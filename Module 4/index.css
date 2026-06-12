@@ -1,0 +1,1318 @@
+.module4-container1 {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+   
+  .module4-thq-module4-elm {
+    width: 100%;
+    height: 11303px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, 0.10000000149011612);
+  }
+   
+  .module4-thq-bg-elm {
+    top: -2986px;
+    left: -3117px;
+    width: 8466px;
+    height: 14289px;
+    position: absolute;
+  }
+   
+  .module4-thq-footer-elm {
+    top: 10893px;
+    left: -0.0003662109375px;
+    width: 1440.1253662109375px;
+    height: 410px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-o-sphere-logo-elm {
+    top: 0px;
+    left: 314.1402587890625px;
+    width: 812px;
+    height: 410px;
+    position: absolute;
+  }
+   
+  .module4-thq-footer-line-elm {
+    top: 10px;
+    left: 1440.1253662109375px;
+    width: 1440px;
+    height: 1px;
+    position: absolute;
+  }
+   
+  .module4-thq-content-container-elm {
+    top: 320px;
+    left: 65px;
+    width: 1298px;
+    height: 10408px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-multilevel-feedback-queue-elm {
+    top: 8997px;
+    left: 6px;
+    width: 1182px;
+    height: 1411px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm100 {
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm101 {
+    top: 81px;
+    left: 43px;
+    color: rgba(255, 255, 255, 1);
+    width: 1139px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm102 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm103 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm104 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm105 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm106 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm107 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm108 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm109 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm110 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm111 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm112 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm113 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm114 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm115 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm116 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm117 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm118 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm119 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm120 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm121 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm122 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm123 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-multilevel-queue-elm {
+    top: 8020px;
+    left: 6px;
+    width: 1217px;
+    height: 933px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm125 {
+    top: 93px;
+    color: rgba(255, 255, 255, 1);
+    width: 1217px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm126 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm127 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm128 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm129 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm130 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm131 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm132 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm133 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm134 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm135 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm136 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm139 {
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-highest-response-ratio-next-scheduling-elm {
+    top: 7275px;
+    left: 6px;
+    width: 1217px;
+    height: 718px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm140 {
+    top: 88px;
+    color: rgba(255, 255, 255, 1);
+    width: 1217px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm141 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm142 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm143 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm144 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm145 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm146 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm147 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm148 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm152 {
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-memory-protection-elm {
+    top: 6286px;
+    left: 6px;
+    width: 1217px;
+    height: 909px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm153 {
+    top: 104px;
+    color: rgba(255, 255, 255, 1);
+    width: 1217px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm154 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm155 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm156 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm157 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm158 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm159 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm160 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm161 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm162 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm166 {
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-priority-scheduling-elm {
+    top: 5444px;
+    left: 6px;
+    width: 1239px;
+    height: 861px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm167 {
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm168 {
+    top: 89px;
+    color: rgba(255, 255, 255, 1);
+    width: 1239px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm169 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm170 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm171 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm172 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm173 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm174 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm175 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm176 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm177 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm178 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm179 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm180 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm181 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm182 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-shortest-job-first-elm {
+    top: 4551px;
+    left: 6px;
+    width: 1251px;
+    height: 859px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm184 {
+    color: rgba(255, 255, 255, 1);
+    width: 1251px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm185 {
+    top: 87px;
+    color: rgba(255, 255, 255, 1);
+    width: 1239px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm186 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm187 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm188 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm189 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm190 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm191 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm192 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm193 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm194 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm195 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm196 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm197 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm198 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm199 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-cpu-scheduling-algorithms-elm {
+    top: 3857px;
+    left: 6px;
+    width: 1251px;
+    height: 634px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm201 {
+    color: rgba(255, 255, 255, 1);
+    width: 564px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm202 {
+    top: 65px;
+    color: rgba(255, 255, 255, 1);
+    width: 1251px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm203 {
+    top: 130px;
+    color: rgba(255, 255, 255, 1);
+    width: 1239px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-scheduling-performance-criteria-elm {
+    top: 3083px;
+    left: 6px;
+    width: 1292px;
+    height: 747px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm212 {
+    left: 2px;
+    color: rgba(255, 255, 255, 1);
+    width: 564px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm213 {
+    top: 88px;
+    color: rgba(255, 255, 255, 1);
+    width: 1292px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm214 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm215 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm216 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm217 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm218 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm219 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm220 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm221 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm222 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm223 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm224 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm225 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm226 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm227 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm228 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm229 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm230 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-scheduling-decisions-schemes-elm {
+    top: 2463px;
+    left: 0px;
+    width: 1298px;
+    height: 569px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm233 {
+    color: rgba(255, 255, 255, 1);
+    width: 564px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm234 {
+    top: 76px;
+    left: 6px;
+    color: rgba(255, 255, 255, 1);
+    width: 1292px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm235 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm236 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm237 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm238 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm239 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm240 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm241 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm242 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm243 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-the-cpuio-burst-cycle-elm {
+    top: 1639px;
+    left: 0px;
+    width: 1250px;
+    height: 766px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm245 {
+    color: rgba(255, 255, 255, 1);
+    width: 502px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm246 {
+    top: 84.74893951416016px;
+    color: rgba(255, 255, 255, 1);
+    width: 1250px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm247 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm248 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm249 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm250 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm251 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm252 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm253 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm254 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm255 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm256 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm257 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm258 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-the-process-context-switch-breakdown-elm {
+    top: 1231px;
+    left: 0px;
+    width: 1250px;
+    height: 377px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm260 {
+    top: 82px;
+    color: rgba(255, 255, 255, 1);
+    width: 1250px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm261 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm262 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm263 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm264 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm265 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm266 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm268 {
+    color: rgba(255, 255, 255, 1);
+    width: 1069px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-the-core-archiecture-elm {
+    top: 447px;
+    left: 0px;
+    width: 1250px;
+    height: 701px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm269 {
+    color: rgba(255, 255, 255, 1);
+    width: 502px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm270 {
+    top: 72px;
+    color: rgba(255, 255, 255, 1);
+    width: 1250px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm271 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm272 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm273 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm274 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm275 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm276 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm277 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm278 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm279 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-text-elm280 {
+    font-weight: 200;
+  }
+   
+  .module4-thq-text-elm281 {
+    font-weight: 300;
+  }
+   
+  .module4-thq-overview-elm {
+    top: 0px;
+    left: 0px;
+    width: 1250px;
+    height: 365px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-text-elm283 {
+    color: rgba(255, 255, 255, 1);
+    width: 502px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm284 {
+    top: 64px;
+    color: rgba(255, 255, 255, 1);
+    width: 1250px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-header-elm {
+    top: 116px;
+    left: 45.998046875px;
+    width: 1347px;
+    height: 149px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+   
+  .module4-thq-m4bg-elm {
+    top: -231px;
+    left: -26px;
+    width: 1393px;
+    height: 783px;
+    position: absolute;
+  }
+   
+  .module4-thq-text-elm286 {
+    top: 13px;
+    left: 56px;
+    color: rgba(87, 30, 58, 1);
+    width: 348px;
+    height: auto;
+    position: absolute;
+    font-size: 64px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-text-elm287 {
+    top: 86px;
+    left: 56px;
+    color: rgba(67, 15, 35, 1);
+    width: 502px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module4-thq-navigation-bar-elm {
+    top: 0px;
+    left: -0.0023193359375px;
+    width: 1440.1253662109375px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module4-thq-line1-elm {
+    top: 50px;
+    left: 1440.125px;
+    width: 1440px;
+    height: 1px;
+    position: absolute;
+  }
+   
+  .module4-thq-side-menu-elm {
+    top: 3px;
+    left: 26.0252685546875px;
+    width: 56px;
+    height: 47px;
+    position: absolute;
+  }
+   
+  .module4-thq-home-elm {
+    top: 0px;
+    left: 78.0252685546875px;
+    width: 60px;
+    height: 54px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+  }
+   
+  .module4-thq-help-elm {
+    top: 4px;
+    left: 1371px;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+  }
+   
+  .module4-link {
+    display: contents;
+  }
+   
+  .module4-container2 {
+    right: 50px;
+    border: 1px solid #ffffff5c;
+    bottom: 30px;
+    display: flex;
+    z-index: 22;
+    position: fixed;
+    box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+    min-height: auto;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 12px;
+    border-radius: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(41, 41, 41, 0.41);
+  }
+   
+  .module4-icon1 {
+    width: 24px;
+    margin-right: 4px;
+  }
+   
+  .module4-text254 {
+    color: white;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  

@@ -1,0 +1,635 @@
+.aboutus-container1 {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+   
+  .aboutus-thq-aboutus-elm {
+    width: 100%;
+    height: 3103px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+  }
+   
+  .aboutus-thq-background-elm {
+    top: -105px;
+    left: -379px;
+    width: 2206px;
+    height: 3723px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .aboutus-thq-bg-elm {
+    top: 0px;
+    left: 0px;
+    width: 2206px;
+    height: 3723px;
+    position: absolute;
+  }
+   
+  .aboutus-thq-waves-elm {
+    top: 0px;
+    left: 143px;
+    width: 1922px;
+    height: 3244px;
+    position: absolute;
+  }
+   
+  .aboutus-thq-dots-elm {
+    top: 165px;
+    left: 332px;
+    width: 1803px;
+    height: 2648px;
+    opacity: 0.07;
+    position: absolute;
+  }
+   
+  .aboutus-thq-members-elm {
+    top: 1335px;
+    left: 88px;
+    width: 1306px;
+    height: 1250px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .aboutus-thq-marga-elm {
+    top: 739px;
+    left: 638px;
+    width: 416px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+   
+  .aboutus-thq-marga-clear-elm {
+    width: 400px;
+    height: 183px;
+    border-radius: 50px 50px 0 0;
+  }
+   
+  .aboutus-thq-yellow-elm {
+    width: 400px;
+    height: 328px;
+    z-index: 1;
+    border-radius: 0 0 50px 50px;
+  }
+   
+  .aboutus-thq-marga-profile-elm {
+    top: 70px;
+    left: 81px;
+    width: 237px;
+    height: 225px;
+    z-index: 2;
+    position: absolute;
+  }
+   
+  .aboutus-thq-text-elm10 {
+    top: 329px;
+    left: -8px;
+    color: rgba(255, 255, 255, 1);
+    width: 416px;
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm11 {
+    top: 389px;
+    left: -8px;
+    color: rgba(134, 123, 33, 1);
+    width: 416px;
+    height: auto;
+    z-index: 4;
+    position: absolute;
+    font-size: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: italic;
+    text-align: center;
+    font-family: Archivo;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-lian-elm {
+    top: 739px;
+    left: 194px;
+    width: 424px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+   
+  .aboutus-thq-lian-clear-elm {
+    width: 400px;
+    height: 183px;
+    border-radius: 50px 50px 0 0;
+  }
+   
+  .aboutus-thq-purple-elm {
+    width: 400px;
+    height: 328px;
+    z-index: 1;
+    border-radius: 0 0 50px 50px;
+  }
+   
+  .aboutus-thq-lian-profile-elm {
+    top: 70px;
+    left: 81px;
+    width: 237px;
+    height: 225px;
+    z-index: 2;
+    position: absolute;
+  }
+   
+  .aboutus-thq-text-elm12 {
+    top: 331px;
+    left: -8px;
+    color: rgba(255, 255, 255, 1);
+    width: 416px;
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm13 {
+    top: 387px;
+    left: -8px;
+    color: rgba(85, 65, 109, 1);
+    width: 416px;
+    height: auto;
+    z-index: 4;
+    position: absolute;
+    font-size: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: italic;
+    text-align: center;
+    font-family: Archivo;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-annie-elm {
+    top: 161px;
+    left: 876px;
+    width: 430px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+   
+  .aboutus-thq-annie-clear-elm {
+    width: 400px;
+    height: 183px;
+    border-radius: 50px 50px 0 0;
+  }
+   
+  .aboutus-thq-blue-elm {
+    width: 400px;
+    height: 328px;
+    z-index: 1;
+    border-radius: 0 0 50px 50px;
+  }
+   
+  .aboutus-thq-annie-profile-elm {
+    top: 70px;
+    left: 81px;
+    width: 237px;
+    height: 225px;
+    z-index: 2;
+    position: absolute;
+  }
+   
+  .aboutus-thq-text-elm16 {
+    top: 329px;
+    left: -7px;
+    color: rgba(255, 255, 255, 1);
+    width: 413px;
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 29px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: 30px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm17 {
+    top: 386px;
+    left: 92px;
+    color: rgba(56, 118, 155, 1);
+    width: 215px;
+    height: auto;
+    z-index: 4;
+    position: absolute;
+    font-size: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: italic;
+    text-align: center;
+    font-family: Archivo;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-vivienne-elm {
+    top: 161px;
+    left: 438px;
+    width: 422px;
+    height: 521px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+   
+  .aboutus-thq-viv-clear-elm {
+    width: 400px;
+    height: 183px;
+    border-radius: 50px 50px 0 0;
+  }
+   
+  .aboutus-thq-green-elm {
+    width: 400px;
+    height: 328px;
+    z-index: 1;
+    border-radius: 0 0 50px 50px;
+  }
+   
+  .aboutus-thq-viv-profile-elm {
+    top: 70px;
+    left: 81px;
+    width: 237px;
+    height: 225px;
+    z-index: 2;
+    position: absolute;
+  }
+   
+  .aboutus-thq-text-elm20 {
+    top: 336px;
+    left: 17px;
+    color: rgba(255, 255, 255, 1);
+    width: 365px;
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 30px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: 30px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm21 {
+    top: 392px;
+    left: 103px;
+    color: rgba(64, 128, 45, 1);
+    width: 215px;
+    height: auto;
+    z-index: 4;
+    position: absolute;
+    font-size: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: italic;
+    text-align: center;
+    font-family: Archivo;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-chael-elm {
+    top: 161px;
+    left: 0px;
+    width: 422px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+   
+  .aboutus-thq-chael-clear-elm {
+    width: 400px;
+    height: 182px;
+    border-radius: 50px 50px 0 0;
+  }
+   
+  .aboutus-thq-orange-elm {
+    width: 400px;
+    height: 328px;
+    z-index: 1;
+    border-radius: 0 0 50px 50px;
+  }
+   
+  .aboutus-thq-chael-profile-elm {
+    top: 69px;
+    left: 81px;
+    width: 237px;
+    height: 225px;
+    z-index: 2;
+    position: absolute;
+  }
+   
+  .aboutus-thq-text-elm24 {
+    top: 326px;
+    left: 22px;
+    color: rgba(255, 255, 255, 1);
+    width: 355px;
+    height: auto;
+    z-index: 3;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm25 {
+    top: 382px;
+    left: -8px;
+    color: rgba(131, 69, 49, 1);
+    width: 416px;
+    height: auto;
+    z-index: 4;
+    position: absolute;
+    font-size: 24px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: italic;
+    text-align: center;
+    font-family: Archivo;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm28 {
+    left: 277px;
+    color: rgba(255, 255, 255, 1);
+    width: 717px;
+    height: auto;
+    position: absolute;
+    font-size: 64px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-about-us-elm {
+    top: 136px;
+    left: 165px;
+    width: 1118px;
+    height: 588px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .aboutus-thq-text-elm29 {
+    top: 129px;
+    color: rgba(255, 255, 255, 1);
+    width: 1118px;
+    height: auto;
+    position: absolute;
+    font-size: 28px;
+    font-style: Regular;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm32 {
+    left: 197px;
+    color: rgba(255, 255, 255, 1);
+    width: 717px;
+    height: auto;
+    position: absolute;
+    font-size: 64px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-objective-elm {
+    top: 843px;
+    left: 165px;
+    width: 1124px;
+    height: 395px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .aboutus-thq-text-elm33 {
+    left: 197px;
+    color: rgba(255, 255, 255, 1);
+    width: 717px;
+    height: auto;
+    position: absolute;
+    font-size: 64px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-text-elm34 {
+    top: 131px;
+    color: rgba(255, 255, 255, 1);
+    width: 1124px;
+    height: auto;
+    position: absolute;
+    font-size: 28px;
+    font-style: Regular;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .aboutus-thq-footer-elm {
+    top: 2707px;
+    left: -14.000012397766113px;
+    width: 1484px;
+    height: 432px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .aboutus-thq-footer-line-elm {
+    top: 0px;
+    left: 1484px;
+    width: 1484px;
+    height: 1px;
+    position: absolute;
+  }
+   
+  .aboutus-thq-o-sphere-logo-elm {
+    top: 0px;
+    left: 354px;
+    width: 768px;
+    height: 432px;
+    position: absolute;
+  }
+   
+  .aboutus-thq-navigation-bar-elm {
+    top: 0px;
+    left: -0.0003662109375px;
+    width: 1440.1253662109375px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .aboutus-thq-line1-elm {
+    top: 50px;
+    left: 1440.125px;
+    width: 1440px;
+    height: 1px;
+    position: absolute;
+  }
+   
+  .aboutus-thq-side-menu-elm {
+    top: 3px;
+    left: 26.000732421875px;
+    width: 56px;
+    height: 47px;
+    position: absolute;
+  }
+   
+  .aboutus-thq-home-elm {
+    top: 0px;
+    left: 78.000732421875px;
+    width: 60px;
+    height: 54px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+  }
+   
+  .aboutus-thq-help-elm {
+    top: 4px;
+    left: 1371px;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+  }
+   
+  .aboutus-link {
+    display: contents;
+  }
+   
+  .aboutus-container2 {
+    right: 50px;
+    border: 1px solid #ffffff5c;
+    bottom: 30px;
+    display: flex;
+    z-index: 22;
+    position: fixed;
+    box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+    min-height: auto;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 12px;
+    border-radius: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(41, 41, 41, 0.41);
+  }
+   
+  .aboutus-icon1 {
+    width: 24px;
+    margin-right: 4px;
+  }
+   
+  .aboutus-text9 {
+    color: white;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  

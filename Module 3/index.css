@@ -1,0 +1,1415 @@
+.module3-container1 {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+   
+  .module3-thq-module3-elm {
+    width: 100%;
+    height: 11453px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: rgba(0, 0, 0, 1);
+    border-style: solid;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, 0.10000000149011612);
+  }
+   
+  .module3-thq-bg-elm {
+    top: -2727px;
+    left: -3810px;
+    width: 9742px;
+    height: 16441px;
+    position: absolute;
+  }
+   
+  .module3-thq-content-container-elm {
+    top: 325px;
+    left: 76px;
+    width: 1287px;
+    height: 10659px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm100 {
+    top: 10487px;
+    left: 45px;
+    color: rgba(255, 255, 255, 1);
+    width: 1196px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm101 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-concrete-unix-implementations-elm {
+    top: 10060px;
+    left: 4px;
+    width: 1277px;
+    height: 399px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+  }
+   
+  .module3-thq-container8-elm {
+    top: 0px;
+    left: 0px;
+    width: 1277px;
+    height: 399px;
+    position: absolute;
+    border-radius: 20px;
+  }
+   
+  .module3-thq-text-elm103 {
+    top: 32px;
+    left: 41px;
+    color: rgb(255, 255, 255);
+    width: 1196px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-text101 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-operationson-processes-elm {
+    top: 8921px;
+    left: 10px;
+    width: 1231px;
+    height: 1081px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-fig6-elm {
+    top: 525px;
+    left: 218px;
+    width: 842px;
+    height: 556px;
+    position: absolute;
+  }
+   
+  .module3-thq-text-elm104 {
+    top: 63px;
+    left: 35px;
+    color: rgba(255, 255, 255, 1);
+    width: 1196px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm105 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm106 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm107 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm108 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm109 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm110 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm111 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm112 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm113 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm114 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm117 {
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-context-switching-elm {
+    top: 7793px;
+    left: 3px;
+    width: 1277px;
+    height: 1075px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+  }
+   
+  .module3-thq-container7-elm {
+    top: 0px;
+    left: 0px;
+    width: 1277px;
+    height: 1075px;
+    position: absolute;
+    border-radius: 20px;
+  }
+   
+  .module3-thq-fig5-elm {
+    top: 283px;
+    left: 268px;
+    width: 746px;
+    height: 591px;
+    position: absolute;
+  }
+   
+  .module3-thq-text-elm118 {
+    top: 93px;
+    left: 78px;
+    color: rgb(255, 255, 255);
+    width: 1145px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-text120 {
+    font-weight: 300;
+  }
+   
+  .module3-text122 {
+    font-weight: 200;
+  }
+   
+  .module3-text124 {
+    font-weight: 200;
+  }
+   
+  .module3-text144 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm119 {
+    top: 26px;
+    left: 49px;
+    color: rgb(255, 255, 255);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+    font-style: Light;
+    text-align: left;
+    font-family: "Alexandria";
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-memory-swappingand-suspended-states-elm {
+    top: 6934px;
+    left: 21px;
+    width: 1215px;
+    height: 790px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-fig4-elm {
+    top: 368px;
+    left: 213px;
+    width: 828px;
+    height: 422px;
+    position: absolute;
+  }
+   
+  .module3-thq-text-elm120 {
+    top: 63px;
+    left: 31px;
+    color: rgba(255, 255, 255, 1);
+    width: 1184px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm124 {
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-execution-journey-elm {
+    top: 6034px;
+    left: 5px;
+    width: 1277px;
+    height: 833px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+  }
+   
+  .module3-thq-container6-elm {
+    top: 0px;
+    left: 0px;
+    width: 1277px;
+    height: 833px;
+    position: absolute;
+    border-radius: 20px;
+  }
+   
+  .module3-thq-text-elm125 {
+    top: 119px;
+    left: 52px;
+    color: rgba(255, 255, 255, 1);
+    width: 1174px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm126 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm127 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm128 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm129 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm130 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm131 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm132 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm133 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm134 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm135 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm136 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm137 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm138 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm140 {
+    top: 56px;
+    left: 47px;
+    color: rgba(255, 255, 255, 1);
+    width: 1082px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm141 {
+    top: 5204px;
+    left: 52px;
+    color: rgba(255, 255, 255, 1);
+    width: 1174px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm142 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm143 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm144 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm145 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm146 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm147 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm148 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm149 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm150 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm151 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm152 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm153 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm154 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm155 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-scheduling-queues-elm {
+    top: 4563px;
+    left: 1px;
+    width: 1277px;
+    height: 599px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+  }
+   
+  .module3-thq-container5-elm {
+    top: 0px;
+    left: 0px;
+    width: 1277px;
+    height: 599px;
+    position: absolute;
+    border-radius: 20px;
+  }
+   
+  .module3-thq-fig3-elm {
+    left: 263px;
+    width: 769px;
+    bottom: 55px;
+    height: 238px;
+    position: absolute;
+  }
+   
+  .module3-thq-text-elm157 {
+    top: 31px;
+    left: 56px;
+    color: rgb(255, 255, 255);
+    width: 1174px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-text171 {
+    font-weight: 200;
+  }
+   
+  .module3-text172 {
+    font-weight: 300;
+  }
+   
+  .module3-text174 {
+    font-weight: 200;
+  }
+   
+  .module3-text176 {
+    font-weight: 300;
+  }
+   
+  .module3-text177 {
+    font-weight: 200;
+  }
+   
+  .module3-text179 {
+    font-weight: 300;
+  }
+   
+  .module3-text180 {
+    font-weight: 200;
+  }
+   
+  .module3-text182 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm158 {
+    top: 4475px;
+    left: 21px;
+    color: rgb(255, 255, 255);
+    width: 1052px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+    font-style: Light;
+    text-align: left;
+    font-family: "Alexandria";
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-process-events-elm {
+    top: 3864px;
+    left: 11px;
+    width: 1255px;
+    height: 538px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-process-termination-events-elm {
+    top: 311px;
+    left: 10px;
+    width: 1245px;
+    height: 227px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm159 {
+    top: 52px;
+    left: 36px;
+    color: rgba(255, 255, 255, 1);
+    width: 1209px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm165 {
+    color: rgba(255, 255, 255, 1);
+    width: 1052px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-process-creation-events-elm {
+    top: 0px;
+    left: 0px;
+    width: 1242px;
+    height: 297px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm166 {
+    top: 52px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 1209px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm173 {
+    color: rgba(255, 255, 255, 1);
+    width: 1052px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-figure2-elm {
+    top: 3349px;
+    left: 2px;
+    width: 1277px;
+    height: 481px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+  }
+   
+  .module3-thq-container4-elm {
+    top: 0px;
+    left: 0px;
+    width: 1277px;
+    height: 481px;
+    position: absolute;
+    border-radius: 20px;
+  }
+   
+  .module3-thq-fig2-elm {
+    top: 28px;
+    left: 318px;
+    width: 656px;
+    height: 420px;
+    position: absolute;
+  }
+   
+  .module3-thq-core-process-states-elm {
+    top: 3024px;
+    left: 11px;
+    width: 1233px;
+    height: 306px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm174 {
+    top: 43px;
+    left: 36px;
+    color: rgba(255, 255, 255, 1);
+    width: 1197px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm175 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm176 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm177 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm178 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm179 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm180 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm181 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm182 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm183 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm184 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm186 {
+    color: rgba(255, 255, 255, 1);
+    width: 784px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-information-fieldsinsidea-pcb-elm {
+    top: 1894px;
+    left: 9px;
+    width: 1277px;
+    height: 1105px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 0.03999999910593033);
+  }
+   
+  .module3-thq-fig1-elm {
+    top: 166px;
+    left: 738px;
+    width: 498px;
+    height: 845px;
+    position: absolute;
+  }
+   
+  .module3-thq-text-elm187 {
+    top: 128.34765625px;
+    left: 48px;
+    color: rgba(255, 255, 255, 1);
+    width: 658px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm188 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm189 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm190 {
+    font-weight: 400;
+  }
+   
+  .module3-thq-text-elm191 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm192 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm193 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm194 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm195 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm196 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm197 {
+    font-weight: 400;
+  }
+   
+  .module3-thq-text-elm198 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm199 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm200 {
+    font-weight: 400;
+  }
+   
+  .module3-thq-text-elm201 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm202 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm203 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm204 {
+    font-weight: 300;
+  }
+   
+  .module3-thq-text-elm206 {
+    top: 51.85986328125px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 571px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-pcb-elm {
+    top: 1576px;
+    left: 11px;
+    width: 1257px;
+    height: 278px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm208 {
+    top: 69px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 1224px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm209 {
+    color: rgba(255, 255, 255, 1);
+    width: 784px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-whata-process-includes-elm {
+    top: 1155px;
+    left: 9px;
+    width: 1277px;
+    height: 381px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 0.03999999910593033);
+  }
+   
+  .module3-thq-text-elm210 {
+    top: 93px;
+    left: 48px;
+    color: rgba(255, 255, 255, 1);
+    width: 1197px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm211 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm212 {
+    font-weight: 400;
+  }
+   
+  .module3-thq-text-elm213 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm214 {
+    font-weight: 400;
+  }
+   
+  .module3-thq-text-elm215 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm216 {
+    font-weight: 400;
+  }
+   
+  .module3-thq-text-elm217 {
+    font-weight: 200;
+  }
+   
+  .module3-thq-text-elm218 {
+    font-weight: 400;
+  }
+   
+  .module3-thq-text-elm220 {
+    top: 46px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 571px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-standard-examplesof-processes-elm {
+    top: 920px;
+    left: 11px;
+    width: 1257px;
+    height: 209px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm222 {
+    top: 55px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 1224px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm227 {
+    color: rgba(255, 255, 255, 1);
+    width: 784px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-programvs-process-elm {
+    top: 561px;
+    left: 10px;
+    width: 1277px;
+    height: 329px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(255, 255, 255, 0.03999999910593033);
+  }
+   
+  .module3-thq-text-elm228 {
+    top: 152px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 1211px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm231 {
+    top: 91px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 1211px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm232 {
+    top: 33px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 571px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-whatisa-process-elm {
+    top: 366px;
+    left: 11px;
+    width: 1257px;
+    height: 161.5177459716797px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm234 {
+    top: 53.5316162109375px;
+    left: 33px;
+    color: rgba(255, 255, 255, 1);
+    width: 1224px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: 35px;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm235 {
+    color: rgba(255, 255, 255, 1);
+    width: 502px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-overview-elm {
+    top: 0px;
+    left: 0px;
+    width: 1268px;
+    height: 336px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-text-elm236 {
+    color: rgba(255, 255, 255, 1);
+    width: 162px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: Light;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm237 {
+    top: 67px;
+    left: 44px;
+    color: rgba(255, 255, 255, 1);
+    width: 1224px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: ExtraLight;
+    text-align: justified;
+    font-family: Alexandria;
+    font-weight: 200;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-header-elm {
+    top: 104px;
+    left: 46px;
+    width: 1347px;
+    height: 149px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+   
+  .module3-thq-m3bg-elm {
+    top: -218px;
+    left: 0px;
+    width: 1347px;
+    height: 758px;
+    position: absolute;
+  }
+   
+  .module3-thq-text-elm238 {
+    top: 13px;
+    left: 37px;
+    color: rgba(35, 38, 48, 1);
+    width: 348px;
+    height: auto;
+    position: absolute;
+    font-size: 64px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-text-elm239 {
+    top: 89px;
+    left: 62px;
+    color: rgba(37, 37, 37, 1);
+    width: 502px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    font-style: Regular;
+    text-align: left;
+    font-family: Alexandria;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+   
+  .module3-thq-footer-elm {
+    top: 11043px;
+    left: 0.9996337890625px;
+    width: 1440.1253662109375px;
+    height: 410px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-o-sphere-logo-elm {
+    top: 0px;
+    left: 314.1029052734375px;
+    width: 812px;
+    height: 410px;
+    position: absolute;
+  }
+   
+  .module3-thq-footer-line-elm {
+    top: 10px;
+    left: 1440.1253662109375px;
+    width: 1440px;
+    height: 1px;
+    position: absolute;
+  }
+   
+  .module3-thq-navigation-bar-elm {
+    top: 0px;
+    left: -0.0023193359375px;
+    width: 1440.1253662109375px;
+    height: 54px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+   
+  .module3-thq-line1-elm {
+    top: 50px;
+    left: 1440.125px;
+    width: 1440px;
+    height: 1px;
+    position: absolute;
+  }
+   
+  .module3-thq-side-menu-elm {
+    top: 3px;
+    left: 26.02490234375px;
+    width: 56px;
+    height: 47px;
+    position: absolute;
+  }
+   
+  .module3-thq-home-elm {
+    top: 0px;
+    left: 78.02490234375px;
+    width: 60px;
+    height: 54px;
+    position: absolute;
+    border-color: rgba(0, 0, 0, 1);
+  }
+   
+  .module3-thq-help-elm {
+    top: 4px;
+    left: 1371px;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+  }
+   
+  .module3-link {
+    display: contents;
+  }
+   
+  .module3-container2 {
+    right: 50px;
+    border: 1px solid #ffffff5c;
+    bottom: 30px;
+    display: flex;
+    z-index: 22;
+    position: fixed;
+    box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+    min-height: auto;
+    align-items: center;
+    padding-top: 8px;
+    padding-left: 12px;
+    border-radius: 8px;
+    padding-right: 12px;
+    padding-bottom: 8px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(41, 41, 41, 0.41);
+  }
+   
+  .module3-icon1 {
+    width: 24px;
+    margin-right: 4px;
+  }
+   
+  .module3-text216 {
+    color: white;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  
