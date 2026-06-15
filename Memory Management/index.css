@@ -482,10 +482,10 @@
   }
 
   .output-thq-table-elm {
-    top: 230px;
+    top: 160px;
     left: 13px;
     width: 873px;
-    height: 228px;
+    height: 303px;
     position: absolute;
   }
 
@@ -499,9 +499,9 @@
 
   .output-thq-text-elm3 {
     top: 85px;
-    left: 241px;
-    color: rgba(242, 232, 164, 1);
-    width: 417px;
+    left: 130px;
+    color: #79A36D;
+    width: 645px;
     height: auto;
     position: absolute;
     font-size: 40px;
