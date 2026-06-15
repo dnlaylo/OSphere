@@ -96,6 +96,7 @@
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
+    cursor: pointer;
   }
    
   .algorithm-thq-computebtncon-elm {
@@ -453,4 +454,157 @@
     font-weight: 500;
     line-height: 24px;
   }
-  
+
+  /* pop up */
+
+  .output-container1 {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .output-thq-output-elm {
+    width: 899px;
+    height: 523px;
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 1;
+    background-color: rgba(21, 21, 21, 1);
+
+    border-radius: 16px; 
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.6);
+
+    transform: scale(0.92);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .output-thq-text-elm1 {
+    top: 462px;
+    left: 561px;
+    color: rgba(255, 255, 255, 1);
+    width: 234px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+  .output-thq-text-elm2 {
+    top: 462px;
+    left: 124px;
+    color: rgba(255, 255, 255, 1);
+    width: 234px;
+    height: auto;
+    position: absolute;
+    font-size: 24px;
+    font-style: Light;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+  .output-thq-table-elm {
+    top: 230px;
+    left: 13px;
+    width: 873px;
+    height: 228px;
+    position: absolute;
+  }
+
+  .output-thq-gantt-chart-elm {
+    top: 138px;
+    left: 132px;
+    width: 634px;
+    height: 80px;
+    position: absolute;
+  }
+
+  .output-thq-text-elm3 {
+    top: 85px;
+    left: 241px;
+    color: rgba(242, 232, 164, 1);
+    width: 417px;
+    height: auto;
+    position: absolute;
+    font-size: 40px;
+    font-style: SemiBold;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 600;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+  .output-thq-line-elm {
+    top: 69.5px;
+    left: 0.5px;
+    width: 898px;
+    height: 1px;
+    position: absolute;
+  }
+
+  .output-thq-text-elm4 {
+    top: 17px;
+    left: 344px;
+    color: rgba(255, 255, 255, 1);
+    width: 210px;
+    height: auto;
+    position: absolute;
+    font-size: 32px;
+    font-style: Light;
+    text-align: center;
+    font-family: Alexandria;
+    font-weight: 300;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+
+  /* pop up function */
+
+  #popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.65); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  #popup-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  #popup-overlay .output-container1 {
+    justify-content: center;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  #popup-overlay.show .output-thq-output-elm {
+    transform: scale(1);
+  }
+    
