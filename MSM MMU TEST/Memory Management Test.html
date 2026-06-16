@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Subsystem Simulator: Memory & CPU Scheduling</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 24px;
+            width: 100%;
+            max-width: 950px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        h2, h3 {
+            color: #d19a66;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        h2 { margin-top: 0; }
+        .section {
+            background: #181818;
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+        .input-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-size: 13px;
+            color: #aaa;
+        }
+        input, select {
+            padding: 8px;
+            background: #2a2a2a;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        th, td {
+            padding: 8px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        th {
+            background-color: #252525;
+            color: #d19a66;
+            font-size: 13px;
+        }
+        td input {
+            width: 90%;
+            text-align: center;
+            padding: 5px;
+        }
+        .btn-secondary {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .btn-secondary:hover { background-color: #555; }
+        .btn-danger {
+            background-color: #a94442;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-danger:hover { background-color: #c9302c; }
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background-color: #d19a66;
+            color: #121212;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.2s;
+            margin-top: 15px;
+        }
+        .btn-primary:hover { background-color: #e5ad7e; }
+        #output-box {
+            margin-top: 20px;
+            background-color: #151515;
+            border: 1px solid #2c2c2c;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .metric-text {
+            font-size: 14px;
+            color: #a3be8c;
+            margin-bottom: 15px;
+            font-family: monospace;
+        }
+        .canvas-container {
+            overflow-x: auto;
+            width: 100%;
+            margin-top: 15px;
+            background-color: #151515;
+            border-radius: 6px;
+            padding: 15px 0;
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>OS Memory & CPU Scheduler Visualizer</h2>
+    
+    <div class="section">
+        <h3>1. Memory Management Unit (MMU)</h3>
+        <div class="row">
+            <div class="input-group">
+                <label for="memAlgo">Memory Architecture:</label>
+                <select id="memAlgo">
+                    <option value="MFT">MFT (Fixed Partitioning)</option>
+                    <option value="MVT" selected>MVT (Dynamic Partitioning)</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="totalMem">Total User Memory Size (K):</label>
+                <input type="number" id="totalMem" value="32">
+            </div>
+            <div class="input-group" id="mftConfigGroup" style="display:none;">
+                <label for="customPartitions">MFT Partition Sizes (Comma separated):</label>
+                <input type="text" id="customPartitions" value="10, 8, 14" placeholder="e.g., 10, 10, 12">
+            </div>
+            <div class="input-group" id="mvtConfigGroup">
+                <label for="compactionOpt">MVT Shuffling Action:</label>
+                <select id="compactionOpt">
+                    <option value="NO">Without Compaction</option>
+                    <option value="YES">With Compaction</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>2. CPU Scheduling & Processes</h3>
+        <div class="row">
+            <div class="input-group">
+                <label for="cpuAlgo">CPU Scheduling Algorithm:</label>
+                <select id="cpuAlgo">
+                    <option value="FCFS">FCFS (First-Come, First-Served)</option>
+                    <option value="RR">Round Robin (RR)</option>
+                </select>
+            </div>
+            <div class="input-group" id="quantumGroup" style="display:none;">
+                <label for="quantum">Time Quantum:</label>
+                <input type="number" id="quantum" value="2">
+            </div>
+        </div>
+
+        <table id="processTable">
+            <thead>
+                <tr>
+                    <th>Process ID</th>
+                    <th>Arrival Time</th>
+                    <th>Burst Time</th>
+                    <th>Priority</th>
+                    <th>Memory Req (K)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" value="P1"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="2"></td>
+                    <td><input type="number" value="1"></td>
+                    <td><input type="number" value="10"></td>
+                    <td><button class="btn-danger" onclick="deleteRow(this)">X</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="P2"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="1"></td>
+                    <td><input type="number" value="2"></td>
+                    <td><input type="number" value="10"></td>
+                    <td><button class="btn-danger" onclick="deleteRow(this)">X</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="P3"></td>
+                    <td><input type="number" value="0"></td>
+                    <td><input type="number" value="2"></td>
+                    <td><input type="number" value="3"></td>
+                    <td><input type="number" value="10"></td>
+                    <td><button class="btn-danger" onclick="deleteRow(this)">X</button></td>
+                </tr>
+                <tr>
+                    <td><input type="text" value="P4"></td>
+                    <td><input type="number" value="1"></td>
+                    <td><input type="number" value="2"></td>
+                    <td><input type="number" value="4"></td>
+                    <td><input type="number" value="12"></td>
+                    <td><button class="btn-danger" onclick="deleteRow(this)">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn-secondary" onclick="addProcessRow()">+ Add Process</button>
+    </div>
+
+    <button class="btn-primary" onclick="simulateSystem()">Calculate & Graph</button>
+
+    <div id="output-box">
+        <div id="memoryMetrics" class="metric-text">Memory Report: Awaiting Calculation...</div>
+        <div class="canvas-container">
+            <canvas id="timelineCanvas" height="380"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+// Toggle UI inputs dynamically based on architecture selections
+document.getElementById('cpuAlgo').addEventListener('change', function() {
+    document.getElementById('quantumGroup').style.display = (this.value === 'RR') ? 'block' : 'none';
+});
+
+document.getElementById('memAlgo').addEventListener('change', function() {
+    if (this.value === 'MFT') {
+        document.getElementById('mftConfigGroup').style.display = 'flex';
+        document.getElementById('mvtConfigGroup').style.display = 'none';
+    } else {
+        document.getElementById('mftConfigGroup').style.display = 'none';
+        document.getElementById('mvtConfigGroup').style.display = 'flex';
+    }
+});
+
+function addProcessRow() {
+    const table = document.getElementById('processTable').getElementsByTagName('tbody')[0];
+    const rowCount = table.rows.length + 1;
+    const row = table.insertRow();
+    row.innerHTML = `
+        <td><input type="text" value="P${rowCount}"></td>
+        <td><input type="number" value="0"></td>
+        <td><input type="number" value="3"></td>
+        <td><input type="number" value="1"></td>
+        <td><input type="number" value="5"></td>
+        <td><button class="btn-danger" onclick="deleteRow(this)">X</button></td>
+    `;
+}
+
+function deleteRow(btn) {
+    const row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+
+function simulateSystem() {
+    const memAlgo = document.getElementById('memAlgo').value;
+    const totalMem = parseInt(document.getElementById('totalMem').value);
+    const cpuAlgo = document.getElementById('cpuAlgo').value;
+    const quantum = parseInt(document.getElementById('quantum').value);
+    const compactionEnabled = document.getElementById('compactionOpt').value === 'YES';
+    
+    const rows = document.getElementById('processTable').getElementsByTagName('tbody')[0].rows;
+    let initialProcesses = [];
+
+    for (let i = 0; i < rows.length; i++) {
+        let inputs = rows[i].getElementsByTagName('input');
+        initialProcesses.push({
+            id: inputs[0].value,
+            arrival: parseInt(inputs[1].value),
+            burst: parseInt(inputs[2].value),
+            remainingBurst: parseInt(inputs[2].value),
+            memReq: parseInt(inputs[4].value),
+            allocatedPartitionIndex: -1,
+            finishTime: -1,
+            memoryArriveTime: -1
+        });
+    }
+
+    if(initialProcesses.length === 0) return alert("Please add at least one process.");
+
+    // Initialize Memory Spaces
+    let partitions = [];
+    if (memAlgo === 'MFT') {
+        let customSizesRaw = document.getElementById('customPartitions').value;
+        let customSizes = customSizesRaw.split(',').map(s => parseInt(s.trim())).filter(s => !isNaN(s) && s > 0);
+        
+        if (customSizes.length === 0) return alert("Please enter valid MFT partition sizes.");
+
+        let currentStart = 0;
+        for (let i = 0; i < customSizes.length; i++) {
+            let size = customSizes[i];
+            if (currentStart + size > totalMem) {
+                size = totalMem - currentStart;
+                if (size > 0) partitions.push({ start: currentStart, size: size, used: 0, residentProcess: null });
+                currentStart += size;
+                break;
+            }
+            partitions.push({ start: currentStart, size: size, used: 0, residentProcess: null });
+            currentStart += size;
+        }
+        if (currentStart < totalMem) {
+            partitions.push({ start: currentStart, size: totalMem - currentStart, used: totalMem - currentStart, residentProcess: "SYSTEM_WASTE" });
+        }
+    } else {
+        partitions.push({ start: 0, size: totalMem, used: 0, residentProcess: null });
+    }
+
+    let time = 0;
+    let completedCount = 0;
+    let memoryStatesOverTime = [];
+
+    function saveStateChangeSnapshot(currentTime, eventLabel) {
+        memoryStatesOverTime.push({
+            time: currentTime,
+            event: eventLabel,
+            partitions: JSON.parse(JSON.stringify(partitions)),
+            totalMem: totalMem,
+            memAlgo: memAlgo
+        });
+    }
+
+    let currentRunningProcess = null;
+    let quantumUsed = 0;
+    let protectionLoop = 0;
+
+    // Cycle-by-cycle execution loop
+    while (completedCount < initialProcesses.length && protectionLoop < 1000) {
+        protectionLoop++;
+        let stateChangedThisTick = false;
+        let eventLabels = [];
+
+        // 1. Terminate Finished Processes & Free Memory FIRST
+        let newlyFinished = initialProcesses.filter(p => p.allocatedPartitionIndex !== -1 && p.remainingBurst === 0 && p.finishTime === -1);
+        
+        newlyFinished.forEach(p => {
+            completedCount++;
+            p.finishTime = time;
+            if(currentRunningProcess && currentRunningProcess.id === p.id) {
+                currentRunningProcess = null;
+                quantumUsed = 0;
+            }
+            
+            let targetIdx = partitions.findIndex(part => part.residentProcess === p.id);
+            if (targetIdx !== -1) {
+                partitions[targetIdx].residentProcess = null;
+                partitions[targetIdx].used = 0;
+                
+                if (memAlgo === 'MVT') { // Immediate Coalescing
+                    if (targetIdx + 1 < partitions.length && partitions[targetIdx + 1].residentProcess === null) {
+                        partitions[targetIdx].size += partitions[targetIdx + 1].size;
+                        partitions.splice(targetIdx + 1, 1);
+                    }
+                    if (targetIdx - 1 >= 0 && partitions[targetIdx - 1].residentProcess === null) {
+                        partitions[targetIdx - 1].size += partitions[targetIdx].size;
+                        partitions[targetIdx - 1].start = Math.min(partitions[targetIdx - 1].start, partitions[targetIdx].start);
+                        partitions.splice(targetIdx, 1);
+                    }
+                }
+            }
+            eventLabels.push(`${p.id} Exits`);
+            stateChangedThisTick = true;
+        });
+
+        // 2. Memory Admission Phase
+        let waitingProcesses = initialProcesses.filter(p => p.arrival <= time && p.allocatedPartitionIndex === -1 && p.finishTime === -1);
+        
+        waitingProcesses.forEach(p => {
+            if (memAlgo === 'MFT') {
+                let maxPartitionSize = Math.max(...partitions.filter(part => part.residentProcess !== "SYSTEM_WASTE").map(part => part.size));
+                if (p.memReq > maxPartitionSize) {
+                    p.finishTime = -2; // Denied
+                    completedCount++; 
+                    eventLabels.push(`${p.id} Rejected (Too Big)`);
+                    stateChangedThisTick = true;
+                } else {
+                    for (let idx = 0; idx < partitions.length; idx++) {
+                        if (partitions[idx].residentProcess === null && partitions[idx].residentProcess !== "SYSTEM_WASTE" && p.memReq <= partitions[idx].size) {
+                            partitions[idx].residentProcess = p.id;
+                            partitions[idx].used = p.memReq;
+                            p.allocatedPartitionIndex = idx;
+                            p.memoryArriveTime = time;
+                            eventLabels.push(`${p.id} Admitted`);
+                            stateChangedThisTick = true;
+                            break;
+                        }
+                    }
+                }
+            } else { // MVT Allocation Flow
+                let admitted = false;
+                
+                // First pass: try to find an existing hole that fits right now
+                for (let idx = 0; idx < partitions.length; idx++) {
+                    if (partitions[idx].residentProcess === null && partitions[idx].size >= p.memReq) {
+                        let oldSize = partitions[idx].size;
+                        let oldStart = partitions[idx].start;
+                        
+                        partitions[idx].size = p.memReq;
+                        partitions[idx].used = p.memReq;
+                        partitions[idx].residentProcess = p.id;
+                        p.allocatedPartitionIndex = idx;
+                        p.memoryArriveTime = time;
+                        
+                        if (oldSize > p.memReq) {
+                            partitions.splice(idx + 1, 0, { start: oldStart + p.memReq, size: oldSize - p.memReq, used: 0, residentProcess: null });
+                        }
+                        eventLabels.push(`${p.id} Admitted`);
+                        stateChangedThisTick = true;
+                        admitted = true;
+                        break;
+                    }
+                }
+
+                // Second pass: If it didn't fit, check if Compaction can save it
+                if (!admitted && compactionEnabled) {
+                    let totalFreeMemory = partitions.filter(part => part.residentProcess === null).reduce((sum, part) => sum + part.size, 0);
+                    
+                    if (totalFreeMemory >= p.memReq) {
+                        // Execution of memory compaction
+                        let activePartitions = partitions.filter(part => part.residentProcess !== null);
+                        let compactedPartitions = [];
+                        let currentStart = 0;
+                        
+                        activePartitions.forEach(part => {
+                            part.start = currentStart;
+                            compactedPartitions.push(part);
+                            currentStart += part.size;
+                        });
+                        
+                        let accumulatedFreeSize = totalMem - currentStart;
+                        if (accumulatedFreeSize > 0) {
+                            compactedPartitions.push({ start: currentStart, size: accumulatedFreeSize, used: 0, residentProcess: null });
+                        }
+                        
+                        partitions = compactedPartitions;
+                        
+                        // Re-sync array memory indexes for running operations
+                        initialProcesses.forEach(proc => {
+                            if (proc.allocatedPartitionIndex !== -1 && proc.finishTime === -1) {
+                                proc.allocatedPartitionIndex = partitions.findIndex(part => part.residentProcess === proc.id);
+                            }
+                        });
+
+                        // Snapshot the exact shuffling action frame
+                        saveStateChangeSnapshot(time, `Compaction Shuffling`);
+                        
+                        // Drop the process into the freshly cleared large trailing gap
+                        for (let idx = 0; idx < partitions.length; idx++) {
+                            if (partitions[idx].residentProcess === null && partitions[idx].size >= p.memReq) {
+                                let oldSize = partitions[idx].size;
+                                let oldStart = partitions[idx].start;
+                                
+                                partitions[idx].size = p.memReq;
+                                partitions[idx].used = p.memReq;
+                                partitions[idx].residentProcess = p.id;
+                                p.allocatedPartitionIndex = idx;
+                                p.memoryArriveTime = time;
+                                
+                                if (oldSize > p.memReq) {
+                                    partitions.splice(idx + 1, 0, { start: oldStart + p.memReq, size: oldSize - p.memReq, used: 0, residentProcess: null });
+                                }
+                                eventLabels.push(`${p.id} Admitted`);
+                                stateChangedThisTick = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        if (stateChangedThisTick || time === 0) {
+            let label = eventLabels.length > 0 ? eventLabels.join(" | ") : "State Update";
+            saveStateChangeSnapshot(time, label);
+        }
+
+        if (completedCount === initialProcesses.length) break;
+
+        // 3. Round Robin Preemption Evaluation
+        if (cpuAlgo === 'RR' && currentRunningProcess && quantumUsed >= quantum && currentRunningProcess.remainingBurst > 0) {
+            currentRunningProcess = null;
+            quantumUsed = 0;
+        }
+
+        // 4. CPU Dispatching Phase
+        let readyProcesses = initialProcesses.filter(p => p.allocatedPartitionIndex !== -1 && p.remainingBurst > 0);
+        if (!currentRunningProcess && readyProcesses.length > 0) {
+            if (cpuAlgo === 'FCFS') {
+                readyProcesses.sort((a, b) => a.arrival - b.arrival || a.memoryArriveTime - b.memoryArriveTime);
+            }
+            currentRunningProcess = readyProcesses[0];
+            quantumUsed = 0;
+        }
+
+        // 5. Work Execution Step
+        if (currentRunningProcess) {
+            currentRunningProcess.remainingBurst--;
+            quantumUsed++;
+        }
+
+        time++;
+    }
+
+    document.getElementById('memoryMetrics').innerText = `Simulation complete. Compaction triggers dynamically on MVT whenever total free space permits.`;
+    renderProgressTimeline(memoryStatesOverTime);
+}
+
+function createHatchPattern(color) {
+    const pCanvas = document.createElement('canvas');
+    pCanvas.width = 10;
+    pCanvas.height = 10;
+    const pCtx = pCanvas.getContext('2d');
+    pCtx.strokeStyle = color;
+    pCtx.lineWidth = 1.5;
+    pCtx.beginPath();
+    pCtx.moveTo(0, 10);
+    pCtx.lineTo(10, 0);
+    pCtx.stroke();
+    return pCanvas;
+}
+
+function renderProgressTimeline(states) {
+    const canvas = document.getElementById('timelineCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    const blockWidth = 110;
+    const blockSpacing = 65; 
+    const columnHeight = 240;
+    const osHeight = 40;
+    
+    canvas.width = (states.length * (blockWidth + blockSpacing)) + 40;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    const freePattern = ctx.createPattern(createHatchPattern('#2d4a68'), 'repeat');
+    const fragPattern = ctx.createPattern(createHatchPattern('#8b0000'), 'repeat');
+
+    states.forEach((state, idx) => {
+        let xStart = 20 + (idx * (blockWidth + blockSpacing));
+        let yStart = 60; 
+
+        ctx.fillStyle = '#d19a66';
+        ctx.font = 'bold 15px "Segoe UI", sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(`t = ${state.time}`, xStart + blockWidth / 2, yStart - 25);
+
+        ctx.fillStyle = '#aaaaaa';
+        ctx.font = '11px "Segoe UI", sans-serif';
+        ctx.fillText(state.event, xStart + blockWidth / 2, yStart - 8);
+
+        let currentY = yStart;
+        state.partitions.forEach(p => {
+            let pHeight = (p.size / state.totalMem) * columnHeight;
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = '11px monospace';
+            ctx.textAlign = 'left';
+            ctx.fillText(p.start, xStart + blockWidth + 5, currentY + 10);
+
+            if (p.residentProcess === "SYSTEM_WASTE") {
+                ctx.fillStyle = '#333333';
+                ctx.fillRect(xStart, currentY, blockWidth, pHeight);
+                ctx.strokeStyle = '#222222';
+                ctx.strokeRect(xStart, currentY, blockWidth, pHeight);
+                ctx.fillStyle = '#888888';
+                ctx.font = '10px sans-serif';
+                ctx.textAlign = 'center';
+                if (pHeight > 15) ctx.fillText(`Waste (${p.size}K)`, xStart + blockWidth / 2, currentY + pHeight / 2 + 4);
+            } 
+            else if (p.residentProcess === null) {
+                ctx.fillStyle = freePattern;
+                ctx.fillRect(xStart, currentY, blockWidth, pHeight);
+                ctx.strokeStyle = '#333333';
+                ctx.strokeRect(xStart, currentY, blockWidth, pHeight);
+                
+                if(pHeight > 20) {
+                    ctx.fillStyle = '#aaaaaa';
+                    ctx.font = '10px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(`Free (${p.size}K)`, xStart + blockWidth / 2, currentY + pHeight / 2 + 4);
+                }
+            } else {
+                let usedHeight = (p.used / state.totalMem) * columnHeight;
+                let fragHeight = pHeight - usedHeight;
+
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(xStart, currentY, blockWidth, usedHeight);
+                ctx.strokeStyle = '#333333';
+                ctx.strokeRect(xStart, currentY, blockWidth, usedHeight);
+
+                ctx.fillStyle = '#000000';
+                ctx.font = 'bold 16px sans-serif';
+                ctx.textAlign = 'center';
+                ctx.fillText(p.residentProcess, xStart + blockWidth / 2, currentY + usedHeight / 2 + 6);
+
+                if (fragHeight > 0.5) {
+                    ctx.fillStyle = fragPattern;
+                    ctx.fillRect(xStart, currentY + usedHeight, blockWidth, fragHeight);
+                    ctx.strokeStyle = '#333333';
+                    ctx.strokeRect(xStart, currentY + usedHeight, blockWidth, fragHeight);
+
+                    if (fragHeight > 15) {
+                        ctx.fillStyle = '#ff7777';
+                        ctx.font = '9px sans-serif';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(`Frag (${p.size - p.used}K)`, xStart + blockWidth / 2, currentY + usedHeight + fragHeight / 2 + 3);
+                    }
+                }
+            }
+            currentY += pHeight;
+        });
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '11px monospace';
+        ctx.textAlign = 'left';
+        ctx.fillText(state.totalMem, xStart + blockWidth + 5, currentY + 5);
+
+        ctx.fillStyle = '#222222';
+        ctx.fillRect(xStart, currentY, blockWidth, osHeight);
+        ctx.strokeRect(xStart, currentY, blockWidth, osHeight);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 14px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText("OS", xStart + blockWidth / 2, currentY + osHeight / 2 + 5);
+        
+        ctx.font = '14px sans-serif';
+        ctx.fillText(`${state.totalMem}K`, xStart + blockWidth / 2, currentY + osHeight + 18);
+    });
+}
+
+simulateSystem();
+</script>
+
+</body>
+</html>
