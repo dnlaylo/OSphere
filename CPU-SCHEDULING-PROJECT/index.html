@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Scheduling Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="algorithm-container1">
+        
+        <div class="main-container">
+            
+            <div class="top-controls">
+                <select id="algorithm">
+                    <option value="" selected disabled>ALGORITHM</option>
+                    <option value="FCFS">FCFS</option>
+                    <option value="SJF">Shortest Job First (SJF)</option>
+                    <option value="RR">Round Robin</option>
+                    <option value="PRIORITY">Priority Scheduling</option>
+                </select>
+                
+                <select id="mode" style="display:none;">
+                    <option value="non" selected>Non-Preemptive</option>
+                    <option value="pre">Preemptive</option>
+                </select>
+                
+                <input type="number" id="quantum" placeholder="Time Quantum" style="display:none;" min="1">
+            </div>
+
+            <table id="processTable">
+                <thead>
+                    <tr>
+                        <th>Process</th>
+                        <th>Arrival Time</th>
+                        <th>Burst Time</th>
+                        <th>Priority</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pid">P1</td>
+                        <td><input class="arrival" type="number" min="0"></td>
+                        <td><input class="burst" type="number" min="1"></td>
+                        <td><input class="priority" type="number" min="1"></td>
+                        <td><button class="delete">✕</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="buttons">
+                <button id="addProcess">+ Add Process</button>
+                <button id="compute">COMPUTE</button>
+            </div>
+            
+        </div>
+
+        <div id="popup">
+            <div class="popup-content">
+                <h2>Output Evaluation</h2>
+                
+                <h3>Gantt Chart Sequence</h3>
+                <div id="gantt-blocks"></div>
+                
+                <h3>Data Calculations Table</h3>
+                <table id="resultTable"></table>
+                
+                <h3>Averages Dashboard</h3>
+                <div id="averages"></div>
+
+                <div style="text-align: center; margin-top: 25px;">
+                    <button id="close">Close Window</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
