@@ -171,34 +171,34 @@
                 <span class="module2-text322">1. Concurrent Operation</span>
                 <br />
                 <span class="module2-text324">
-                  The CPU and I/O devices work at the same time.
+                  • The CPU and I/O devices work at the same time.
                 </span>
                 <br />
                 <span class="module2-text326">This means:</span>
                 <br />
                 <span class="module2-text328">
-                  While the CPU is processing data, I/O devices can also perform
+                  • While the CPU is processing data, I/O devices can also perform
                   their tasks
                 </span>
                 <br />
                 <span class="module2-text330">
-                  This improves overall system speed and efficiency
+                  • This improves overall system speed and efficiency
                 </span>
                 <br />
                 <br />
                 <span class="module2-text333">2. Device Controllers</span>
                 <br />
                 <span class="module2-text335">
-                  Each I/O device is managed by a device controller.
+                  • Each I/O device is managed by a device controller.
                 </span>
                 <br />
                 <span class="module2-text337">
-                  Each controller handle&nbsp; s one specific type of device
+                  • Each controller handle&nbsp; s one specific type of device
                   (e.g., keyboard, disk, printer)
                 </span>
                 <br />
                 <span class="module2-text339">
-                  It acts as a middle unit between the device and the computer
+                  • It acts as a middle unit between the device and the computer
                   system
                 </span>
                 <br />
@@ -206,15 +206,15 @@
                 <span class="module2-text342">3. Local Buffer Storage</span>
                 <br />
                 <span class="module2-text344">
-                  Every device controller has a local buffer.
+                  • Every device controller has a local buffer.
                 </span>
                 <br />
                 <span class="module2-text346">
-                  Data from the device is first stored in this buffer
+                  • Data from the device is first stored in this buffer
                 </span>
                 <br />
                 <span class="module2-text348">
-                  This helps manage data transfer smoothly before sending it to
+                  • This helps manage data transfer smoothly before sending it to
                   memory or CPU
                 </span>
                 <br />
@@ -222,7 +222,7 @@
                 <span class="module2-text351">4. Data Transfer Process</span>
                 <br />
                 <span class="module2-text353">
-                  The CPU does not communicate directly with the device.
+                  • The CPU does not communicate directly with the device.
                 </span>
                 <br />
                 <span class="module2-text355">Instead:</span>
@@ -232,20 +232,20 @@
                 </span>
                 <br />
                 <span class="module2-text359">
-                  Then the CPU transfers data between the buffer and main memory
+                  • Then the CPU transfers data between the buffer and main memory
                 </span>
                 <br />
                 <br />
                 <span class="module2-text362">5. Interrupt System</span>
                 <br />
                 <span>
-                  Device controllers notify the CPU when they finish a task.
+                  • Device controllers notify the CPU when they finish a task.
                 </span>
                 <br />
-                <span>This is done through an interrupt signal</span>
+                <span>• This is done through an interrupt signal</span>
                 <br />
                 <span>
-                  It tells the CPU that I/O operation is complete and ready for
+                  • It tells the CPU that I/O operation is complete and ready for
                   processing
                 </span>
               </span>
@@ -255,31 +255,31 @@
               <span class="module2-thq-text-elm380">Interrupts</span>
               <span class="module2-thq-text-elm381">
                 <span>
-                  Interrupt transfers control to the interrupt service routine
+                  • Interrupt transfers control to the interrupt service routine
                 </span>
                 <br />
                 <span>
-                  Interrupt Service Routine: Segments of code that determine
+                  • Interrupt Service Routine: Segments of code that determine
                   action to be taken for each type of interrupt.
                 </span>
                 <br />
                 <span>
-                  Interrupt vector contains the address of service routines.
+                  • Interrupt vector contains the address of service routines.
                 </span>
                 <br />
                 <br />
-                <span>OS preserves the state of the CPU</span>
+                <span>• OS preserves the state of the CPU</span>
                 <br />
                 <span>
-                  stores registers and the program counter (address of
+                  • stores registers and the program counter (address of
                   interrupted instruction).
                 </span>
                 <br />
                 <br />
-                <span>Trap</span>
+                <span>• Trap</span>
                 <br />
                 <span>
-                  software generated interrupt caused either by an error or a
+                  • software generated interrupt caused either by an error or a
                   user request.
                 </span>
               </span>
@@ -289,13 +289,13 @@
               <span class="module2-thq-text-elm374">
                 <span class="module2-thq-text-elm375">Types of interrupt</span>
                 <br />
-                <span>Polling</span>
+                <span>• Polling</span>
                 <br />
-                <span>Vectored interrupt system</span>
+                <span>• Vectored interrupt system</span>
                 <br />
                 <br />
                 <span>
-                  Incoming interrupts are disabled while another interrupt is
+                  • Incoming interrupts are disabled while another interrupt is
                   being processed to prevent a lost interrupt.
                 </span>
               </span>
@@ -307,11 +307,11 @@
                 <span class="module2-thq-text-elm365">Synchronous I/O</span>
                 <br />
                 <span class="module2-thq-text-elm366">
-                  wait instruction idles CPU until next interrupt
+                  • wait instruction idles CPU until next interrupt
                 </span>
                 <br />
                 <span class="module2-thq-text-elm367">
-                  no simultaneous I/O processing, at most one outstanding I/O
+                  • no simultaneous I/O processing, at most one outstanding I/O
                   request at a time.
                 </span>
                 <br />
@@ -319,19 +319,19 @@
                 <span class="module2-thq-text-elm368">Asynchronous I/O</span>
                 <br />
                 <span>
-                  After I/O is initiated, control returns to the user program
+                  • After I/O is initiated, control returns to the user program
                   without waiting for I/O completion.
                 </span>
                 <br />
-                <span>System call</span>
+                <span>• System call</span>
                 <br />
                 <span>
-                  Device Status table - holds type, address and state for each
+                  • Device Status table - holds type, address and state for each
                   device&nbsp;
                 </span>
                 <br />
                 <span>
-                  OS indexes into the I/O device table to determine device
+                  • OS indexes into the I/O device table to determine device
                   status and modify table entry to include interrupt.
                 </span>
               </span>
@@ -344,17 +344,17 @@
               </span>
               <span class="module2-thq-text-elm360">
                 <span>
-                  Used for high speed I/O devices able to transmit information
+                  • Used for high speed I/O devices able to transmit information
                   at close to memory speeds.
                 </span>
                 <br />
                 <span>
-                  Device controller transfers blocks of data from buffer storage
+                  • Device controller transfers blocks of data from buffer storage
                   directly to main memory without CPU intervention.
                 </span>
                 <br />
                 <span>
-                  Only one interrupt is generated per block, rather than one per
+                  • Only one interrupt is generated per block, rather than one per
                   byte (or word).
                 </span>
                 <br />
@@ -386,12 +386,12 @@
                 </span>
                 <br />
                 <span>
-                  The disk surface is logically divided into tracks, subdivided
+                  • The disk surface is logically divided into tracks, subdivided
                   into sectors.
                 </span>
                 <br />
                 <span>
-                  Disk controller determines logical interaction between device
+                  • Disk controller determines logical interaction between device
                   and computer.
                 </span>
               </span>
@@ -411,45 +411,45 @@
                 <span class="module2-thq-text-elm310">Registers</span>
                 <br />
                 <span class="module2-thq-text-elm311">
-                  Small storage locations inside the CPU.
+                  • Small storage locations inside the CPU.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm312">
-                  Fastest type of storage.
+                  • Fastest type of storage.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm313">
-                  Holds data and instructions currently being processed.
+                  • Holds data and instructions currently being processed.
                 </span>
                 <br />
                 <br />
                 <span class="module2-thq-text-elm314">Cache</span>
                 <br />
                 <span class="module2-thq-text-elm315">
-                  High-speed memory located close to the CPU.
+                  • High-speed memory located close to the CPU.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm316">
-                  Stores frequently used data to reduce access time.
+                  • Stores frequently used data to reduce access time.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm317">
-                  Faster than main memory but smaller in size.
+                  • Faster than main memory but smaller in size.
                 </span>
                 <br />
                 <br />
                 <span class="module2-thq-text-elm318">Main Memory (RAM)</span>
                 <br />
                 <span class="module2-thq-text-elm319">
-                  Temporary storage used by running programs.
+                  • Temporary storage used by running programs.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm320">
-                  Allows quick access to active data and applications.
+                  • Allows quick access to active data and applications.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm321">
-                  Data is lost when power is turned off.
+                  • Data is lost when power is turned off.
                 </span>
                 <br />
                 <br />
@@ -457,12 +457,12 @@
                   Electronic Disk (SSD)
                 </span>
                 <br />
-                <span>Uses flash memory with no moving parts.</span>
+                <span>• Uses flash memory with no moving parts.</span>
                 <br />
-                <span>Faster and more reliable than magnetic disks.</span>
+                <span>• Faster and more reliable than magnetic disks.</span>
                 <br />
                 <span>
-                  Commonly used for operating systems and applications
+                  • Commonly used for operating systems and applications
                 </span>
                 <br />
               </span>
@@ -472,40 +472,40 @@
                 <span class="module2-thq-text-elm327">Magnetic Disk (HDD)</span>
                 <br />
                 <span class="module2-thq-text-elm328">
-                  Stores data on rotating magnetic platters.
+                  • Stores data on rotating magnetic platters.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm329">
-                  Provides large storage capacity at a lower cost.
+                  • Provides large storage capacity at a lower cost.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm330">
-                  Slower than SSDs due to moving mechanical parts.
+                  • Slower than SSDs due to moving mechanical parts.
                 </span>
                 <br />
                 <br />
                 <span class="module2-thq-text-elm331">Optical Disk</span>
                 <br />
                 <span class="module2-thq-text-elm332">
-                  Stores data using laser technology.
+                  • Stores data using laser technology.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm333">
-                  Examples include CDs, DVDs, and Blu-ray discs.
+                  • Examples include CDs, DVDs, and Blu-ray discs.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm334">
-                  Often used for media distribution and backups.
+                  • Often used for media distribution and backups.
                 </span>
                 <br />
                 <br />
                 <span class="module2-thq-text-elm335">Magnetic Tape</span>
                 <br />
-                <span>Uses magnetic strips to store data sequentially.</span>
+                <span>• Uses magnetic strips to store data sequentially.</span>
                 <br />
-                <span>Very large storage capacity and low cost.</span>
+                <span>• Very large storage capacity and low cost.</span>
                 <br />
-                <span>Commonly used for long-term backup and archiving.</span>
+                <span>• Commonly used for long-term backup and archiving.</span>
               </span>
               <div class="module2-thq-storage-hierarchy-elm">
                 <span class="module2-thq-text-elm339">Storage Hierarchy</span>
@@ -515,11 +515,11 @@
                     are organized in a hierarchy based on
                   </span>
                   <br />
-                  <span class="module2-thq-text-elm343">Speed</span>
+                  <span class="module2-thq-text-elm343">• Speed</span>
                   <br />
-                  <span class="module2-thq-text-elm344">Cost</span>
+                  <span class="module2-thq-text-elm344">• Cost</span>
                   <br />
-                  <span class="module2-thq-text-elm345">Volatility</span>
+                  <span class="module2-thq-text-elm345">• Volatility</span>
                   <br />
                   <span class="module2-thq-text-elm346">Caching</span>
                   <span>
@@ -552,27 +552,27 @@
               </span>
               <span class="module2-thq-text-elm299">
                 <span>
-                  Sharing system resources requires the operating system to
+                  • Sharing system resources requires the operating system to
                   ensure that an incorrect program cannot cause other programs
                   to execute incorrectly.
                 </span>
                 <br />
                 <span>
-                  Provide hardware support to differentiate between at least two
+                  • Provide hardware support to differentiate between at least two
                   modes of operation:
                 </span>
                 <br />
                 <br />
-                <span>User mode -- execution done on behalf of a user.</span>
+                <span>1. User mode -- execution done on behalf of a user.</span>
                 <br />
                 <span>
-                  Monitor mode (supervisor/kernel/system mode) – execution done
+                  2. Monitor mode (supervisor/kernel/system mode) – execution done
                   on behalf of the operating system.
                 </span>
                 <br />
                 <br />
                 <span>
-                  Mode bit added to computer hardware to indicate the current
+                  • Mode bit added to computer hardware to indicate the current
                   mode: monitor(0) or user(1).
                 </span>
                 <br />
@@ -586,11 +586,11 @@
                 <br />
                 <br />
                 <span>
-                  When an interrupt or fault occurs, hardware switches to
+                  • When an interrupt or fault occurs, hardware switches to
                   monitor mode.
                 </span>
                 <br />
-                <span>Privileged instructions only in monitor mode.</span>
+                <span>• Privileged instructions only in monitor mode.</span>
               </span>
               <span class="module2-thq-text-elm307">Dual-mode operation</span>
               <span class="module2-thq-text-elm308">Hardware Protection</span>
@@ -608,10 +608,10 @@
 
             <div class="module2-thq-io-protection-elm">
               <span class="module2-thq-text-elm293">
-                <span>All I/O instructions are privileged instructions.</span>
+                <span>• All I/O instructions are privileged instructions.</span>
                 <br />
                 <span>
-                  Must ensure that a user program could never gain control of
+                  • Must ensure that a user program could never gain control of
                   the computer in monitor mode, for e.g. a user program that as
                   part of its execution, stores a new address in the interrupt
                   vector.
@@ -623,27 +623,27 @@
             <div class="module2-thq-memory-protection-elm">
               <span class="module2-thq-text-elm282">
                 <span>
-                  Must provide memory protection at least for the interrupt
+                  • Must provide memory protection at least for the interrupt
                   vector and the interrupt service routines.
                 </span>
                 <br />
                 <span>
-                  To provide memory protection, add two registers that determine
+                  • To provide memory protection, add two registers that determine
                   the range of legal addresses a program may address.
                 </span>
                 <br />
                 <span>
-                  Base Register - holds the smallest legal physical memory
+                  • Base Register - holds the smallest legal physical memory
                   address.
                 </span>
                 <br />
-                <span>Limit register - contains the size of the range.</span>
+                <span>• Limit register - contains the size of the range.</span>
                 <br />
-                <span>Memory outside the defined range is</span>
+                <span>• Memory outside the defined range is</span>
                 <br />
                 <span>protected.</span>
                 <br />
-                <span>When executing in monitor mode,</span>
+                <span>• When executing in monitor mode,</span>
                 <br />
                 <span>the OS has unrestricted access to</span>
                 <br />
@@ -671,18 +671,18 @@
                   the OS maintains control.
                 </span>
                 <br />
-                <span>The timer is decremented every clock tick.</span>
+                <span>• The timer is decremented every clock tick.</span>
                 <br />
                 <span>
-                  When the timer reaches a value of 0, an interrupt occurs.
+                  • When the timer reaches a value of 0, an interrupt occurs.
                 </span>
                 <br />
                 <br />
-                <span>Timer is commonly used to implement time sharing.</span>
+                <span>• Timer is commonly used to implement time sharing.</span>
                 <br />
-                <span>Timer is also used to compute the current time.</span>
+                <span>• Timer is also used to compute the current time.</span>
                 <br />
-                <span>Load timer is a privileged instruction.</span>
+                <span>• Load timer is a privileged instruction.</span>
               </span>
               <span class="module2-thq-text-elm281">CPU Protection</span>
             </div>
@@ -707,26 +707,26 @@
 
             <div class="module2-thq-system-calls-elm">
               <span class="module2-thq-text-elm260">
-                <span>Interface between running program and the OS.</span>
+                <span>• Interface between running program and the OS.</span>
                 <br />
                 <span>
-                  Assembly language instructions (macros and subroutines)
+                  • Assembly language instructions (macros and subroutines)
                 </span>
                 <br />
                 <span>
-                  Some higher level languages allow system calls to be made
+                  • Some higher level languages allow system calls to be made
                   directly (e.g. C)
                 </span>
                 <br />
                 <span>
-                  Passing parameters between a running program and OS via
+                  • Passing parameters between a running program and OS via
                   registers, memory tables or stack.
                 </span>
                 <br />
-                <span>Unix has about 32 system calls&nbsp;</span>
+                <span>• Unix has about 32 system calls&nbsp;</span>
                 <br />
                 <span>
-                  read(), write(), open(), close(), fork(), exec(),
+                  • read(), write(), open(), close(), fork(), exec(),
                   ioctl(),.....
                 </span>
               </span>
@@ -735,40 +735,40 @@
 
             <div class="module2-thq-operating-system-services-elm">
               <span class="module2-thq-text-elm248">
-                <span>Services that provide user-interfaces to OS</span>
+                <span>• Services that provide user-interfaces to OS</span>
                 <br />
                 <span>
-                  Program execution - load program into memory and run it
+                  • Program execution - load program into memory and run it
                 </span>
                 <br />
                 <span>
-                  I/O Operations - since users cannot execute I/O operations
+                  • I/O Operations - since users cannot execute I/O operations
                   directly
                 </span>
                 <br />
                 <span>
-                  File System Manipulation - read, write, create, delete files
+                  • File System Manipulation - read, write, create, delete files
                 </span>
                 <br />
-                <span>Communications - interprocess and intersystem</span>
+                <span>• Communications - interprocess and intersystem</span>
                 <br />
                 <span>
-                  Error Detection - in hardware, I/O devices, user programs
+                  • Error Detection - in hardware, I/O devices, user programs
                 </span>
                 <br />
                 <br />
-                <span>Services for providing efficient system operation</span>
+                <span>• Services for providing efficient system operation</span>
                 <br />
                 <span>
-                  Resource Allocation - for simultaneously executing jobs
-                </span>
-                <br />
-                <span>
-                  Accounting - for account billing and usage statistics
+                  • Resource Allocation - for simultaneously executing jobs
                 </span>
                 <br />
                 <span>
-                  Protection - ensure access to system resources is controlled
+                  • Accounting - for account billing and usage statistics
+                </span>
+                <br />
+                <span>
+                  • Protection - ensure access to system resources is controlled
                 </span>
               </span>
               <span class="module2-thq-text-elm259">
@@ -785,25 +785,25 @@
                 </span>
                 <br />
                 <span>
-                  Command Interpreter (sh, csh, ksh) - parses/executes other
+                  • Command Interpreter (sh, csh, ksh) - parses/executes other
                   system programs
                 </span>
                 <br />
                 <span>
-                  File manipulation - copy (cp), print (lpr), compare(cmp,diff)
+                  • File manipulation - copy (cp), print (lpr), compare(cmp,diff)
                 </span>
                 <br />
-                <span>File modification - editing (ed, vi, emacs)</span>
+                <span>• File modification - editing (ed, vi, emacs)</span>
                 <br />
                 <span>
-                  Application programs - send mail (mail), read news (rn)
+                  • Application programs - send mail (mail), read news (rn)
                 </span>
                 <br />
-                <span>Programming language support (cc)</span>
+                <span>• Programming language support (cc)</span>
                 <br />
-                <span>Status information, communication</span>
+                <span>• Status information, communication</span>
                 <br />
-                <span>Etc.</span>
+                <span>• Etc.</span>
               </span>
               <span class="module2-thq-text-elm247">System Programs</span>
             </div>
@@ -811,26 +811,26 @@
             <div class="module2-thq-command-interpreter-system-elm">
               <span class="module2-thq-text-elm231">
                 <span>
-                  Commands that are given to the operating system via command
+                  • Commands that are given to the operating system via command
                   statements that execute
                 </span>
                 <br />
                 <span>
-                  Process creation and deletion, I/O handling, Secondary Storage
+                  • Process creation and deletion, I/O handling, Secondary Storage
                   Management, Main Memory Management, File System Access,
                   Protection, Networking.
                 </span>
                 <br />
                 <br />
-                <span>Obtains the next command and executes it.</span>
+                <span>• Obtains the next command and executes it.</span>
                 <br />
                 <span>
-                  Programs that read and interpret control statements also
+                  • Programs that read and interpret control statements also
                   called -
                 </span>
                 <br />
                 <span>
-                  Control card interpreter, command-line interpreter, shell (in
+                  • Control card interpreter, command-line interpreter, shell (in
                   UNIX)
                 </span>
               </span>
@@ -841,23 +841,23 @@
 
             <div class="module2-thq-systemdesignand-implementation-elm">
               <span class="module2-thq-text-elm221">
-                <span>Establish design goals</span>
+                <span>• Establish design goals</span>
                 <br />
-                <span>User Goals</span>
+                <span>• User Goals</span>
                 <br />
-                <span>System Goals</span>
+                <span>• System Goals</span>
                 <br />
-                <span>Software Engineering -</span>
+                <span>• Software Engineering -</span>
                 <br />
                 <span>
-                  Separate mechanism from policy. Policies determine what needs
+                  • Separate mechanism from policy. Policies determine what needs
                   to be done, mechanisms determine how they are done.
                 </span>
                 <br />
-                <span>Choose a high-level implementation language&nbsp;</span>
+                <span>• Choose a high-level implementation language&nbsp;</span>
                 <br />
                 <span>
-                  faster implementation, more compact, easier to debug
+                  • faster implementation, more compact, easier to debug
                 </span>
               </span>
               <span class="module2-thq-text-elm229">
@@ -869,44 +869,44 @@
             <div class="module2-thq-systemgeneration-elm">
               <span class="module2-thq-text-elm214">
                 <span>
-                  OS written for a class of machines, must be configured for
+                  • OS written for a class of machines, must be configured for
                   each specific site.
                 </span>
                 <br />
                 <span>
-                  SYSGEN program obtains info about specific hardware
+                  • SYSGEN program obtains info about specific hardware
                   configuration and creates version of OS for hardware
                 </span>
                 <br />
-                <span>Booting</span>
+                <span>• Booting</span>
                 <br />
                 <span>
-                  Bootstrap program - loader program loads kernel, kernel loads
+                  • Bootstrap program - loader program loads kernel, kernel loads
                   rest of OS.
                 </span>
                 <br />
-                <span>Bootstrap program stored in ROM</span>
+                <span>• Bootstrap program stored in ROM</span>
               </span>
               <span class="module2-thq-text-elm220">System Generation</span>
             </div>
 
             <div class="module2-thq-operating-systems-howaretheyorganized-elm">
               <span class="module2-thq-text-elm203">
-                <span>Simple</span>
+                <span>• Simple</span>
                 <br />
-                <span>Only one or two levels of code</span>
+                <span>• Only one or two levels of code</span>
                 <br />
-                <span>Layered</span>
+                <span>• Layered</span>
                 <br />
-                <span>Lower levels independent of upper levels</span>
+                <span>• Lower levels independent of upper levels</span>
                 <br />
-                <span>Microkernel</span>
+                <span>• Microkernel</span>
                 <br />
-                <span>OS built from many user-level processes</span>
+                <span>• OS built from many user-level processes</span>
                 <br />
-                <span>Modular</span>
+                <span>• Modular</span>
                 <br />
-                <span>Core kernel with Dynamically loadable modules</span>
+                <span>• Core kernel with Dynamically loadable modules</span>
               </span>
               <span class="module2-thq-text-elm212">
                 <span>Operating Systems: How are they organized?</span>
@@ -922,11 +922,11 @@
               </span>
               <span class="module2-thq-text-elm198">
                 <span>
-                  MS-DOS - provides a lot of functionality in little space.
+                  • MS-DOS - provides a lot of functionality in little space.
                 </span>
                 <br />
                 <span>
-                  Not divided into modules, Interfaces and levels of
+                  • Not divided into modules, Interfaces and levels of
                   functionality are not well separated
                 </span>
               </span>
@@ -939,18 +939,18 @@
 
             <div class="module2-thq-unix-system-structure-elm">
               <span class="module2-thq-text-elm190">
-                <span>UNIX - limited structuring, has 2 separable parts</span>
+                <span>• UNIX - limited structuring, has 2 separable parts</span>
                 <br />
-                <span>Systems programs</span>
+                <span>• Systems programs</span>
                 <br />
-                <span>Kernel</span>
+                <span>• Kernel</span>
                 <br />
                 <span>
-                  everything below the system call interface and above physical
+                  • everything below the system call interface and above physical
                   hardware.
                 </span>
                 <br />
-                <span>Filesystem, CPU scheduling, memory management</span>
+                <span>• Filesystem, CPU scheduling, memory management</span>
               </span>
               <span class="module2-thq-text-elm196">
                 <span>UNIX System Structure</span>
@@ -961,17 +961,17 @@
             <div class="module2-thq-layered-os-structure-elm">
               <span class="module2-thq-text-elm185">
                 <span>
-                  OS is divided into a number of layers - bottom layer is
+                  • OS is divided into a number of layers - bottom layer is
                   hardware, highest layer is the user interface.
                 </span>
                 <br />
                 <span>
-                  Each layer uses functions and services of only lower-level
+                  • Each layer uses functions and services of only lower-level
                   layers.
                 </span>
                 <br />
                 <span>
-                  The Operating System Kernel has successive layers of
+                  • The Operating System Kernel has successive layers of
                   abstraction.
                 </span>
               </span>
@@ -991,19 +991,19 @@
             <div class="module2-thq-microkernel-structure-elm">
               <span class="module2-thq-text-elm169">
                 <span class="module2-thq-text-elm170">
-                  Moves as much from the kernel into “user” space
+                  • Moves as much from the kernel into “user” space
                 </span>
                 <br />
                 <span class="module2-thq-text-elm171">
-                  Small core OS running at kernel level
+                  • Small core OS running at kernel level
                 </span>
                 <br />
                 <span class="module2-thq-text-elm172">
-                  OS Services built from many independent user-level processes
+                  • OS Services built from many independent user-level processes
                 </span>
                 <br />
                 <span class="module2-thq-text-elm173">
-                  Communication between modules with message passing
+                  • Communication between modules with message passing
                 </span>
                 <br />
                 <br />
@@ -1011,29 +1011,29 @@
                 <span class="module2-thq-text-elm175">:</span>
                 <br />
                 <span class="module2-thq-text-elm176">
-                  Easier to extend a microkernel
+                  • Easier to extend a microkernel
                 </span>
                 <br />
                 <span class="module2-thq-text-elm177">
-                  Easier to port OS to new architectures
+                  • Easier to port OS to new architectures
                 </span>
                 <br />
                 <span class="module2-thq-text-elm178">
-                  More reliable (less code is running in kernel mode)
+                  • More reliable (less code is running in kernel mode)
                 </span>
                 <br />
                 <span class="module2-thq-text-elm179">
-                  Fault Isolation (parts of kernel protected from other parts)
+                  • Fault Isolation (parts of kernel protected from other parts)
                 </span>
                 <br />
-                <span class="module2-thq-text-elm180">More secure</span>
+                <span class="module2-thq-text-elm180">• More secure</span>
                 <br />
                 <br />
                 <span class="module2-thq-text-elm181">Detriments</span>
                 <span>:</span>
                 <br />
                 <span>
-                  Performance overhead severe for naïve implementation
+                  • Performance overhead severe for naïve implementation
                 </span>
               </span>
               <span class="module2-thq-text-elm184">Microkernel Structure</span>
@@ -1041,17 +1041,17 @@
 
             <div class="module2-thq-modulesbased-structure-elm">
               <span class="module2-thq-text-elm161">
-                <span>Most modern operating systems implement modules</span>
+                <span>• Most modern operating systems implement modules</span>
                 <br />
-                <span>Uses object-oriented approach</span>
+                <span>• Uses object-oriented approach</span>
                 <br />
-                <span>Each core component is separate</span>
+                <span>• Each core component is separate</span>
                 <br />
-                <span>Each talks to the others over known interfaces</span>
+                <span>• Each talks to the others over known interfaces</span>
                 <br />
-                <span>Each is loadable as needed within the kernel</span>
+                <span>• Each is loadable as needed within the kernel</span>
                 <br />
-                <span>Overall, similar to layers but with more flexible</span>
+                <span>• Overall, similar to layers but with more flexible</span>
               </span>
               <span class="module2-thq-text-elm168">
                 Modules-based Structure
@@ -1071,11 +1071,11 @@
                 </span>
                 <br />
                 <span class="module2-thq-text-elm152">
-                  Process is a program in execution.
+                  • Process is a program in execution.
                 </span>
                 <br />
                 <span class="module2-thq-text-elm153">
-                  Process needs resources - CPU time, memory, files/data and I/O
+                  • Process needs resources - CPU time, memory, files/data and I/O
                   devices.
                 </span>
                 <br />
@@ -1086,16 +1086,16 @@
                   activities.
                 </span>
                 <br />
-                <span>Process creation and deletion</span>
+                <span>• Process creation and deletion</span>
                 <br />
-                <span>Process suspension and resumption</span>
+                <span>• Process suspension and resumption</span>
                 <br />
                 <span>
-                  Process synchronization and interprocess communication
+                  • Process synchronization and interprocess communication
                 </span>
                 <br />
                 <span>
-                  Process interactions - deadlock detection, avoidance and
+                  • Process interactions - deadlock detection, avoidance and
                   correction
                 </span>
               </span>
@@ -1107,24 +1107,24 @@
             <div class="module2-thq-os-task-memory-management-elm">
               <span class="module2-thq-text-elm140">
                 <span>
-                  Main Memory is an array of addressable words or bytes that is
+                  • Main Memory is an array of addressable words or bytes that is
                   quickly accessible.
                 </span>
                 <br />
-                <span>Main Memory is volatile.</span>
+                <span>• Main Memory is volatile.</span>
                 <br />
-                <span>OS is responsible for:</span>
+                <span>• OS is responsible for:</span>
                 <br />
-                <span>Allocate and deallocate memory to processes.</span>
+                <span>• Allocate and deallocate memory to processes.</span>
                 <br />
                 <span>
-                  Managing multiple processes within memory - keep track of
+                  • Managing multiple processes within memory - keep track of
                   which parts of memory are used by which processes. Manage the
                   sharing of memory between processes.
                 </span>
                 <br />
                 <span>
-                  Determining which processes to load when memory becomes
+                  • Determining which processes to load when memory becomes
                   available.
                 </span>
               </span>
@@ -1137,27 +1137,27 @@
             <div class="module2-thq-os-task-secondary-storage-elm">
               <span class="module2-thq-text-elm130">
                 <span>
-                  Since primary storage is expensive and volatile, secondary
+                  • Since primary storage is expensive and volatile, secondary
                   storage is required for backup.
                 </span>
                 <br />
-                <span>Disk is the primary form of secondary storage.</span>
+                <span>• Disk is the primary form of secondary storage.</span>
                 <br />
                 <span>
-                  OS performs storage allocation, free-space management and disk
+                  • OS performs storage allocation, free-space management and disk
                   scheduling.
                 </span>
                 <br />
                 <br />
-                <span>I/O system in the OS consists of</span>
+                <span>• I/O system in the OS consists of</span>
                 <br />
-                <span>Buffer caching and management</span>
+                <span>• Buffer caching and management</span>
                 <br />
                 <span>
-                  Device driver interface that abstracts device details
+                  • Device driver interface that abstracts device details
                 </span>
                 <br />
-                <span>Drivers for specific hardware devices</span>
+                <span>• Drivers for specific hardware devices</span>
               </span>
               <span class="module2-thq-text-elm138">
                 <span>OS Task: Secondary Storage and I/O Management</span>
@@ -1168,24 +1168,24 @@
             <div class="module2-thq-file-management-system-elm">
               <span class="module2-thq-text-elm120">
                 <span>
-                  File is a collection of related information defined by creator
+                  • File is a collection of related information defined by creator
                 </span>
                 <br />
-                <span>represents programs and data.</span>
+                <span>• represents programs and data.</span>
                 <br />
-                <span>OS is responsible for</span>
+                <span>• OS is responsible for</span>
                 <br />
-                <span>File creation and deletion</span>
+                <span>• File creation and deletion</span>
                 <br />
-                <span>Directory creation and deletion</span>
+                <span>• Directory creation and deletion</span>
                 <br />
                 <span>
-                  Supporting primitives for file/directory manipulation.
+                  • Supporting primitives for file/directory manipulation.
                 </span>
                 <br />
-                <span>Mapping files to disks (secondary storage).</span>
+                <span>• Mapping files to disks (secondary storage).</span>
                 <br />
-                <span>Backup files on archival media (tapes).</span>
+                <span>• Backup files on archival media (tapes).</span>
               </span>
               <span class="module2-thq-text-elm129">
                 OS Task: File System Management
@@ -1195,32 +1195,32 @@
             <div class="module2-thq-os-task-protectionand-security-elm">
               <span class="module2-thq-text-elm109">
                 <span>
-                  Protection mechanisms control access of programs and processes
+                  • Protection mechanisms control access of programs and processes
                   to user and system resources.
                 </span>
                 <br />
                 <span>
-                  Protect the user from himself, the user from other users, the
+                  • Protect the user from himself, the user from other users, the
                   system from users.
                 </span>
                 <br />
-                <span>Protection mechanisms must:</span>
+                <span>• Protection mechanisms must:</span>
                 <br />
                 <span>
-                  Distinguish between authorized and unauthorized use.
+                  • Distinguish between authorized and unauthorized use.
                 </span>
                 <br />
-                <span>Specify access controls to be imposed on use.</span>
+                <span>• Specify access controls to be imposed on use.</span>
                 <br />
                 <span>
-                  Provide mechanisms for enforcement of access control.
+                  • Provide mechanisms for enforcement of access control.
                 </span>
                 <br />
                 <span>
-                  Security mechanisms provide trust in system and privacy
+                  • Security mechanisms provide trust in system and privacy
                 </span>
                 <br />
-                <span>authentication, certification, encryption etc.</span>
+                <span>• authentication, certification, encryption etc.</span>
               </span>
               <span class="module2-thq-text-elm118">
                 <span>OS Task: Protection and Security</span>
@@ -1230,26 +1230,26 @@
 
             <div class="module2-thq-o-snetworking-elm">
               <span class="module2-thq-text-elm100">
-                <span>Connecting processors in a distributed system</span>
+                <span>• Connecting processors in a distributed system</span>
                 <br />
                 <span>
-                  A Distributed System is a collection of processors that do not
+                  • A Distributed System is a collection of processors that do not
                   share memory or a clock.
                 </span>
                 <br />
                 <span>
-                  Processors are connected via a communication network.
+                  • Processors are connected via a communication network.
                 </span>
                 <br />
                 <br />
-                <span>Advantages:</span>
+                <span>• Advantages:</span>
                 <br />
-                <span>Allows users and system to exchange information</span>
+                <span>• Allows users and system to exchange information</span>
                 <br />
-                <span>provide computational speedup</span>
+                <span>• provide computational speedup</span>
                 <br />
                 <span>
-                  increased reliability and availability of information
+                  • increased reliability and availability of information
                 </span>
                 <br />
               </span>
