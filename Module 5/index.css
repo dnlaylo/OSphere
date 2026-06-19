@@ -1441,7 +1441,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -1675,7 +1675,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -1707,39 +1707,39 @@
   }
    
   .module5-thq-text-elm297 {
-    top: 85px;
-    left: 57px;
-    color: rgba(63, 36, 55, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm298 {
-    top: 13px;
-    left: 37px;
-    color: rgba(89, 52, 77, 1);
-    width: 348px;
-    height: auto;
-    position: absolute;
-    font-size: 64px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
+  top: 85px;
+  left: 57px;
+  color: rgba(63, 36, 55, 1);
+  width: 502px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: normal; 
+  text-align: left;
+  font-family: Alexandria;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+ 
+.module5-thq-text-elm298 {
+  top: 13px;
+  left: 37px;
+  color: rgba(89, 52, 77, 1);
+  width: 348px;
+  height: auto;
+  position: absolute;
+  font-size: 64px;
+  box-shadow: none !important; 
+  font-style: normal; 
+  text-align: center;
+  font-family: Alexandria;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
    
   .module5-thq-navigation-bar-elm {
     top: 0px;
