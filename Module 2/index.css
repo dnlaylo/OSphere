@@ -71,28 +71,81 @@
     top: 15434px;
     left: 46px;
     width: 1184px;
-    height: 394px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
   }
    
-  .module2-thq-text-elm100 {
-    top: 79px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
+ .module2-thq-text-elm100 {
+  top: 25px;
+  left: 31px;
+  color: rgba(255, 255, 255, 1);
+  width: 531px;
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: normal; /* Fixed font crash */
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.5; /* Adds uniform spacing inside the box */
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.module2-thq-text-elm101 {
+  top: 25px;
+  left: 31px;
+  color: rgba(255, 255, 255, 1);
+  width: 531px; /* Uniform width */
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: normal; /* Fixed font crash */
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.5;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.module2-thq-text-elm104 {
+  top: 25px;
+  left: 31px;
+  color: rgba(255, 255, 255, 1);
+  width: 531px; /* Uniform width */
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: normal; /* Fixed font crash */
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.5;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.module2-thq-text-elm107 {
+  top: 25px;
+  left: 31px;
+  color: rgba(255, 255, 255, 1);
+  width: 531px; /* Uniform width */
+  height: auto;
+  position: absolute;
+  font-size: 16px;
+  font-style: normal; /* Fixed font crash */
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: 1.5;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
    
   .module2-thq-text-elm108 {
     color: rgba(255, 255, 255, 1);
@@ -100,7 +153,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -114,7 +167,7 @@
     top: 15039px;
     left: 46px;
     width: 1184px;
-    height: 351px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -143,7 +196,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -157,7 +210,7 @@
     top: 14638px;
     left: 46px;
     width: 1184px;
-    height: 351px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -186,7 +239,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -200,7 +253,7 @@
     top: 14237px;
     left: 46px;
     width: 1184px;
-    height: 351px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -229,7 +282,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -243,7 +296,7 @@
     top: 13863px;
     left: 45px;
     width: 1185px;
-    height: 321px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -273,7 +326,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -287,7 +340,7 @@
     top: 13408px;
     left: 45px;
     width: 1184px;
-    height: 390px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -336,7 +389,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -350,7 +403,7 @@
     top: 13058px;
     left: 56px;
     width: 1173px;
-    height: 280px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -379,7 +432,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -401,7 +454,7 @@
     top: 12424px;
     left: 56px;
     width: 1173px;
-    height: 561px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -478,7 +531,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -492,7 +545,7 @@
     top: 11865px;
     left: 50px;
     width: 1173px;
-    height: 475.9996337890625px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -522,7 +575,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -552,7 +605,7 @@
     top: 11576px;
     left: 50px;
     width: 1139px;
-    height: 242px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -582,7 +635,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -596,7 +649,7 @@
     top: 11315px;
     left: 56px;
     width: 1181px;
-    height: 217px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -625,7 +678,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -647,7 +700,7 @@
     top: 10904px;
     left: 56px;
     width: 1139px;
-    height: 349px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -676,7 +729,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -690,7 +743,7 @@
     top: 10548px;
     left: 56px;
     width: 1180px;
-    height: 290px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -719,7 +772,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -733,7 +786,7 @@
     top: 10145px;
     left: 56px;
     width: 1180px;
-    height: 348px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -762,7 +815,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -776,7 +829,7 @@
     top: 9771px;
     left: 56px;
     width: 1180px;
-    height: 317px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -805,7 +858,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -819,7 +872,7 @@
     top: 9312px;
     left: 56px;
     width: 1139px;
-    height: 396px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -848,7 +901,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -862,7 +915,7 @@
     top: 8757px;
     left: 56px;
     width: 1082px;
-    height: 492px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -892,7 +945,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -906,7 +959,7 @@
     top: 8418px;
     left: 57px;
     width: 1255px;
-    height: 273px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -935,7 +988,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -949,7 +1002,7 @@
     top: 8217px;
     left: 57px;
     width: 1255px;
-    height: 150px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -986,7 +1039,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1000,7 +1053,7 @@
     top: 7853px;
     left: 57px;
     width: 1255px;
-    height: 309px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1033,7 +1086,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1047,7 +1100,7 @@
     top: 6887px;
     left: 22px;
     width: 1217px;
-    height: 916.999755859375px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1077,7 +1130,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1107,7 +1160,7 @@
     top: 6664px;
     left: 22px;
     width: 1232px;
-    height: 174px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1137,7 +1190,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1151,7 +1204,7 @@
     top: 5615px;
     left: 1px;
     width: 1277px;
-    height: 994px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1225,7 +1278,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1255,7 +1308,7 @@
     top: 4129px;
     left: 1px;
     width: 1277px;
-    height: 1678px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1397,7 +1450,7 @@
     top: 0px;
     left: 20px;
     width: 1257px;
-    height: 343px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1410,7 +1463,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1472,7 +1525,7 @@
     top: 3786px;
     left: 21px;
     width: 1181px;
-    height: 275px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1522,7 +1575,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1536,7 +1589,7 @@
     top: 3446px;
     left: 21px;
     width: 1232px;
-    height: 359px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1550,7 +1603,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1588,7 +1641,7 @@
     top: 2944px;
     left: 29px;
     width: 1292px;
-    height: 444px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1633,7 +1686,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1647,7 +1700,7 @@
     top: 2638px;
     left: 21px;
     width: 1292px;
-    height: 223px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1680,7 +1733,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1694,7 +1747,7 @@
     top: 2200px;
     left: 21px;
     width: 1292px;
-    height: 376px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1707,7 +1760,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1737,7 +1790,7 @@
     top: 981px;
     left: 0px;
     width: 1277px;
-    height: 1164px;
+    height: auto;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -1760,7 +1813,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1907,7 +1960,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1966,7 +2019,7 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1984,7 +2037,7 @@
     display: flex;
     overflow: hidden;
     position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+
     align-items: flex-start;
     flex-shrink: 0;
     border-radius: 30px;
@@ -2017,22 +2070,22 @@
   }
    
   .module2-thq-text-elm399 {
-    top: 13px;
-    left: 56px;
-    color: rgba(73, 40, 83, 1);
-    width: 348px;
-    height: auto;
-    position: absolute;
-    font-size: 64px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
+  top: 13px;
+  left: 56px;
+  color: rgba(80, 53, 86, 1); /* Maintained your exact color choice */
+  width: 348px;
+  height: auto;
+  position: absolute;
+  font-size: 64px;
+  box-shadow: none !important; 
+  font-style: normal; 
+  text-align: left;
+  font-family: Alexandria;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
    
   .module2-thq-navigation-bar-elm {
     top: 0px;

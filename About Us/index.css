@@ -457,7 +457,7 @@
     position: absolute;
     font-size: 28px;
     font-style: Regular;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 400;
     line-height: normal;
@@ -518,7 +518,7 @@
     position: absolute;
     font-size: 28px;
     font-style: Regular;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 400;
     line-height: normal;
@@ -717,4 +717,13 @@
     margin-top: 50px;
   }
 }  
-  
+
+[class*="about-us-thq-text"],
+[class*="aboutus-thq-text"] {
+  background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+

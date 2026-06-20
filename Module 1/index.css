@@ -451,7 +451,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -593,7 +592,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -732,7 +730,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -861,7 +858,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -985,7 +981,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1028,7 +1023,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1071,7 +1065,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1086,10 +1079,11 @@
     left: 16px;
     width: 1277px;
     height: 907px;
-    display: flex;
+    display: flex-start;
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
   }
    
@@ -1153,7 +1147,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1196,7 +1189,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1239,7 +1231,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1291,7 +1282,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1335,7 +1325,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1379,7 +1368,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1398,6 +1386,7 @@
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
   }
    
@@ -1434,7 +1423,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1478,7 +1466,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1548,7 +1535,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1567,6 +1553,7 @@
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
   }
    
@@ -1631,7 +1618,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1710,7 +1696,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1729,6 +1714,7 @@
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
   }
    
@@ -1783,7 +1769,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1827,7 +1812,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1935,7 +1919,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: center;
     font-family: Alexandria;
@@ -1954,6 +1937,7 @@
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
   }
    
@@ -2025,7 +2009,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: center;
     font-family: Alexandria;
@@ -2044,6 +2027,7 @@
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
   }
    
@@ -2100,7 +2084,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: center;
     font-family: Alexandria;
@@ -2144,7 +2127,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: center;
     font-family: Alexandria;
@@ -2197,7 +2179,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: center;
     font-family: Alexandria;
@@ -2215,7 +2196,6 @@
   display: flex;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   align-items: flex-start;
   flex-shrink: 0;
   border-radius: 30px;
@@ -2238,6 +2218,7 @@
   height: auto;
   position: absolute;
   font-size: 64px;
+  box-shadow: none; 
   font-style: normal;
   font-family: Alexandria;
   font-weight: 600;
@@ -2262,16 +2243,16 @@
   text-decoration: none;
 }
     
-  .module1-thq-bg-elm {
-    z-index: -100 !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: max-content;
+.module1-thq-bg-elm {
+  z-index: -100 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
 }
 
 .module1-thq-module1-elm {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
