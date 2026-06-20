@@ -274,21 +274,21 @@
             <div class="module6-thq-benefits-elm">
               <span class="module6-thq-text-elm324">
                 <span>
-                  Enables execution of programs larger than physical memory.
+                  • Enables execution of programs larger than physical memory.
                 </span>
                 <br />
-                <span>Increases the degree of multiprogramming.</span>
+                <span>• Increases the degree of multiprogramming.</span>
                 <br />
-                <span>Improves overall CPU utilization.</span>
+                <span>• Improves overall CPU utilization.</span>
                 <br />
                 <span>
-                  Reduces memory waste by loading only required pages.
+                  • Reduces memory waste by loading only required pages.
                 </span>
                 <br />
-                <span>Supports memory sharing among processes.</span>
+                <span>• Supports memory sharing among processes.</span>
                 <br />
                 <span>
-                  Simplifies process creation through mechanisms such as
+                  • Simplifies process creation through mechanisms such as
                   copy-on-write and shared pages.
                 </span>
               </span>
@@ -312,26 +312,26 @@
                 &nbsp;Virtual Memory Implementation:
               </span>
               <span class="module6-thq-text-elm315">
-                <span class="module6-thq-text-elm316">Demand Paging</span>
+                <span class="module6-thq-text-elm316">• Demand Paging</span>
                 <br />
                 <span class="module6-thq-text-elm317">
-                  Memory is divided into pages, and pages are loaded into memory
+                  • Memory is divided into pages, and pages are loaded into memory
                   only when they are referenced.
                 </span>
                 <br />
                 <br />
-                <span class="module6-thq-text-elm318">Demand Segmentation</span>
+                <span class="module6-thq-text-elm318">• Demand Segmentation</span>
                 <br />
                 <span class="module6-thq-text-elm319">
-                  Segments are brought into memory only when required by a
+                  • Segments are brought into memory only when required by a
                   process.
                 </span>
                 <br />
                 <br />
-                <span class="module6-thq-text-elm320">Paged Segmentation</span>
+                <span class="module6-thq-text-elm320">• Paged Segmentation</span>
                 <br />
                 <span>
-                  Combines the advantages of segmentation and paging by dividing
+                  • Combines the advantages of segmentation and paging by dividing
                   segments into pages. The primary implementation discussed in
                   this module is Demand Paging.
                 </span>
@@ -398,9 +398,9 @@
 
             <div class="module6-thq-stepsin-demand-paging-elm">
               <span class="module6-thq-text-elm280">
-                <span class="module6-thq-text-elm281">Page Selection</span>
+                <span class="module6-thq-text-elm281">1. Page Selection</span>
                 <span class="module6-thq-text-elm282">
-                    When a process is to be swapped into memory, the pager
+                    When a process is to be swapped into memory, the pager
                   predicts which pages are likely to be used before the process
                   is swapped out again.
                 </span>
@@ -408,10 +408,10 @@
                 <span class="module6-thq-text-elm283"></span>
                 <br />
                 <span class="module6-thq-text-elm284">
-                  Loading Required Pages
+                  2. Loading Required Pages
                 </span>
                 <span class="module6-thq-text-elm285">
-                    The pager loads only the necessary pages into physical
+                    The pager loads only the necessary pages into physical
                   memory, reducing swap time and minimizing the amount of
                   physical memory required for process execution.
                 </span>
@@ -450,15 +450,15 @@
                 <br />
                 <span>An invalid bit indicates either:</span>
                 <br />
-                <span>The page is not currently resident in memory, or</span>
+                <span>1. The page is not currently resident in memory, or</span>
                 <br />
                 <span>
-                  The referenced address is not part of the process's legal
+                  2. The referenced address is not part of the process's legal
                   address space.
                 </span>
                 <br />
                 <span>
-                  An access to an invalid page entry triggers a page-fault
+                  3. An access to an invalid page entry triggers a page-fault
                   exception.
                 </span>
                 <br />
@@ -512,27 +512,27 @@
                 <span>When a page fault occurs:</span>
                 <br />
                 <br />
-                <span>Hardware detects the invalid page-table entry.</span>
+                <span>• Hardware detects the invalid page-table entry.</span>
                 <br />
-                <span>Control transfers to the operating system.</span>
+                <span>• Control transfers to the operating system.</span>
                 <br />
                 <span>
-                  The operating system verifies that the memory reference is
+                  • The operating system verifies that the memory reference is
                   valid.
                 </span>
                 <br />
-                <span>The required page is located on backing storage.</span>
+                <span>• The required page is located on backing storage.</span>
                 <br />
                 <span>
-                  A free frame is obtained, or a victim page is selected if no
+                  • A free frame is obtained, or a victim page is selected if no
                   free frame exists.
                 </span>
                 <br />
-                <span>The required page is loaded into memory.</span>
+                <span>• The required page is loaded into memory.</span>
                 <br />
-                <span>The page table is updated.</span>
+                <span>• The page table is updated.</span>
                 <br />
-                <span>The interrupted instruction is restarted.</span>
+                <span>• The interrupted instruction is restarted.</span>
               </span>
               <span class="module6-thq-text-elm272">
                 Page Fault Handling Procedure
@@ -599,11 +599,11 @@
                 <br />
                 <span>The page-fault rate (p) is defined as:</span>
                 <br />
-                <span>0 ≤ p ≤ 1</span>
+                <span>• 0 ≤ p ≤ 1</span>
                 <br />
-                <span>p = 0: No page faults occur.</span>
+                <span>• p = 0: No page faults occur.</span>
                 <br />
-                <span>p = 1: Every memory reference causes a page fault.</span>
+                <span>• p = 1: Every memory reference causes a page fault.</span>
                 <br />
                 <br />
                 <span>The EAT is calculated as:</span>
@@ -614,21 +614,21 @@
                 <br />
                 <span>where:</span>
                 <br />
-                <span>p = page-fault rate</span>
+                <span>• p = page-fault rate</span>
                 <br />
-                <span>ma = memory access time</span>
+                <span>• ma = memory access time</span>
                 <br />
                 <br />
                 <span>The page fault service time includes:</span>
                 <br />
                 <br />
-                <span>Page fault handling overhead</span>
+                <span>• Page fault handling overhead</span>
                 <br />
-                <span>Page replacement (swap out, if required)</span>
+                <span>• Page replacement (swap out, if required)</span>
                 <br />
-                <span>Page loading (swap in)</span>
+                <span>• Page loading (swap in)</span>
                 <br />
-                <span>Process restart overhead</span>
+                <span>•Process restart overhead</span>
                 <br />
                 <br />
                 <span>
@@ -673,46 +673,46 @@
                 <br />
                 <br />
                 <span class="module6-thq-text-elm222">
-                  Terminate the Process
+                  1. Terminate the Process
                 </span>
                 <br />
                 <span class="module6-thq-text-elm223">
-                  Stop the process that caused the page fault.
+                  • Stop the process that caused the page fault.
                 </span>
                 <br />
                 <span class="module6-thq-text-elm224">
-                  This option is rarely used because it defeats the purpose of
+                  • This option is rarely used because it defeats the purpose of
                   demand paging, which aims to improve CPU utilization and
                   throughput.
                 </span>
                 <br />
                 <span class="module6-thq-text-elm225"></span>
                 <br />
-                <span class="module6-thq-text-elm226">Swap Out a Process</span>
+                <span class="module6-thq-text-elm226">2. Swap Out a Process</span>
                 <br />
                 <span class="module6-thq-text-elm227">
-                  Temporarily move an entire process to secondary storage.
+                  • Temporarily move an entire process to secondary storage.
                 </span>
                 <br />
                 <span class="module6-thq-text-elm228">
-                  This frees all frames used by the process but reduces the
+                  • This frees all frames used by the process but reduces the
                   degree of multiprogramming.
                 </span>
                 <br />
                 <br />
                 <span class="module6-thq-text-elm229">
-                  Perform Page Replacement
+                  3. Perform Page Replacement
                 </span>
                 <br />
-                <span>Select a victim page currently residing in memory.</span>
+                <span>• Select a victim page currently residing in memory.</span>
                 <br />
                 <span>
-                  Remove the victim page and load the required page into the
+                  • Remove the victim page and load the required page into the
                   freed frame.
                 </span>
                 <br />
                 <span>
-                  This is the most common approach in modern operating systems.
+                  • This is the most common approach in modern operating systems.
                 </span>
               </span>
               <span class="module6-thq-text-elm233">Page Replacement</span>
@@ -721,29 +721,29 @@
             <div class="module6-thq-how-page-replacementworks-elm">
               <span class="module6-thq-text-elm206">
                 <span>
-                  Locate the required page in secondary storage (backing store).
+                  1. Locate the required page in secondary storage (backing store).
                 </span>
                 <br />
-                <span>Check for a free frame.</span>
+                <span>2. Check for a free frame.</span>
                 <br />
-                <span>If a free frame exists, load the page into it.</span>
+                <span>• If a free frame exists, load the page into it.</span>
                 <br />
                 <span>
-                  If no free frame exists, use a page replacement algorithm to
+                  • If no free frame exists, use a page replacement algorithm to
                   select a victim page.
                 </span>
                 <br />
                 <span>
-                  If the victim page has been modified, write it back to disk
+                  3. If the victim page has been modified, write it back to disk
                   and update the page table.
                 </span>
                 <br />
                 <span>
-                  Load the required page into the freed frame and update the
+                  4. Load the required page into the freed frame and update the
                   page table.
                 </span>
                 <br />
-                <span>Restart the interrupted process.</span>
+                <span>5. Restart the interrupted process.</span>
               </span>
               <span class="module6-thq-text-elm214">
                 How Page Replacement Works
@@ -766,13 +766,13 @@
               <span class="module6-thq-text-elm196">
                 <span>A page replacement algorithm aims to:</span>
                 <br />
-                <span>Minimize page faults</span>
+                <span>• Minimize page faults</span>
                 <br />
-                <span>Maximize memory utilization</span>
+                <span>• Maximize memory utilization</span>
                 <br />
-                <span>Reduce disk I/O operations</span>
+                <span>• Reduce disk I/O operations</span>
                 <br />
-                <span>Improve overall system performance</span>
+                <span>• Improve overall system performance</span>
               </span>
               <span class="module6-thq-text-elm202">
                 Objectives of Page Replacement
@@ -785,12 +785,12 @@
                 <br />
                 <br />
                 <span>
-                  A page replacement algorithm to determine which page should be
+                  • A page replacement algorithm to determine which page should be
                   replaced.
                 </span>
                 <br />
                 <span>
-                  A frame allocation algorithm to determine how many memory
+                  • A frame allocation algorithm to determine how many memory
                   frames are assigned to each process.
                 </span>
               </span>
@@ -840,15 +840,15 @@
                 <span>Evaluation typically involves the following steps:</span>
                 <br />
                 <br />
-                <span>Select a reference string.</span>
+                <span>1. Select a reference string.</span>
                 <br />
-                <span>Assume a fixed number of available memory frames.</span>
+                <span>2. Assume a fixed number of available memory frames.</span>
                 <br />
                 <span>
-                  Apply the page replacement algorithm to the reference string.
+                  3. Apply the page replacement algorithm to the reference string.
                 </span>
                 <br />
-                <span>Count the total number of page faults generated.</span>
+                <span>4.Count the total number of page faults generated.</span>
                 <br />
                 <br />
                 <span>
@@ -875,32 +875,32 @@
                 <br />
                 <br />
                 <span>
-                  Initially, all frames are empty. When pages 1, 3, and 0 are
+                  • Initially, all frames are empty. When pages 1, 3, and 0 are
                   referenced, they are loaded into the available frames,
                   resulting in 3 page faults.
                 </span>
                 <br />
                 <span>
-                  When page 3 is referenced next, it is already present in
+                  • When page 3 is referenced next, it is already present in
                   memory, resulting in a hit and no page fault.
                 </span>
                 <br />
                 <span>
-                  When page 5 is referenced, it is not present in memory.
+                  • When page 5 is referenced, it is not present in memory.
                   Following the FIFO algorithm, the oldest page (1) is removed
                   from the top frame, and the remaining pages shift up, allowing
                   page 5 to be loaded into memory, resulting in 1 page fault.
                 </span>
                 <br />
                 <span>
-                  When page 6 is referenced, it is also not present in memory.
+                  • When page 6 is referenced, it is also not present in memory.
                   The next oldest page (3) is removed from the top frame as the
                   pages shift up, and page 6 is loaded into memory, resulting in
                   1 page fault.
                 </span>
                 <br />
                 <span>
-                  Finally, when page 3 is referenced again, it is no longer
+                  • Finally, when page 3 is referenced again, it is no longer
                   present in memory. Following FIFO, the oldest page currently
                   in memory (0) is removed from the top frame, and page 3 is
                   loaded at the bottom, resulting in 1 page fault.
@@ -961,12 +961,12 @@
               </span>
               <span class="module6-thq-text-elm157">
                 <span class="module6-thq-text-elm158">
-                  Initially, all slots are empty, so when 7 0 1 2 are allocated
+                  • Initially, all slots are empty, so when 7 0 1 2 are allocated
                   to the empty slots ---&gt; 4 Page faults
                 </span>
                 <br />
                 <span class="module6-thq-text-elm159">
-                  The next reference, 0, is already present in memory and
+                  • The next reference, 0, is already present in memory and
                   results in a hit. When page 3 is referenced, page 7 is
                   selected for replacement because it will not be used again in
                   the remaining reference string, resulting in 1 page
@@ -974,7 +974,7 @@
                 </span>
                 <br />
                 <span class="module6-thq-text-elm160">
-                  The next reference, 0, is already present in memory and
+                  • The next reference, 0, is already present in memory and
                   results in a hit. When page 4 is referenced, page 1 is
                   selected for replacement because it will not be used again in
                   the remaining reference string, resulting in 1 page
@@ -1036,33 +1036,33 @@
               </span>
               <span class="module6-thq-text-elm144">
                 <span>
-                  Initially, all four frames are empty. The first four page
+                  • Initially, all four frames are empty. The first four page
                   references (7, 0, 1, and 2) are loaded into the available
                   frames, resulting in 4 page faults.
                 </span>
                 <br />
                 <span>
-                  The next reference, 0, is already present in memory, resulting
+                  • The next reference, 0, is already present in memory, resulting
                   in a hit.
                 </span>
                 <br />
                 <span>
-                  When page 3 is referenced, page 7 is the least recently used
+                  • When page 3 is referenced, page 7 is the least recently used
                   page and is therefore replaced, resulting in 1 page fault.
                 </span>
                 <br />
                 <span>
-                  The next reference, 0, is already present in memory and
+                  • The next reference, 0, is already present in memory and
                   results in a hit.
                 </span>
                 <br />
                 <span>
-                  When page 4 is referenced, page 1 is the least recently used
+                  • When page 4 is referenced, page 1 is the least recently used
                   page and is replaced, resulting in 1 page fault.
                 </span>
                 <br />
                 <span>
-                  The remaining references (2, 3, 0, 3, 2, 3) are already
+                  • The remaining references (2, 3, 0, 3, 2, 3) are already
                   present in memory and therefore result in hits.
                 </span>
                 <br />
@@ -1080,18 +1080,18 @@
               />
               <span class="module6-thq-text-elm125">
                 <span>
-                  Initially, all four frames are empty. The first four page
+                  • Initially, all four frames are empty. The first four page
                   references (7, 0, 1, and 2) are loaded into memory, resulting
                   in 4 page faults.
                 </span>
                 <br />
                 <span>
-                  The next reference, 0, is already present in memory, resulting
+                  • The next reference, 0, is already present in memory, resulting
                   in a hit.
                 </span>
                 <br />
                 <span>
-                  When page 3 is referenced, no free frame is available. The
+                  • When page 3 is referenced, no free frame is available. The
                   clock pointer begins scanning the pages. Pages whose reference
                   bit is 1 are given a second chance and their reference bits
                   are cleared to 0. The first page encountered with a reference
@@ -1100,12 +1100,12 @@
                 </span>
                 <br />
                 <span>
-                  The next reference, 0, is already present in memory and
+                  • The next reference, 0, is already present in memory and
                   results in a hit.
                 </span>
                 <br />
                 <span>
-                  When page 4 is referenced, the clock pointer again scans the
+                  • When page 4 is referenced, the clock pointer again scans the
                   pages starting from its current position. Page 0 (reference
                   bit = 1) is given a second chance and its bit is cleared to 0.
                   The pointer moves forward, and the first page encountered with
@@ -1115,7 +1115,7 @@
                 </span>
                 <br />
                 <span>
-                  The remaining references (2, 3, 0, 3, 2, 3) are already
+                  • The remaining references (2, 3, 0, 3, 2, 3) are already
                   present in memory and therefore result in hits.
                 </span>
                 <br />
@@ -1191,18 +1191,18 @@
               />
               <span class="module6-thq-text-elm115">
                 <span>
-                  Initially, all four frames are empty. The first four page
+                  • Initially, all four frames are empty. The first four page
                   references (7, 0, 1, and 2) are loaded into memory, resulting
                   in 4 page faults.
                 </span>
                 <br />
                 <span>
-                  The next reference, 0, is already present in memory. Its
+                  • The next reference, 0, is already present in memory. Its
                   reference count is increased, resulting in a hit.
                 </span>
                 <br />
                 <span>
-                  When page 3 is referenced, all frames are occupied. Under the
+                  • When page 3 is referenced, all frames are occupied. Under the
                   LFU policy, the page with the smallest reference count is
                   selected for replacement. Since page 7 has the lowest
                   reference count, it is replaced by page 3, resulting in 1 page
@@ -1210,12 +1210,12 @@
                 </span>
                 <br />
                 <span>
-                  The next reference, 0, is already present in memory and
+                  • The next reference, 0, is already present in memory and
                   therefore results in a hit.
                 </span>
                 <br />
                 <span>
-                  When page 4 is referenced, pages 1, 2, and 3 have the same
+                  • When page 4 is referenced, pages 1, 2, and 3 have the same
                   lowest reference count. Because of this tie, FIFO (First-In,
                   First-Out) is used as the tie-breaking rule. Among these
                   pages, page 1 is the oldest and is therefore selected for
@@ -1224,13 +1224,13 @@
                 </span>
                 <br />
                 <span>
-                  The remaining references (2, 3, 0, 3, 2, and 3) are already
+                  • The remaining references (2, 3, 0, 3, 2, and 3) are already
                   present in memory. Their reference counters are updated
                   accordingly, and all of these references result in hits.
                 </span>
                 <br />
                 <span>
-                  Therefore, the total number of page faults generated by the
+                  • Therefore, the total number of page faults generated by the
                   LFU page replacement algorithm with FIFO tie-breaking is:
                 </span>
                 <br />
@@ -1268,24 +1268,24 @@
                 <span></span>
                 <br />
                 <span>
-                  The operating system cannot allocate more frames than the
+                  • The operating system cannot allocate more frames than the
                   total number of frames available in physical memory.
                 </span>
                 <br />
                 <span>
-                  The number of frames assigned to a process directly affects
+                  • The number of frames assigned to a process directly affects
                   its performance. Allocating fewer frames generally increases
                   the page-fault rate.
                 </span>
                 <br />
                 <span>
-                  The minimum number of frames required by a process is
+                  • The minimum number of frames required by a process is
                   determined by the system architecture and instruction
                   requirements.
                 </span>
                 <br />
                 <span>
-                  The maximum number of frames that can be allocated depends on
+                  • The maximum number of frames that can be allocated depends on
                   available physical memory and the needs of other processes.
                 </span>
                 <br />
