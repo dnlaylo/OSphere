@@ -130,7 +130,7 @@
             <div class="module4-thq-the-core-archiecture-elm">
               <span class="module4-thq-text-elm269">The Core Architecture</span>
               <span class="module4-thq-text-elm270">
-                <span class="module4-thq-text-elm271">The Ready Queue</span>
+                <span class="module4-thq-text-elm271">• The Ready Queue</span>
                 <span class="module4-thq-text-elm272">
                   : As a process is loaded into the main memory, it is kept in
                   the ready queue. The ready queue contains the set of all
@@ -141,7 +141,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm273">
-                  Short-term Scheduler (CPU Scheduler)
+                  • Short-term Scheduler (CPU Scheduler)
                 </span>
                 <span class="module4-thq-text-elm274">
                   : A system module that selects from among the processes in
@@ -150,14 +150,14 @@
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm275">Dispatcher</span>
+                <span class="module4-thq-text-elm275">• Dispatcher</span>
                 <span class="module4-thq-text-elm276">
                   : A specific module that gives control of the CPU to the
                   process selected by the short-term scheduler.
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm277">Dispatch Latency</span>
+                <span class="module4-thq-text-elm277">• Dispatch Latency</span>
                 <span class="module4-thq-text-elm278">
                   : The total time it takes for the dispatcher to stop one
                   process from running and start another one executing.
@@ -165,7 +165,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm279">
-                  Objective of Multiprogramming:
+                  • Objective of Multiprogramming:
                 </span>
                 <span class="module4-thq-text-elm280">
                   To achieve maximum CPU utilization by always having some
@@ -173,7 +173,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm281">CPU Scheduling</span>
+                <span class="module4-thq-text-elm281">• CPU Scheduling</span>
                 <span>
                   : The fundamental basis of multiprogrammed operating systems.
                   It deals with the problem of deciding which of the processes
@@ -185,26 +185,26 @@
             <div class="module4-thq-the-process-context-switch-breakdown-elm">
               <span class="module4-thq-text-elm260">
                 <span class="module4-thq-text-elm261">
-                  When the Dispatcher gives control of the CPU to a selected
+                  • When the Dispatcher gives control of the CPU to a selected
                   process, it executes the following sequential steps:
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm262">Switch Context:</span>
+                <span class="module4-thq-text-elm262">a. Switch Context:</span>
                 <span class="module4-thq-text-elm263">
                   Saves the state (context) of the currently running process and
                   loads the saved state of the new process.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm264">
-                  Switch to User Mode:
+                  b. Switch to User Mode:
                 </span>
                 <span class="module4-thq-text-elm265">
                   Flips the CPU execution mode from kernel/privileged mode to
                   user mode.
                 </span>
                 <br />
-                <span class="module4-thq-text-elm266">Jump to Location:</span>
+                <span class="module4-thq-text-elm266">c. Jump to Location:</span>
                 <span>
                   Jumps to the proper location in the target user program to
                   restart or begin execution of that program.
@@ -221,7 +221,7 @@
                 The CPU-I/O Burst Cycle
               </span>
               <span class="module4-thq-text-elm246">
-                <span class="module4-thq-text-elm247">Concept Definition:</span>
+                <span class="module4-thq-text-elm247">• Concept Definition:</span>
                 <span class="module4-thq-text-elm248">
                   Process execution consists of an alternating cycle of CPU
                   execution (computations) and I/O wait (input/output
@@ -229,7 +229,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm249">CPU Burst:</span>
+                <span class="module4-thq-text-elm249">• CPU Burst:</span>
                 <span class="module4-thq-text-elm250">
                   The time period where the process is actively utilizing the
                   CPU (e.g., executing instructions like load, store, add,
@@ -237,7 +237,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm251">I/O Burst:</span>
+                <span class="module4-thq-text-elm251">• I/O Burst:</span>
                 <span class="module4-thq-text-elm252">
                   The time period where the process is blocked, waiting for an
                   input/output operation to complete (e.g., reading from a file,
@@ -246,7 +246,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm253">
-                  Histogram of CPU Burst Times:
+                  • Histogram of CPU Burst Times:
                 </span>
                 <span class="module4-thq-text-elm254">
                   CPU burst durations are characteristically hyperexponential.
@@ -256,18 +256,18 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm255">
-                  Classification of Processes:
+                  • Classification of Processes:
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm256">I/O-Bound Process:</span>
+                <span class="module4-thq-text-elm256">• I/O-Bound Process:</span>
                 <span class="module4-thq-text-elm257">
                   Spends more of its time doing I/O operations than
                   computations; characterized by many short CPU bursts.
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm258">CPU-Bound Process:</span>
+                <span class="module4-thq-text-elm258">• CPU-Bound Process:</span>
                 <span>
                   Spends more of its time doing computations; characterized by a
                   few, very long CPU bursts.
@@ -286,28 +286,28 @@
                 </span>
                 <br />
                 <span class="module4-thq-text-elm236">
-                  When a process switches from the running state to the waiting
+                  1. When a process switches from the running state to the waiting
                   state (e.g., an I/O request).
                 </span>
                 <br />
                 <span class="module4-thq-text-elm237">
-                  When a process switches from the running state to the ready
+                  2. When a process switches from the running state to the ready
                   state (e.g., a timer interrupt).
                 </span>
                 <br />
                 <span class="module4-thq-text-elm238">
-                  When a process switches from the waiting state to the ready
+                  3. When a process switches from the waiting state to the ready
                   state (e.g., I/O completion).
                 </span>
                 <br />
                 <span class="module4-thq-text-elm239">
-                  When a process terminates.
+                  4. When a process terminates.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm240"></span>
                 <br />
                 <span class="module4-thq-text-elm241">
-                  Non-preemptive Scheduling (Cooperative):
+                  • Non-preemptive Scheduling (Cooperative):
                 </span>
                 <span class="module4-thq-text-elm242">
                   Scheduling that occurs only under conditions 1 and 4. There is
@@ -318,7 +318,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm243">
-                  Preemptive Scheduling:
+                  • Preemptive Scheduling:
                 </span>
                 <span>
                   Scheduling that occurs under conditions 2 and 3. The operating
@@ -334,70 +334,70 @@
                 Scheduling Performance Criteria
               </span>
               <span class="module4-thq-text-elm213">
-                <span class="module4-thq-text-elm214">CPU Utilization:</span>
+                <span class="module4-thq-text-elm214">1. CPU Utilization:</span>
                 <span class="module4-thq-text-elm215">
                   The percentage or fraction of time that the CPU is actively
                   doing useful work.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm216">
-                  Target: Maximize CPU utilization.
+                  • Target: Maximize CPU utilization.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm217"></span>
                 <br />
-                <span class="module4-thq-text-elm218">Throughput:</span>
+                <span class="module4-thq-text-elm218">2. Throughput:</span>
                 <span class="module4-thq-text-elm219">
                   The absolute number of processes that are fully completed per
                   unit of time.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm220">
-                  Target: Maximize throughput.
+                  • Target: Maximize throughput.
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm221">Turnaround Time:</span>
+                <span class="module4-thq-text-elm221">3. Turnaround Time:</span>
                 <span class="module4-thq-text-elm222">
                   The entire time interval spanning from the exact moment a
                   process is submitted to the moment of its complete completion.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm223">
-                  Mathematical Formula: Turnaround Time = Finish Time - Arrival
+                  • Mathematical Formula: Turnaround Time = Finish Time - Arrival
                   Time
                 </span>
                 <br />
                 <span class="module4-thq-text-elm224">
-                  Target: Minimize turnaround time.
+                  • Target: Minimize turnaround time.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm225"></span>
                 <br />
-                <span class="module4-thq-text-elm226">Waiting Time:</span>
+                <span class="module4-thq-text-elm226">4. Waiting Time:</span>
                 <span class="module4-thq-text-elm227">
                   The cumulative amount of time a process spends sitting and
                   waiting inside the ready queue.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm228">
-                  Mathematical Formula: Waiting Time = Turnaround Time - Burst
+                  • Mathematical Formula: Waiting Time = Turnaround Time - Burst
                   Time
                 </span>
                 <br />
                 <span class="module4-thq-text-elm229">
-                  Target: Minimize waiting time.
+                  • Target: Minimize waiting time.
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm230">Response Time:</span>
+                <span class="module4-thq-text-elm230">5. Response Time:</span>
                 <span>
                   The specific amount of time it takes from process submission
                   until the very first response or output begins to be produced
                   (not the time it takes to output the entire response).
                 </span>
                 <br />
-                <span>Target: Minimize response time.</span>
+                <span>• Target: Minimize response time.</span>
                 <br />
               </span>
             </div>
@@ -411,41 +411,41 @@
               </span>
               <span class="module4-thq-text-elm203">
                 <span>
-                  Definition: The core algorithm where the process that requests
+                  • Definition: The core algorithm where the process that requests
                   the CPU first is allocated the CPU first, based entirely on
                   its arrival time or when it was loaded into memory.
                 </span>
                 <br />
                 <br />
                 <span>
-                  Data Structure: Managed using a standard First-In, First-Out
+                  • Data Structure: Managed using a standard First-In, First-Out
                   (FIFO) queue.
                 </span>
                 <br />
                 <br />
                 <span>
-                  Scheme Type: Strictly Non-preemptive. Once a process gets CPU
+                  • Scheme Type: Strictly Non-preemptive. Once a process gets CPU
                   allocation, it retains it until it terminates or requests an
                   I/O operation.
                 </span>
                 <br />
                 <br />
-                <span>Key Characteristics &amp; Limitations:</span>
+                <span>• Key Characteristics &amp; Limitations:</span>
                 <br />
-                <span>Average waiting time is generally not minimal.</span>
+                <span>• Average waiting time is generally not minimal.</span>
                 <br />
                 <span>
-                  A short process may be forced to wait a very long time if a
+                  • A short process may be forced to wait a very long time if a
                   massive process arrives ahead of it.
                 </span>
                 <br />
                 <span>
-                  It inherently favors CPU-bound processes over I/O-bound
+                  • It inherently favors CPU-bound processes over I/O-bound
                   processes.
                 </span>
                 <br />
                 <span>
-                  The Convoy Effect: A major performance phenomenon where
+                  • The Convoy Effect: A major performance phenomenon where
                   multiple short processes end up stuck waiting in a long line
                   behind one massive, slow process while it holds the CPU.
                 </span>
@@ -457,7 +457,7 @@
                 Shortest-Job-First (SJF) / Shortest-Job-Next (SJN)
               </span>
               <span class="module4-thq-text-elm185">
-                <span class="module4-thq-text-elm186">Definition:</span>
+                <span class="module4-thq-text-elm186">• Definition:</span>
                 <span class="module4-thq-text-elm187">
                   An algorithm that allocates the CPU based on the length of the
                   process's next CPU burst (more accurately called "Shortest
@@ -467,7 +467,7 @@
                 <br />
                 <span class="module4-thq-text-elm188"></span>
                 <br />
-                <span class="module4-thq-text-elm189">Tie-Breaker Rule:</span>
+                <span class="module4-thq-text-elm189">• Tie-Breaker Rule:</span>
                 <span class="module4-thq-text-elm190">
                   If two processes share the exact same next CPU burst length,
                   FCFS scheduling is employed to break the tie.
@@ -475,17 +475,17 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm191">
-                  Key Performance Characteristics:
+                  • Key Performance Characteristics:
                 </span>
                 <br />
-                <span class="module4-thq-text-elm192">Advantage:</span>
+                <span class="module4-thq-text-elm192">• Advantage:</span>
                 <span class="module4-thq-text-elm193">
                   It is mathematically optimal—it guarantees the minimum
                   possible average waiting time for any given set of processes.
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm194">Disadvantage:</span>
+                <span class="module4-thq-text-elm194">• Disadvantage:</span>
                 <span class="module4-thq-text-elm195">
                   Can lead to Starvation, where longer processes may wait
                   indefinitely if a continuous stream of shorter processes keeps
@@ -494,10 +494,10 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm196">
-                  Operational Schemes (Two Variants):
+                  • Operational Schemes (Two Variants):
                 </span>
                 <br />
-                <span class="module4-thq-text-elm197">Non-preemptive SJF:</span>
+                <span class="module4-thq-text-elm197">• Non-preemptive SJF:</span>
                 <span class="module4-thq-text-elm198">
                   Once the CPU is allocated to a process, it cannot be
                   interrupted or overridden until it completely finishes its
@@ -507,7 +507,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm199">
-                  Preemptive SJF / Shortest-Remaining-Time-First (SRTF):
+                  • Preemptive SJF / Shortest-Remaining-Time-First (SRTF):
                 </span>
                 <span>
                   If a new process arrives in the ready queue with a next CPU
@@ -522,7 +522,7 @@
             <div class="module4-thq-priority-scheduling-elm">
               <span class="module4-thq-text-elm167">Priority Scheduling</span>
               <span class="module4-thq-text-elm168">
-                <span class="module4-thq-text-elm169">Definition:</span>
+                <span class="module4-thq-text-elm169">• Definition:</span>
                 <span class="module4-thq-text-elm170">
                   An algorithm where a priority value (typically an integer) is
                   explicitly associated with every process, and the CPU is
@@ -530,7 +530,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm171">Standard Rule:</span>
+                <span class="module4-thq-text-elm171">• Standard Rule:</span>
                 <span class="module4-thq-text-elm172">
                   The smallest integer value represents the highest priority
                   level.
@@ -538,7 +538,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm173">
-                  Relationship to SJF:
+                  • Relationship to SJF:
                 </span>
                 <span class="module4-thq-text-elm174">
                   SJF is simply a specific form of priority scheduling where the
@@ -548,28 +548,28 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm175">
-                  Key Issues &amp; Solutions:
+                  • Key Issues &amp; Solutions:
                 </span>
                 <br />
                 <span class="module4-thq-text-elm176">
-                  Problem - Starvation (Indefinite Blocking): Low-priority
+                  • Problem - Starvation (Indefinite Blocking): Low-priority
                   processes may sit in the queue forever and never execute if
                   higher-priority processes are constantly submitted.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm177">
-                  Solution - Aging: A technical process where the operating
+                  • Solution - Aging: A technical process where the operating
                   system gradually increases the priority level of long-waiting
                   processes as time progresses.
                 </span>
                 <br />
                 <br />
                 <span class="module4-thq-text-elm178">
-                  Operational Schemes (Two Variants):
+                  • Operational Schemes (Two Variants):
                 </span>
                 <br />
                 <span class="module4-thq-text-elm179">
-                  Nonpreemptive Priority (NPP):
+                  • Nonpreemptive Priority (NPP):
                 </span>
                 <span class="module4-thq-text-elm180">
                   The CPU is given to the job with the highest priority. If
@@ -580,7 +580,7 @@
                 <span class="module4-thq-text-elm181"></span>
                 <br />
                 <span class="module4-thq-text-elm182">
-                  Preemptive Priority (PP):
+                  • Preemptive Priority (PP):
                 </span>
                 <span>
                   If a newly arrived process features a higher priority level
@@ -593,7 +593,7 @@
 
             <div class="module4-thq-memory-protection-elm">
               <span class="module4-thq-text-elm153">
-                <span class="module4-thq-text-elm154">Definition:</span>
+                <span class="module4-thq-text-elm154">• Definition:</span>
                 <span class="module4-thq-text-elm155">
                   An algorithm designed specifically for time-sharing
                   environments. It operates similarly to FCFS, but overlays
@@ -602,7 +602,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm156">Time Quantum (q):</span>
+                <span class="module4-thq-text-elm156">• Time Quantum (q):</span>
                 <span class="module4-thq-text-elm157">
                   A small, fixed unit of CPU time (typically ranging between 10
                   to 100 milliseconds) allocated to a process at a time. No
@@ -612,7 +612,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm158">
-                  Preemption Mechanism:
+                  • Preemption Mechanism:
                 </span>
                 <span class="module4-thq-text-elm159">
                   Driven by clock interrupts generated at periodic intervals
@@ -623,7 +623,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm160">
-                  Wait-Time Guarantee:
+                  • Wait-Time Guarantee:
                 </span>
                 <span class="module4-thq-text-elm161">
                   If there are n processes in the ready queue and the time
@@ -634,17 +634,17 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm162">
-                  Performance Dependency on Quantum Size:
+                  • Performance Dependency on Quantum Size:
                 </span>
                 <br />
                 <span>
-                  If q is extremely large, RR performance degenerates and
+                  • If q is extremely large, RR performance degenerates and
                   becomes identical to FIFO/FCFS.
                 </span>
                 <br />
                 <br />
                 <span>
-                  If q is extremely small, q must still remain significantly
+                  • If q is extremely small, q must still remain significantly
                   larger than the system's context switch time. Otherwise, the
                   performance overhead from constant switching becomes
                   unsustainably high.
@@ -652,7 +652,7 @@
                 <br />
                 <br />
                 <span>
-                  Turnaround Optimization Rule:* Average turnaround time
+                  • Turnaround Optimization Rule:* Average turnaround time
                   improves if the majority of processes can fully complete their
                   next CPU burst within the span of a single time quantum.
                 </span>
@@ -662,7 +662,7 @@
 
             <div class="module4-thq-highest-response-ratio-next-scheduling-elm">
               <span class="module4-thq-text-elm140">
-                <span class="module4-thq-text-elm141">Definition:</span>
+                <span class="module4-thq-text-elm141">• Definition:</span>
                 <span class="module4-thq-text-elm142">
                   A non-preemptive scheduling algorithm where the process with
                   the highest mathematically computed response ratio is chosen
@@ -671,21 +671,21 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm143">
-                  Response Ratio Formula:
+                  • Response Ratio Formula:
                 </span>
                 <br />
                 <span class="module4-thq-text-elm144">
-                  Response Ratio = (Time Spent Waiting + Expected Service TIme)
+                  • Response Ratio = (Time Spent Waiting + Expected Service TIme)
                   / Expected Service Time
                 </span>
                 <br />
                 <span class="module4-thq-text-elm145">
-                  (Where "Expected Service Time" is equal to the next CPU burst
+                  • (Where "Expected Service Time" is equal to the next CPU burst
                   time)
                 </span>
                 <br />
                 <br />
-                <span class="module4-thq-text-elm146">Tie-Breaker Rule:</span>
+                <span class="module4-thq-text-elm146">• Tie-Breaker Rule:</span>
                 <span class="module4-thq-text-elm147">
                   If two processes compute down to an identical response ratio,
                   FCFS is utilized.
@@ -693,23 +693,23 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm148">
-                  Key Characteristics:
+                  • Key Characteristics:
                 </span>
                 <br />
                 <span>
-                  The absolute minimum possible value of a response ratio is 1
-                  (ocruns the exact moment a process enters the ready queue).
+                  • The absolute minimum possible value of a response ratio is 1
+                  (occurring the exact moment a process enters the ready queue).
                 </span>
                 <br />
                 <br />
                 <span>
-                  Shorter processes are naturally favored (since a smaller
+                  • Shorter processes are naturally favored (since a smaller
                   denominator yields a higher ratio).
                 </span>
                 <br />
                 <br />
                 <span>
-                  Longer processes are protected against starvation via aging—as
+                  • Longer processes are protected against starvation via aging—as
                   their waiting time (numerator) continuously grows over time,
                   their overall response ratio increases until they win CPU
                   allocation.
@@ -723,7 +723,7 @@
 
             <div class="module4-thq-multilevel-queue-elm">
               <span class="module4-thq-text-elm125">
-                <span class="module4-thq-text-elm126">Definition:</span>
+                <span class="module4-thq-text-elm126">• Definition:</span>
                 <span class="module4-thq-text-elm127">
                   A scheduling methodology where the ready queue is partitioned
                   into several entirely separate sub-queues based on process
@@ -733,7 +733,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm128">
-                  Independent Algorithms:
+                  • Independent Algorithms:
                 </span>
                 <span class="module4-thq-text-elm129">
                   Every sub-queue maintains its own separate scheduling
@@ -743,31 +743,31 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm130">
-                  Queue Priority Hierarchy (From Highest to Lowest Priority):
+                  • Queue Priority Hierarchy (From Highest to Lowest Priority):
                 </span>
                 <br />
-                <span class="module4-thq-text-elm131">System processes</span>
+                <span class="module4-thq-text-elm131">a. System processes</span>
                 <br />
                 <span class="module4-thq-text-elm132">
-                  Interactive processes
+                  b. Interactive processes
                 </span>
                 <br />
                 <span class="module4-thq-text-elm133">
-                  Interactive editing processes
+                  c. Interactive editing processes
                 </span>
                 <br />
-                <span class="module4-thq-text-elm134">Student processes</span>
+                <span class="module4-thq-text-elm134">d. Student processes</span>
                 <br />
-                <span class="module4-thq-text-elm135">Batch processes</span>
+                <span class="module4-thq-text-elm135">e. Batch processes</span>
                 <br />
                 <br />
                 <span class="module4-thq-text-elm136">
-                  Inter-Queue Scheduling Methods (Managing Queue Priority):
+                  • Inter-Queue Scheduling Methods (Managing Queue Priority):
                 </span>
                 <br />
                 <br />
                 <span>
-                  Fixed Priority Preemptive Scheduling: Each individual queue
+                  a. Fixed Priority Preemptive Scheduling: Each individual queue
                   holds absolute priority over lower-priority queues. No process
                   in a lower-priority queue (e.g., a batch queue) can run unless
                   all higher-priority queues are completely empty. If a
@@ -777,7 +777,7 @@
                 </span>
                 <br />
                 <span>
-                  Time Slicing: Every queue receives a statically allocated,
+                  b. Time Slicing: Every queue receives a statically allocated,
                   dedicated percentage of the total CPU time to divide among its
                   own processes (e.g., Queue 1 takes 50% of CPU time, Queue 2
                   takes 30%, and Queue 3 gets 20%).
@@ -794,7 +794,7 @@
                 Multilevel Feedback Queue (MLFQ) Scheduling
               </span>
               <span class="module4-thq-text-elm101">
-                <span class="module4-thq-text-elm102">Definition:</span>
+                <span class="module4-thq-text-elm102">• Definition:</span>
                 <span class="module4-thq-text-elm103">
                   An advanced extension of Multilevel Queues where processes are
                   not permanently assigned to a single queue. Instead, processes
@@ -806,7 +806,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm104">
-                  System Parameters (Defining an MLFQ System)
+                  • System Parameters (Defining an MLFQ System)
                 </span>
                 <span class="module4-thq-text-elm105">
                   : An MLFQ scheduler is strictly defined by five distinct
@@ -815,66 +815,66 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm106">
-                  The total number of sub-queues.
+                  • The total number of sub-queues.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm107">
-                  The specific scheduling algorithm used within each individual
+                  • The specific scheduling algorithm used within each individual
                   queue.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm108">
-                  The explicit method used to determine when to upgrade a
+                  • The explicit method used to determine when to upgrade a
                   process to a higher-priority queue (Aging).
                 </span>
                 <br />
                 <span class="module4-thq-text-elm109">
-                  The explicit method used to determine when to demote a process
+                  • The explicit method used to determine when to demote a process
                   to a lower-priority queue.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm110">
-                  The explicit method used to determine which queue a process
+                  • The explicit method used to determine which queue a process
                   will initially enter when it requires service.
                 </span>
                 <br />
                 <br />
                 <span class="module4-thq-text-elm111">
-                  The Demotion/Interruption Process (Step-by-Step Multi-Level
+                  • The Demotion/Interruption Process (Step-by-Step Multi-Level
                   Life Cycle):
                 </span>
                 <br />
                 <span class="module4-thq-text-elm112"></span>
                 <br />
                 <span class="module4-thq-text-elm113">
-                  A brand new process enters the highest-priority queue (Q0)
+                  • A brand new process enters the highest-priority queue (Q0)
                   under an FCFS structure and is allocated a small time quantum.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm114">
-                  If the process finishes its job within that time quantum, it
+                  • If the process finishes its job within that time quantum, it
                   terminates cleanly.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm115">
-                  If the quantum expires and the process has not finished, it is
+                  • If the quantum expires and the process has not finished, it is
                   preempted, demoted, and moved to the back of the next
                   lower-priority queue (Q1).
                 </span>
                 <br />
                 <span class="module4-thq-text-elm116">
-                  In Q1, the process waits until Q0 is completely empty. When it
+                  • In Q1, the process waits until Q0 is completely empty. When it
                   executes, it receives an expanded time quantum.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm117">
-                  If it still fails to complete within the Q1 quantum, it is
+                  • If it still fails to complete within the Q1 quantum, it is
                   demoted down again to a lower queue (Q2), which often operates
                   under a basic FCFS structure.
                 </span>
                 <br />
                 <span class="module4-thq-text-elm118">
-                  Preemption Rule: Lower-priority queues are processed only when
+                  • Preemption Rule: Lower-priority queues are processed only when
                   all higher-priority queues are completely empty. If a process
                   enters a higher queue, execution in the lower queue is
                   stopped.
@@ -882,18 +882,18 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm119">
-                  Key Issues &amp; Solutions:
+                  • Key Issues &amp; Solutions:
                 </span>
                 <br />
                 <span class="module4-thq-text-elm120"></span>
                 <br />
-                <span class="module4-thq-text-elm121">Problem:</span>
+                <span class="module4-thq-text-elm121">• Problem:</span>
                 <span class="module4-thq-text-elm122">
                   Starvation of long processes if I/O-bound and interactive
                   processes keep arriving continuously.
                 </span>
                 <br />
-                <span class="module4-thq-text-elm123">Solution:</span>
+                <span class="module4-thq-text-elm123">• Solution:</span>
                 <span>
                   Aging (processes waiting too long in a low-priority queue can
                   be dynamically moved to a higher-priority queue).
