@@ -87,7 +87,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -101,7 +101,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -141,7 +140,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -157,7 +156,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -186,7 +184,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -201,7 +199,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -240,7 +237,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -264,7 +261,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -281,7 +277,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -336,7 +331,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -360,7 +355,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -377,7 +371,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -432,7 +425,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -456,7 +449,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -473,7 +465,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -528,7 +519,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -596,7 +586,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -625,7 +614,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -642,7 +631,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -657,7 +646,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -697,7 +685,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -711,7 +699,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -738,7 +725,7 @@
     position: absolute;
     font-size: 16px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -765,7 +752,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -780,7 +767,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -807,7 +793,7 @@
     position: absolute;
     font-size: 16px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -821,7 +807,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -861,7 +846,7 @@
     position: absolute;
     font-size: 24px;
     font-style: Regular;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 400;
     line-height: normal;
@@ -901,7 +886,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -939,7 +923,7 @@
     position: absolute;
     font-size: 16px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -964,9 +948,9 @@
     position: absolute;
     font-size: 24px;
     font-style: Regular;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
-    font-weight: 400;
+    font-weight: 200;
     line-height: normal;
     font-stretch: normal;
     text-decoration: none;
@@ -1000,7 +984,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1027,7 +1010,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1046,7 +1028,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -1074,7 +1056,7 @@
     position: absolute;
     font-size: 16px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -1099,7 +1081,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -1113,7 +1095,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1143,7 +1124,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -1157,7 +1138,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: center;
     font-family: Alexandria;
