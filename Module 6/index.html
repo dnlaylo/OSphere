@@ -8,7 +8,7 @@
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button; appearance: button; color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -330,7 +330,7 @@
                 <br />
                 <span class="module6-thq-text-elm320">• Paged Segmentation</span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • Combines the advantages of segmentation and paging by dividing
                   segments into pages. The primary implementation discussed in
                   this module is Demand Paging.
@@ -448,16 +448,18 @@
                 <br />
                 <span></span>
                 <br />
-                <span>An invalid bit indicates either:</span>
+                <span style="font-weight: 200";>
+                  An invalid bit indicates either:
+                </span>
                 <br />
-                <span>1. The page is not currently resident in memory, or</span>
+                <span style="font-weight: 200";>1. The page is not currently resident in memory, or</span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   2. The referenced address is not part of the process's legal
                   address space.
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   3. An access to an invalid page entry triggers a page-fault
                   exception.
                 </span>
@@ -704,14 +706,16 @@
                   3. Perform Page Replacement
                 </span>
                 <br />
-                <span>• Select a victim page currently residing in memory.</span>
+                <span style="font-weight: 200";>
+                  • Select a victim page currently residing in memory.
+                </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • Remove the victim page and load the required page into the
                   freed frame.
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • This is the most common approach in modern operating systems.
                 </span>
               </span>
