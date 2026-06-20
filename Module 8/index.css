@@ -997,7 +997,7 @@
     position: absolute;
     font-size: 16px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -1029,7 +1029,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -1046,7 +1046,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justifie;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -1107,7 +1107,7 @@
     position: absolute;
     font-size: 16px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: normal;
@@ -1288,7 +1288,7 @@
     position: absolute;
     font-size: 24px;
     font-style: ExtraLight;
-    text-align: justified;
+    text-align: justify;
     font-family: Alexandria;
     font-weight: 200;
     line-height: 35px;
@@ -1308,15 +1308,15 @@
     align-items: flex-start;
     flex-shrink: 0;
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: transparent;
   }
    
   .module8-thq-m8bg-elm {
-    top: -218px;
+    top: 0px;
     left: 0px;
-    width: 1347px;
-    height: 758px;
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
    
   .module8-thq-text-elm357 {
@@ -1327,7 +1327,6 @@
     height: auto;
     position: absolute;
     font-size: 64px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: SemiBold;
     text-align: center;
     font-family: Alexandria;

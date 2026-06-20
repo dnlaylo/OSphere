@@ -8,7 +8,7 @@
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html { line-height: 1.15; } body { margin: 0; } * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased; } p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0; } button { background-color: transparent; } button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; } button,select { text-transform: none; } button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; color: inherit; } button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner { border-style: none; padding: 0; } button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus { outline: 1px dotted ButtonText; } a { color: inherit; text-decoration: inherit; } pre { white-space: normal; } input { padding: 2px 4px; } img { display: block; } details { display: block; margin: 0; padding: 0; } summary::-webkit-details-marker { display: none; } [data-thq="accordion"] [data-thq="accordion-content"] { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; padding: 0; } [data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] { max-height: 1000vh; } details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] { transform: rotate(180deg); } html { scroll-behavior: smooth }
+      html { line-height: 1.15; } body { margin: 0; } * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased; } p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0; } button { background-color: transparent; } button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0; } button,select { text-transform: none; } button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; appearance:button; color: inherit; } button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner { border-style: none; padding: 0; } button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus { outline: 1px dotted ButtonText; } a { color: inherit; text-decoration: inherit; } pre { white-space: normal; } input { padding: 2px 4px; } img { display: block; } details { display: block; margin: 0; padding: 0; } summary::-webkit-details-marker { display: none; } [data-thq="accordion"] [data-thq="accordion-content"] { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; padding: 0; } [data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] { max-height: 1000vh; } details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] { transform: rotate(180deg); } html { scroll-behavior: smooth }
     </style>
     <style data-tag="default-style-sheet">
       html {
@@ -128,7 +128,7 @@
               <img src="Assets/Container/Container 1.svg" alt="Terminologies Container Background" class="module8-thq-container1-elm" />
               <span class="module8-thq-text-elm345">
                 <span>
-                  Resource: Physical or logical components required by a process
+                  1. Resource: Physical or logical components required by a process
                   to execute its task (e.g., CPU cycles, memory blocks, tape
                   drives, or printers). System resources are inherently limited
                   and can be either sharable (accessible by multiple processes
@@ -137,19 +137,19 @@
                 </span>
                 <br />
                 <span>
-                  Request Edge: A directed vertex notation (Pi to Rj) in a graph
+                  2. Request Edge: A directed vertex notation (Pi to Rj) in a graph
                   structure indicating that process Pi has initiated a block to
                   wait for an available instance of resource type Rj.
                 </span>
                 <br />
                 <span>
-                  Assignment Edge: A directed vertex notation (Rj to Pi)
+                  3. Assignment Edge: A directed vertex notation (Rj to Pi)
                   indicating that an instance of resource type Rj has been
                   successfully claimed and allocated to process Pi.
                 </span>
                 <br />
                 <span>
-                  Safe State: A system operating condition where there exists at
+                  4. Safe State: A system operating condition where there exists at
                   least one specific execution sequence (a Safe Sequence) that
                   ensures all active processes can eventually claim their
                   maximum declared resources and complete execution without
@@ -157,7 +157,7 @@
                 </span>
                 <br />
                 <span>
-                  Unsafe State: A condition where the system cannot guarantee
+                  5. Unsafe State: A condition where the system cannot guarantee
                   that all processes can finish without deadlocking. An unsafe
                   state is not explicitly a deadlock, but all deadlock states
                   are mathematically subset within unsafe states.
@@ -170,29 +170,29 @@
               <img src="Assets/Container/Container 2.svg" alt="Visual Assets Container Background" class="module8-thq-container2-elm" />
               <span class="module8-thq-text-elm335">
                 <span>
-                  System Resource Allocation Graph (RAG): A directed graph
+                  • System Resource Allocation Graph (RAG): A directed graph
                   consisting of Vertices (V) and Edges (E). V is partitioned
                   into Processes (P) and Resources (R).
                 </span>
                 <br />
                 <span>
-                  Cycle Property 1: If the RAG contains no cycles, the system is
+                  • Cycle Property 1: If the RAG contains no cycles, the system is
                   mathematically guaranteed to be free of deadlocks.
                 </span>
                 <br />
                 <span>
-                  Cycle Property 2: If the graph contains a cycle and resources
+                  • Cycle Property 2: If the graph contains a cycle and resources
                   have only 1 instance, a deadlock has definitely occurred.
                 </span>
                 <br />
                 <span>
-                  Cycle Property 3: If the graph contains a cycle and resources
+                  • Cycle Property 3: If the graph contains a cycle and resources
                   have multiple instances, a deadlock may exist but is not
                   guaranteed.
                 </span>
                 <br />
                 <span>
-                  Wait-For Graph (WFG): For single-instance resource
+                  • Wait-For Graph (WFG): For single-instance resource
                   environments, the resource nodes are optimized out. Edges are
                   reduced strictly to Pi Pj &nbsp;meaning Process i is waiting
                   for Process j to release a resource. A cycle in a Wait-For
@@ -224,7 +224,7 @@
               </span>
               <span class="module8-thq-text-elm331">
                 <span>
-                  Request: The process submits a formal claim to the Operating
+                  1. Request: The process submits a formal claim to the Operating
                   System for an instance of a resource type. If the resource is
                   currently occupied or unavailable, the process is pushed into
                   a waiting queue (e.g., tape queue, printer queue) and must
@@ -232,13 +232,13 @@
                 </span>
                 <br />
                 <span>
-                  Use: Once the resource request is granted, the process takes
+                  2. Use: Once the resource request is granted, the process takes
                   exclusive lock control over the asset and executes its program
                   instructions.
                 </span>
                 <br />
                 <span>
-                  Release: Upon completing its specific task, the process
+                  3. Release: Upon completing its specific task, the process
                   voluntarily relinquishes control of the asset, returning it to
                   the system's available pool for allocation to other waiting
                   processes.
@@ -262,25 +262,25 @@
                 </span>
                 <br class="module8-text313" />
                 <span class="module8-text314">
-                  Mutual Exclusion: At least one resource must be held in a
+                  • Mutual Exclusion: At least one resource must be held in a
                   non-shareable mode; only one process can use it at a
                   time.&nbsp;
                 </span>
                 <br class="module8-text315" />
                 <span class="module8-text316">
-                  Hold and Wait: A process must currently hold at least one
+                  • Hold and Wait: A process must currently hold at least one
                   resource while concurrently waiting to acquire another
                   resource that is held by a separate process.
                 </span>
                 <br class="module8-text317" />
                 <span class="module8-text318">
-                  No Preemption: Resources cannot be forcibly seized from a
+                  • No Preemption: Resources cannot be forcibly seized from a
                   process; they can only be released voluntarily by the process
                   holding them after its task is finished.
                 </span>
                 <br class="module8-text319" />
                 <span class="module8-text320">
-                  Circular Wait: A closed chain of processes exists such that P0
+                  • Circular Wait: A closed chain of processes exists such that P0
                   is waiting for a resource held by P1, P1 is waiting for P2,
                   and Pn is waiting for P0.
                 </span>
@@ -307,14 +307,14 @@
                 </span>
                 <br class="module8-text333" />
                 <span class="module8-text334">
-                  Eliminating Mutual Exclusion: Make resources shareable so that
+                  • Eliminating Mutual Exclusion: Make resources shareable so that
                   processes never wait. Disadvantage: Certain hardware or
                   software components (like printers or write-locks) are
                   fundamentally non-shareable.
                 </span>
                 <br class="module8-text335" />
                 <span class="module8-text336">
-                  Eliminating Hold and Wait: Require processes to request and
+                  • Eliminating Hold and Wait: Require processes to request and
                   receive all required assets before commencing execution, or
                   force them to completely release current allocations before
                   requesting new ones. Disadvantage: Leads to severe resource
@@ -322,7 +322,7 @@
                 </span>
                 <br class="module8-text337" />
                 <span class="module8-text338">
-                  Eliminating No Preemption: If a process holding resources
+                  • Eliminating No Preemption: If a process holding resources
                   requests an asset that cannot be immediately allocated, all
                   its currently held resources are preemptively stripped away
                   and added back to the pool. Disadvantage: Cannot be applied
@@ -330,7 +330,7 @@
                 </span>
                 <br class="module8-text339" />
                 <span class="module8-text340">
-                  Eliminating Circular Wait: Impose a strict total ordering
+                  • Eliminating Circular Wait: Impose a strict total ordering
                   (numerical enumeration) on all system resources. Processes can
                   only request resources in an strictly increasing order of
                   value. Disadvantage: Restricts dynamic program behavior and
@@ -349,7 +349,7 @@
                 </span>
                 <br class="module8-text346" />
                 <span class="module8-text347">
-                  Banker's Algorithm: The standard multi-instance avoidance
+                  • Banker's Algorithm: The standard multi-instance avoidance
                   strategy. When a process requests resources, the system
                   simulates the allocation. It runs a safety verification check;
                   the allocation is finalized only if the resulting state
@@ -369,7 +369,7 @@
                 </span>
                 <br class="module8-text353" />
                 <span class="module8-text354">
-                  Detection: Periodically loops through an allocation tracking
+                  • Detection: Periodically loops through an allocation tracking
                   algorithm (similar to the Banker's safety check) to see if any
                   execution sequence remains viable based on current active
                   requests. If any process returns a permanent Finish == false
@@ -377,17 +377,17 @@
                 </span>
                 <br class="module8-text355" />
                 <span class="module8-text356">
-                  Recovery: Employs drastic measures to restore system flow,
+                  • Recovery: Employs drastic measures to restore system flow,
                   choosing between:
                 </span>
                 <br class="module8-text357" />
                 <span class="module8-text358">
-                  Process Termination: Aborting all deadlocked processes, or
+                  • Process Termination: Aborting all deadlocked processes, or
                   aborting them one by one until the dependency cycle breaks.
                 </span>
                 <br class="module8-text359" />
                 <span class="module8-text360">
-                  Resource Preemption: Forcibly rolling back processes to a
+                  • Resource Preemption: Forcibly rolling back processes to a
                   known safe checkpoint and reclaiming their allocated assets to
                   assign them elsewhere.
                 </span>
@@ -467,7 +467,7 @@
                 </span>
                 <br />
                 <span>
-                  Deadlock Prevention: A strict protocol that ensures the system
+                  • Deadlock Prevention: A strict protocol that ensures the system
                   never enters a deadlock state by guaranteeing at least one of
                   the four necessary conditions (Mutual Exclusion, Hold and
                   Wait, No Preemption, Circular Wait) cannot hold. For example,
@@ -476,7 +476,7 @@
                 </span>
                 <br />
                 <span>
-                  Deadlock Avoidance (Banker's Algorithm): The OS is given
+                  • Deadlock Avoidance (Banker's Algorithm): The OS is given
                   advance information about the maximum resources a process will
                   need during its lifetime. When a request is made, the OS
                   dynamically checks if granting it will leave the system in a
@@ -484,7 +484,7 @@
                 </span>
                 <br />
                 <span>
-                  Deadlock Detection &amp; Recovery: The OS allows deadlocks to
+                  • Deadlock Detection &amp; Recovery: The OS allows deadlocks to
                   occur, runs a detection algorithm periodically to find
                   processes that are stuck (where Finish[i] == false), and then
                   attempts to recover.
@@ -499,27 +499,27 @@
                 </span>
                 <br />
                 <span>
-                  Available: A vector indicating the number of available
+                  • Available: A vector indicating the number of available
                   instances of each resource type.
                 </span>
                 <br />
                 <span>
-                  Allocation: A matrix tracking the resources currently held by
+                  • Allocation: A matrix tracking the resources currently held by
                   each process.
                 </span>
                 <br />
                 <span>
-                  Max: A matrix defining the maximum potential demand of each
+                  • Max: A matrix defining the maximum potential demand of each
                   process.
                 </span>
                 <br />
                 <span>
-                  Need Calculation: The remaining resources a process might
+                  • Need Calculation: The remaining resources a process might
                   request is calculated as: Need = Max - Allocation.
                 </span>
                 <br />
                 <span>
-                  Safety Check Math: The algorithm searches for a process where
+                  • Safety Check Math: The algorithm searches for a process where
                   Need &lt;= Work (Work is initially equal to Available). If
                   found, it simulates execution and updates the available pool:
                   Work = Work + Allocation.
@@ -1292,21 +1292,21 @@
                 </span>
                 <br />
                 <span>
-                  Visual Simulators: You can use HTML5 Canvas or SVG alongside
+                  • Visual Simulators: You can use HTML5 Canvas or SVG alongside
                   JavaScript to build interactive Resource Allocation Graphs
                   (RAGs) that visually update as processes request and release
                   resources.
                 </span>
                 <br />
                 <span>
-                  Algorithm Dashboards: JavaScript is perfectly suited to handle
+                  • Algorithm Dashboards: JavaScript is perfectly suited to handle
                   the matrix math required for Deadlock Avoidance (Banker’s
                   Algorithm), allowing users to input resource values via HTML
                   forms and instantly see if a safe sequence exists.
                 </span>
                 <br />
                 <span>
-                  Concurrency Emulation: While JavaScript is single-threaded,
+                  • Concurrency Emulation: While JavaScript is single-threaded,
                   you can simulate multiple processes competing for limited
                   resources using asynchronous event loops (Promises,
                   setTimeout, or Web Workers) to demonstrate deadlock states in
