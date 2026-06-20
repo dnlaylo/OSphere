@@ -188,7 +188,7 @@
               />
               <span class="module7-thq-text-elm70">
                 <span class="module7-thq-text-elm71">
-                  Rotating Shaft (Spindle):
+                • Rotating Shaft (Spindle):
                 </span>
                 <span class="module7-thq-text-elm72">
                   Driven by a high-speed motor, this central axis spins the
@@ -199,7 +199,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module7-thq-text-elm73">Read-Write Head:</span>
+                <span class="module7-thq-text-elm73">• Read-Write Head:</span>
                 <span class="module7-thq-text-elm74">
                   A tiny electromagnetic component positioned just micro-inches
                   above the platter surface. Its primary function is to detect
@@ -210,7 +210,7 @@
                 <br />
                 <br />
                 <span class="module7-thq-text-elm75">
-                  Arm Assembly (Actuator):
+                  • Arm Assembly (Actuator):
                 </span>
                 <span>
                   A mechanical bracket framework that holds the read-write heads
@@ -229,7 +229,7 @@
                 class="module7-thq-container2-elm"
               />
               <span class="module7-thq-text-elm61">
-                <span class="module7-thq-text-elm62">Seek Time:</span>
+                <span class="module7-thq-text-elm62">• Seek Time:</span>
                 <span class="module7-thq-text-elm63">
                   The duration required for the mechanical arm assembly to
                   physically move the read-write head from its current position
@@ -240,7 +240,7 @@
                 <br />
                 <br />
                 <span class="module7-thq-text-elm64">
-                  Latency Time (Rotational Latency):
+                  • Latency Time (Rotational Latency):
                 </span>
                 <span class="module7-thq-text-elm65">
                   The delay that occurs after the head reaches the correct
@@ -251,7 +251,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module7-thq-text-elm66">Transfer Time:</span>
+                <span class="module7-thq-text-elm66">• Transfer Time:</span>
                 <span class="module7-thq-text-elm67">
                   The electronic phase of the operation, representing the actual
                   speed at which data bits are read from or written to the
@@ -265,7 +265,7 @@
             <div class="module7-thq-rn-wonthe-disks-elm">
               <div class="module7-thq-clv-elm">
                 <span class="module7-thq-text-elm54">
-                  In disks using CLV, the density of bits per unit length is
+                  • In disks using CLV, the density of bits per unit length is
                   uniform across every track on the media. Because the outer
                   tracks have a larger circumference, they contain more data
                   bits and more sectors than the shorter inner tracks. To keep
@@ -289,7 +289,7 @@
               </div>
               <div class="module7-thq-cav-elm">
                 <span class="module7-thq-text-elm57">
-                  In disks using CAV, the number of bits per track is uniform
+                  • In disks using CAV, the number of bits per track is uniform
                   across the entire disk, meaning every track contains a
                   constant number of sectors. Because the larger outer tracks
                   hold the exact same amount of data as the shorter inner
@@ -349,14 +349,14 @@
             <div class="module7-thq-first-come-first-serve-elm">
               <span class="module7-thq-text-elm39">
                 <span class="module7-thq-text-elm40">
-                  This is the simplest form of disk scheduling. It services I/O
+                  • This is the simplest form of disk scheduling. It services I/O
                   requests strictly in the order they arrive in the queue,
                   without regard for the current position of the disk
                   head.&nbsp;
                 </span>
                 <br />
                 <br />
-                <span class="module7-thq-text-elm41">Pros &amp; Cons:</span>
+                <span class="module7-thq-text-elm41">• Pros &amp; Cons:</span>
                 <span>
                   It is completely fair and prevents starvation (every request
                   is guaranteed to be serviced). However, it results in massive,
@@ -397,13 +397,13 @@
               />
               <span class="module7-thq-text-elm32">
                 <span class="module7-thq-text-elm33">
-                  This algorithm selects the request that is closest to the
+                  • This algorithm selects the request that is closest to the
                   current position of the read-write head, minimizing the
                   immediate seek time.&nbsp;
                 </span>
                 <br />
                 <br />
-                <span class="module7-thq-text-elm34">Pros &amp; Cons:</span>
+                <span class="module7-thq-text-elm34">• Pros &amp; Cons:</span>
                 <span>
                   It significantly reduces the total head movement compared to
                   FCFS, boosting overall throughput. The major disadvantage is
@@ -436,7 +436,7 @@
               />
               <span class="module7-thq-text-elm26">
                 <span class="module7-thq-text-elm27">
-                  The disk head starts at one end of the disk and moves toward
+                  • The disk head starts at one end of the disk and moves toward
                   the other end, servicing requests as it reaches each track.
                   When it hits the very edge of the disk, it reverses direction
                   and moves back toward the opposite end, continuing to service
@@ -444,7 +444,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module7-thq-text-elm28">Pros &amp; Cons:</span>
+                <span class="module7-thq-text-elm28">• Pros &amp; Cons:</span>
                 <span>
                   It eliminates starvation and provides a much lower variance in
                   response time compared to SSTF. However, it can be inefficient
@@ -476,7 +476,7 @@
               />
               <span class="module7-thq-text-elm20">
                 <span class="module7-thq-text-elm21">
-                  Designed to provide a more uniform waiting time, C-SCAN moves
+                  • Designed to provide a more uniform waiting time, C-SCAN moves
                   the head from one end of the disk to the other, servicing
                   requests along the way. However, when it reaches the end
                   boundary, it immediately wraps around to the beginning
@@ -485,7 +485,7 @@
                 </span>
                 <br />
                 <br />
-                <span class="module7-thq-text-elm22">Pros &amp; Cons:</span>
+                <span class="module7-thq-text-elm22">• Pros &amp; Cons:</span>
                 <span>
                   It provides a highly predictable and uniform delay for all
                   requests across the entire disk surface. The downside is that
@@ -510,7 +510,7 @@
             <div class="module7-thq-look-scheduling-elm">
               <span class="module7-thq-text-elm16">
                 <span>
-                  The read-write head moves in one direction servicing requests
+                  • The read-write head moves in one direction servicing requests
                   until there are no more pending requests ahead of its current
                   position. Instead of traveling all the way to the absolute
                   physical edge of the disk, it immediately stops and reverses
@@ -520,7 +520,7 @@
                 <br />
                 <br />
                 <span>
-                  It prevents the starvation of requests on the extreme inner
+                  • It prevents the starvation of requests on the extreme inner
                   and outer tracks while remaining more efficient than SCAN by
                   eliminating wasted mechanical travel to empty disk boundaries;
                   however, it still results in unequal waiting times because
@@ -539,7 +539,7 @@
               />
               <span class="module7-thq-text-elm12">
                 <span>
-                  The head services requests in only one direction (e.g., from
+                  • The head services requests in only one direction (e.g., from
                   lowest track number to highest). Once it services the highest
                   requested track, it performs a single rapid return trip
                   straight back to the lowest requested track in the
@@ -549,7 +549,7 @@
                 <br />
                 <br />
                 <span>
-                  Pros &amp; Cons: It provides a highly uniform and predictable
+                  • Pros &amp; Cons: It provides a highly uniform and predictable
                   waiting time for all requests across the disk surface while
                   maximizing efficiency by restricting all mechanical sweeps
                   strictly to the span of active requests; however, the

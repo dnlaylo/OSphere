@@ -1179,15 +1179,15 @@
     align-items: flex-start;
     flex-shrink: 0;
     border-radius: 30px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: transparent;
   }
    
   .module7-thq-m7bg-elm {
-    top: -218px;
+    top: 0px;
     left: 0px;
-    width: 1347px;
-    height: 758px;
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
    
   .module7-thq-text-elm86 {
@@ -1198,7 +1198,6 @@
     height: auto;
     position: absolute;
     font-size: 64px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: SemiBold;
     text-align: center;
     font-family: Alexandria;
