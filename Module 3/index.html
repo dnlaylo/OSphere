@@ -135,13 +135,13 @@
             <div class="module3-thq-programvs-process-elm">
               <span class="module3-thq-text-elm228">
                 <span>
-                  Although two or more processes may be associated with the
+                  • Although two or more processes may be associated with the
                   exact same program, they are strictly considered separate
                   execution sequences by the Operating System.
                 </span>
                 <br />
                 <span>
-                  Examples of this distinction: Several distinct users running
+                  • Examples of this distinction: Several distinct users running
                   different copies of an email program simultaneously, or a
                   single user invoking a text editor several times. Each
                   instance is a unique process.
@@ -159,13 +159,13 @@
 
             <div class="module3-thq-standard-examplesof-processes-elm">
               <span class="module3-thq-text-elm222">
-                <span>Compiler</span>
+                <span>• Compiler</span>
                 <br />
-                <span>Word-processor</span>
+                <span>• Word-processor</span>
                 <br />
-                <span>Email program</span>
+                <span>• Email program</span>
                 <br />
-                <span>Sending output to a printer</span>
+                <span>• Sending output to a printer</span>
               </span>
               <span class="module3-thq-text-elm227">
                 Standard Examples of Processes:
@@ -179,24 +179,24 @@
                   components:
                 </span>
                 <br />
-                <span class="module3-thq-text-elm212">Text Section:</span>
+                <span class="module3-thq-text-elm212">• Text Section:</span>
                 <span class="module3-thq-text-elm213">
                   Contains the executable program code.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm214">Data Section:</span>
+                <span class="module3-thq-text-elm214">• Data Section:</span>
                 <span class="module3-thq-text-elm215">
                   Contains global and static variables.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm216">Stack:</span>
+                <span class="module3-thq-text-elm216">• Stack:</span>
                 <span class="module3-thq-text-elm217">
                   Contains temporary data generated during execution (e.g.,
                   function/method parameters, return addresses, and local
                   variables).
                 </span>
                 <br />
-                <span class="module3-thq-text-elm218">Program Counter:</span>
+                <span class="module3-thq-text-elm218">• Program Counter:</span>
                 <span>
                   A specialized marker that specifies the exact next instruction
                   to be executed by the process.
@@ -237,13 +237,13 @@
                   tracks:
                 </span>
                 <br />
-                <span class="module3-thq-text-elm189">Process State:</span>
+                <span class="module3-thq-text-elm189">1. Process State:</span>
                 <span class="module3-thq-text-elm190"></span>
                 <span class="module3-thq-text-elm191">
                   The current operational status of the process.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm192">Program Counter:</span>
+                <span class="module3-thq-text-elm192">2. Program Counter:</span>
                 <span class="module3-thq-text-elm193">
                   The memory address of the next instruction to be executed for
                   this process. (This information must be saved when an
@@ -251,7 +251,7 @@
                   continued afterward).
                 </span>
                 <br />
-                <span class="module3-thq-text-elm194">CPU Registers:</span>
+                <span class="module3-thq-text-elm194">3. CPU Registers:</span>
                 <span class="module3-thq-text-elm195">
                   Hardware components including accumulators, index registers,
                   stack pointers, and general-purpose registers. (This register
@@ -260,7 +260,7 @@
                 </span>
                 <br />
                 <span class="module3-thq-text-elm196">
-                  CPU Scheduling Information:
+                  4. CPU Scheduling Information:
                 </span>
                 <span class="module3-thq-text-elm197"></span>
                 <span class="module3-thq-text-elm198">
@@ -269,7 +269,7 @@
                 </span>
                 <br />
                 <span class="module3-thq-text-elm199">
-                  Memory-Management Information:
+                  5. Memory-Management Information:
                 </span>
                 <span class="module3-thq-text-elm200"></span>
                 <span class="module3-thq-text-elm201">
@@ -278,7 +278,7 @@
                 </span>
                 <br />
                 <span class="module3-thq-text-elm202">
-                  Accounting Information:
+                  6. Accounting Information:
                 </span>
                 <span class="module3-thq-text-elm203">
                   Tracks the amount of CPU time and real time used, time limits,
@@ -286,7 +286,7 @@
                 </span>
                 <br />
                 <span class="module3-thq-text-elm204">
-                  I/O Status Information:
+                  7. I/O Status Information:
                 </span>
                 <span>
                   Includes a running list of I/O devices allocated to this
@@ -307,29 +307,29 @@
                   state:
                 </span>
                 <br />
-                <span class="module3-thq-text-elm176">New:</span>
+                <span class="module3-thq-text-elm176">• New:</span>
                 <span class="module3-thq-text-elm177">
                   The process is currently being created.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm178">Ready:</span>
+                <span class="module3-thq-text-elm178">• Ready:</span>
                 <span class="module3-thq-text-elm179">
                   The process is waiting to be assigned to a processor.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm180">Running:</span>
+                <span class="module3-thq-text-elm180">• Running:</span>
                 <span class="module3-thq-text-elm181">
                   Instructions belonging to the process are actively being
                   executed.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm182">Waiting (Blocked):</span>
+                <span class="module3-thq-text-elm182">• Waiting (Blocked):</span>
                 <span class="module3-thq-text-elm183">
                   The process is waiting for some specific event to occur (such
                   as an I/O completion or receiving a signal).
                 </span>
                 <br />
-                <span class="module3-thq-text-elm184">Terminated:</span>
+                <span class="module3-thq-text-elm184">• Terminated:</span>
                 <span>The process has completely finished its execution.</span>
               </span>
               <span class="module3-thq-text-elm186">Core Process States</span>
@@ -356,13 +356,13 @@
                     4 specific causes:
                   </span>
                   <br />
-                  <span>Normal exit (Voluntary).</span>
+                  <span>a. Normal exit (Voluntary).</span>
                   <br />
-                  <span>Error exit (Voluntary).</span>
+                  <span>b. Error exit (Voluntary).</span>
                   <br />
-                  <span>Fatal error (Involuntary).</span>
+                  <span>c. Fatal error (Involuntary).</span>
                   <br />
-                  <span>Killed by another process (Involuntary).</span>
+                  <span>d. Killed by another process (Involuntary).</span>
                 </span>
                 <span class="module3-thq-text-elm165">
                   Process Termination Events
@@ -375,19 +375,19 @@
                     process:
                   </span>
                   <br />
-                  <span>System initialization.</span>
+                  <span>a. System initialization.</span>
                   <br />
                   <span>
                     Execution of a process creation system call by an actively
                     running process.
                   </span>
                   <br />
-                  <span>A direct user request to create a new process.</span>
+                  <span>b. A direct user request to create a new process.</span>
                   <br />
-                  <span>Initiation of a background batch job.</span>
+                  <span>c. Initiation of a background batch job.</span>
                   <br />
                   <span>
-                    State Entry: On creation, the process immediately enters the
+                    • State Entry: On creation, the process immediately enters the
                     New state, and its initial control block (e.g., PCB1) is
                     allocated.
                   </span>
@@ -418,23 +418,23 @@
                 <span class="module3-text172">The Three Scheduling Queues</span>
                 <br />
                 <span class="module3-text174">
-                  As processes move through their lifecycle, they are organized
+                  • As processes move through their lifecycle, they are organized
                   into targeted queues:
                 </span>
                 <br />
-                <span class="module3-text176">Job Queue:</span>
+                <span class="module3-text176">• Job Queue:</span>
                 <span class="module3-text177">
                   The set consisting of all processes currently residing in the
                   entire system.
                 </span>
                 <br />
-                <span class="module3-text179">Ready Queue:</span>
+                <span class="module3-text179">• Ready Queue:</span>
                 <span class="module3-text180">
                   The set of all processes residing in main memory that are
                   completely ready and waiting to execute.
                 </span>
                 <br />
-                <span class="module3-text182">Device Queues:</span>
+                <span class="module3-text182">• Device Queues:</span>
                 <span>
                   The sets of processes strictly waiting for a specific,
                   individual I/O device to become available.
@@ -448,7 +448,7 @@
               </span>
               <br />
               <span class="module3-thq-text-elm143">
-                Long-Term Scheduler (or Job Scheduler):
+                • Long-Term Scheduler (or Job Scheduler):
               </span>
               <span class="module3-thq-text-elm144">
                 Selects which processes should be moved from the disk's input
@@ -456,17 +456,17 @@
               </span>
               <br />
               <span class="module3-thq-text-elm145">
-                Directly controls the degree of multiprogramming (the total
+                • Directly controls the degree of multiprogramming (the total
                 number of processes residing in memory).
               </span>
               <br />
               <span class="module3-thq-text-elm146">
-                Invoked very infrequently (intervals of seconds or minutes),
+                • Invoked very infrequently (intervals of seconds or minutes),
                 meaning it can afford to be relatively slow.
               </span>
               <br />
               <span class="module3-thq-text-elm147">
-                Must maintain a balanced Process Mix: It balances I/O-bound
+                • Must maintain a balanced Process Mix: It balances I/O-bound
                 processes (which spend more time doing I/O than computations and
                 have many short CPU bursts) and CPU-bound processes (which spend
                 more time doing computations and have a few, very long CPU
@@ -474,7 +474,7 @@
               </span>
               <br />
               <span class="module3-thq-text-elm148">
-                Short-Term Scheduler (or CPU Scheduler):
+                • Short-Term Scheduler (or CPU Scheduler):
               </span>
               <span class="module3-thq-text-elm149">
                 Selects which process residing in the main memory's ready queue
@@ -482,12 +482,12 @@
               </span>
               <br />
               <span class="module3-thq-text-elm150">
-                Invoked very frequently (intervals of milliseconds), meaning it
+                • Invoked very frequently (intervals of milliseconds), meaning it
                 must be extremely fast to maintain system performance.
               </span>
               <br />
               <span class="module3-thq-text-elm151">
-                Medium-Term Scheduler:
+                • Medium-Term Scheduler:
               </span>
               <span class="module3-thq-text-elm152">
                 An intermediate-level scheduling system utilized in time-sharing
@@ -495,7 +495,7 @@
               </span>
               <br />
               <span class="module3-thq-text-elm153">
-                Removes processes entirely from main memory and saves them
+                • Removes processes entirely from main memory and saves them
                 temporarily to disk (Swapping), reducing the degree of
                 multiprogramming when memory is constrained. The processes are
                 reintroduced later to resume exactly where they left off.
@@ -504,7 +504,7 @@
               <br />
               <span class="module3-thq-text-elm154">3. The Dispatcher</span>
               <br />
-              <span class="module3-thq-text-elm155">Dispatcher:</span>
+              <span class="module3-thq-text-elm155">• Dispatcher:</span>
               <span>
                 A specific module that gives physical control of the CPU to the
                 exact process selected by the short-term scheduler.
@@ -518,13 +518,13 @@
                 class="module3-thq-container6-elm"
               />
               <span class="module3-thq-text-elm125">
-                <span class="module3-thq-text-elm126">Creation:</span>
+                <span class="module3-thq-text-elm126">1. Creation:</span>
                 <span class="module3-thq-text-elm127">
                   An arriving job enters the system and is placed on the Job
                   Queue in the New state.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm128">Memory Admission:</span>
+                <span class="module3-thq-text-elm128">2. Memory Admission:</span>
                 <span class="module3-thq-text-elm129">
                   If there isn't enough room in main memory, the jobs wait on
                   the disk in an Input Queue (a collection of processes on disk
@@ -533,7 +533,7 @@
                   Queue, and its state becomes Ready.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm130">CPU Dispatching:</span>
+                <span class="module3-thq-text-elm130">3. CPU Dispatching:</span>
                 <span class="module3-thq-text-elm131">
                   The Short-Term Scheduler selects a process from the Ready
                   Queue. The Dispatcher hands over the CPU, and the process
@@ -542,38 +542,38 @@
                 </span>
                 <br />
                 <span class="module3-thq-text-elm132">
-                  Runtime Transitions:
+                  4. Runtime Transitions:
                 </span>
                 <span class="module3-thq-text-elm133">
                   While running, one of four events will happen to the process:
                 </span>
                 <br />
                 <span class="module3-thq-text-elm134">
-                  Event 1 (I/O Request): The process issues an I/O request. It
+                  • Event 1 (I/O Request): The process issues an I/O request. It
                   is placed in a specific I/O Device Queue and its state shifts
                   to Waiting. Once the I/O or event completion occurs, it
                   switches back to the Ready Queue.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm135">
-                  Event 2 (Time Expiration): The maximum time slice allotted to
+                  • Event 2 (Time Expiration): The maximum time slice allotted to
                   the process in the CPU expires. It is intercepted, removed
                   from the CPU, and placed back into the Ready Queue.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm136">
-                  Event 3 (Child Creation): The process creates a new subprocess
+                  • Event 3 (Child Creation): The process creates a new subprocess
                   (forks a child) and is forced to wait until that child
                   finishes, remaining in the Waiting state.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm137">
-                  Event 4 (Interrupt): The process is forcibly removed from the
+                  • Event 4 (Interrupt): The process is forcibly removed from the
                   CPU as a result of an external interrupt and is placed
                   directly back into the Ready Queue.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm138">Termination:</span>
+                <span class="module3-thq-text-elm138">5. Termination:</span>
                 <span>
                   Upon completing its final statement or encountering an error,
                   the process finishes execution, its memory space is declared
@@ -601,12 +601,12 @@
                 </span>
                 <br />
                 <span>
-                  Blocked/Suspend: The process is currently located in secondary
+                  • Blocked/Suspend: The process is currently located in secondary
                   memory (disk) and is awaiting an external I/O event.
                 </span>
                 <br />
                 <span>
-                  Ready/Suspend: The process is located in secondary memory
+                  • Ready/Suspend: The process is located in secondary memory
                   (disk) but is fully available for execution the moment it is
                   swapped back into main memory.
                 </span>
@@ -632,13 +632,13 @@
                 <span class="module3-text120">1. Core Mechanics</span>
                 <br />
                 <span class="module3-text122">
-                  When the CPU switches focus from one process to another, the
+                  • When the CPU switches focus from one process to another, the
                   system must securely save the state of the old process and
                   load the saved state for the new process.
                 </span>
                 <br />
                 <span class="module3-text124">
-                  The saved state consists of the exact CPU registers, the
+                  • The saved state consists of the exact CPU registers, the
                   current process state, and all memory-management information.
                 </span>
                 <br />
@@ -663,13 +663,13 @@
                 <span class="module3-text144">2. System Overhead</span>
                 <br />
                 <span>
-                  Context-switch time is pure system overhead. The operating
+                  • Context-switch time is pure system overhead. The operating
                   system and hardware do no useful work for the user while a
                   switch is taking place.
                 </span>
                 <br />
                 <span>
-                  Context-switch performance and speed are highly dependent on
+                  • Context-switch performance and speed are highly dependent on
                   direct hardware support.
                 </span>
               </span>
@@ -688,48 +688,48 @@
                 </span>
                 <br />
                 <span class="module3-thq-text-elm106">
-                  Processes are organized hierarchically. A parent process can
+                  • Processes are organized hierarchically. A parent process can
                   create children processes, which, in turn, can create other
                   sub-processes, forming a structural tree of processes.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm107">
-                  Resource Sharing Options:
+                  • Resource Sharing Options:
                 </span>
                 <span class="module3-thq-text-elm108">
-                  The parent and children share all system resources.
+                  • The parent and children share all system resources.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm109">
-                  The children share a strict subset of the parent’s resources.
+                  • The children share a strict subset of the parent’s resources.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm110">
-                  The parent and child share no resources at all.
+                  • The parent and child share no resources at all.
                 </span>
                 <br />
-                <span class="module3-thq-text-elm111">Execution Behavior:</span>
+                <span class="module3-thq-text-elm111">• Execution Behavior:</span>
                 <br />
                 <span class="module3-thq-text-elm112">
-                  The parent and children execute concurrently.
+                  • The parent and children execute concurrently.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm113">
-                  The parent blocks and waits until some or all of its children
+                  • The parent blocks and waits until some or all of its children
                   have completely terminated.
                 </span>
                 <br />
                 <span class="module3-thq-text-elm114">
-                  Address Space Behavior:
+                  • Address Space Behavior:
                 </span>
                 <br />
                 <span>
-                  The child process is an exact structural duplicate of the
+                  • The child process is an exact structural duplicate of the
                   parent process.
                 </span>
                 <br />
                 <span>
-                  The child process has an entirely new program loaded into its
+                  • The child process has an entirely new program loaded into its
                   address space.
                 </span>
               </span>
@@ -750,25 +750,25 @@
                 </span>
                 <br />
                 <span>
-                  fork(): A system call that creates a brand-new process. The
+                  • fork(): A system call that creates a brand-new process. The
                   newly created child process is an initial duplicate of the
                   parent process.
                 </span>
                 <br />
                 <span>
-                  exec(): A system call typically used immediately after a
+                  • exec(): A system call typically used immediately after a
                   fork() to replace the process’s memory space with an entirely
                   new program layout.
                 </span>
                 <br />
                 <span>
-                  wait(): A system call through which a parent process receives
+                  • wait(): A system call through which a parent process receives
                   output data from its child and suspends itself until the child
                   finishes.
                 </span>
                 <br />
                 <span>
-                  exit(): A system call used by a process to execute its last
+                  • exit(): A system call used by a process to execute its last
                   statement and ask the operating system to delete it.
                 </span>
               </span>

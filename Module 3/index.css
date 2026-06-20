@@ -1,10 +1,12 @@
 .module3-container1 {
     width: 100%;
     display: flex;
-    overflow: auto;
+    overflow: hidden;
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
+    border-radius: 20px;
+    isolation: isolate;
   }
    
   .module3-thq-module3-elm {
@@ -19,6 +21,7 @@
     border-style: solid;
     border-width: 1px;
     background-color: rgba(255, 255, 255, 0.10000000149011612);
+    border-radius: 20px;
   }
    
   .module3-thq-bg-elm {
@@ -37,7 +40,10 @@
     display: flex;
     position: absolute;
     align-items: flex-start;
+    border-radius: 20px;
     flex-shrink: 1;
+    overflow: hidden;
+    isolation: isolate;
   }
    
   .module3-thq-text-elm100 {
@@ -55,6 +61,7 @@
     line-height: 35px;
     font-stretch: normal;
     text-decoration: none;
+    border-radius: 20px;
   }
    
   .module3-thq-text-elm101 {
@@ -78,6 +85,7 @@
     height: 399px;
     position: absolute;
     border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-text-elm103 {
@@ -95,6 +103,7 @@
     line-height: 35px;
     font-stretch: normal;
     text-decoration: none;
+    border-radius: 20px;
   }
    
   .module3-text101 {
@@ -135,6 +144,7 @@
     line-height: 35px;
     font-stretch: normal;
     text-decoration: none;
+    border-radius: 20px;
   }
    
   .module3-thq-text-elm105 {
@@ -210,6 +220,7 @@
     height: 1075px;
     position: absolute;
     border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-fig5-elm {
@@ -340,6 +351,7 @@
     height: 833px;
     position: absolute;
     border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-text-elm125 {
@@ -519,6 +531,7 @@
     height: 599px;
     position: absolute;
     border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-fig3-elm {
@@ -712,6 +725,7 @@
     height: 481px;
     position: absolute;
     border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-fig2-elm {
@@ -816,6 +830,8 @@
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
+    border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-fig1-elm {
@@ -983,6 +999,8 @@
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
+    border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-text-elm210 {
@@ -1106,6 +1124,8 @@
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(255, 255, 255, 0.03999999910593033);
+    border-radius: 20px;
+    overflow: hidden;
   }
    
   .module3-thq-text-elm228 {
@@ -1273,38 +1293,38 @@
    
   .module3-thq-text-elm238 {
     top: 13px;
-    left: 37px;
-    color: rgba(35, 38, 48, 1);
-    width: 348px;
-    height: auto;
-    position: absolute;
-    font-size: 64px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module3-thq-text-elm239 {
-    top: 89px;
-    left: 62px;
-    color: rgba(37, 37, 37, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
+  left: 37px;
+  color: rgba(35, 38, 48, 1);
+  width: 348px;
+  height: auto;
+  position: absolute;
+  font-size: 64px;
+  box-shadow: none !important; 
+  font-style: normal; 
+  text-align: center;
+  font-family: Alexandria;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+
+.module3-thq-text-elm239 {
+  top: 89px;
+  left: 62px;
+  color: rgba(37, 37, 37, 1);
+  width: 502px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: normal; 
+  text-align: left;
+  font-family: Alexandria;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
    
   .module3-thq-footer-elm {
     top: 11043px;
@@ -1376,3 +1396,4 @@
     height: 40px;
     position: absolute;
   }
+

@@ -860,6 +860,8 @@
     align-items: flex-start;
     flex-shrink: 1;
     background-color: rgba(217, 217, 217, 1);
+    border-radius: 50px;
+    overflow: hidden;
   }
    
   .mainpage-thq-search-icon-elm {
@@ -1016,4 +1018,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+[class*="mainpage-thq-text-elm"] {
+  background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
 }
