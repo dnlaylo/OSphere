@@ -627,6 +627,7 @@
                   1. The Core Protection Mechanism
                 </span>
                 <br />
+                <br />
                 <span class="module5-thq-text-elm190">
                   To protect memory, the hardware uses two special boundary
                   registers to frame the allowed memory space for a running
@@ -643,7 +644,6 @@
                   memory segment.
                 </span>
                 <br />
-                <br />
                 <span class="module5-thq-text-elm193">
                   Together, they establish a legal range. For example, if the
                   Base register is 300040 and the Limit register is 120900, the
@@ -655,6 +655,7 @@
                 <span class="module5-thq-text-elm194">
                   2. How the Hardware Checks Every Address
                 </span>
+                <br />
                 <br />
                 <span class="module5-thq-text-elm195">
                   Every time a running program tries to read or write to a
@@ -691,7 +692,8 @@
                   3. Modifying the Boundaries
                 </span>
                 <br />
-                <span>
+                <br />
+                <span style="font-weight: 200;">
                   To keep the system secure, user programs are strictly
                   forbidden from modifying these boundaries. The instructions
                   used to alter the base and limit registers are designated as

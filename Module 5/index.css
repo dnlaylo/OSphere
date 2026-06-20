@@ -414,7 +414,7 @@
   }
    
   .module5-thq-container4-elm {
-    top: 61px;
+    top: 77px;
     left: 0px;
     width: 1191px;
     height: 899px;
@@ -1262,7 +1262,7 @@
   }
    
   .module5-thq-text-elm248 {
-    top: 334px;
+    top: 400px;
     left: 8px;
     color: rgba(255, 255, 255, 1);
     width: 1237px;
@@ -1279,6 +1279,7 @@
   }
    
   .module5-thq-text-elm250 {
+    top: 0px;
     left: 21px;
     color: rgba(255, 255, 255, 1);
     width: 1239px;
@@ -1366,7 +1367,7 @@
    
   .module5-thq-container2-elm {
     top: 0px;
-    left: 0px;
+    left: -30px;
     width: 1277px;
     height: 870px;
     position: absolute;
