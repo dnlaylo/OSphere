@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>OSphere</title> <meta property="og:title" content="OSphere" />
+    <title>OSphere - Disk Scheduling</title> 
+    <meta property="og:title" content="OSphere - Disk Scheduling" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html { line-height: 1.15;} body { margin: 0;} * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased;} p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0;} button { background-color: transparent;} button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;} button,select { text-transform: none;} button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; color: inherit;} button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner { border-style: none; padding: 0;} button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus { outline: 1px dotted ButtonText;} a { color: inherit; text-decoration: inherit;} pre { white-space: normal;} input { padding: 2px 4px;} img { display: block;} details { display: block; margin: 0; padding: 0;} summary::-webkit-details-marker { display: none;} [data-thq="accordion"] [data-thq="accordion-content"] { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; padding: 0;} [data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] { max-height: 1000vh;} details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] { transform: rotate(180deg);} html { scroll-behavior: smooth }
+      html { line-height: 1.15;} body { margin: 0;} * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased;} p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0;} button { background-color: transparent;} button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;} button,select { text-transform: none;} button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; color: inherit;} button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner { border-style: none; padding: 0;} button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus { outline: 1px dotted ButtonText;} a { color: inherit; text-decoration: inherit;} pre { white-space: normal;} input { padding: 2px 4px;} img { display: block;} details { display: block; margin: 0; padding: 0;} summary::-webkit-details-marker { display: none;}
     </style>
     <style data-tag="default-style-sheet">
       html { font-family: Inter; font-size: 16px; }
       body { font-weight: 400; font-style:normal; text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 1.15; color: var(--dl-color-theme-neutral-dark); background: var(--dl-color-theme-neutral-light); fill: var(--dl-color-theme-neutral-dark); }
     </style>
 
-    <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" data-tag="font" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" data-tag="font" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" data-tag="font" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" data-tag="font" />
+    <link href="./index.css" rel="stylesheet" />
   </head>
   <body>
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="./style.css" />
+    
     <div>
-      <link href="./index.css" rel="stylesheet" />
-  
       <div class="algorithm-container1">
         <div class="algorithm-thq-algorithm-elm">
           
@@ -34,55 +29,46 @@
             <img src="Assets/BG/Dots.svg" alt="Dotted background pattern overlay" class="algorithm-thq-assets13-elm" />
           </div>
   
-          <main class="algorithm-thq-content-container-elm">
-            
-            <img src="Assets/Input Container.svg" alt="Translucent background container for calculator inputs" class="algorithm-thq-input-container-elm" />
-  
-            <div class="algorithm-thq-dropdown-elm">
-              <img src="Assets/dropdown_con.svg" alt="Dropdown selection background" class="algorithm-thq-dropdowncon-elm" />
-              <span class="algorithm-thq-text-elm6">Algorithms</span>
-              <img src="Assets/dropdown_icon.svg" alt="Expand dropdown icon" class="algorithm-thq-dropdownicon-elm" />
+          <main class="algorithm-thq-content-container-elm" style="width: 100%; height: auto; top: 120px; left: 0; justify-content: center; z-index: 10;">
+            <div class="main-container">
+                
+                <div class="top-controls">
+                    <select id="algorithm">
+                        <option value="" selected disabled>DISK SCHEDULING ALGORITHM</option>
+                        <option value="FCFS">FCFS</option>
+                        <option value="SSTF">SSTF</option>
+                        <option value="SCAN">SCAN</option>
+                        <option value="C-SCAN">C-SCAN</option>
+                        <option value="LOOK">LOOK</option>
+                        <option value="C-LOOK">C-LOOK</option>
+                    </select>
+                </div>
+    
+                <div class="disk-input-form">
+                    <div class="input-group full-width">
+                        <label for="sequence">Track Request Sequence (comma-separated)</label>
+                        <input type="text" id="sequence" placeholder="e.g., 98, 183, 37, 122, 14">
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label for="startTrack">Current Track (Start)</label>
+                            <input type="number" id="startTrack" placeholder="53" min="0">
+                        </div>
+                        <div class="input-group">
+                            <label for="maxTrack">Segment End Point (Max Index)</label>
+                            <input type="number" id="maxTrack" placeholder="199" min="0">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="buttons">
+                    <button id="compute">Calculate & Graph</button>
+                </div>
             </div>
-  
-            <div class="algorithm-thq-arrival-time-elm">
-              <span class="algorithm-thq-text-elm5">Arrival Time</span>
-              <img src="Assets/Line 7.svg" alt="Decorative underline for arrival time" class="algorithm-thq-line7-elm" />
-              <img src="Assets/Arrival Time Input.svg" alt="Arrival time input field" class="algorithm-thq-arrival-time-input-elm" />
-            </div>
-  
-            <div class="algorithm-thq-burst-time-elm1">
-              <span class="algorithm-thq-text-elm4">Burst Time</span>
-              <div class="algorithm-thq-burst-time-elm2">
-                <img src="Assets/Line 8.svg" alt="Decorative underline for burst time" class="algorithm-thq-line8-elm" />
-                <img src="Assets/Burst Time Input.svg" alt="Burst time input field" class="algorithm-thq-burst-time-input-elm" />
-              </div>
-            </div>
-  
-            <div class="algorithm-thq-time-quantum-elm">
-              <div class="algorithm-thq-group22-elm">
-                <span class="algorithm-thq-text-elm3">Time Quantum</span>
-                <img src="Assets/Line 9.svg" alt="Decorative underline for time quantum" class="algorithm-thq-line9-elm" />
-              </div>
-              <div class="algorithm-thq-tqaddbtn-elm">
-                <img src="Assets/tq_add_btn.svg" alt="Add time quantum value button" class="algorithm-thq-addicon-elm1" />
-              </div>
-            </div>
-  
-            <div class="algorithm-thq-at-btaddbtn-elm">
-              <img src="Assets/at-bt_add_btn.svg" alt="Add new process row background" class="algorithm-thq-btncon-elm" />
-              <img src="public/addicon3435-cd1-200h.png" alt="Plus icon to add process row" class="algorithm-thq-addicon-elm2" />
-            </div>
-  
-            <div class="algorithm-thq-compute-button-elm">
-              <img src="Assets/compute_btn_con.svg" alt="Compute results button background" class="algorithm-thq-computebtncon-elm" />
-              <span class="algorithm-thq-text-elm2">COMPUTE</span>
-            </div>
-  
-            <span class="algorithm-thq-text-elm1">Please input contents</span>
-  
           </main>
   
-          <nav class="algorithm-thq-navigation-bar-elm">
+          <nav class="algorithm-thq-navigation-bar-elm" style="z-index: 20;">
             <img src="Assets/NavBar/Side Menu.png" alt="Open side menu" class="algorithm-thq-side-menu-elm" />
             <img src="Assets/NavBar/Line 1.svg" alt="Navigation separator line" class="algorithm-thq-line1-elm" />
             <a href="../Main Page/index.html">
@@ -92,19 +78,24 @@
               <img src="Assets/NavBar/Help.png" alt="Navigate to Help Page" class="algorithm-thq-help-elm" />
             </a>
           </nav>
+
           <div id="popup-overlay">
             <div class="output-container1">
-              <div class="output-thq-output-elm">
-                <span class="output-thq-text-elm1">Time</span>
-                <span class="output-thq-text-elm2">Turn Around Time</span>
-                <img src="Assets/Table.svg" alt="Table2114" class="output-thq-table-elm" />
-                <img src="Assets/Gantt Chart.svg" alt="GanttChart2114" class="output-thq-gantt-chart-elm" />
-                <span class="output-thq-text-elm3">CPU SCHEDULING</span>
-                <img src="Assets/line.svg" alt="line2114" class="output-thq-line-elm" />
-                <span class="output-thq-text-elm4">OUTPUT</span>
+              <div class="output-thq-output-elm popup-content" style="height: auto; min-height: 523px; width: 100%; max-width: 900px; display: block;">
+                <h2>Output Evaluation</h2>
+                
+                <h3>Seek Seek Graph / Sequence</h3>
+                <div id="gantt-blocks"></div>
+                
+                <h3>Calculations Summary</h3>
+                <table id="resultTable"></table>
+                
+                <h3>Metrics Dashboard</h3>
+                <div id="averages"></div>
               </div>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
