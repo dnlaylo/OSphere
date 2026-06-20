@@ -193,7 +193,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -272,7 +271,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
     font-style: Light;
     text-align: left;
     font-family: "Alexandria";
@@ -324,7 +322,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -431,7 +428,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -599,7 +595,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
     font-style: Light;
     text-align: left;
     font-family: "Alexandria";
@@ -654,7 +649,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -698,7 +692,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -810,7 +803,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -935,7 +927,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -979,7 +970,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1060,7 +1050,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1104,7 +1093,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1170,7 +1158,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1214,7 +1201,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: left;
     font-family: Alexandria;
@@ -1241,7 +1227,6 @@
     height: auto;
     position: absolute;
     font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
     font-style: Light;
     text-align: center;
     font-family: Alexandria;
@@ -1299,7 +1284,6 @@
   height: auto;
   position: absolute;
   font-size: 64px;
-  box-shadow: none !important; 
   font-style: normal; 
   text-align: center;
   font-family: Alexandria;
