@@ -81,10 +81,6 @@ img { display: block; }
    ALL CONTENT sits above the background
    ========================================================= */
 .mainpage-thq-navigation-bar-elm,
-.mainpage-thq-text-elm41,
-.mainpage-thq-search-elm,
-.mainpage-thq-modules-grid,
-.mainpage-thq-operating-system-algortihms-elm,
 .mainpage-thq-footer-elm {
   position: relative;
   z-index: 1;

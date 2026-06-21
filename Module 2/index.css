@@ -1,2133 +1,387 @@
-.module2-container1 {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-  }
-   
-  .module2-thq-module2-elm {
-    width: 100%;
-    height: 16707px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 1);
-    border-style: solid;
-    border-width: 1px;
-    background-color: transparent;
-  }
-   
-  .module2-thq-bg-elm {
-    top: -2982px;
-    left: -4842px;
-    width: 11666px;
-    height: 19689px;
-    position: absolute;
-  }
-   
-  .module2-thq-footer-elm {
-    top: 16296px;
-    left: -0.0001220703125px;
-    width: 1440.1253662109375px;
-    height: 411px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-footerline-elm {
-    top: 0px;
-    left: 1440.124755859375px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .module2-thq-o-spher-logo-elm {
-    top: 1px;
-    left: 314.0001220703125px;
-    width: 812px;
-    height: 410px;
-    position: absolute;
-  }
-   
-  .module2-thq-content-container-elm {
-    top: 320px;
-    left: 65px;
-    width: 1321px;
-    height: 15828px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-o-snetworking-elm {
-    top: 15434px;
-    left: 46px;
-    width: 1300px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
- .module2-thq-text-elm100 {
-  top: 55px;
-  left: 31px;
-  color: rgba(255, 255, 255, 1);
-  width: 1250px;
-  height: auto;
-  position: absolute;
-  font-size: 24px;
-  font-style: normal; 
-  text-align: left;
-  font-family: Alexandria;
+html { line-height: 1.15; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Alexandria, sans-serif;
+  font-size: 16px;
   font-weight: 200;
-  line-height: 1.5; 
-  font-stretch: normal;
-  text-decoration: none;
+  color: #fff;
+  background: #0d0d14;
+}
+*, *::before, *::after { box-sizing: border-box; }
+p, li, ul, pre, div, h1, h2, h3, h4, h5, h6,
+figure, blockquote, figcaption { margin: 0; padding: 0; }
+button { background-color: transparent; }
+button, input, optgroup, select, textarea {
+  font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;
+}
+a { color: inherit; text-decoration: inherit; }
+img { display: block; }
+
+/* =========================================================
+   ROOT WRAPPER
+   ========================================================= */
+.module2-container1 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
-.module2-thq-text-elm101 {
-  top: 25px;
-  left: 31px;
-  color: rgba(255, 255, 255, 1);
-  width: 531px; /* Uniform width */
+/* =========================================================
+   MAIN CANVAS
+   ========================================================= */
+.module2-thq-module2-elm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: Light; /* Fixed font crash */
-  text-align: left;
-  font-family: Alexandria;
-  font-weight: 400;
-  line-height: 1.5;
-  font-stretch: normal;
-  text-decoration: none;
+  overflow: visible;
+  border: none;
+  background-color: transparent;
 }
 
-.module2-thq-text-elm104 {
-  top: 25px;
-  left: 31px;
-  color: rgba(255, 255, 255, 1);
-  width: 531px; /* Uniform width */
+/* =========================================================
+   BACKGROUND LAYER (fixed behind everything)
+   ========================================================= */
+.mainpage-thq-background-elm {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.module2-thq-bg-elm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   ALL CONTENT sits above the background
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm,
+.mainpage-thq-footer-elm {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(16px, 3vw, 26px);
+  flex-shrink: 0;
+}
+
+/* Nav line below bar — hidden, was decorative SVG at design width */
+.mainpage-thq-line1-elm { display: none; }
+
+.mainpage-thq-side-menu-elm {
+  width: clamp(36px, 4vw, 56px);
   height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: normal; /* Fixed font crash */
-  text-align: left;
-  font-family: Inter;
-  font-weight: 400;
-  line-height: 1.5;
-  font-stretch: normal;
-  text-decoration: none;
+  cursor: pointer;
 }
 
-.module2-thq-text-elm107 {
-  top: 25px;
-  left: 31px;
-  color: rgba(255, 255, 255, 1);
-  width: 531px; /* Uniform width */
+/* Apply the margin to the wrapper so Flexbox spaces it correctly */
+.home-link-wrapper {
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.mainpage-thq-home-elm {
+  width: clamp(36px, 4vw, 60px);
   height: auto;
-  position: absolute;
-  font-size: 16px;
-  font-style: normal; /* Fixed font crash */
-  text-align: left;
-  font-family: Inter;
-  font-weight: 400;
-  line-height: 1.5;
-  font-stretch: normal;
-  text-decoration: none;
 }
 
-   
-  .module2-thq-text-elm108 {
-    top: 0px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-os-task-protectionand-security-elm {
-    top: 15039px;
-    left: 46px;
-    width: 1184px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm109 {
-    top: 71px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm118 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
+/* Apply margin-left: auto to the wrapper to push it to the far right */
+.help-link-wrapper {
+  margin-left: auto; 
+}
 
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-file-management-system-elm {
-    top: 14638px;
-    left: 46px;
-    width: 1184px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm120 {
-    top: 71px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm129 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
+.mainpage-thq-help-elm {
+  width: clamp(24px, 2.5vw, 35px);
+  height: auto;
+}
 
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-os-task-secondary-storage-elm {
-    top: 14237px;
-    left: 46px;
-    width: 1184px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm130 {
-    top: 71px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm138 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
+/* =========================================================
+   HEADER BANNER
+   ========================================================= */
+.module2-thq-header-elm {
+  position: relative;
+  width: min(1347px, 94%);
+  height: clamp(100px, 12vw, 149px);
+  margin: clamp(16px, 2.5vw, 32px) auto clamp(24px, 3vw, 48px);
+  border-radius: clamp(16px, 2.5vw, 30px);
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  flex-shrink: 0;
+}
 
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-os-task-memory-management-elm {
-    top: 13863px;
-    left: 45px;
-    width: 1185px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm140 {
-    top: 76px;
-    left: 1px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm147 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
+.module2-thq-m2bg-elm {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 250%;
+  object-fit: cover;
+  object-position: center center;
+}
 
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-os-task-process-management-elm {
-    top: 13408px;
-    left: 45px;
-    width: 1184px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm149 {
-    top: 75px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm150 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm151 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm152 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm153 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm154 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm160 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-modulesbased-structure-elm {
-    top: 13058px;
-    left: 56px;
-    width: 1173px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm161 {
-    top: 70px;
-    color: rgba(255, 255, 255, 1);
-    width: 649px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm168 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-fig12-elm {
-    top: 72px;
-    left: 735px;
-    width: 438px;
-    height: 205px;
-    position: absolute;
-  }
-   
-  .module2-thq-microkernel-structure-elm {
-    top: 12424px;
-    left: 56px;
-    width: 1173px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm169 {
-    top: 71px;
-    color: rgba(255, 255, 255, 1);
-    width: 1173px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm170 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm171 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm172 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm173 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm174 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm175 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm176 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm177 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm178 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm179 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm180 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm181 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm184 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-layered-os-structure-elm {
-    top: 11865px;
-    left: 50px;
-    width: 1173px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm185 {
-    top: 77px;
-    color: rgba(255, 255, 255, 1);
-    width: 1173px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm189 {
-    left: 6px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-fig10-elm {
-    top: 247.0224609375px;
-    left: 142px;
-    width: 377px;
-    height: 229px;
-    position: absolute;
-  }
-   
-  .module2-thq-fig11-elm {
-    top: 248px;
-    left: 662px;
-    width: 250px;
-    height: 226px;
-    position: absolute;
-  }
-   
-  .module2-thq-unix-system-structure-elm {
-    top: 11576px;
-    left: 50px;
-    width: 1139px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm190 {
-    top: 67px;
-    color: rgba(255, 255, 255, 1);
-    width: 1139px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm196 {
-    left: 6px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-os-structure-simple-approach-elm {
-    top: 11315px;
-    left: 56px;
-    width: 1181px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm198 {
-    top: 88px;
-    color: rgba(255, 255, 255, 1);
-    width: 803px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm201 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-fig9-elm {
-    top: 4px;
-    left: 907px;
-    width: 274px;
-    height: 213px;
-    position: absolute;
-  }
-   
-  .module2-thq-operating-systems-howaretheyorganized-elm {
-    top: 10904px;
-    left: 56px;
-    width: 1139px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm203 {
-    top: 69px;
-    color: rgba(255, 255, 255, 1);
-    width: 1139px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm212 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-systemgeneration-elm {
-    top: 10548px;
-    left: 56px;
-    width: 1180px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm214 {
-    top: 80px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm220 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-systemdesignand-implementation-elm {
-    top: 10145px;
-    left: 56px;
-    width: 1180px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm221 {
-    top: 68px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm229 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-command-interpreter-system-elm {
-    top: 9771px;
-    left: 56px;
-    width: 1180px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm231 {
-    top: 72px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm237 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-system-programs-elm {
-    top: 9312px;
-    left: 56px;
-    width: 1139px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm238 {
-    top: 81px;
-    color: rgba(255, 255, 255, 1);
-    width: 1139px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm247 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-operating-system-services-elm {
-    top: 8757px;
-    left: 56px;
-    width: 1082px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm248 {
-    top: 72px;
-    left: 1px;
-    color: rgba(255, 255, 255, 1);
-    width: 784px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm259 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-system-calls-elm {
-    top: 8418px;
-    left: 57px;
-    width: 1255px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm260 {
-    top: 63px;
-    color: rgba(255, 255, 255, 1);
-    width: 1255px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm267 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-general-systemarchitecture-elm {
-    top: 8217px;
-    left: 57px;
-    width: 1255px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm268 {
-    top: 80px;
-    color: rgba(255, 255, 255, 1);
-    width: 1255px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm269 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm270 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm272 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-cpu-protection-elm {
-    top: 7853px;
-    left: 57px;
-    width: 1255px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm273 {
-    top: 64px;
-    color: rgba(255, 255, 255, 1);
-    width: 1255px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm274 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm281 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-memory-protection-elm {
-    top: 6887px;
-    left: 22px;
-    width: 1217px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm282 {
-    top: 69px;
-    color: rgba(255, 255, 255, 1);
-    width: 1217px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm292 {
-    left: 14px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-fig8-elm {
-    top: 486.1279296875px;
-    left: 546px;
-    width: 506px;
-    height: 431px;
-    position: absolute;
-  }
-   
-  .module2-thq-fig7-elm {
-    top: 484px;
-    left: 35px;
-    width: 402px;
-    height: 432px;
-    position: absolute;
-  }
-   
-  .module2-thq-io-protection-elm {
-    top: 6664px;
-    left: 22px;
-    width: 1232px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm293 {
-    top: 69px;
-    color: rgba(255, 255, 255, 1);
-    width: 1232px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm296 {
-    left: 14px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-hardware-protection-elm {
-    top: 5615px;
-    left: 1px;
-    width: 1277px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-container4-elm {
-    top: 250px;
-    left: 0px;
-    width: 1277px;
-    height: 744px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module2-thq-text-elm297 {
-    top: 62px;
-    left: 27px;
-    color: rgba(255, 255, 255, 1);
-    width: 1223px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm299 {
-    top: 281px;
-    left: 27px;
-    color: rgba(255, 255, 255, 1);
-    width: 1223px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm307 {
-    top: 191px;
-    left: 47px;
-    color: rgba(255, 255, 255, 1);
-    width: 1223px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm308 {
-    left: 47px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-fig5-elm {
-    top: 592px;
-    left: 66px;
-    width: 784px;
-    height: 240px;
-    position: absolute;
-  }
-   
-  .module2-thq-fig6-elm {
-    top: 592px;
-    left: 931px;
-    width: 205px;
-    height: 242px;
-    position: absolute;
-  }
-   
-  .module2-thq-storagehierarchy-elm {
-    top: 4129px;
-    left: 1px;
-    width: 1277px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-container3-elm1 {
-    top: 350px;
-    left: 0px;
-    width: 1277px;
-    height: 918px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module2-thq-text-elm309 {
-    top: 453px;
-    left: 27px;
-    color: rgba(255, 255, 255, 1);
-    width: 566px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm310 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm311 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm312 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm313 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm314 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm315 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm316 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm317 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm318 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm319 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm320 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm321 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm322 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm326 {
-    top: 383px;
-    left: 674px;
-    color: rgba(255, 255, 255, 1);
-    width: 566px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm327 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm328 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm329 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm330 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm331 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm332 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm333 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm334 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm335 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-storage-hierarchy-elm {
-    top: 0px;
-    left: 20px;
-    width: 1257px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm339 {
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm340 {
-    top: 89px;
-    color: rgba(255, 255, 255, 1);
-    width: 745px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm341 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm342 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm343 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm344 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm345 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm346 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-fig4-elm {
-    top: 0.07275390625px;
-    left: 897.923828125px;
-    width: 359px;
-    height: 343px;
-    position: absolute;
-  }
-   
-  .module2-thq-storage-structure-elm {
-    top: 3786px;
-    left: 21px;
-    width: 1181px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm348 {
-    top: 77px;
-    color: rgba(255, 255, 255, 1);
-    width: 1181px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm349 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm350 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm351 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm352 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm353 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm357 {
-    left: 8px;
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-direct-memory-access-elm {
-    top: 3446px;
-    left: 21px;
-    width: 1232px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm359 {
-    left: 8px;
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm360 {
-    top: 77px;
-    color: rgba(255, 255, 255, 1);
-    width: 768px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-fig3-elm {
-    top: 28px;
-    left: 862.1738891601562px;
-    width: 370px;
-    height: 312px;
-    position: absolute;
-  }
-   
-  .module2-thq-io-structure-elm {
-    top: 2944px;
-    left: 29px;
-    width: 1292px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm364 {
-    top: 77px;
-    color: rgba(255, 255, 255, 1);
-    width: 1292px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm365 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm366 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm367 {
-    font-weight: 200;
-  }
-   
-  .module2-thq-text-elm368 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm373 {
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-interrupt-handling-elm {
-    top: 2638px;
-    left: 21px;
-    width: 1292px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm374 {
-    top: 65px;
-    color: rgba(255, 255, 255, 1);
-    width: 1292px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm375 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-text-elm379 {
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-interrupts-elm {
-    top: 2200px;
-    left: 21px;
-    width: 1292px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm380 {
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm381 {
-    top: 65px;
-    color: rgba(255, 255, 255, 1);
-    width: 1292px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-computer-system-organization-elm {
-    top: 981px;
-    left: 0px;
-    width: 1277px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-container2-elm2 {
-    right: -2px;
-    width: 1277px;
-    bottom: 2px;
-    height: 1103px;
-    position: absolute;
-    border-radius: 20px;
-    opacity: 0;
-  }
-   
-  .module2-thq-text-elm389 {
-    left: 26px;
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm391 {
-    top: 81px;
-    left: 26px;
-    color: rgba(255, 255, 255, 1);
-    width: 1250px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm393 {
-    top: 216px;
-    left: 27px;
-    color: rgb(255, 255, 255);
-    width: 1224px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-text322 {
-    font-weight: 300;
-  }
-   
-  .module2-text324 {
-    font-weight: 200;
-  }
-   
-  .module2-text326 {
-    font-weight: 200;
-  }
-   
-  .module2-text328 {
-    font-weight: 200;
-  }
-   
-  .module2-text330 {
-    font-weight: 200;
-  }
-   
-  .module2-text333 {
-    font-weight: 300;
-  }
-   
-  .module2-text335 {
-    font-weight: 200;
-  }
-   
-  .module2-text337 {
-    font-weight: 200;
-  }
-   
-  .module2-text339 {
-    font-weight: 200;
-  }
-   
-  .module2-text342 {
-    font-weight: 300;
-  }
-   
-  .module2-text344 {
-    font-weight: 200;
-  }
-   
-  .module2-text346 {
-    font-weight: 200;
-  }
-   
-  .module2-text348 {
-    font-weight: 200;
-  }
-   
-  .module2-text351 {
-    font-weight: 300;
-  }
-   
-  .module2-text353 {
-    font-weight: 200;
-  }
-   
-  .module2-text355 {
-    font-weight: 200;
-  }
-   
-  .module2-text357 {
-    font-weight: 200;
-  }
-   
-  .module2-text359 {
-    font-weight: 200;
-  }
-   
-  .module2-text362 {
-    font-weight: 300;
-  }
-   
-  .module2-thq-computer-system-architecture-elm {
-    top: 447px;
-    left: 1px;
-    width: 1277px;
-    height: 491px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-container1-elm3 {
-    top: 60px;
-    right: -12px;
-    width: 1277px;
-    height: 436px;
-    position: relative;
-    border-radius: 20px;
-  }
-   
-  .module2-thq-text-elm394 {
-    left: 20px;
-    color: rgba(255, 255, 255, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-fig2-elm {
-    top: 118px;
-    left: 728px;
-    width: 431px;
-    height: 329px;
-    position: absolute;
-  }
-   
-  .module2-thq-fig1-elm {
-    top: 118px;
-    left: 117px;
-    width: 487px;
-    height: 329px;
-    position: absolute;
-  }
-   
-  .module2-thq-overview-elm {
-    top: 0px;
-    left: 21px;
-    width: 1250px;
-    height: auto;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module2-thq-text-elm395 {
-    top: 50px;
-    color: rgba(255, 255, 255, 1);
-    width: 1250px;
-    height: auto;
-    position: relative;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm397 {
-    top: 0px;
-    color: rgba(255, 255, 255, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-header-elm {
-    top: 116px;
-    left: 46px;
-    width: 1347px;
-    height: 149px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 30px;
-    background-color: transparent;
-  }
-   
-  .module2-thq-m2bg-elm {
-    top: -218px;
-    left: 0px;
-    width: 1347px;
-    height: 758px;
-    position: absolute;
-  }
-   
-  .module2-thq-text-elm398 {
-    top: 86px;
-    left: 56px;
-    color: rgba(80, 53, 86, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module2-thq-text-elm399 {
-  top: 13px;
-  left: 56px;
+.module2-thq-text-elm399 {
+  position: absolute;
+  top: clamp(8px, 1vw, 13px);            
+  left: clamp(24px, 4vw, 56px);          
   color: rgba(80, 53, 86, 1); /* Maintained your exact color choice */
-  width: 348px;
-  height: auto;
-  position: absolute;
-  font-size: 64px;
-  box-shadow: none !important; 
-  font-style: normal; 
-  text-align: left;
-  font-family: Alexandria;
+  font-size: clamp(32px, 4.5vw, 64px);   
+  font-family: Alexandria, sans-serif;
   font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+  line-height: 1.1;
+  white-space: nowrap;
 }
-   
-  .module2-thq-navigation-bar-elm {
-    top: 0px;
-    left: -0.0023193359375px;
-    width: 1440.1253662109375px;
-    height: 54px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
+
+.module2-thq-text-elm398 {
+  position: absolute;
+  top: clamp(52px, 6vw, 86px);           
+  left: clamp(24px, 4vw, 56px);          
+  color: rgba(80, 53, 86, 1); /* Maintained your exact color choice */
+  font-size: clamp(16px, 2.2vw, 32px);   
+  font-family: Alexandria, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   CONTENT CONTAINER — all sections stack inside
+   ========================================================= */
+.module2-thq-content-container-elm {
+  position: relative;
+  width: min(1299px, 94%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(40px, 5vw, 80px);
+}
+
+/* =========================================================
+   UTILITY CLASSES (Matches Module 1 logic)
+   ========================================================= */
+.content-row {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(16px, 3vw, 40px);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.text-content {
+  flex: 1 1 min(300px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1vw, 16px);
+}
+.image-row {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(16px, 2vw, 32px);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================================================
+   CARDS WITH TRANSLUCENT BACKGROUNDS
+   ========================================================= */
+.module2-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+  border-radius: clamp(12px, 2vw, 20px);
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: clamp(20px, 3vw, 48px) clamp(20px, 3vw, 40px);
+}
+
+/* Hide the old SVG containers since we use CSS backgrounds now */
+.module2-thq-container1-elm3,
+.module2-thq-container2-elm2,
+.module2-thq-container3-elm1,
+.module2-thq-container4-elm {
+  display: none;
+}
+
+/* =========================================================
+   SECTION BLOCKS (Switching from absolute to relative flex)
+   ========================================================= */
+.module2-thq-overview-elm,
+.module2-thq-computer-system-architecture-elm,
+.module2-thq-computer-system-organization-elm,
+.module2-thq-interrupts-elm,
+.module2-thq-interrupt-handling-elm,
+.module2-thq-io-structure-elm,
+.module2-thq-direct-memory-access-elm,
+.module2-thq-storage-structure-elm,
+.module2-thq-storagehierarchy-elm,
+.module2-thq-hardware-protection-elm,
+.module2-thq-io-protection-elm,
+.module2-thq-memory-protection-elm,
+.module2-thq-cpu-protection-elm,
+.module2-thq-general-systemarchitecture-elm,
+.module2-thq-system-calls-elm,
+.module2-thq-operating-system-services-elm,
+.module2-thq-system-programs-elm,
+.module2-thq-command-interpreter-system-elm,
+.module2-thq-systemdesignand-implementation-elm,
+.module2-thq-systemgeneration-elm,
+.module2-thq-operating-systems-howaretheyorganized-elm,
+.module2-thq-os-structure-simple-approach-elm,
+.module2-thq-unix-system-structure-elm,
+.module2-thq-layered-os-structure-elm,
+.module2-thq-microkernel-structure-elm,
+.module2-thq-modulesbased-structure-elm,
+.module2-thq-os-task-process-management-elm,
+.module2-thq-os-task-memory-management-elm,
+.module2-thq-os-task-secondary-storage-elm,
+.module2-thq-file-management-system-elm,
+.module2-thq-os-task-protectionand-security-elm,
+.module2-thq-o-snetworking-elm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 16px);
+}
+
+/* =========================================================
+   SHARED: SECTION HEADINGS (Fluid 32px)
+   ========================================================= */
+.module2-thq-text-elm397, .module2-thq-text-elm394, .module2-thq-text-elm389,
+.module2-thq-text-elm380, .module2-thq-text-elm379, .module2-thq-text-elm373,
+.module2-thq-text-elm359, .module2-thq-text-elm357, .module2-thq-text-elm339,
+.module2-thq-text-elm308, .module2-thq-text-elm296, .module2-thq-text-elm292,
+.module2-thq-text-elm281, .module2-thq-text-elm272, .module2-thq-text-elm267,
+.module2-thq-text-elm259, .module2-thq-text-elm247, .module2-thq-text-elm237,
+.module2-thq-text-elm229, .module2-thq-text-elm220, .module2-thq-text-elm212,
+.module2-thq-text-elm201, .module2-thq-text-elm196, .module2-thq-text-elm189,
+.module2-thq-text-elm184, .module2-thq-text-elm168, .module2-thq-text-elm160,
+.module2-thq-text-elm147, .module2-thq-text-elm138, .module2-thq-text-elm129,
+.module2-thq-text-elm118, .module2-thq-text-elm108 {
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-family: Alexandria, sans-serif;
+  font-weight: 300;
+  font-size: clamp(24px, 3.5vw, 32px);
+  line-height: 1.3;
+  margin-bottom: clamp(4px, 1vw, 12px);
+}
+
+/* =========================================================
+   SHARED: BODY TEXT (Fluid 24px/16px)
+   ========================================================= */
+.module2-thq-text-elm395, .module2-thq-text-elm391, .module2-thq-text-elm393,
+.module2-thq-text-elm381, .module2-thq-text-elm374, .module2-thq-text-elm364,
+.module2-thq-text-elm360, .module2-thq-text-elm348, .module2-thq-text-elm340,
+.module2-thq-text-elm309, .module2-thq-text-elm326, .module2-thq-text-elm297,
+.module2-thq-text-elm299, .module2-thq-text-elm307, .module2-thq-text-elm293,
+.module2-thq-text-elm282, .module2-thq-text-elm273, .module2-thq-text-elm268,
+.module2-thq-text-elm260, .module2-thq-text-elm248, .module2-thq-text-elm238,
+.module2-thq-text-elm231, .module2-thq-text-elm221, .module2-thq-text-elm214,
+.module2-thq-text-elm203, .module2-thq-text-elm198, .module2-thq-text-elm190,
+.module2-thq-text-elm185, .module2-thq-text-elm169, .module2-thq-text-elm161,
+.module2-thq-text-elm149, .module2-thq-text-elm140, .module2-thq-text-elm130,
+.module2-thq-text-elm120, .module2-thq-text-elm109, .module2-thq-text-elm100,
+.module2-thq-text-elm101, .module2-thq-text-elm104, .module2-thq-text-elm107 {
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-family: Alexandria, sans-serif;
+  font-weight: 200;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: clamp(26px, 3vw, 35px);
+}
+
+/* Helper Bolds */
+.module2-text322, .module2-text333, .module2-text342, .module2-text351, 
+.module2-text362, .module2-thq-text-elm327, .module2-thq-text-elm331, 
+.module2-thq-text-elm335 { font-weight: 300; }
+
+/* =========================================================
+   FIGURE IMAGES
+   ========================================================= */
+.module2-thq-fig1-elm, .module2-thq-fig2-elm,
+.module2-thq-fig3-elm, .module2-thq-fig4-elm,
+.module2-thq-fig5-elm, .module2-thq-fig6-elm,
+.module2-thq-fig7-elm, .module2-thq-fig8-elm,
+.module2-thq-fig9-elm, .module2-thq-fig10-elm,
+.module2-thq-fig11-elm, .module2-thq-fig12-elm {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(45%, 480px);
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+/* Specific Image Overrides for readability */
+.module2-thq-fig4-elm { width: min(80%, 450px); margin: 0 auto; } /* Pyramid */
+.module2-thq-fig5-elm { width: min(60%, 600px); } /* Hardware prot */
+.module2-thq-fig6-elm { width: min(30%, 250px); }
+
+/* =========================================================
+   FOOTER (Restored relative layout)
+   ========================================================= */
+.module2-thq-footer-elm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(32px, 5vw, 80px);
+  padding-bottom: clamp(24px, 3vw, 48px);
+}
+
+.module2-thq-footer-line-elm { display: none; }
+
+.module2-thq-o-sphere-logo-elm {
+  width: min(480px, 60%);
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+@media (max-width: 900px) {
+  .content-row { flex-direction: column; }
+  
+  .module2-thq-fig1-elm, .module2-thq-fig2-elm,
+  .module2-thq-fig3-elm, .module2-thq-fig4-elm,
+  .module2-thq-fig5-elm, .module2-thq-fig6-elm,
+  .module2-thq-fig7-elm, .module2-thq-fig8-elm,
+  .module2-thq-fig9-elm, .module2-thq-fig10-elm,
+  .module2-thq-fig11-elm, .module2-thq-fig12-elm {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
   }
-   
-  .module2-thq-line1-elm {
-    top: 50px;
-    left: 1440.125px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .module2-thq-side-menu-elm {
-    top: 3px;
-    left: 26.0252685546875px;
-    width: 56px;
-    height: 47px;
-    position: absolute;
-  }
-   
-  .module2-thq-home-elm {
-    top: 0px;
-    left: 78.0252685546875px;
-    width: 60px;
-    height: 54px;
-    position: absolute;
-    border-color: rgba(0, 0, 0, 1);
-  }
-   
-  .module2-thq-help-elm {
-    top: 4px;
-    left: 1371px;
-    width: 35px;
-    height: 40px;
-    position: absolute;
-  }
-   
+}
+@media (max-width: 600px) {
+  .module2-thq-header-elm { height: clamp(80px, 18vw, 120px); }
+  .module2-card { padding: clamp(16px, 4vw, 28px) clamp(14px, 3vw, 24px); }
+  .module2-thq-o-sphere-logo-elm { width: 75%; }
+}
