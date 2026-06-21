@@ -1,1027 +1,616 @@
+/* ===================================================
+   OSphere — Responsive CSS
+   Design target: 1440px. Scales gracefully down to 375px.
+   =================================================== */
+
+/* ---------- Reset (kept from original) ---------- */
+html { line-height: 1.15; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+*, *::before, *::after { box-sizing: border-box; }
+p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin:0; padding:0; }
+button { background-color: transparent; }
+button,input,optgroup,select,textarea { font-family:inherit; font-size:100%; line-height:1.15; margin:0; }
+a { color:inherit; text-decoration:inherit; }
+img { display:block; }
+
+/* =========================================================
+   ROOT WRAPPER
+   ========================================================= */
 .mainpage-container1 {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-  }
-   
-  .mainpage-thq-mainpage-elm {
-    width: 100%;
-    height: 3549px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 1);
-    border-style: solid;
-    border-width: 1px;
-    background-color: rgba(255, 255, 255, 0.10000000149011612);
-  }
-   
-  .mainpage-thq-background-elm {
-    top: -2922px;
-    left: -1931px;
-    width: 5286px;
-    height: 7566px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-gradient-elm {
-    top: 0px;
-    left: 803px;
-    width: 4483px;
-    height: 7566px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-dots2-elm {
-    top: 4902px;
-    left: 0px;
-    width: 3505px;
-    height: 1164px;
-    opacity: 0.10;
-    position: absolute;
-  }
-   
-  .mainpage-thq-dots-elm {
-    top: 2972px;
-    left: 1931px;
-    width: 1415px;
-    height: 2202px;
-    opacity: 0.10;
-    position: absolute;
-  }
-   
-  .mainpage-thq-footer-elm {
-    top: 3144px;
-    left: -26px;
-    width: 1466px;
-    height: 432px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-footer-line-elm {
-    top: 0px;
-    left: 1466px;
-    width: 1466px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-o-sphere-logo-elm {
-    top: 0px;
-    left: 362px;
-    width: 768px;
-    height: 432px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-operating-system-algortihms-elm {
-    top: 2013px;
-    left: 175px;
-    width: 1091px;
-    height: 982px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-cpu-scheduling-elm {
-    top: 287px;
-    left: 1px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm10 {
-    top: 0px;
-    left: 0px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm10 {
-    top: 28px;
-    left: 457px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm10 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm10 {
-    top: 112px;
-    left: 104px;
-    color: rgba(128, 116, 39, 1);
-    width: 310px;
-    height: auto;
-    position: absolute;
-    font-size: 40px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-memory-management-elm {
-    top: 287px;
-    left: 573px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm11 {
-    top: 0px;
-    left: 0px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm11 {
-    top: 28px;
-    left: 457px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm11 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm11 {
-    top: 112px;
-    left: 104px;
-    color: rgba(46, 71, 41, 1);
-    width: 310px;
-    height: auto;
-    position: absolute;
-    font-size: 40px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-vitual-memory-elm {
-    top: 660px;
-    left: 0px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm12 {
-    top: 0px;
-    left: 0px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm12 {
-    top: 28px;
-    left: 457px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm12 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm12 {
-    top: 112px;
-    left: 104px;
-    color: rgba(103, 44, 73, 1);
-    width: 310px;
-    height: auto;
-    position: absolute;
-    font-size: 40px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-mass-storage-management-elm {
-    top: 660px;
-    left: 570px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm13 {
-    top: 0px;
-    left: 0px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm13 {
-    top: 28px;
-    left: 457px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm13 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm13 {
-    top: 112px;
-    left: 104px;
-    color: rgba(143, 67, 48, 1);
-    width: 310px;
-    height: auto;
-    position: absolute;
-    font-size: 40px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-text-elm14 {
-    top: 104px;
-    left: 83px;
-    color: rgba(255, 255, 255, 1);
-    width: 926px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-text-elm15 {
-    left: 21px;
-    color: rgba(255, 255, 255, 1);
-    width: 1047px;
-    height: auto;
-    position: absolute;
-    font-size: 64px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module8-elm {
-    top: 1559px;
-    left: 747px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm14 {
-    top: 0px;
-    left: -26px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm14 {
-    top: 26px;
-    left: 455px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm14 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm16 {
-    top: 122px;
-    left: 102px;
-    color: rgba(85, 108, 68, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module7-elm {
-    top: 1559px;
-    left: 177px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm15 {
-    top: 0px;
-    left: -26px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm15 {
-    top: 28px;
-    left: 457px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm15 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm19 {
-    top: 94px;
-    left: 102px;
-    color: rgba(63, 100, 122, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module6-elm {
-    top: 1186px;
-    left: 747px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm16 {
-    top: 0px;
-    left: -26px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm16 {
-    top: 27px;
-    left: 461px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm16 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm22 {
-    top: 122px;
-    left: 103px;
-    color: rgba(68, 81, 163, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module5-elm {
-    top: 1186px;
-    left: 176px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm17 {
-    top: 0px;
-    left: -26px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm17 {
-    top: 27px;
-    left: 459px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm17 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm25 {
-    top: 91px;
-    left: 102px;
-    color: rgba(119, 70, 105, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module4-elm {
-    top: 813px;
-    left: 747px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm18 {
-    top: 0px;
-    left: -26px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm18 {
-    top: 25px;
-    left: 458px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm18 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm28 {
-    top: 122px;
-    left: 102px;
-    color: rgba(110, 47, 71, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module3-elm {
-    top: 813px;
-    left: 175px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm19 {
-    top: 0px;
-    left: -26px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm19 {
-    top: 27px;
-    left: 455px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm19 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm31 {
-    top: 119px;
-    left: 102px;
-    color: rgba(113, 103, 155, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module2-elm {
-    top: 440px;
-    left: 747px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm20 {
-    top: 0px;
-    left: 0px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm20 {
-    top: 21px;
-    left: 458px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm20 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm34 {
-    top: 94px;
-    left: 102px;
-    color: rgba(98, 61, 132, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-module1-elm {
-    top: 440px;
-    left: 175px;
-    width: 518px;
-    height: 322px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .mainpage-thq-bg-elm21 {
-    top: 0px;
-    left: 0px;
-    width: 572px;
-    height: 322px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-info-elm21 {
-    top: 21px;
-    left: 459px;
-    width: 35px;
-    height: 31px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-frame-elm21 {
-    top: 0px;
-    left: 0px;
-    width: 35px;
-    height: 31px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-text-elm37 {
-    top: 94px;
-    left: 102px;
-    color: rgba(42, 67, 145, 1);
-    width: 314px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-search-elm {
-    top: 285px;
-    left: 309px;
-    width: 823px;
-    height: 69px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-    background-color: rgba(217, 217, 217, 1);
-    border-radius: 50px;
-    overflow: hidden;
-  }
-   
-  .mainpage-thq-search-icon-elm {
-    top: 5px;
-    left: 8px;
-    width: 71px;
-    height: 60px;
-    position: absolute; 
-  }
-   
-  .mainpage-thq-text-elm40 {
-    top: 23px;
-    left: 40px;
-    color: rgba(130, 120, 135, 1);
-    width: 419px;
-    height: auto;
-    position: absolute;
-    font-size: 20px;
-    font-style: Regular;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-text-elm41 {
-    top: 136px;
-    left: 362px;
-    color: rgba(255, 255, 255, 1);
-    width: 717px;
-    height: auto;
-    position: absolute;
-    font-size: 64px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .mainpage-thq-navigation-bar-elm {
-    top: 0px;
-    left: -0.0003662109375px;
-    width: 1440.1253662109375px;
-    height: 54px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .mainpage-thq-line1-elm {
-    top: 50px;
-    left: 1440.125px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-side-menu-elm {
-    top: 3px;
-    left: 26.0234375px;
-    width: 56px;
-    height: 47px;
-    position: absolute;
-  }
-   
-  .mainpage-thq-home-elm {
-    top: 0px;
-    left: 78.0234375px;
-    width: 60px;
-    height: 54px;
-    position: absolute;
-    border-color: rgba(0, 0, 0, 1);
-  }
-   
-  .mainpage-thq-help-elm {
-    top: 4px;
-    left: 1371px;
-    width: 35px;
-    height: 40px;
-    position: absolute;
-  }
-   
-  .mainpage-link {
-    display: contents;
-  }
-   
-  .mainpage-container2 {
-    right: 50px;
-    border: 1px solid #ffffff5c;
-    bottom: 30px;
-    display: flex;
-    z-index: 22;
-    position: fixed;
-    box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
-    min-height: auto;
-    align-items: center;
-    padding-top: 8px;
-    padding-left: 12px;
-    border-radius: 8px;
-    padding-right: 12px;
-    padding-bottom: 8px;
-    backdrop-filter: blur(6px);
-    background-color: rgba(41, 41, 41, 0.41);
-  }
-   
-  .mainpage-icon1 {
-    width: 24px;
-    margin-right: 4px;
-  }
-   
-  .mainpage-text22 {
-    color: white;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  
-/* Force the background container to span the entire scrolling length of the document */
-.mainpage-thq-background-elm {
-  z-index: -100 !important;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  min-height: 100%; /* Ensures it covers at least the full screen */
-  height: max-content; /* Forces it to stretch down with the scrolling content */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MAIN PAGE — full-bleed, relative-positioned scroll container
+   ========================================================= */
+.mainpage-thq-mainpage-elm {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================================================
+   BACKGROUND LAYER (fixed behind everything)
+   ========================================================= */
+.mainpage-thq-background-elm {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
   overflow: hidden;
 }
 
-/* Ensure the background images stretch nicely without cutting off */
 .mainpage-thq-gradient-elm,
-.mainpage-thq-dots2-elm,
-.mainpage-thq-dots-elm {
+.mainpage-thq-dots-elm,
+.mainpage-thq-dots2-elm {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Prevents the SVGs from distorting while filling the space */
+  object-fit: cover;
 }
 
-/* Ensure the main container wraps all absolute items correctly */
-.mainpage-thq-mainpage-elm {
+.mainpage-thq-dots-elm  { opacity: 0.10; }
+.mainpage-thq-dots2-elm { opacity: 0.10; }
+
+/* =========================================================
+   ALL CONTENT sits above the background
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm,
+.mainpage-thq-text-elm41,
+.mainpage-thq-search-elm,
+.mainpage-thq-modules-grid,
+.mainpage-thq-operating-system-algortihms-elm,
+.mainpage-thq-footer-elm {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(16px, 3vw, 26px);
+  flex-shrink: 0;
+}
+
+/* Nav line below bar — hidden, was decorative SVG at design width */
+.mainpage-thq-line1-elm { display: none; }
+
+.mainpage-thq-side-menu-elm {
+  width: clamp(36px, 4vw, 56px);
+  height: auto;
+  cursor: pointer;
+}
+
+/* Apply the margin to the wrapper so Flexbox spaces it correctly */
+.home-link-wrapper {
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.mainpage-thq-home-elm {
+  width: clamp(36px, 4vw, 60px);
+  height: auto;
+  /* Removed margin-left from here */
+}
+
+/* Apply margin-left: auto to the wrapper to push it to the far right */
+.help-link-wrapper {
+  margin-left: auto; 
+}
+
+.mainpage-thq-help-elm {
+  width: clamp(24px, 2.5vw, 35px);
+  height: auto;
+  /* Removed margin-left from here */
+}
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+.mainpage-thq-text-elm41 {
+  width: 100%;
+  text-align: center;
+  font-family: Alexandria, sans-serif;
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 64px);
+  color: #fff;
+  margin-top: clamp(24px, 4vw, 60px);
+  padding: 0 16px;
+  line-height: 1.15;
+}
+
+/* =========================================================
+   SEARCH BAR
+   ========================================================= */
+.mainpage-thq-search-elm {
+  position: relative;
+  width: min(823px, 88%);
+  height: clamp(44px, 5vw, 69px);
+  margin: clamp(16px, 2.5vw, 36px) auto clamp(32px, 4vw, 60px);
+  background-color: rgba(217, 217, 217, 1);
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.mainpage-thq-search-icon-elm {
+  position: absolute;
+  left: clamp(8px, 1vw, 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(36px, 5vw, 60px);
+  height: auto;
+}
+
+.mainpage-thq-text-elm40 {
+  position: absolute;
+  left: clamp(48px, 6vw, 80px);
+  color: rgba(130, 120, 135, 1);
+  font-size: clamp(13px, 1.5vw, 20px);
+  font-family: Alexandria, sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 80px);
+}
+
+/* =========================================================
+   MODULE CARDS — shared card styles
+   ========================================================= */
+
+/* Grid that holds the 8 module cards */
+.mainpage-thq-modules-grid {
+  width: min(1091px, 88%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2.5vw, 54px);
+}
+
+/* Each module card */
+[class^="mainpage-thq-module"][class$="-elm"],
+[class*="mainpage-thq-module"][class$="-elm"] {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 518 / 322;
+  border-radius: clamp(20px, 3.5vw, 50px);
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background SVG fills the card */
+[class^="mainpage-thq-module"][class$="-elm"] > a,
+[class*="mainpage-thq-module"][class$="-elm"] > a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Module BG images — cover the card */
+[class*="-thq-bg-elm"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Module text labels */
+[class*="-thq-text-elm37"],
+[class*="-thq-text-elm34"],
+[class*="-thq-text-elm31"],
+[class*="-thq-text-elm28"],
+[class*="-thq-text-elm25"],
+[class*="-thq-text-elm22"],
+[class*="-thq-text-elm19"],
+[class*="-thq-text-elm16"] {
+  position: absolute;
+  width: 70%;
+  text-align: center;
+  font-family: Alexandria, sans-serif;
+  font-weight: 600;
+  font-size: clamp(13px, 2.5vw, 32px);
+  line-height: 1.3;
+  background: none !important;
+  box-shadow: none !important;
+  /* vertically & horizontally centred inside the card */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* preserve the original per-module colors */
+.mainpage-thq-text-elm37 { color: rgba(42, 67, 145, 1); }
+.mainpage-thq-text-elm34 { color: rgba(98, 61, 132, 1); }
+.mainpage-thq-text-elm31 { color: rgba(113, 103, 155, 1); }
+.mainpage-thq-text-elm28 { color: rgba(110, 47, 71, 1); }
+.mainpage-thq-text-elm25 { color: rgba(119, 70, 105, 1); }
+.mainpage-thq-text-elm22 { color: rgba(68, 81, 163, 1); }
+.mainpage-thq-text-elm19 { color: rgba(63, 100, 122, 1); }
+.mainpage-thq-text-elm16 { color: rgba(85, 108, 68, 1); }
+
+/* Info icon — top-right corner of each card */
+[class*="-thq-info-elm"] {
+  position: absolute;
+  top: clamp(10px, 2vw, 25px);
+  right: clamp(10px, 2vw, 25px);
+  width: clamp(20px, 2.5vw, 35px);
+  height: auto;
+  z-index: 2;
+}
+
+[class*="-thq-frame-elm"] {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   ALGORITHMS SECTION
+   ========================================================= */
+.mainpage-thq-operating-system-algortihms-elm {
+  width: min(1091px, 88%);
+  margin: clamp(48px, 6vw, 100px) auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section heading */
+.mainpage-thq-text-elm15 {
+  font-family: Alexandria, sans-serif;
+  font-weight: 600;
+  font-size: clamp(28px, 5vw, 64px);
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  box-shadow: none !important;
+}
+
+/* Section description */
+.mainpage-thq-text-elm14 {
+  font-family: Alexandria, sans-serif;
+  font-weight: 200;
+  font-size: clamp(13px, 1.6vw, 24px);
+  color: #fff;
+  text-align: center;
+  width: min(926px, 90%);
+  margin: clamp(12px, 2vw, 30px) auto;
+  line-height: 1.5;
+}
+
+/* 2×2 grid for algorithm cards */
+.mainpage-thq-algos-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(16px, 2.5vw, 54px);
+  margin-top: clamp(16px, 2vw, 32px);
+}
+
+/* Algorithm cards share the same shape as module cards */
+.mainpage-thq-cpu-scheduling-elm,
+.mainpage-thq-memory-management-elm,
+.mainpage-thq-vitual-memory-elm,
+.mainpage-thq-mass-storage-management-elm {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 518 / 322;
+  border-radius: clamp(20px, 3.5vw, 50px);
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  background-color: #fff;
+}
+
+.mainpage-thq-cpu-scheduling-elm > a,
+.mainpage-thq-memory-management-elm > a,
+.mainpage-thq-vitual-memory-elm > a,
+.mainpage-thq-mass-storage-management-elm > a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Algorithm card labels */
+.mainpage-thq-text-elm10,
+.mainpage-thq-text-elm11,
+.mainpage-thq-text-elm12,
+.mainpage-thq-text-elm13 {
+  position: absolute;
+  width: 70%;
+  text-align: center;
+  font-family: Alexandria, sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 3vw, 40px);
+  line-height: 1.3;
+  box-shadow: none !important;
+  background: none !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mainpage-thq-text-elm10 { color: rgba(128, 116, 39, 1); }
+.mainpage-thq-text-elm11 { color: rgba(46, 71, 41, 1); }
+.mainpage-thq-text-elm12 { color: rgba(103, 44, 73, 1); }
+.mainpage-thq-text-elm13 { color: rgba(143, 67, 48, 1); }
+
+/* Info icons for algorithm cards */
+.mainpage-thq-info-elm10,
+.mainpage-thq-info-elm11,
+.mainpage-thq-info-elm12,
+.mainpage-thq-info-elm13 {
+  position: absolute;
+  top: clamp(10px, 2vw, 28px);
+  right: clamp(10px, 2vw, 28px);
+  width: clamp(20px, 2.5vw, 35px);
+  height: auto;
+  z-index: 2;
+}
+
+.mainpage-thq-frame-elm10,
+.mainpage-thq-frame-elm11,
+.mainpage-thq-frame-elm12,
+.mainpage-thq-frame-elm13 {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.mainpage-thq-footer-elm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(48px, 6vw, 100px);
+  padding-bottom: clamp(24px, 3vw, 48px);
+}
+
+.mainpage-thq-footer-line-elm {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
+
+.mainpage-thq-o-sphere-logo-elm {
+  width: min(480px, 60%);
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   GLOBAL TEXT SAFETY RESET
+   ========================================================= */
 [class*="mainpage-thq-text-elm"] {
   background-color: transparent !important;
   background: none !important;
   box-shadow: none !important;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* Tablet / small desktop  (≤ 900px) */
+@media (max-width: 900px) {
+  .mainpage-thq-modules-grid {
+    width: 90%;
+    gap: clamp(12px, 2vw, 24px);
+  }
+  .mainpage-thq-algos-grid {
+    gap: clamp(12px, 2vw, 24px);
+  }
+  .mainpage-thq-operating-system-algortihms-elm {
+    width: 90%;
+  }
+}
+
+/* Mobile (≤ 600px) — switch to single column */
+@media (max-width: 600px) {
+  .mainpage-thq-modules-grid,
+  .mainpage-thq-algos-grid {
+    grid-template-columns: 1fr;
+    width: 88%;
+  }
+
+  [class*="-thq-text-elm37"],
+  [class*="-thq-text-elm34"],
+  [class*="-thq-text-elm31"],
+  [class*="-thq-text-elm28"],
+  [class*="-thq-text-elm25"],
+  [class*="-thq-text-elm22"],
+  [class*="-thq-text-elm19"],
+  [class*="-thq-text-elm16"],
+  .mainpage-thq-text-elm10,
+  .mainpage-thq-text-elm11,
+  .mainpage-thq-text-elm12,
+  .mainpage-thq-text-elm13 {
+    font-size: clamp(18px, 5vw, 28px);
+  }
+
+  .mainpage-thq-text-elm41,
+  .mainpage-thq-text-elm15 {
+    font-size: clamp(24px, 7vw, 40px);
+  }
+
+  .mainpage-thq-o-sphere-logo-elm {
+    width: 75%;
+  }
+}
+
+/* =========================================================
+   FLIP CARD MECHANICS
+   ========================================================= */
+
+/* Override the parent wrapper for 3D compatibility */
+.flip-container {
+  position: relative !important; 
+  width: 100% !important;
+  aspect-ratio: 518 / 322;
+  
+  /* --- 3D & DISPLAY SETTINGS --- */
+  perspective: 1000px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important; 
+  display: block !important; 
+}
+.flip-toggle {
+  display: none;
+}
+
+.flipper {
+  position: absolute; 
+  inset: 0;           
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d; /* Safari Fix */
+}
+
+.flip-toggle:checked ~ .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari Fix */
+  border-radius: clamp(20px, 3.5vw, 50px);
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  background-color: #fff;
+}
+
+/* Ensure original anchors fill the front correctly with the new structure */
+.front > a {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Update the .back container to remove the hardcoded gradient */
+.back {
+  transform: rotateY(180deg);
+  background-color: #fff; /* Replaced the gradient with white base */
+  padding: clamp(20px, 4vw, 40px) clamp(15px, 3vw, 30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* New class for the back background image */
+.back-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Update back text to sit ABOVE the background and remove hardcoded color */
+.back-text {
+  position: relative;
+  z-index: 1; /* Puts the text above the absolute background image */
+  font-family: Alexandria, sans-serif;
+  font-size: clamp(12px, 1.8vw, 18px);
+  line-height: 1.5;
+  text-align: justify;
+  margin: 0;
+}
+
+.back-info-icon {
+  cursor: pointer;
+  position: absolute;
+  top: clamp(10px, 2vw, 25px);
+  right: clamp(10px, 2vw, 25px);
+  width: clamp(20px, 2.5vw, 35px);
+  height: auto;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.back-info-icon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.back-info-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Specific text colors for each module (matching your original front colors) */
+.text-m1 { color: rgba(42, 67, 145, 1); }
+.text-m2 { color: rgba(98, 61, 132, 1); }
+.text-m3 { color: rgba(113, 103, 155, 1); }
+.text-m4 { color: rgba(110, 47, 71, 1); }
+.text-m5 { color: rgba(119, 70, 105, 1); }
+.text-m6 { color: rgba(68, 81, 163, 1); }
+.text-m7 { color: rgba(63, 100, 122, 1); }
+.text-m8 { color: rgba(85, 108, 68, 1); }
+/* Algorithm specific text colors */
+.text-a1 { color: rgba(128, 116, 39, 1); } /* Matches CPU Scheduling */
+.text-a2 { color: rgba(46, 71, 41, 1); }  /* Matches Memory Management */
+.text-a3 { color: rgba(103, 44, 73, 1); } /* Matches Virtual Memory */
+.text-a4 { color: rgba(143, 67, 48, 1); } /* Matches Mass Storage */
+
+/* Fix cursor pointer for the front info icons since they are now labels */
+[class*="-thq-info-elm"] {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+[class*="-thq-info-elm"]:hover {
+  transform: scale(1.1);
 }

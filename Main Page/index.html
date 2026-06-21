@@ -1,413 +1,355 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="en">
   <head>
-    <title>OSPhere</title>
-    <meta property="og:title" content="exported project" />
+    <title>OSphere</title>
+    <meta property="og:title" content="OSphere - Your OS Learning Hub" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button; appearance: button;; color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+      html{line-height:1.15;}body{margin:0;}*{box-sizing:border-box;border-width:0;border-style:solid;-webkit-font-smoothing:antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption{margin:0;padding:0;}button{background-color:transparent;}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0;}button,select{text-transform:none;}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button;appearance:button;color:inherit;}a{color:inherit;text-decoration:inherit;}pre{white-space:normal;}img{display:block;}html{scroll-behavior:smooth}
     </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-theme-neutral-dark);
-        background: var(--dl-color-theme-neutral-light);
-
-        fill: var(--dl-color-theme-neutral-dark);
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" data-tag="font" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;400;600&display=swap" data-tag="font" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
+    <div class="mainpage-container1">
+      <div class="mainpage-thq-mainpage-elm">
 
-      <div class="mainpage-container1">
-        <div class="mainpage-thq-mainpage-elm">
+        <div class="mainpage-thq-background-elm">
+          <img src="Assets/BG/Gradient.svg"  alt="" class="mainpage-thq-gradient-elm" />
+          <img src="Assets/BG/Dots 2.svg"    alt="" class="mainpage-thq-dots2-elm" />
+          <img src="Assets/BG/Dots.svg"      alt="" class="mainpage-thq-dots-elm" />
+        </div>
+
+        <div class="mainpage-thq-navigation-bar-elm">
+          <img src="Assets/NavBar/Side Menu.png" alt="Open Side Menu" class="mainpage-thq-side-menu-elm" />
           
-          <div class="mainpage-thq-navigation-bar-elm">
-            <img
-              src="Assets/NavBar/Line 1.svg"
-              alt="Navigation Separator Line"
-              class="mainpage-thq-line1-elm"
-            />
-            <img
-              src="Assets/NavBar/Side Menu.png"
-              alt="Open Side Menu"
-              class="mainpage-thq-side-menu-elm"
-            />
-            <a href="index.html"><img
-              src="Assets/NavBar/Home (1).png"
-              alt="Go to Home"
-              class="mainpage-thq-home-elm"
-            /></a>
-            <a href="../About%20Us/index.html"><img
-              src="Assets/NavBar/Help.png"
-              alt="Go to About Us Help Page"
-              class="mainpage-thq-help-elm"
-            /></a>
-          </div>
+          <a href="index.html" class="home-link-wrapper">
+            <img src="Assets/NavBar/Home (1).png" alt="Go to Home" class="mainpage-thq-home-elm" />
+          </a>
+          
+          <a href="../About%20Us/index.html" class="help-link-wrapper">
+            <img src="Assets/NavBar/Help.png" alt="About Us" class="mainpage-thq-help-elm" />
+          </a>
+        </div>
 
-          <span class="mainpage-thq-text-elm41">Your OS Learning Hub</span>
+        <span class="mainpage-thq-text-elm41">Your OS Learning Hub</span>
 
-          <div class="mainpage-thq-search-elm">
-            <img
-              src="Assets/Search Icon.svg"
-              alt="Search Icon"
-              class="mainpage-thq-search-icon-elm"
-            />
-            <span class="mainpage-thq-text-elm40">
-              What do you want to learn today?
-            </span>
-          </div>
+        <div class="mainpage-thq-search-elm">
+          <img src="Assets/Search Icon.svg" alt="Search" class="mainpage-thq-search-icon-elm" />
+          <span class="mainpage-thq-text-elm40">What do you want to learn today?</span>
+        </div>
 
-          <div class="mainpage-thq-module1-elm">
-            <a href="../Module%201/index.html"><img
-              src="Assets/Modules/M1 BG.svg"
-              alt="Module 1 Operating System Introduction Background Card"
-              class="mainpage-thq-bg-elm21"
-            />
-            <span class="mainpage-thq-text-elm37">
-              <span>Module 1:</span>
-              <br />
-              <span>Operating System Introduction</span>
-              <br />
-            </span></a>
-            <div class="mainpage-thq-info-elm21">
-              <img
-                src="Assets/Modules/M1 Info.svg"
-                alt="Module 1 Info Icon"
-                class="mainpage-thq-frame-elm21"
-              />
-            </div>
-          </div>
+        <div class="mainpage-thq-modules-grid">
 
-          <div class="mainpage-thq-module2-elm">
-            <a href="../Module%202/index.html"><img
-              src="Assets/Modules/M2 BG.svg"
-              alt="Module 2 Operating System Structures Background Card"
-              class="mainpage-thq-bg-elm20"
-            />
-            <span class="mainpage-thq-text-elm34">
-              <span>Module 2:</span>
-              <br />
-              <span>Operating System Structures</span>
-              <br />
-            </span></a>
-            <div class="mainpage-thq-info-elm20">
-              <img
-                src="Assets/Modules/M2 Info.svg"
-                alt="Module 2 Info Icon"
-                class="mainpage-thq-frame-elm20"
-              />
-            </div>
-          </div>
-
-          <div class="mainpage-thq-module3-elm">
-            <a href="../Module%203/index.html"><img
-              src="Assets/Modules/M3 BG.svg"
-              alt="Module 3 Processes Background Card"
-              class="mainpage-thq-bg-elm19"
-            />
-            <span class="mainpage-thq-text-elm31">
-              <span>Module 3:</span>
-              <br />
-              <span>Processes</span>
-              <br />
-            </span></a>
-            <div class="mainpage-thq-info-elm19">
-              <img
-                src="Assets/Modules/M3 Info.svg"
-                alt="Module 3 Info Icon"
-                class="mainpage-thq-frame-elm19"
-              />
-            </div>
-          </div>
-
-          <div class="mainpage-thq-module4-elm">
-            <a href="../Module%204/index.html"><img
-              src="Assets/Modules/M4 BG.svg"
-              alt="Module 4 CPU Scheduling Background Card"
-              class="mainpage-thq-bg-elm18"
-            />
-            <span class="mainpage-thq-text-elm28">
-              <span>Module 4:</span>
-              <br />
-              <span>CPU Scheduling</span>
-            </span></a>
-            <div class="mainpage-thq-info-elm18">
-              <img
-                src="Assets/Modules/M4 Info.svg"
-                alt="Module 4 Info Icon"
-                class="mainpage-thq-frame-elm18"
-              />
-            </div>
-          </div>
-
-          <div class="mainpage-thq-module5-elm">
-            <a href="../Module%205/index.html"><img
-              src="Assets/Modules/M5 BG.svg"
-              alt="Module 5 Memory Management Background Card"
-              class="mainpage-thq-bg-elm17"
-            />
-            <span class="mainpage-thq-text-elm25">
-              <span>Module 5:</span>
-              <br />
-              <span>Memory Management</span>
-              <br />
-            </span></a>
-            <div class="mainpage-thq-info-elm17">
-              <img
-                src="Assets/Modules/M5 Info.svg"
-                alt="Module 5 Info Icon"
-                class="mainpage-thq-frame-elm17"
-              />
-            </div>
-          </div>
-
-          <div class="mainpage-thq-module6-elm">
-            <a href="../Module%206/index.html"><img
-              src="Assets/Modules/M6 BG.svg"
-              alt="Module 6 Virtual Memory Background Card"
-              class="mainpage-thq-bg-elm16"
-            />
-            <span class="mainpage-thq-text-elm22">
-              <span>Module 6:</span>
-              <br />
-              <span>Virtual Memory</span>
-            </span></a>
-            <div class="mainpage-thq-info-elm16">
-              <img
-                src="Assets/Modules/M6 Info.svg"
-                alt="Module 6 Info Icon"
-                class="mainpage-thq-frame-elm16"
-              />
-            </div>
-          </div>
-
-          <div class="mainpage-thq-module7-elm">
-            <a href="../Module%207/index.html"><img
-              src="Assets/Modules/M7 BG.svg"
-              alt="Module 7 Mass Storage Management Background Card"
-              class="mainpage-thq-bg-elm15"
-            />
-            <span class="mainpage-thq-text-elm19">
-              <span>Module 7:</span>
-              <br />
-              <span>Mass Storage Management</span>
-            </span></a>
-            <div class="mainpage-thq-info-elm15">
-              <img
-                src="Assets/Modules/M7 Info.svg"
-                alt="Module 7 Info Icon"
-                class="mainpage-thq-frame-elm15"
-              />
-            </div>
-          </div>
-
-          <div class="mainpage-thq-module8-elm">
-            <a href="../Module%208/index.html"><img
-              src="Assets/Modules/M8 BG.svg"
-              alt="Module 8 Deadlock Background Card"
-              class="mainpage-thq-bg-elm14"
-            />
-            <span class="mainpage-thq-text-elm16">
-              <span>Module 8:</span>
-              <br />
-              <span>Deadlock</span>
-            </span></a>
-            <div class="mainpage-thq-info-elm14">
-              <img
-                src="Assets/Modules/M8 Info.svg"
-                alt="Module 8 Info Icon"
-                class="mainpage-thq-frame-elm14"
-              />
-            </div>
-          </div>
-
-          <div class="mainpage-thq-operating-system-algortihms-elm">
-            <span class="mainpage-thq-text-elm15">
-              Operating System Algorithms
-            </span>
-            <span class="mainpage-thq-text-elm14">
-              Explore and apply operating system algorithms through interactive
-              simulations. Input your own data to analyze CPU scheduling, memory
-              management, virtual memory, and resource allocation techniques
-              with automated calculations and visual results.
-            </span>
-            
-            <div class="mainpage-thq-cpu-scheduling-elm">
-              <a href="../CPU%20Scheduling/index.html"><img
-                src="Assets/Modules/CPUS BG.svg"
-                alt="CPU Scheduling Interactive Simulator Background Card"
-                class="mainpage-thq-bg-elm10"
-              />
-              <span class="mainpage-thq-text-elm10">CPU Scheduling</span></a>
-              <div class="mainpage-thq-info-elm10">
-                <img
-                  src="Assets/Modules/CPUS Info.svg"
-                  alt="CPU Scheduling Simulator Info Icon"
-                  class="mainpage-thq-frame-elm10"
-                />
+          <div class="mainpage-thq-module1-elm flip-container">
+            <input type="checkbox" id="flip-m1" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%201/index.html">
+                  <img src="Assets/Modules/M1 BG.svg" alt="Module 1 Background" class="mainpage-thq-bg-elm21" />
+                  <span class="mainpage-thq-text-elm37">
+                    <span>Module 1:</span><br /><span>Operating System Introduction</span>
+                  </span>
+                </a>
+                <label for="flip-m1" class="mainpage-thq-info-elm21">
+                  <img src="Assets/Modules/M1 Info.svg" alt="Info" class="mainpage-thq-frame-elm21" />
+                </label>
               </div>
-            </div>
-            
-            <div class="mainpage-thq-memory-management-elm">
-              <a href="../Memory%20Management/index.html"><img
-                src="Assets/Modules/MM BG.svg"
-                alt="Memory Management Interactive Simulator Background Card"
-                class="mainpage-thq-bg-elm11"
-              />
-              <span class="mainpage-thq-text-elm11">Memory Management</span></a>
-              <div class="mainpage-thq-info-elm11">
-                <img
-                  src="Assets/Modules/MM Info.svg"
-                  alt="Memory Management Simulator Info Icon"
-                  class="mainpage-thq-frame-elm11"
-                />
-              </div>
-            </div>
-            
-            <div class="mainpage-thq-vitual-memory-elm">
-              <a href="../Virtual%20Memory/index.html"><img
-                src="Assets/Modules/VM BG.svg"
-                alt="Virtual Memory Interactive Simulator Background Card"
-                class="mainpage-thq-bg-elm12"
-              />
-              <span class="mainpage-thq-text-elm12">Virtual Memory</span></a>
-              <div class="mainpage-thq-info-elm12">
-                <img
-                  src="Assets/Modules/VM Info.svg"
-                  alt="Virtual Memory Simulator Info Icon"
-                  class="mainpage-thq-frame-elm12"
-                />
-              </div>
-            </div>
-            
-            <div class="mainpage-thq-mass-storage-management-elm">
-              <a href="../Mass%20Storage%20Management/index.html"><img
-                src="Assets/Modules/MSM BG.svg"
-                alt="Mass Storage Management Interactive Simulator Background Card"
-                class="mainpage-thq-bg-elm13"
-              />
-              <span class="mainpage-thq-text-elm13">
-                Mass Storage Management
-              </span></a>
-              <div class="mainpage-thq-info-elm13">
-                <img
-                  src="Assets/Modules/MSM Info.svg"
-                  alt="Mass Storage Management Simulator Info Icon"
-                  class="mainpage-thq-frame-elm13"
-                />
+              <div class="back">
+                <img src="Assets/Modules/M1 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m1" class="back-info-icon">
+                  <img src="Assets/Modules/M1 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m1">
+                  This module introduces the basic concepts of Operating Systems, including their role as an interface between users and hardware. It covers OS goals such as resource management, process handling, and scheduling, as well as different computing environments and system architectures like multiprocessor, distributed, real-time, and handheld systems.
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="mainpage-thq-footer-elm">
-            <img
-              src="Assets/Footer/Footer Line.svg"
-              alt="Footer Horizontal Divider Line"
-              class="mainpage-thq-footer-line-elm"
-            />
-            <img
-              src="Assets/Footer/OSphere Logo.svg"
-              alt="OSphere Branding Logo"
-              class="mainpage-thq-o-sphere-logo-elm"
-            />
+          <div class="mainpage-thq-module2-elm flip-container">
+            <input type="checkbox" id="flip-m2" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%202/index.html">
+                  <img src="Assets/Modules/M2 BG.svg" alt="Module 2 Background" class="mainpage-thq-bg-elm20" />
+                  <span class="mainpage-thq-text-elm34">
+                    <span>Module 2:</span><br /><span>Operating System Structures</span>
+                  </span>
+                </a>
+                <label for="flip-m2" class="mainpage-thq-info-elm20">
+                  <img src="Assets/Modules/M2 Info.svg" alt="Info" class="mainpage-thq-frame-elm20" />
+                </label>
+              </div>
+              <div class="back">
+                <img src="Assets/Modules/M2 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m2" class="back-info-icon">
+                  <img src="Assets/Modules/M2 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m2">This module explores the internal structure of operating systems, focusing on how CPU, memory, and I/O devices interact. It covers system organization, interrupts, storage hierarchy, OS services, and architectural designs such as layered systems, microkernels, and modular systems.</p>
+              </div>
+            </div>
           </div>
 
-          <div class="mainpage-thq-background-elm">
-            <img
-              src="Assets/BG/Gradient.svg"
-              alt="Decorative Background Color Gradient Layer"
-              class="mainpage-thq-gradient-elm"
-            />
-            <img
-              src="Assets/BG/Dots 2.svg"
-              alt="Decorative Background Half-tone Dots Cluster Pattern Layer 2"
-              class="mainpage-thq-dots2-elm"
-            />
-            <img
-              src="Assets/BG/Dots.svg"
-              alt="Decorative Background Half-tone Dots Cluster Pattern Layer 1"
-              class="mainpage-thq-dots-elm"
-            />
+          <div class="mainpage-thq-module3-elm flip-container">
+            <input type="checkbox" id="flip-m3" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%203/index.html">
+                  <img src="Assets/Modules/M3 BG.svg" alt="Module 3 Background" class="mainpage-thq-bg-elm19" />
+                  <span class="mainpage-thq-text-elm31">
+                    <span>Module 3:</span><br /><span>Processes</span>
+                  </span>
+                </a>
+                <label for="flip-m3" class="mainpage-thq-info-elm19">
+                  <img src="Assets/Modules/M3 Info.svg" alt="Info" class="mainpage-thq-frame-elm19" />
+                </label>
+              </div>
+              <div class="back">
+                <img src="Assets/Modules/M3 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m3" class="back-info-icon">
+                  <img src="Assets/Modules/M3 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m3">This module explains processes as programs in execution and how the OS manages them. It discusses process structure, PCB, process states, scheduling, context switching, and creation/termination mechanisms like fork and exec.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainpage-thq-module4-elm flip-container">
+            <input type="checkbox" id="flip-m4" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%204/index.html">
+                  <img src="Assets/Modules/M4 BG.svg" alt="Module 4 Background" class="mainpage-thq-bg-elm18" />
+                  <span class="mainpage-thq-text-elm28">
+                    <span>Module 4:</span><br /><span>CPU Scheduling</span>
+                  </span>
+                </a>
+                <label for="flip-m4" class="mainpage-thq-info-elm18">
+                  <img src="Assets/Modules/M4 Info.svg" alt="Info" class="mainpage-thq-frame-elm18" />
+                </label>
+              </div>
+              <div class="back">
+                <img src="Assets/Modules/M4 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m4" class="back-info-icon">
+                  <img src="Assets/Modules/M4 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m4">This module focuses on CPU scheduling and how the OS allocates processor time to processes. It covers scheduling criteria, queues, and major algorithms like FCFS, SJF, Priority, and Round Robin, emphasizing efficiency and system responsiveness.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainpage-thq-module5-elm flip-container">
+            <input type="checkbox" id="flip-m5" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%205/index.html">
+                  <img src="Assets/Modules/M5 BG.svg" alt="Module 5 Background" class="mainpage-thq-bg-elm17" />
+                  <span class="mainpage-thq-text-elm25">
+                    <span>Module 5:</span><br /><span>Memory Management</span>
+                  </span>
+                </a>
+                <label for="flip-m5" class="mainpage-thq-info-elm17">
+                  <img src="Assets/Modules/M5 Info.svg" alt="Info" class="mainpage-thq-frame-elm17" />
+                </label>
+              </div>
+              <div class="back">
+                <img src="Assets/Modules/M5 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m5" class="back-info-icon">
+                  <img src="Assets/Modules/M5 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m5">This module discusses memory management, including how processes are loaded, stored, and protected in RAM. It covers address binding, MMU, swapping, allocation strategies, fragmentation, paging, and memory protection techniques.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainpage-thq-module6-elm flip-container">
+            <input type="checkbox" id="flip-m6" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%206/index.html">
+                  <img src="Assets/Modules/M6 BG.svg" alt="Module 6 Background" class="mainpage-thq-bg-elm16" />
+                  <span class="mainpage-thq-text-elm22">
+                    <span>Module 6:</span><br /><span>Virtual Memory</span>
+                  </span>
+                </a>
+                <label for="flip-m6" class="mainpage-thq-info-elm16">
+                  <img src="Assets/Modules/M6 Info.svg" alt="Info" class="mainpage-thq-frame-elm16" />
+                </label>
+              </div>
+              <div class="back">
+                <img src="Assets/Modules/M6 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m6" class="back-info-icon">
+                  <img src="Assets/Modules/M6 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m6">This module introduces virtual memory, which allows programs to run even if not fully loaded in RAM. It explains demand paging, page faults, page replacement algorithms, frame allocation, and performance considerations like effective access time.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainpage-thq-module7-elm flip-container">
+            <input type="checkbox" id="flip-m7" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%207/index.html">
+                  <img src="Assets/Modules/M7 BG.svg" alt="Module 7 Background" class="mainpage-thq-bg-elm15" />
+                  <span class="mainpage-thq-text-elm19">
+                    <span>Module 7:</span><br /><span>Mass Storage Management</span>
+                  </span>
+                </a>
+                <label for="flip-m7" class="mainpage-thq-info-elm15">
+                  <img src="Assets/Modules/M7 Info.svg" alt="Info" class="mainpage-thq-frame-elm15" />
+                </label>
+              </div>
+              <div class="back">
+                <img src="Assets/Modules/M7 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m7" class="back-info-icon">
+                  <img src="Assets/Modules/M7 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m7">This module covers mass storage and disk management in operating systems. It explains disk structure, performance factors, disk scheduling algorithms, and how the OS optimizes storage access and efficiency.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mainpage-thq-module8-elm flip-container">
+            <input type="checkbox" id="flip-m8" class="flip-toggle">
+            <div class="flipper">
+              <div class="front">
+                <a href="../Module%208/index.html">
+                  <img src="Assets/Modules/M8 BG.svg" alt="Module 8 Background" class="mainpage-thq-bg-elm14" />
+                  <span class="mainpage-thq-text-elm16">
+                    <span>Module 8:</span><br /><span>Deadlock</span>
+                  </span>
+                </a>
+                <label for="flip-m8" class="mainpage-thq-info-elm14">
+                  <img src="Assets/Modules/M8 Info.svg" alt="Info" class="mainpage-thq-frame-elm14" />
+                </label>
+              </div>
+              <div class="back">
+                <img src="Assets/Modules/M8 BG.svg" alt="" class="back-bg" />
+                <label for="flip-m8" class="back-info-icon">
+                  <img src="Assets/Modules/M8 Info.svg" alt="Close Info" />
+                </label>
+                <p class="back-text text-m8">This module explains deadlocks and how operating systems handle them. It covers deadlock conditions, system modeling, and strategies such as prevention, avoidance (Banker’s Algorithm), detection, and recovery.</p>
+              </div>
+            </div>
           </div>
 
         </div>
 
-        <a href="https://play.teleporthq.io/signup" class="mainpage-link">
-          <div aria-label="Sign up to TeleportHQ" class="mainpage-container2">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 19 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="mainpage-icon1"
-            >
-              <path
-                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
-                fill="#B23ADE"
-              ></path>
-              <path
-                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
-                fill="#FF5C5C"
-              ></path>
-              <path
-                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
-                fill="#2874DE"
-              ></path>
-            </svg>
-            <span class="mainpage-text22">Built in TeleportHQ</span>
+        <div class="mainpage-thq-operating-system-algortihms-elm">
+          <span class="mainpage-thq-text-elm15">Operating System Algorithms</span>
+          <span class="mainpage-thq-text-elm14">
+            Explore and apply operating system algorithms through interactive
+            simulations. Input your own data to analyze CPU scheduling, memory
+            management, virtual memory, and resource allocation techniques
+            with automated calculations and visual results.
+          </span>
+
+          <div class="mainpage-thq-algos-grid">
+
+            <div class="mainpage-thq-cpu-scheduling-elm flip-container">
+              <input type="checkbox" id="flip-a1" class="flip-toggle">
+              <div class="flipper">
+                <div class="front">
+                  <a href="../CPU%20Scheduling/index.html">
+                    <img src="Assets/Modules/CPUS BG.svg" alt="CPU Scheduling" class="mainpage-thq-bg-elm10" />
+                    <span class="mainpage-thq-text-elm10">CPU Scheduling</span>
+                  </a>
+                  <label for="flip-a1" class="mainpage-thq-info-elm10">
+                    <img src="Assets/Modules/CPUS Info.svg" alt="Info" class="mainpage-thq-frame-elm10" />
+                  </label>
+                </div>
+                <div class="back">
+                  <img src="Assets/Modules/CPUS BG.svg" alt="" class="back-bg" />
+                  <label for="flip-a1" class="back-info-icon">
+                    <img src="Assets/Modules/CPUS Info.svg" alt="Close Info" />
+                  </label>
+                  <p class="back-text text-a1">An interactive CPU scheduling simulation that generates Gantt charts and performance metrics. It supports algorithms such as FCFS, SJF, Priority Scheduling, Round Robin, HRRN, Multilevel Queue, and Multilevel Feedback Queue.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mainpage-thq-memory-management-elm flip-container">
+              <input type="checkbox" id="flip-a2" class="flip-toggle">
+              <div class="flipper">
+                <div class="front">
+                  <a href="../Memory%20Management/index.html">
+                    <img src="Assets/Modules/MM BG.svg" alt="Memory Management" class="mainpage-thq-bg-elm11" />
+                    <span class="mainpage-thq-text-elm11">Memory Management</span>
+                  </a>
+                  <label for="flip-a2" class="mainpage-thq-info-elm11">
+                    <img src="Assets/Modules/MM Info.svg" alt="Info" class="mainpage-thq-frame-elm11" />
+                  </label>
+                </div>
+                <div class="back">
+                  <img src="Assets/Modules/MM BG.svg" alt="" class="back-bg" />
+                  <label for="flip-a2" class="back-info-icon">
+                    <img src="Assets/Modules/MM Info.svg" alt="Close Info" />
+                  </label>
+                  <p class="back-text text-a2">An interactive memory management simulation that demonstrates how the operating system allocates, tracks, and protects main memory. It supports techniques such as paging, segmentation concepts, address translation, and memory allocation strategies.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mainpage-thq-vitual-memory-elm flip-container">
+              <input type="checkbox" id="flip-a3" class="flip-toggle">
+              <div class="flipper">
+                <div class="front">
+                  <a href="../Virtual%20Memory/index.html">
+                    <img src="Assets/Modules/VM BG.svg" alt="Virtual Memory" class="mainpage-thq-bg-elm12" />
+                    <span class="mainpage-thq-text-elm12">Virtual Memory</span>
+                  </a>
+                  <label for="flip-a3" class="mainpage-thq-info-elm12">
+                    <img src="Assets/Modules/VM Info.svg" alt="Info" class="mainpage-thq-frame-elm12" />
+                  </label>
+                </div>
+                <div class="back">
+                  <img src="Assets/Modules/VM BG.svg" alt="" class="back-bg" />
+                  <label for="flip-a3" class="back-info-icon">
+                    <img src="Assets/Modules/VM Info.svg" alt="Close Info" />
+                  </label>
+                  <p class="back-text text-a3">An interactive virtual memory simulation that models how systems extend memory beyond physical RAM using demand paging. It supports page replacement algorithms such as FIFO, Optimal, LRU, LFU, and Second Chance, along with page fault and performance analysis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mainpage-thq-mass-storage-management-elm flip-container">
+              <input type="checkbox" id="flip-a4" class="flip-toggle">
+              <div class="flipper">
+                <div class="front">
+                  <a href="../Mass%20Storage%20Management/index.html">
+                    <img src="Assets/Modules/MSM BG.svg" alt="Mass Storage Management" class="mainpage-thq-bg-elm13" />
+                    <span class="mainpage-thq-text-elm13">Mass Storage Management</span>
+                  </a>
+                  <label for="flip-a4" class="mainpage-thq-info-elm13">
+                    <img src="Assets/Modules/MSM Info.svg" alt="Info" class="mainpage-thq-frame-elm13" />
+                  </label>
+                </div>
+                <div class="back">
+                  <img src="Assets/Modules/MSM BG.svg" alt="" class="back-bg" />
+                  <label for="flip-a4" class="back-info-icon">
+                    <img src="Assets/Modules/MSM Info.svg" alt="Close Info" />
+                  </label>
+                  <p class="back-text text-a4">An interactive disk management simulation that models how operating systems organize and access secondary storage. It supports disk scheduling algorithms such as FCFS, SSTF, SCAN, C-SCAN, LOOK, and C-LOOK, along with disk structure and performance analysis.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </a>
+        </div>
+
+        <div class="mainpage-thq-footer-elm">
+          <img src="Assets/Footer/Footer Line.svg" alt="" class="mainpage-thq-footer-line-elm" />
+          <img src="Assets/Footer/OSphere Logo.svg" alt="OSphere Logo" class="mainpage-thq-o-sphere-logo-elm" />
+        </div>
+
       </div>
-      <link
-        rel="canonical"
-        href="https://osphere-prototype-copy-9zpl9v.teleporthq.site/"
-      />
     </div>
   </body>
 </html>

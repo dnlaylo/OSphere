@@ -1,0 +1,102 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OSphere - Page Replacement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    
+    <div id="main-app-wrapper" class="algorithm-container1">
+      
+      <div class="algorithm-thq-bg-elm">
+        <img src="Assets/BG/Dots.svg" alt="Dotted background pattern overlay" class="algorithm-thq-assets13-elm" />
+      </div>
+  
+      <nav class="algorithm-thq-navigation-bar-elm">
+        <div class="nav-left">
+          <img src="Assets/NavBar/Side Menu.png" alt="Open side menu" />
+          <a href="../Main Page/index.html">
+            <img src="Assets/NavBar/Home.png" alt="Navigate to Home Page" />
+          </a>
+        </div>
+        <div class="nav-right">
+          <a href="../About Us/index.html">
+            <img src="Assets/NavBar/Help.png" alt="Navigate to Help Page" />
+          </a>
+        </div>
+      </nav>
+
+      <main class="algorithm-thq-content-container-elm">
+        
+        <div class="dropdown-wrapper">
+          <select class="algorithm-thq-dropdown-elm">
+            <option disabled selected>Algorithms</option>
+            <option value="FIFO">FIFO (First In First Out)</option>
+            <option value="LRU">LRU (Least Recently Used)</option>
+            <option value="Optimal">Optimal</option>
+          </select>
+        </div>
+
+        <div class="input-card-body">
+
+          <div class="form-group">
+            <label class="field-label">Reference String</label>
+            <input
+              type="text"
+              class="algorithm-thq-reference-input-elm"
+              placeholder="Ex: 7 0 1 2 0 3 0 4"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">No. of Frames</label>
+            <input
+              type="number"
+              class="algorithm-thq-frames-input-elm"
+              placeholder="Frames"
+              min="1"
+            />
+          </div>
+
+          <button class="algorithm-thq-compute-button-elm" id="compute-btn">
+              COMPUTE
+          </button>
+
+          <span class="algorithm-thq-text-elm1">
+              Please input contents
+          </span>
+
+        </div>
+      </main>
+    </div>
+
+    <div id="popup-overlay">
+      <div class="modal-card">
+        
+        <div class="modal-header">
+          <span>OUTPUT</span>
+        </div>
+
+        <div class="modal-body">
+          <h2 class="virtual-memory-title">VIRTUAL MEMORY</h2>
+          
+          <div class="memory-bars-container">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
