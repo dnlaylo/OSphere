@@ -1,1788 +1,410 @@
+html { line-height: 1.15; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Alexandria, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #fff;
+  background: #0d0d14;
+}
+*, *::before, *::after { box-sizing: border-box; }
+p, li, ul, pre, div, h1, h2, h3, h4, h5, h6,
+figure, blockquote, figcaption { margin: 0; padding: 0; }
+button { background-color: transparent; }
+button, input, optgroup, select, textarea {
+  font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;
+}
+a { color: inherit; text-decoration: inherit; }
+img { display: block; }
+
+/* =========================================================
+   ROOT WRAPPER
+   ========================================================= */
 .module5-container1 {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
-    flex-direction: column;
-  }
-   
-  .module5-thq-module5-elm {
-    width: 100%;
-    height: 17266px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 1);
-    border-style: solid;
-    border-width: 1px;
-    background-color: rgba(255, 255, 255, 0.10000000149011612);
-  }
-   
-  .module5-thq-bg-elm {
-    top: -2986px;
-    left: -4884px;
-    width: 12000px;
-    height: 20252px;
-    position: absolute;
-  }
-   
-  .module5-thq-footer-elm {
-    top: 16875px;
-    left: -0.0159912109375px;
-    width: 1440.1253662109375px;
-    height: 411.9993591308594px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-footerline-elm {
-    top: 0px;
-    left: 1440.1248779296875px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .module5-thq-o-spherelogo-elm {
-    top: 1.884765625px;
-    left: 302.1728515625px;
-    width: 812px;
-    height: 410px;
-    position: absolute;
-  }
-   
-  .module5-thq-content-container-elm {
-    top: 320px;
-    left: 65px;
-    width: 1291px;
-    height: 16482px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-fragmentation-elm {
-    top: 15720px;
-    left: 21px;
-    width: 1184px;
-    height: 245px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm100 {
-    top: 70px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm102 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-paging-elm1 {
-    top: 14780px;
-    left: 21px;
-    width: 1184px;
-    height: 1093px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm103 {
-    top: 78px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm104 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm105 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm106 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm107 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm108 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm109 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm110 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm111 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm112 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm113 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm114 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm115 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm116 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm119 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-address-conversion-elm {
-    top: 13670px;
-    left: 21px;
-    width: 1191px;
-    height: 1032px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-container5-elm {
-    top: 64px;
-    left: 0px;
-    width: 1191px;
-    height: 968px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module5-thq-fig5-elm {
-    top: 300px;
-    left: 514px;
-    width: 158px;
-    height: 110px;
-    position: absolute;
-  }
-   
-  .module5-thq-fig7-elm {
-    top: 941px;
-    left: 437px;
-    width: 313px;
-    height: 36px;
-    position: absolute;
-  }
-   
-  .module5-thq-text-elm120 {
-    top: 0px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm121 {
-    top: 95px;
-    left: 44px;
-    color: rgba(255, 255, 255, 1);
-    width: 1102px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm122 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm123 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm124 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm125 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm126 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm127 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm128 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm129 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-fig6-elm {
-    top: 550px;
-    left: 513px;
-    width: 160px;
-    height: 50px;
-    position: absolute;
-  }
-   
-  .module5-thq-paging-elm2 {
-    top: 13120px;
-    left: 21px;
-    width: 1187px;
-    height: 535px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm131 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm132 {
-    top: 80px;
-    left: 3px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-memory-allocation-policies-elm1 {
-    top: 12800px;
-    left: 21px;
-    width: 1184px;
-    height: 278px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm137 {
-    top: 68px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm141 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-multiprogrammingwitha-variable-number-elm {
-    top: 11850px;
-    left: 21px;
-    width: 1191px;
-    height: 960px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-container4-elm {
-    top: 77px;
-    left: 0px;
-    width: 1191px;
-    height: 899px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module5-thq-text-elm142 {
-    top: 107px;
-    left: 46px;
-    color: rgba(255, 255, 255, 1);
-    width: 1098px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm143 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm144 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm145 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm146 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm147 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm148 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm149 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm153 {
-    left: 13px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-memory-allocation-policies-elm2 {
-    top: 11480px;
-    left: 50.998046875px;
-    width: 1173px;
-    height: 324px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm155 {
-    top: 79px;
-    color: rgba(255, 255, 255, 1);
-    width: 1173px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm159 {
-    left: 21px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-frame2-typesof-mft-elm {
-    top: 11200px;
-    left: 21px;
-    width: 1194px;
-    height: 208px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm160 {
-    top: 68px;
-    color: rgba(255, 255, 255, 1);
-    width: 1194px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm163 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-multiprogrammingwitha-fixed-tasks-elm {
-    top: 10400px;
-    left: 21px;
-    width: 1180px;
-    height: 864px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm164 {
-    top: 94px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm165 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm166 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm167 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm168 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm169 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm170 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm171 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm174 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-skipping-elm {
-    top: 10120px;
-    left: 21px;
-    width: 1180px;
-    height: 259px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm176 {
-    top: 84px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm178 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-memory-fragmentation-elm {
-    top: 9680px;
-    left: 21px;
-    width: 1180px;
-    height: 434px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm179 {
-    top: 84px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm182 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-multiple-partition-allocation-elm {
-    top: 9400px;
-    left: 21px;
-    width: 1180px;
-    height: 224px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm184 {
-    top: 84px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm186 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-memory-allocation-elm {
-    top: 7870px;
-    left: 21px;
-    width: 1204px;
-    height: 1504px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-container3-elm {
-    top: 281px;
-    left: 5px;
-    width: 1191px;
-    height: 1223px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module5-thq-text-elm187 {
-    top: 314px;
-    left: 62.998046875px;
-    color: rgba(255, 255, 255, 1);
-    width: 1070px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm188 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm189 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm190 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm191 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm192 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm193 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm194 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm195 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm196 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm197 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm198 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm199 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm200 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm203 {
-    top: 71px;
-    left: 5px;
-    color: rgba(255, 255, 255, 1);
-    width: 1199px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm205 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-bare-machines-elm {
-    top: 7620px;
-    left: 33px;
-    width: 1212px;
-    height: 183px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm206 {
-    left: 8px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm207 {
-    top: 78px;
-    color: rgba(255, 255, 255, 1);
-    width: 1212px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm208 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm209 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm210 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-swapping-constraintsand-pending-io-elm {
-    top: 7200px;
-    left: 33px;
-    width: 1212px;
-    height: 353px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm212 {
-    left: 8px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm213 {
-    top: 78px;
-    color: rgba(255, 255, 255, 1);
-    width: 1212px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-frame3-waysto-optimize-swapping-elm {
-    top: 6850px;
-    left: 21px;
-    width: 1212px;
-    height: 364px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm218 {
-    left: 8px;
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm219 {
-    top: 89px;
-    color: rgba(255, 255, 255, 1);
-    width: 1212px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-swapping-elm {
-    top: 5850px;
-    left: 21px;
-    width: 1239px;
-    height: 913px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm223 {
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm224 {
-    top: 70px;
-    color: rgba(255, 255, 255, 1);
-    width: 1212px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-figc2-elm {
-    top: 679px;
-    left: 111px;
-    width: 975px;
-    height: 94px;
-    position: absolute;
-  }
-   
-  .module5-thq-fig3-elm {
-    top: 794px;
-    left: 226px;
-    width: 744px;
-    height: 55px;
-    position: absolute;
-  }
-   
-  .module5-thq-fig4-elm {
-    top: 872px;
-    left: 299px;
-    width: 598px;
-    height: 41px;
-    position: absolute;
-  }
-   
-  .module5-thq-overlays-elm {
-    top: 5500px;
-    left: 21px;
-    width: 1239px;
-    height: 292px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm231 {
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm232 {
-    top: 70px;
-    color: rgba(255, 255, 255, 1);
-    width: 1212px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-staticand-dynamic-linking-elm {
-    top: 5050px;
-    left: 21px;
-    width: 1239px;
-    height: 479px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm235 {
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm236 {
-    top: 80px;
-    color: rgba(255, 255, 255, 1);
-    width: 1216px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm237 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm238 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm239 {
-    font-weight: 200;
-  }
-   
-  .module5-thq-text-elm240 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-text-elm241 {
-    font-weight: 300;
-  }
-   
-  .module5-thq-dynamic-loading-elm {
-    top: 4650px;
-    left: 20.998046875px;
-    width: 1259px;
-    height: 354px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm244 {
-    left: 20px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm245 {
-    top: 80px;
-    color: rgba(255, 255, 255, 1);
-    width: 1237px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-memory-management-unit-elm {
-    top: 4150px;
-    left: 21px;
-    width: 1260px;
-    height: 501px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm248 {
-    top: 400px;
-    left: 8px;
-    color: rgba(255, 255, 255, 1);
-    width: 1237px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm250 {
-    top: 0px;
-    left: 21px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm251 {
-    top: 80px;
-    color: rgba(255, 255, 255, 1);
-    width: 1237px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-logicalvs-virtual-space-elm {
-    top: 3850px;
-    left: 21px;
-    width: 1252px;
-    height: 265px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm254 {
-    left: 13px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm255 {
-    top: 67px;
-    color: rgba(255, 255, 255, 1);
-    width: 1237px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-address-binding-elm {
-    top: 2932px;
-    left: 21px;
-    width: 1288px;
-    height: 923px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-container2-elm {
-    top: 0px;
-    left: -30px;
-    width: 1277px;
-    height: 870px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module5-thq-text-elm259 {
-    top: 34px;
-    left: 49px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm260 {
-    top: 100px;
-    left: 40px;
-    color: rgba(255, 255, 255, 1);
-    width: 1184px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-addresses-elm {
-    top: 2331px;
-    left: 20.998046875px;
-    width: 1247px;
-    height: 524px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm270 {
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm271 {
-    top: 70px;
-    color: rgba(255, 255, 255, 1);
-    width: 1247px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: justify;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-whatis-memory-elm {
-    top: 1680px;
-    left: 21px;
-    width: 1291px;
-    height: 618.0466918945312px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm276 {
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm277 {
-    top: 62px;
-    color: rgba(255, 255, 255, 1);
-    width: 1291px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-fig1-elm {
-    top: 241px;
-    left: 363px;
-    width: 551px;
-    height: 377px;
-    position: absolute;
-  }
-   
-  .module5-thq-motivationof-memory-management-elm {
-    top: 1468px;
-    left: 21px;
-    width: 1291px;
-    height: 202px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm278 {
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm279 {
-    top: 62px;
-    color: rgba(255, 255, 255, 1);
-    width: 1291px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-step-by-step-elm {
-    top: 690px;
-    left: 1px;
-    width: 1285px;
-    height: 727px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-container1-elm {
-    top: -15px;
-    left: 0px;
-    width: 1277px;
-    height: 741px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module5-thq-text-elm283 {
-    top: 86px;
-    left: 46px;
-    color: rgba(255, 255, 255, 1);
-    width: 1185px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm290 {
-    top: 27px;
-    left: 46px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-memory-management-elm {
-    top: 408px;
-    left: 21px;
-    width: 1239px;
-    height: 260px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm291 {
-    color: rgba(255, 255, 255, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm292 {
-    top: 65px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-overview-elm {
-    top: 0px;
-    left: 21px;
-    width: 1239px;
-    height: 449px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module5-thq-text-elm294 {
-    color: rgba(255, 255, 255, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-text-elm295 {
-    top: 52px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: justify;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module5-thq-header-elm {
-    top: 116px;
-    left: 46px;
-    width: 1345px;
-    height: 149px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 30px;
-    background-color: rgba(255, 255, 255, 1);
-  }
-   
-  .module5-thq-m5bg-elm {
-    top: -225px;
-    left: -26px;
-    width: 1371px;
-    height: 771px;
-    position: absolute;
-  }
-   
-  .module5-thq-text-elm297 {
-  top: 85px;
-  left: 57px;
-  color: rgba(63, 36, 55, 1);
-  width: 502px;
-  height: auto;
-  position: absolute;
-  font-size: 32px;
-  font-style: normal; 
-  text-align: left;
-  font-family: Alexandria;
-  font-weight: 400;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
- 
+
+/* =========================================================
+   MAIN CANVAS
+   ========================================================= */
+.module5-thq-module5-elm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow: visible;
+  border: none;
+  background-color: transparent;
+}
+
+/* =========================================================
+   BACKGROUND LAYER (fixed behind everything)
+   ========================================================= */
+.mainpage-thq-background-elm {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.module5-thq-bg-elm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   ALL CONTENT sits above the background
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm,
+.mainpage-thq-footer-elm {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(16px, 3vw, 26px);
+  flex-shrink: 0;
+}
+
+/* Nav line below bar — hidden, was decorative SVG at design width */
+.mainpage-thq-line1-elm { display: none; }
+
+.mainpage-thq-side-menu-elm {
+  width: clamp(36px, 4vw, 56px);
+  height: auto;
+  cursor: pointer;
+}
+
+/* Apply the margin to the wrapper so Flexbox spaces it correctly */
+.home-link-wrapper {
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.mainpage-thq-home-elm {
+  width: clamp(36px, 4vw, 60px);
+  height: auto;
+}
+
+/* Apply margin-left: auto to the wrapper to push it to the far right */
+.help-link-wrapper {
+  margin-left: auto; 
+}
+
+.mainpage-thq-help-elm {
+  width: clamp(24px, 2.5vw, 35px);
+  height: auto;
+}
+
+/* =========================================================
+   HEADER BANNER
+   ========================================================= */
+.module5-thq-header-elm {
+  position: relative;
+  width: min(1347px, 94%);
+  height: clamp(100px, 12vw, 149px);
+  margin: clamp(16px, 2.5vw, 32px) auto clamp(24px, 3vw, 48px);
+  border-radius: clamp(16px, 2.5vw, 30px);
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.module5-thq-m5bg-elm {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 250%;
+  object-fit: cover;
+  object-position: center center;
+}
+
 .module5-thq-text-elm298 {
-  top: 13px;
-  left: 37px;
-  color: rgba(89, 52, 77, 1);
-  width: 348px;
-  height: auto;
   position: absolute;
-  font-size: 64px;
-  box-shadow: none !important; 
-  font-style: normal; 
-  text-align: center;
-  font-family: Alexandria;
+  top: clamp(8px, 1vw, 13px);            
+  left: clamp(24px, 4vw, 56px);          
+  color: rgba(63, 36, 55, 1);
+  font-size: clamp(32px, 4.5vw, 64px);   
+  font-family: Alexandria, sans-serif;
   font-weight: 600;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
+  line-height: 1.1;
+  white-space: nowrap;
 }
-   
-  .module5-thq-navigation-bar-elm {
-    top: 0px;
-    left: -0.0023193359375px;
-    width: 1440.1253662109375px;
-    height: 54px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
+
+.module5-thq-text-elm297 {
+  position: absolute;
+  top: clamp(52px, 6vw, 86px);           
+  left: clamp(24px, 4vw, 56px);          
+  color: rgba(63, 36, 55, 1);
+  font-size: clamp(16px, 2.2vw, 32px);   
+  font-family: Alexandria, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   CONTENT CONTAINER — all sections stack inside
+   ========================================================= */
+.module5-thq-content-container-elm {
+  position: relative;
+  width: min(1299px, 94%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(40px, 5vw, 80px);
+}
+
+/* =========================================================
+   UTILITY CLASSES (Standardized Layout Flow)
+   ========================================================= */
+.content-row {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(16px, 3vw, 40px);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.text-content {
+  flex: 1 1 min(300px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1vw, 16px);
+}
+
+.image-row {
+  display: flex;
+  flex-direction: row;
+  gap: clamp(16px, 2vw, 32px);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================================================
+   CARDS WITH TRANSLUCENT BACKGROUNDS
+   ========================================================= */
+/* Applies card styling to sections that previously used SVG backgrounds */
+.module5-thq-step-by-step-elm,
+.module5-thq-address-binding-elm,
+.module5-thq-memory-allocation-elm,
+.module5-thq-multiprogrammingwitha-variable-number-elm,
+.module5-thq-address-conversion-elm {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: clamp(12px, 2vw, 20px);
+  padding: clamp(20px, 3vw, 48px) clamp(20px, 3vw, 40px);
+}
+
+/* Hide old absolute SVG containers */
+.module5-thq-container1-elm,
+.module5-thq-container2-elm,
+.module5-thq-container3-elm,
+.module5-thq-container4-elm,
+.module5-thq-container5-elm {
+  display: none;
+}
+
+/* =========================================================
+   SECTION BLOCKS (Relative flow reset)
+   ========================================================= */
+.module5-thq-overview-elm, 
+.module5-thq-motivationof-memory-management-elm,
+.module5-thq-whatis-memory-elm, 
+.module5-thq-step-by-step-elm,
+.module5-thq-memory-management-elm, 
+.module5-thq-addresses-elm,
+.module5-thq-address-binding-elm, 
+.module5-thq-logicalvs-virtual-space-elm,
+.module5-thq-memory-management-unit-elm, 
+.module5-thq-dynamic-loading-elm,
+.module5-thq-staticand-dynamic-linking-elm, 
+.module5-thq-overlays-elm,
+.module5-thq-swapping-elm, 
+.module5-thq-swapping-constraintsand-pending-io-elm,
+.module5-thq-frame3-waysto-optimize-swapping-elm, 
+.module5-thq-bare-machines-elm,
+.module5-thq-memory-allocation-elm, 
+.module5-thq-multiple-partition-allocation-elm,
+.module5-thq-multiprogrammingwitha-fixed-tasks-elm, 
+.module5-thq-frame2-typesof-mft-elm,
+.module5-thq-skipping-elm, 
+.module5-thq-multiprogrammingwitha-variable-number-elm,
+.module5-thq-memory-allocation-policies-elm1, 
+.module5-thq-memory-allocation-policies-elm2,
+.module5-thq-memory-fragmentation-elm, 
+.module5-thq-paging-elm2,
+.module5-thq-fragmentation-elm, 
+.module5-thq-paging-elm1,
+.module5-thq-address-conversion-elm {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: auto;
+  left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.5vw, 16px);
+}
+
+/* =========================================================
+   SHARED: SECTION HEADINGS (Fluid 32px)
+   ========================================================= */
+.module5-thq-text-elm294, .module5-thq-text-elm278, .module5-thq-text-elm276,
+.module5-thq-text-elm290, .module5-thq-text-elm291, .module5-thq-text-elm270,
+.module5-thq-text-elm259, .module5-thq-text-elm254, .module5-thq-text-elm250,
+.module5-thq-text-elm244, .module5-thq-text-elm235, .module5-thq-text-elm231,
+.module5-thq-text-elm223, .module5-thq-text-elm212, .module5-thq-text-elm218,
+.module5-thq-text-elm206, .module5-thq-text-elm205, .module5-thq-text-elm186,
+.module5-thq-text-elm174, .module5-thq-text-elm163, .module5-thq-text-elm178,
+.module5-thq-text-elm153, .module5-thq-text-elm141, .module5-thq-text-elm159,
+.module5-thq-text-elm182, .module5-thq-text-elm131, .module5-thq-text-elm102,
+.module5-thq-text-elm119, .module5-thq-text-elm120 {
+  position: relative; 
+  top: auto; 
+  left: auto; 
+  width: 100%;
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-family: Alexandria, sans-serif;
+  font-weight: 300;
+  font-size: clamp(24px, 3.5vw, 32px);
+  line-height: 1.3;
+  margin-bottom: clamp(4px, 1vw, 12px);
+  box-shadow: none; /* Removes design tool shadows */
+}
+
+/* =========================================================
+   SHARED: BODY TEXT (Fluid 24px/16px)
+   ========================================================= */
+.module5-thq-text-elm295, .module5-thq-text-elm279, .module5-thq-text-elm277,
+.module5-thq-text-elm283, .module5-thq-text-elm292, .module5-thq-text-elm271,
+.module5-thq-text-elm260, .module5-thq-text-elm255, .module5-thq-text-elm251,
+.module5-thq-text-elm248, .module5-thq-text-elm245, .module5-thq-text-elm236,
+.module5-thq-text-elm232, .module5-thq-text-elm224, .module5-thq-text-elm213,
+.module5-thq-text-elm219, .module5-thq-text-elm207, .module5-thq-text-elm203,
+.module5-thq-text-elm187, .module5-thq-text-elm184, .module5-thq-text-elm164,
+.module5-thq-text-elm160, .module5-thq-text-elm176, .module5-thq-text-elm142,
+.module5-thq-text-elm137, .module5-thq-text-elm155, .module5-thq-text-elm179,
+.module5-thq-text-elm132, .module5-thq-text-elm100, .module5-thq-text-elm103,
+.module5-thq-text-elm121 {
+  position: relative; 
+  top: auto; 
+  left: auto; 
+  width: 100%;
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-family: Alexandria, sans-serif;
+  font-weight: 200;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: clamp(26px, 3vw, 35px);
+}
+
+.module5-thq-text-elm248 {
+    text-align: center;
+}
+
+/* Shared bold/weight utilities for inline spans */
+.module5-thq-text-elm105, .module5-thq-text-elm108, .module5-thq-text-elm111,
+.module5-thq-text-elm112, .module5-thq-text-elm116, .module5-thq-text-elm122,
+.module5-thq-text-elm127, .module5-thq-text-elm129, .module5-thq-text-elm143,
+.module5-thq-text-elm146, .module5-thq-text-elm149, .module5-thq-text-elm165,
+.module5-thq-text-elm168, .module5-thq-text-elm171, .module5-thq-text-elm188,
+.module5-thq-text-elm194, .module5-thq-text-elm200, .module5-thq-text-elm208,
+.module5-thq-text-elm210, .module5-thq-text-elm237, .module5-thq-text-elm240,
+.module5-thq-text-elm241 { 
+  font-weight: 300; 
+}
+
+/* =========================================================
+   FIGURE IMAGES
+   ========================================================= */
+.module5-thq-fig1-elm, .module5-thq-figc2-elm, .module5-thq-fig3-elm,
+.module5-thq-fig4-elm {
+  position: relative; 
+  top: auto; 
+  left: auto;
+  flex: 0 0 auto;
+  width: min(100%, 750px); /* Keeps them constrained */
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+  margin: clamp(16px, 2vw, 32px) auto;
+}
+
+/* Restrict diagram sizes within the Address Conversion card */
+.module5-thq-fig5-elm,
+.module5-thq-fig6-elm,
+.module5-thq-fig7-elm {
+  display: block;
+  max-width: 100%;    /* Never wider than the container */
+  width: min(90%, 300px); /* Comfortable default size, scales down on small screens */
+  height: auto;       /* Keeps aspect ratio intact */
+  margin: 16px auto;  /* Adds breathing room */
+}
+
+/* =========================================================
+   FOOTER (Relative Layout Reset)
+   ========================================================= */
+.module5-thq-footer-elm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(32px, 5vw, 80px);
+  padding-bottom: clamp(24px, 3vw, 48px);
+}
+
+.module5-thq-footerline-elm { display: none; }
+
+.module5-thq-o-spherelogo-elm {
+  width: min(480px, 60%);
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+@media (max-width: 900px) {
+  .content-row { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+  .module5-thq-header-elm { height: clamp(80px, 18vw, 120px); }
+  
+  .module5-thq-step-by-step-elm,
+  .module5-thq-address-binding-elm,
+  .module5-thq-memory-allocation-elm,
+  .module5-thq-multiprogrammingwitha-variable-number-elm,
+  .module5-thq-address-conversion-elm {
+    padding: clamp(16px, 4vw, 28px) clamp(14px, 3vw, 24px);
   }
-   
-  .module5-thq-line1-elm {
-    top: 50px;
-    left: 1440.125px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .module5-thq-side-menu-elm {
-    top: 3px;
-    left: 26.025634765625px;
-    width: 56px;
-    height: 47px;
-    position: absolute;
-  }
-   
-  .module5-thq-home-elm {
-    top: 0px;
-    left: 78.025634765625px;
-    width: 60px;
-    height: 54px;
-    position: absolute;
-    border-color: rgba(0, 0, 0, 1);
-  }
-   
-  .module5-thq-help-elm {
-    top: 4px;
-    left: 1371px;
-    width: 35px;
-    height: 40px;
-    position: absolute;
-  }
+  
+  .module5-thq-o-spherelogo-elm { width: 75%; }
+}
