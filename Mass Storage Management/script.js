@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function processDiskScheduling() {
-  // 1. Gather User Inputs (Updated IDs to match disk.html)
+  // 1. Gather User Inputs
   const initialHead = parseInt(document.getElementById('startTrack').value);
   const diskEnd = parseInt(document.getElementById('maxTrack').value);
   const algo = document.getElementById('algorithm').value;
@@ -43,6 +43,11 @@ function processDiskScheduling() {
   let left = requests.filter(r => r < initialHead).sort((a,b) => b - a); // descending
   let right = requests.filter(r => r >= initialHead).sort((a,b) => a - b); // ascending
 
+  // Calculate distances to determine closest initial direction
+  let distanceToLeft = left.length > 0 ? Math.abs(initialHead - left[0]) : Infinity;
+  let distanceToRight = right.length > 0 ? Math.abs(initialHead - right[0]) : Infinity;
+  let goLeftFirst = (distanceToLeft <= distanceToRight && left.length > 0) || right.length === 0;
+
   // 2. Compute path based on chosen Algorithm
   if (algo === 'FCFS') {
       fullPath = [initialHead, ...requests];
@@ -67,72 +72,139 @@ function processDiskScheduling() {
       }
   } 
   else if (algo === 'SCAN') {
-      // Standard down direction, forcing an edge hit at 0
       fullPath = [initialHead];
-      fullPath.push(...left);
-      if (left.length > 0 || initialHead > 0) fullPath.push(0);
-      fullPath.push(...right);
+      if (goLeftFirst) {
+          fullPath.push(...left);
+          fullPath.push(0); 
+          fullPath.push(...right); 
+      } else {
+          fullPath.push(...right);
+          fullPath.push(diskEnd); 
+          fullPath.push(...left); 
+      }
   } 
   else if (algo === 'C-SCAN') {
-      // Standard up direction, hits diskEnd, wraps to 0, then finishes
       fullPath = [initialHead];
-      let leftAsc = [...left].sort((a,b) => a - b);
-      fullPath.push(...right);
-      fullPath.push(diskEnd);
-      fullPath.push(0);
-      fullPath.push(...leftAsc);
+      if (goLeftFirst) {
+          let rightDesc = [...right].sort((a,b) => b - a);
+          fullPath.push(...left);
+          fullPath.push(0);
+          fullPath.push(diskEnd);
+          fullPath.push(...rightDesc);
+      } else {
+          let leftAsc = [...left].sort((a,b) => a - b);
+          fullPath.push(...right);
+          fullPath.push(diskEnd);
+          fullPath.push(0);
+          fullPath.push(...leftAsc);
+      }
   }
   else if (algo === 'LOOK') {
-      // Reverses directly at the lowest/highest requested item without hitting 0 or diskEnd
       fullPath = [initialHead];
-      // Defaulting down standard direction if requests exist below head
-      if (left.length > 0) {
+      if (goLeftFirst) {
           fullPath.push(...left);
           fullPath.push(...right);
       } else {
           fullPath.push(...right);
+          fullPath.push(...left);
       }
   }
   else if (algo === 'C-LOOK') {
-      // Loops up to highest requested item, jumps back to lowest requested item
       fullPath = [initialHead];
-      let leftAsc = [...left].sort((a,b) => a - b);
-      if (right.length > 0) {
-          fullPath.push(...right);
-          fullPath.push(...leftAsc);
+      if (goLeftFirst) {
+          let rightDesc = [...right].sort((a,b) => b - a);
+          fullPath.push(...left);
+          if (rightDesc.length > 0) {
+              fullPath.push(...rightDesc);
+          }
       } else {
-          fullPath.push(...leftAsc);
+          let leftAsc = [...left].sort((a,b) => a - b);
+          fullPath.push(...right);
+          if (leftAsc.length > 0) {
+              fullPath.push(...leftAsc);
+          }
       }
   }
 
-  // 3. Calculate Total Head Movement
+  // 3. Calculate Total Head Movement & Generate Equations array
   let totalMovement = 0;
+  let equations = [];
+  
   for (let i = 0; i < fullPath.length - 1; i++) {
-      if (algo === 'C-SCAN' && fullPath[i] === diskEnd && fullPath[i+1] === 0) continue; 
-      if (algo === 'C-LOOK' && right.length > 0 && leftAsc.length > 0 && fullPath[i] === right[right.length - 1] && fullPath[i+1] === leftAsc[0]) continue;
+      const isCScanJump = (algo === 'C-SCAN' && ((fullPath[i] === 0 && fullPath[i+1] === diskEnd) || (fullPath[i] === diskEnd && fullPath[i+1] === 0)));
       
-      totalMovement += Math.abs(fullPath[i] - fullPath[i+1]);
+      let isCLookJump = false;
+      if (algo === 'C-LOOK' && left.length > 0 && right.length > 0) {
+          if (goLeftFirst) {
+              isCLookJump = (fullPath[i] === left[left.length - 1] && fullPath[i+1] === right[right.length - 1]);
+          } else {
+              isCLookJump = (fullPath[i] === right[right.length - 1] && fullPath[i+1] === left[left.length - 1]);
+          }
+      }
+
+      if (isCScanJump || isCLookJump) {
+          equations.push(`<span style="color: rgba(233, 74, 74, 0.9); font-size: 13px;">Jump ${fullPath[i]} ➔ ${fullPath[i+1]} (0)</span>`);
+          continue;
+      }
+      
+      let big = Math.max(fullPath[i], fullPath[i+1]);
+      let small = Math.min(fullPath[i], fullPath[i+1]);
+      let diff = big - small;
+      
+      totalMovement += diff;
+      equations.push(`${big} - ${small} = <b>${diff}</b>`);
   }
 
-  // 4. Inject Results into the Premium UI Modal
+  // Split equations array into 2 columns if it gets reasonably long
+  let col1HTML = "";
+  let col2HTML = "";
+  let half = Math.ceil(equations.length / 2);
+
+  for (let i = 0; i < equations.length; i++) {
+      if (i < half) {
+          col1HTML += `<div style="margin-bottom: 5px;">${equations[i]}</div>`;
+      } else {
+          col2HTML += `<div style="margin-bottom: 5px;">${equations[i]}</div>`;
+      }
+  }
+
+  // 4. Inject Sorted Results into the Premium UI Modal Container
   const averagesContainer = document.getElementById('averages');
   averagesContainer.innerHTML = `
-      <p>Total Head Movement: <b>${totalMovement} Tracks</b></p>
-      <p>Execution Path: <b>${fullPath.join(' → ')}</b></p>
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; gap: 20px; padding: 10px 0;">
+          
+          <div style="text-align: center; width: 100%;">
+              <span style="color: rgba(255,255,255,0.5); font-size: 14px; font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Execution Path</span>
+              <p style="font-size: 18px; font-weight: bold; margin: 8px 0 0 0; color: #ffffff; letter-spacing: 0.5px;">${fullPath.join(' ➔ ')}</p>
+          </div>
+          
+          <div style="width: 100%; max-width: 480px; margin: 0 auto;">
+              <div style="font-family: monospace; font-size: 15px; color: #ffffff; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; text-align: left;">
+                  <div style="line-height: 1.6; text-align: right;">${col1HTML}</div>
+                  <div style="line-height: 1.6; text-align: left;">${col2HTML || ''}</div>
+              </div>
+          </div>
+          
+          <div style="text-align: center; width: 100%; margin-top: 5px;">
+              <p style="font-size: 18px; color: #ffffff; margin: 0; font-weight: 500; letter-spacing: 0.5px;">
+                  Total Head Movement = <span style="color: #b0cce3; font-weight: bold;">${totalMovement}</span>
+              </p>
+          </div>
+
+      </div>
   `;
 
   // 5. Render the Canvas Graph
   const ganttBlocks = document.getElementById('gantt-blocks');
-  ganttBlocks.innerHTML = ''; // Clear previous graph
+  ganttBlocks.innerHTML = ''; 
   ganttBlocks.style.display = 'flex';
   ganttBlocks.style.justifyContent = 'center';
   ganttBlocks.style.backgroundColor = 'transparent';
   ganttBlocks.style.border = 'none';
 
-  // Create canvas dynamically
   const canvas = document.createElement('canvas');
   canvas.width = 800;
-  canvas.height = Math.max(300, fullPath.length * 40 + 100); // Scale height based on points
+  canvas.height = Math.max(300, fullPath.length * 40 + 100); 
   canvas.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
   canvas.style.borderRadius = '10px';
   canvas.style.border = '1px solid rgba(255, 255, 255, 0.1)';
@@ -140,7 +212,6 @@ function processDiskScheduling() {
 
   const ctx = canvas.getContext('2d');
   
-  // Graph Settings
   const paddingX = 60;
   const paddingY = 60;
   const graphWidth = canvas.width - (paddingX * 2);
@@ -173,7 +244,7 @@ function processDiskScheduling() {
       ctx.stroke();
 
       if (track === initialHead) {
-          ctx.fillStyle = '#f2e8a4'; // Premium gold for start
+          ctx.fillStyle = '#f2e8a4'; 
       } else if (track === 0 || track === diskEnd) {
           ctx.fillStyle = '#888888';
       } else {
@@ -202,15 +273,23 @@ function processDiskScheduling() {
           ctx.moveTo(currentX, currentY);
           ctx.lineTo(nextX, nextY);
           
-          const isCScanJump = (algo === 'C-SCAN' && fullPath[i] === diskEnd && fullPath[i+1] === 0);
-          const isCLookJump = (algo === 'C-LOOK' && right.length > 0 && left.length > 0 && fullPath[i] === right[right.length - 1] && fullPath[i+1] === leftAsc[0]);
+          const isCScanJump = (algo === 'C-SCAN' && ((fullPath[i] === 0 && fullPath[i+1] === diskEnd) || (fullPath[i] === diskEnd && fullPath[i+1] === 0)));
+          
+          let isCLookJump = false;
+          if (algo === 'C-LOOK' && left.length > 0 && right.length > 0) {
+              if (goLeftFirst) {
+                  isCLookJump = (fullPath[i] === left[left.length - 1] && fullPath[i+1] === right[right.length - 1]);
+              } else {
+                  isCLookJump = (fullPath[i] === right[right.length - 1] && fullPath[i+1] === left[left.length - 1]);
+              }
+          }
 
           if (isCScanJump || isCLookJump) {
               ctx.setLineDash([6, 6]);
-              ctx.strokeStyle = 'rgba(233, 74, 74, 0.6)'; // Red dash for structural resets
+              ctx.strokeStyle = 'rgba(233, 74, 74, 0.6)'; 
           } else {
               ctx.setLineDash([]);
-              ctx.strokeStyle = 'rgba(176, 204, 227, 0.8)'; // Soft blue for seek paths
+              ctx.strokeStyle = 'rgba(176, 204, 227, 0.8)'; 
           }
           ctx.stroke();
 

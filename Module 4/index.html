@@ -55,7 +55,6 @@
     />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
     <div>
       <link href="./index.css" rel="stylesheet" />
 
@@ -174,7 +173,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm281">• CPU Scheduling</span>
-                <span>
+                <span style="font-weight: 200";>
                   : The fundamental basis of multiprogrammed operating systems.
                   It deals with the problem of deciding which of the processes
                   in the ready queue is to be allocated the CPU.
@@ -268,7 +267,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm258">• CPU-Bound Process:</span>
-                <span>
+                <span style="font-weight: 200";>
                   Spends more of its time doing computations; characterized by a
                   few, very long CPU bursts.
                 </span>
@@ -391,7 +390,7 @@
                 <br />
                 <br />
                 <span class="module4-thq-text-elm230">5. Response Time:</span>
-                <span>
+                <span style="font-weight: 200";>
                   The specific amount of time it takes from process submission
                   until the very first response or output begins to be produced
                   (not the time it takes to output the entire response).
@@ -509,7 +508,7 @@
                 <span class="module4-thq-text-elm199">
                   • Preemptive SJF / Shortest-Remaining-Time-First (SRTF):
                 </span>
-                <span>
+                <span style="font-weight: 200";>
                   If a new process arrives in the ready queue with a next CPU
                   burst time that is shorter than the remaining burst time of
                   the currently executing process, the running process is
@@ -582,7 +581,7 @@
                 <span class="module4-thq-text-elm182">
                   • Preemptive Priority (PP):
                 </span>
-                <span>
+                <span style="font-weight: 200";>
                   If a newly arrived process features a higher priority level
                   than the process currently executing, the running job is
                   instantly preempted.
@@ -637,13 +636,13 @@
                   • Performance Dependency on Quantum Size:
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • If q is extremely large, RR performance degenerates and
                   becomes identical to FIFO/FCFS.
                 </span>
                 <br />
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • If q is extremely small, q must still remain significantly
                   larger than the system's context switch time. Otherwise, the
                   performance overhead from constant switching becomes
@@ -651,7 +650,7 @@
                 </span>
                 <br />
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • Turnaround Optimization Rule:* Average turnaround time
                   improves if the majority of processes can fully complete their
                   next CPU burst within the span of a single time quantum.
@@ -696,19 +695,19 @@
                   • Key Characteristics:
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • The absolute minimum possible value of a response ratio is 1
                   (occurring the exact moment a process enters the ready queue).
                 </span>
                 <br />
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • Shorter processes are naturally favored (since a smaller
                   denominator yields a higher ratio).
                 </span>
                 <br />
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • Longer processes are protected against starvation via aging—as
                   their waiting time (numerator) continuously grows over time,
                   their overall response ratio increases until they win CPU
@@ -766,7 +765,7 @@
                 </span>
                 <br />
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   a. Fixed Priority Preemptive Scheduling: Each individual queue
                   holds absolute priority over lower-priority queues. No process
                   in a lower-priority queue (e.g., a batch queue) can run unless
@@ -776,7 +775,7 @@
                   immediately preempted.
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   b. Time Slicing: Every queue receives a statically allocated,
                   dedicated percentage of the total CPU time to divide among its
                   own processes (e.g., Queue 1 takes 50% of CPU time, Queue 2
@@ -894,7 +893,7 @@
                 </span>
                 <br />
                 <span class="module4-thq-text-elm123">• Solution:</span>
-                <span>
+                <span style="font-weight: 200";>
                   Aging (processes waiting too long in a low-priority queue can
                   be dynamically moved to a higher-priority queue).
                 </span>

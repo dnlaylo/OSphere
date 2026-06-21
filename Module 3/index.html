@@ -55,7 +55,6 @@
     />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
     <div>
       <link href="./index.css" rel="stylesheet" />
 
@@ -749,25 +748,25 @@
                   2. Concrete UNIX Implementations
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • fork(): A system call that creates a brand-new process. The
                   newly created child process is an initial duplicate of the
                   parent process.
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • exec(): A system call typically used immediately after a
                   fork() to replace the process’s memory space with an entirely
                   new program layout.
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • wait(): A system call through which a parent process receives
                   output data from its child and suspends itself until the child
                   finishes.
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   • exit(): A system call used by a process to execute its last
                   statement and ask the operating system to delete it.
                 </span>
@@ -780,8 +779,8 @@
                   3. Cascading Termination
                 </span>
                 <br />
-                <span>
-                  A strict operating system policy that does not allow a child
+                <span style="font-weight: 200";>
+                  • A strict operating system policy that does not allow a child
                   process to continue running if its parent process terminates. If
                   a parent terminates (either normally or via an abort), the
                   operating system automatically and recursively terminates all of

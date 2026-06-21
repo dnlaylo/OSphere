@@ -55,7 +55,6 @@
     />
   </head>
   <body>
-    <link rel="stylesheet" href="./style.css" />
     <div>
       <link href="./index.css" rel="stylesheet" />
 
@@ -133,12 +132,12 @@
               </span>
               <span class="module5-thq-text-elm279">
                 <span>
-                  To share CPU and implement CPU scheduling, several processes
+                  • To share CPU and implement CPU scheduling, several processes
                   must be kept in memory at a certain time;
                 </span>
                 <br />
                 <span>
-                  &nbsp;To realize an increase in performance, memory has to be
+                  &nbsp;• To realize an increase in performance, memory has to be
                   shared; affects the degree of multiprogramming;&nbsp;
                 </span>
                 <br />
@@ -175,41 +174,41 @@
               />
               <span class="module5-thq-text-elm283">
                 <span>
-                  Staging in the Input Queue New program jobs are initialized
+                  1. Staging in the Input Queue New program jobs are initialized
                   directly on the hard drive disk storage, waiting inside a
                   temporary holding queue known as the input queue until main
                   memory space becomes available.
                 </span>
                 <br />
                 <span>
-                  Long-Term Scheduler Admission The long-term scheduler
+                  2. Long-Term Scheduler Admission The long-term scheduler
                   evaluates the available capacity of physical RAM and decides
                   exactly when to approve and load a waiting program from the
                   input queue into the next open partition block.
                 </span>
                 <br />
                 <span>
-                  Waiting in the Ready Queue Once safely written into Main
+                  3. Waiting in the Ready Queue Once safely written into Main
                   Memory, the program officially becomes an active resident
                   process (such as Process A, B, or C) and enters the ready
                   queue, signifying it is ready for immediate processing.
                 </span>
                 <br />
                 <span>
-                  CPU Scheduler Allocation The short-term CPU scheduler quickly
+                  4. CPU Scheduler Allocation The short-term CPU scheduler quickly
                   pulls the prepared process out of the ready queue and maps its
                   execution context directly onto the central processor core.
                 </span>
                 <br />
                 <span>
-                  Runtime Hardware Access As the instructions run inside the CPU
+                  5. Runtime Hardware Access As the instructions run inside the CPU
                   hardware, the processor actively links back to the assigned
                   main memory block to retrieve program instructions and
                   manipulate variable storage locations.
                 </span>
                 <br />
                 <span>
-                  Process Termination and Memory Clean Up When execution reaches
+                  6. Process Termination and Memory Clean Up When execution reaches
                   completion, the process finishes and terminates; the memory
                   manager instantly reclaims that exact chunk of RAM, marking
                   the block as completely available for new jobs arriving from
@@ -239,14 +238,14 @@
               <span class="module5-thq-text-elm270">Addresses</span>
               <span class="module5-thq-text-elm271">
                 <span>
-                  Symbolic Addresses: These are the plain-text variable names,
+                  • Symbolic Addresses: These are the plain-text variable names,
                   function identifiers, or object references you type out in
                   your source code (for example: int total, float price, or
                   count).
                 </span>
                 <br />
                 <span>
-                  Relocatable Addresses: When you compile your source code, the
+                  • Relocatable Addresses: When you compile your source code, the
                   compiler translates those text names into relative offsets
                   (for example: "14 bytes from the beginning of this module").
                   They are "relocatable" because the code can be placed anywhere
@@ -254,7 +253,7 @@
                 </span>
                 <br />
                 <span>
-                  Absolute Addresses: This is the final hardware stage. When the
+                  • Absolute Addresses: This is the final hardware stage. When the
                   program is actually loaded into RAM to run, a linkage editor
                   or system loader binds those relative offsets to exact,
                   physical spots on your memory chips (for example: the precise
@@ -289,14 +288,14 @@
                 </span>
                 <br />
                 <span>
-                  The compiler figures out exactly where the program will sit in
+                  • The compiler figures out exactly where the program will sit in
                   the RAM before the program even runs. It hardcodes those exact
                   physical addresses into the machine code (called absolute
                   code).
                 </span>
                 <br />
                 <span>
-                  You must know the exact starting location in memory ahead of
+                  • You must know the exact starting location in memory ahead of
                   time (a priori). If that spot in RAM is occupied later, or if
                   you want to move the program to a different starting location,
                   the program won't work. You have to go back, change the
@@ -310,14 +309,14 @@
                 </span>
                 <br />
                 <span>
-                  If the compiler doesn't know where the program will sit in RAM
+                  • If the compiler doesn't know where the program will sit in RAM
                   during compilation, it keeps things flexible. It generates
                   relocatable code, using placeholder positions (like "offset 0,
                   offset 1, offset 2").
                 </span>
                 <br />
                 <span>
-                  The actual, final memory addresses aren't assigned until the
+                  • The actual, final memory addresses aren't assigned until the
                   moment you double-click the program and the OS loads it into
                   RAM. Once it is loaded, those placeholders turn into permanent
                   physical positions for that specific run. If you want to move
@@ -331,14 +330,14 @@
                 </span>
                 <br />
                 <span>
-                  This is the most flexible approach and the one modern
+                  • This is the most flexible approach and the one modern
                   operating systems use. The program can be moved around to
                   entirely different sections of RAM while it is actively
                   running.
                 </span>
                 <br />
                 <span>
-                  The computer waits until the very microsecond an instruction
+                  • The computer waits until the very microsecond an instruction
                   is executed to figure out its physical address. To do this
                   quickly without slowing down your computer, it needs special
                   hardware assistance—specifically base and limit registers
@@ -353,20 +352,20 @@
               </span>
               <span class="module5-thq-text-elm255">
                 <span>
-                  An operating system completely separates the addresses a
+                  • An operating system completely separates the addresses a
                   program thinks it is using from the actual hardware locations
                   in your RAM chips.
                 </span>
                 <br />
                 <span>
-                  Logical Address (Virtual Address): This is the address
+                  • Logical Address (Virtual Address): This is the address
                   generated by the CPU while a program is running. The program
                   itself, the programmer, and the CPU only ever see and deal
                   with these logical addresses.
                 </span>
                 <br />
                 <span>
-                  Physical Address: This is the actual, real slot inside the
+                  • Physical Address: This is the actual, real slot inside the
                   hardware RAM memory unit where the data is stored.
                 </span>
               </span>
@@ -378,7 +377,7 @@
               </span>
               <span class="module5-thq-text-elm251">
                 <span>
-                  The Memory-Management Unit, or MMU, is a dedicated hardware
+                  • The Memory-Management Unit, or MMU, is a dedicated hardware
                   device inside your computer that acts as a real-time
                   translator between the CPU and your physical RAM chips. Its
                   primary job is to take the virtual addresses generated by a
@@ -388,7 +387,7 @@
                 <br />
                 <br />
                 <span>
-                  MMU uses a method called a relocation register scheme. When a
+                  • MMU uses a method called a relocation register scheme. When a
                   program requests a piece of data at a specific logical
                   address, the MMU automatically takes that number and adds it
                   to the base value currently stored inside its relocation
@@ -406,7 +405,7 @@
               <span class="module5-thq-text-elm244">Dynamic Loading</span>
               <span class="module5-thq-text-elm245">
                 <span>
-                  A complete software application usually contains a massive
+                  • A complete software application usually contains a massive
                   amount of code, including many different functions, libraries,
                   or subprograms (referred to on the slide as routines). In
                   traditional static loading, the entire program—including every
@@ -415,7 +414,7 @@
                 </span>
                 <br />
                 <span>
-                  Dynamic loading changes this approach entirely. Under a
+                  • Dynamic loading changes this approach entirely. Under a
                   dynamic loading scheme, a routine is kept on the storage disk
                   and is not loaded into the primary memory (RAM) until it is
                   explicitly called by the running program
@@ -444,7 +443,7 @@
                   Dynamic Linking (The Shared Approach)
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   Dynamic linking solves this wastefulness by postponing the
                   linking process entirely until execution time (when the
                   program is actively running). Instead of packing the real
@@ -495,11 +494,11 @@
                 <br />
                 <br />
                 <span>
-                  Swap-Out: Moving a process from RAM to the hard drive.
+                  • Swap-Out: Moving a process from RAM to the hard drive.
                 </span>
                 <br />
                 <span>
-                  Swap-In: Moving a process from the hard drive back into RAM.
+                  • Swap-In: Moving a process from the hard drive back into RAM.
                 </span>
                 <br />
                 <br />
@@ -538,24 +537,24 @@
               </span>
               <span class="module5-thq-text-elm213">
                 <span>
-                  The OS must follow strict safety rules before swapping out a
+                  • The OS must follow strict safety rules before swapping out a
                   process:
                 </span>
                 <br />
                 <span>
-                  The Core Constraint: A process must be completely idle before
+                  • The Core Constraint: A process must be completely idle before
                   it can be safely removed from RAM.
                 </span>
                 <br />
                 <span>
-                  The Pending I/O Problem: Never swap a process waiting for
+                  • The Pending I/O Problem: Never swap a process waiting for
                   input/output data (like a network download). If swapped,
                   incoming hardware data will overwrite the new program
                   occupying that RAM slot, corrupting memory.
                 </span>
                 <br />
                 <span>
-                  OS Buffering Solution: To bypass this, the OS routes I/O data
+                  • OS Buffering Solution: To bypass this, the OS routes I/O data
                   into secure system buffers first. Once the transfer completes,
                   the OS copies it to the program's memory, allowing the program
                   to safely swap while the hardware transfer happens.
@@ -569,17 +568,17 @@
               </span>
               <span class="module5-thq-text-elm219">
                 <span>
-                  Track Exact Memory: Swap out only the RAM space a program is
+                  • Track Exact Memory: Swap out only the RAM space a program is
                   actively using, not its entire maximum limit.
                 </span>
                 <br />
                 <span>
-                  Faster Hardware: Upgrade the backing store from slow HDDs to
+                  • Faster Hardware: Upgrade the backing store from slow HDDs to
                   high-speed NVMe SSDs to boost transfer rates.
                 </span>
                 <br />
                 <span>
-                  Overlap Operations: Execute a different process in RAM while
+                  • Overlap Operations: Execute a different process in RAM while
                   the current process waits for its data to swap to disk.
                 </span>
               </span>
@@ -588,13 +587,13 @@
             <div class="module5-thq-bare-machines-elm">
               <span class="module5-thq-text-elm206">Bare Machines</span>
               <span class="module5-thq-text-elm207">
-                <span class="module5-thq-text-elm208">Advantages</span>
+                <span class="module5-thq-text-elm208">• Advantages</span>
                 <span>
                   : Maximum user flexibility, total simplicity, and minimum
                   hardware/software cost.
                 </span>
                 <br />
-                <span class="module5-thq-text-elm210">Disadvantages</span>
+                <span class="module5-thq-text-elm210">• Disadvantages</span>
                 <span>
                   : Provides zero system services. The OS has no control over
                   interrupts, errors, system calls, or organizing job
@@ -627,6 +626,7 @@
                   1. The Core Protection Mechanism
                 </span>
                 <br />
+                <br />
                 <span class="module5-thq-text-elm190">
                   To protect memory, the hardware uses two special boundary
                   registers to frame the allowed memory space for a running
@@ -634,15 +634,14 @@
                 </span>
                 <br />
                 <span class="module5-thq-text-elm191">
-                  Base Register: Stores the smallest (starting) physical memory
+                  • Base Register: Stores the smallest (starting) physical memory
                   address allocated to the program.
                 </span>
                 <br />
                 <span class="module5-thq-text-elm192">
-                  Limit Register: Stores the total size (range) of the program's
+                  • Limit Register: Stores the total size (range) of the program's
                   memory segment.
                 </span>
-                <br />
                 <br />
                 <span class="module5-thq-text-elm193">
                   Together, they establish a legal range. For example, if the
@@ -656,6 +655,7 @@
                   2. How the Hardware Checks Every Address
                 </span>
                 <br />
+                <br />
                 <span class="module5-thq-text-elm195">
                   Every time a running program tries to read or write to a
                   memory address, the CPU hardware automatically forces a
@@ -663,24 +663,24 @@
                 </span>
                 <br />
                 <span class="module5-thq-text-elm196">
-                  The First Check (≥Base): The CPU verifies if the target
+                  1. The First Check (≥Base): The CPU verifies if the target
                   address is greater than or equal to the value inside the Base
                   Register.
                 </span>
                 <br />
                 <span class="module5-thq-text-elm197">
-                  The Second Check (&lt;Base+Limit): It then checks if the
+                  2. The Second Check (&lt;Base+Limit): It then checks if the
                   address is strictly less than the combined value of the Base +
                   Limit registers.
                 </span>
                 <br />
                 <span class="module5-thq-text-elm198">
-                  If the address passes both checks: The hardware forwards the
+                  • If the address passes both checks: The hardware forwards the
                   request directly to the physical RAM chip.
                 </span>
                 <br />
                 <span class="module5-thq-text-elm199">
-                  If it fails either check: The hardware instantly intercepts
+                  • If it fails either check: The hardware instantly intercepts
                   the request, blocks the access, and traps an error to the
                   operating system kernel, resulting in a fatal addressing error
                   (commonly known as a segmentation fault).
@@ -691,7 +691,8 @@
                   3. Modifying the Boundaries
                 </span>
                 <br />
-                <span>
+                <br />
+                <span style="font-weight: 200;">
                   To keep the system secure, user programs are strictly
                   forbidden from modifying these boundaries. The instructions
                   used to alter the base and limit registers are designated as
@@ -752,7 +753,7 @@
                   3. The Downside: Internal Fragmentation
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   The biggest drawback of MFT is internal fragmentation, which
                   causes wasted memory. If a small task (e.g., 20 KB) is
                   allocated to a large partition (e.g., 100 KB), it will occupy
@@ -767,13 +768,13 @@
               <span class="module5-thq-text-elm163">2 Types of MFT</span>
               <span class="module5-thq-text-elm160">
                 <span>
-                  Absolute Translation and Loading assigns a separate job queue
+                  • Absolute Translation and Loading assigns a separate job queue
                   to each individual memory region, meaning each queue is
                   scheduled independently.
                 </span>
                 <br />
                 <span>
-                  Relocatable Translation and Loading places all incoming jobs
+                  • Relocatable Translation and Loading places all incoming jobs
                   into a single, shared input queue, allocating memory using
                   specific system policies whenever a partition becomes
                   available.
@@ -841,7 +842,7 @@
                   3. The Downside: External Fragmentation
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   While MVT completely eliminates internal fragmentation (since
                   no process gets more space than it needs), it introduces
                   external fragmentation. As processes finish and leave memory,
@@ -852,7 +853,7 @@
                   block, the new program cannot be loaded.
                 </span>
                 <br />
-                <span>
+                <span style="font-weight: 200";>
                   To fix this, operating systems have to use compaction
                   (shuffling all active processes to one end of the memory to
                   merge the free spaces), which requires significant overhead.
@@ -866,18 +867,18 @@
               </span>
               <span class="module5-thq-text-elm137">
                 <span>
-                  First Fit allocates the very first available hole in memory it
+                  • First Fit allocates the very first available hole in memory it
                   finds that is large enough to hold the incoming job.
                 </span>
                 <br />
                 <span>
-                  Best Fit searches through all available spaces to find and
+                  • Best Fit searches through all available spaces to find and
                   allocate the hole that is nearest to the exact size of the
                   job.
                 </span>
                 <br />
                 <span>
-                  Worst Fit scans memory and allocates the largest available
+                  • Worst Fit scans memory and allocates the largest available
                   hole or biggest region that can accommodate the job, leaving
                   behind the largest remaining fragment.
                 </span>
@@ -890,19 +891,19 @@
               </span>
               <span class="module5-thq-text-elm155">
                 <span>
-                  Best Fit searches all available memory blocks to allocate the
+                  • Best Fit searches all available memory blocks to allocate the
                   smallest overall region that is big enough to hold the
                   process.
                 </span>
                 <br />
                 <span>
-                  First Fit scans through memory from the beginning and
+                  • First Fit scans through memory from the beginning and
                   allocates the very first region it encounters that is big
                   enough for the job.
                 </span>
                 <br />
                 <span>
-                  Best Available Fit selects and allocates the smallest region
+                  • Best Available Fit selects and allocates the smallest region
                   specifically chosen from among the currently free memory
                   regions.
                 </span>
@@ -947,21 +948,21 @@
                 <br />
                 <br />
                 <span>
-                  The Division: The operating system splits a program's Logical
+                  • The Division: The operating system splits a program's Logical
                   Memory into fixed-sized blocks called Pages, while splitting
                   the hardware's Physical Memory into blocks of the exact same
                   size called Frames.
                 </span>
                 <br />
                 <span>
-                  The Page Table: When a process executes, its individual pages
+                  • The Page Table: When a process executes, its individual pages
                   are loaded into any available free frames across the RAM. The
                   system uses a centralized Page Table to keep track of exactly
                   which page landed in which physical frame.
                 </span>
                 <br />
                 <span>
-                  Address Translation: To find data, the CPU generates a logical
+                  • Address Translation: To find data, the CPU generates a logical
                   address split into a page number (p) and an offset (d). The
                   system uses the page number (p) as an index to look up the
                   matching frame number (f) in the page table, then combines it
@@ -1027,12 +1028,12 @@
                 </span>
                 <br />
                 <span class="module5-thq-text-elm114">
-                  If there are enough empty frames: The OS approves the
+                  • If there are enough empty frames: The OS approves the
                   allocation and claims those physical frames for the job.
                 </span>
                 <br />
                 <span class="module5-thq-text-elm115">
-                  Note: These physical frames do not need to be next to each
+                  • Note: These physical frames do not need to be next to each
                   other (contiguous); they can be scattered anywhere in RAM.
                 </span>
                 <br />
@@ -1086,16 +1087,23 @@
                 <br />
                 <br />
                 <span class="module5-thq-text-elm125">
-                  Page Number (p): Calculated using integer division. It tells
+                  • Page Number (p): Calculated using integer division. It tells
                   you which page the data is on.
                 </span>
                 <br />
                 <br />
+                <br />
+                <br />
+                <br />
+                <br />
                 <span class="module5-thq-text-elm126">
-                  Page Offset (d): Calculated using the modulo operator
+                  • Page Offset (d): Calculated using the modulo operator
                   (remainder). It tells you the exact location of the data
                   inside that specific page.
                 </span>
+                <br />
+                <br />
+                <br />
                 <br />
                 <br />
                 <span class="module5-thq-text-elm127">
