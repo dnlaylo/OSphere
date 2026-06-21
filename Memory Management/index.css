@@ -231,66 +231,74 @@ body {
    TABLE
 ========================= */
 
-.table-container{
-    width:100%;
-    max-width:850px;
-
-    padding:15px;
-    margin-bottom:30px;
-
-    background:rgba(0,0,0,.3);
-
-    border:1px solid
-        rgba(255,255,255,.05);
-
-    border-radius:12px;
+.table-container {
+    width: 100%;
+    max-width: 850px;
+    padding: 15px;
+    margin-bottom: 30px;
+    /* You can remove the background and border here if you want 
+       it to look exactly like the target image (which has no visible box). 
+       Uncomment these if you still want the bounding box. */
+    /* background: rgba(0,0,0,.3); */
+    /* border: 1px solid rgba(255,255,255,.05); */
+    /* border-radius: 12px; */
 }
 
-.process-table{
-    width:100%;
-    border-collapse:collapse;
+.process-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 35px;
 }
 
-.process-table th{
-    padding:12px;
-
-    text-align:center;
-
-    color:#f2e8a4;
-
-    font-size:14px;
-    font-weight:600;
-
-    border-bottom:
-        1px solid rgba(255,255,255,.1);
+.process-table th {
+    color: rgba(255, 255, 255, 0.8); /* Changed from yellow to translucent white */
+    font-size: 16px;
+    font-weight: 400; /* Lighter font weight for headers */
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 
-.process-table td{
-    padding:10px;
-    text-align:center;
+.process-table td {
+    padding: 12px 8px;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.process-table input{
-    width:100%;
-
-    padding:8px;
-
-    text-align:center;
-
-    color:#fff;
-
-    background:
-        rgba(26,26,30,.8);
-
-    border:1px solid #4c4c4c;
-    border-radius:8px;
+/* Styles the 'P1' column to be larger and bolder */
+.process-table td:first-child, .pid {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    width: 90px;
 }
 
-.process-table input:focus{
-    outline:none;
-    border-color:#b0cce3;
+/* Custom dark capsule input fields */
+.process-table input {
+    background-color: rgba(26, 26, 30, 0.6);
+    border: 1px solid rgba(76, 76, 76, 1);
+    color: #ffffff;
+    font-size: 16px;
+    width: 100%;
+    max-width: 150px;
+    height: 48px; /* Increased height */
+    border-radius: 30px; /* Capsule shape */
+    text-align: center;
+    transition: all 0.2s ease;
 }
 
+.process-table input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(26, 26, 30, 1);
+    outline: none;
+}
+
+/* Hide number arrows */
+.process-table input::-webkit-outer-spin-button,
+.process-table input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 /* =========================
    BUTTONS
@@ -354,24 +362,22 @@ body {
 }
 
 .btn-danger{
-    padding:6px 12px;
-
-    font-weight:bold;
-
-    color:#e94a4a;
-
-    background:
-        rgba(233,74,74,.2);
-
-    border:1px solid #e94a4a;
-    border-radius:8px;
-
-    cursor:pointer;
+    background-color: rgba(233, 74, 74, 1);
+    color: #ffffff;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
 }
 
 .btn-danger:hover{
-    background:#e94a4a;
-    color:#fff;
+    opacity: 0.85;
 }
 
 
