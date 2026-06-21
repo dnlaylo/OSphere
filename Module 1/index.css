@@ -158,10 +158,10 @@ img { display: block; }
 
 .module1-thq-text-elm313 {
   position: absolute;
-  top: clamp(6px, 1vw, 13px);
-  left: clamp(20px, 2.5vw, 37px);
+  top: clamp(8px, 1vw, 13px);            
+  left: clamp(24px, 4vw, 56px);          
   color: rgba(59, 74, 119, 1);
-  font-size: clamp(28px, 5vw, 64px);
+  font-size: clamp(32px, 4.5vw, 64px);   
   font-family: Alexandria, sans-serif;
   font-weight: 600;
   line-height: 1.1;
@@ -170,10 +170,10 @@ img { display: block; }
 
 .module1-thq-text-elm314 {
   position: absolute;
-  bottom: clamp(8px, 1.5vw, 18px);
-  left: clamp(20px, 2.5vw, 38px);
+  top: clamp(52px, 6vw, 86px);           
+  left: clamp(24px, 4vw, 56px);          
   color: rgba(59, 74, 119, 1);
-  font-size: clamp(18px, 2.5vw, 40px);
+  font-size: clamp(16px, 2.2vw, 32px);   
   font-family: Alexandria, sans-serif;
   font-weight: 400;
   line-height: 1.2;
