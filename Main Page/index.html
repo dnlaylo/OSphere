@@ -40,8 +40,21 @@
         <span class="mainpage-thq-text-elm41">Your OS Learning Hub</span>
 
         <div class="mainpage-thq-search-elm">
-          <img src="Assets/Search Icon.svg" alt="Search" class="mainpage-thq-search-icon-elm" />
-          <span class="mainpage-thq-text-elm40">What do you want to learn today?</span>
+          <img
+            src="Assets/Search Icon.svg"
+            alt="Search"
+            class="mainpage-thq-search-icon-elm"
+          >
+
+          <input
+            type="text"
+            id="mainSearchInput"
+            class="mainpage-thq-text-elm40"
+            placeholder="What do you want to learn today?"
+            autocomplete="off"
+          >
+
+          <div id="searchResults"></div>
         </div>
 
         <div class="mainpage-thq-modules-grid">
@@ -367,5 +380,8 @@
 
       </div>
     </div>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+  <script src="./searchData.js"></script>
+  <script src="./script.js"></script>
   </body>
 </html>

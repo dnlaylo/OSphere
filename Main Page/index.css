@@ -28,7 +28,7 @@ img { display:block; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 /* =========================================================
@@ -37,7 +37,7 @@ img { display:block; }
 .mainpage-thq-mainpage-elm {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -152,7 +152,7 @@ img { display:block; }
   margin: clamp(16px, 2.5vw, 36px) auto clamp(32px, 4vw, 60px);
   background-color: rgba(217, 217, 217, 1);
   border-radius: 50px;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
 }
@@ -177,6 +177,17 @@ img { display:block; }
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: calc(100% - 80px);
+
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-right: 20px; /* Ensures text doesn't hit the edge */
+}
+
+/* Optional: change placeholder color */
+.mainpage-thq-text-elm40::placeholder {
+  color: rgba(130, 120, 135, 1);
 }
 
 /* =========================================================
@@ -613,4 +624,42 @@ img { display:block; }
 
 [class*="-thq-info-elm"]:hover {
   transform: scale(1.1);
+}
+
+.mainpage-thq-search-elm {
+    position: relative;
+    z-index: 9999;
+    overflow: visible;
+}
+
+#searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  z-index: 10000;
+  display: none;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+
+.search-result {
+  display: block;
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+
+.search-result:hover {
+  background: #f5f5f5;
+}
+
+.no-results {
+  padding: 15px;
+  text-align: center;
 }
