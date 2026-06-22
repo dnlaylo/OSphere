@@ -1052,3 +1052,27 @@ img { display:block; }
     font-size: 12px;
     color: rgba(130,120,135,0.8);
 }
+
+/* --- Custom Oblong Scrollbar Styling --- */
+
+/* Width configuration of the scrollbar gutter */
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Background Track - transparent to reveal dashboard panel color underneath */
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+
+/* Long Oblong Moving Thumb Handle */
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb {
+  background-color: rgba(242, 232, 164, 0.4); /* Muted gold matching accent scheme */
+  border-radius: 100px; /* Forces full rounded pill layout shape */
+  border: 2px solid transparent; /* Acts as padding space */
+}
+
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(242, 232, 164, 0.7); /* Highlights brighter upon mouse cursor hover */
+}
