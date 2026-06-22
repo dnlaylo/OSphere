@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght=300;400;600;700;800&display=swap');
 
 * {
     margin: 0;
@@ -71,49 +71,53 @@
     justify-content: center;
 }
 
+/* ==========================================================================
+   FIXED NAVIGATION BAR
+   ========================================================================== */
 .algorithm-thq-navigation-bar-elm {
     top: 0px;
-    left: -0.003px;
-    width: 1440.125px;
-    height: 54px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    padding: 0 40px;
     display: flex;
     position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.algorithm-thq-line1-elm {
-    top: 50px;
-    left: 1440.125px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
+.nav-left-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.algorithm-thq-side-menu-elm {
-    top: 3px;
-    left: 26.027px;
-    width: 56px;
-    height: 47px;
-    position: absolute;
+.nav-right-help-link {
+    display: flex;
+    align-items: center;
 }
 
-.algorithm-thq-home-elm {
-    top: 0px;
-    left: 78.027px;
-    width: 60px;
-    height: 54px;
-    position: absolute;
-    border-color: rgba(0, 0, 0, 1);
-}
-
+.algorithm-thq-side-menu-elm,
+.algorithm-thq-home-elm,
 .algorithm-thq-help-elm {
-    top: 4px;
-    left: 1371px;
-    width: 35px;
-    height: 40px;
-    position: absolute;
+    position: relative;
+    top: auto;
+    left: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
+
+.algorithm-thq-side-menu-elm:hover,
+.algorithm-thq-home-elm:hover,
+.algorithm-thq-help-elm:hover {
+    opacity: 0.8;
+}
+
+.algorithm-thq-side-menu-elm { width: 56px; height: 47px; }
+.algorithm-thq-home-elm { width: 60px; height: 54px; }
+.algorithm-thq-help-elm { width: 35px; height: 40px; }
 
 /* ==========================================================================
    MAIN APPLICATION CARD CONTAINER
@@ -168,14 +172,14 @@
     outline: none;
 }
 
-/* ==========================
-   VIRTUAL MEMORY INPUTS
-========================== */
+/* ==========================================================================
+   VIRTUAL MEMORY INPUTS & INLINE HELPER SUB-NOTES
+   ========================================================================== */
 .vm-fields {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     margin-top: 20px;
 }
 
@@ -210,12 +214,20 @@
     border-color: rgba(255, 255, 255, 0.4);
 }
 
+.field-note-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.35);
+    padding-left: 25px;
+    margin-top: -4px;
+}
+
 .vm-group.small {
     width: 280px;
 }
 
 #compute {
-    margin-top: 80px;
+    margin-top: 60px;
     align-self: center;
     background-color: #b0cce3;
     color: rgba(72, 81, 107, 1);
@@ -234,9 +246,9 @@
     box-shadow: 0 0 15px rgba(176, 204, 227, 0.4);
 }
 
-/* ==========================
-   POPUP OVERLAY
-========================== */
+/* ==========================================================================
+   POPUP OVERLAY & MODAL WINDOW
+   ========================================================================== */
 #popup-overlay {
     position: fixed;
     top: 0;
@@ -244,9 +256,9 @@
     width: 100vw;
     height: 100vh;
     z-index: 9999;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
@@ -261,18 +273,20 @@
 }
 
 .modal-card {
-    width: 900px;
-    min-height: 520px;
-    background: rgba(20, 20, 25, 0.95);
-    border: 1px solid rgba(242, 232, 164, 0.2);
-    border-radius: 18px;
-    padding: 40px;
+    width: 92%;
+    max-width: 950px;
+    min-height: 540px;
+    background: rgba(15, 15, 20, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 35px 40px;
     color: white;
-    transform: scale(0.8);
-    transition: transform 0.3s ease-in-out;
+    transform: scale(0.85);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
 }
 
 #popup-overlay.show .modal-card {
@@ -280,31 +294,170 @@
 }
 
 .modal-header {
-    font-size: 32px;
-    font-weight: 300;
+    display: flex;
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.modal-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8);
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 20px;
+}
+
+#close-modal {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 0.2s;
+}
+
+#close-modal:hover {
+    color: #ff6b6b;
 }
 
 .virtual-memory-title {
     text-align: center;
     color: rgba(242, 232, 164, 1);
-    margin-top: 40px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   DYNAMIC CENTERING DIAGRAM CAROUSEL LAYER
+   ========================================================================== */
+.matrix-section-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 25px;
+}
+
+.matrix-label-header {
+    align-self: flex-start;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 16px;
+    padding-left: 4px;
+}
+
+.matrix-scroll-centrator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px 4px 20px 4px;
+}
+
+.matrix-scroll-centrator::-webkit-scrollbar {
+    height: 6px;
+}
+
+.matrix-scroll-centrator::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
 .memory-bars-container {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     justify-content: center;
-    flex-wrap: wrap;
+    width: max-content; 
 }
 
-.bar {
-    width: 90px;
-    height: 260px;
-    border-radius: 16px;
+.matrix-step-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 44px;
+}
+
+.matrix-header-cell {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.matrix-pillar-track {
+    display: flex;
+    flex-direction: column;
+    width: 42px;
+    background: #b0cce3; 
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.matrix-frame-cell {
+    height: 44px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1e; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.matrix-frame-cell:last-child {
+    border-bottom: none;
+}
+
+.matrix-pillar-track.is-hit {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.matrix-pillar-track.is-hit .matrix-frame-cell {
+    color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================================
+   RESULTS SUMMARY METRICS PANEL
+   ========================================================================== */
+.modal-summary-panel {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: flex-start;
+    padding-left: 4px;
+}
+
+.modal-summary-panel p {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.modal-summary-panel p span {
+    font-weight: 700;
+    color: white;
+    margin-left: 6px;
 }

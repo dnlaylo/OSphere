@@ -35,68 +35,55 @@
             <img src="Assets/BG/Dots.svg" alt="Dotted background pattern overlay" class="algorithm-thq-assets13-elm" />
           </div>
 
-          <main class="algorithm-thq-content-container-elm" style="width:100%;height:auto;top:120px;left:0;justify-content:center;z-index:10;">
-          <div class="main-container">
-              <div class="top-controls">          
-                  <select id="algorithm">
-                      <option disabled selected>ALGORITHM</option>
-                      <option value="FIFO">FIFO</option>
-                      <option value="LRU">LRU</option>
-                      <option value="OPTIMAL">OPTIMAL</option>
-                  </select>          
-              </div>
-
-              <div class="vm-fields">
-                  <div class="vm-group">
-                      <label>Reference String</label>
-                      <input
-                          id="reference"
-                          type="text"
-                          placeholder="Ex: 1 2 3 4 4 5 6 7"
-                      >
-                  </div>
-          
-                  <div class="vm-group small">
-                      <label>No. of Frames</label>
-                      <input
-                          id="frames"
-                          type="number"
-                          min="1"
-                          placeholder="3"
-                      >
-                  </div>
-              </div>
-          
-              <button id="compute">CALCULATE</button>
-          </div>
-          </main>
-
           <nav class="algorithm-thq-navigation-bar-elm" style="z-index: 20;">
-            <img src="Assets/NavBar/Side Menu.png" alt="Open side menu" class="algorithm-thq-side-menu-elm" />
-            <img src="Assets/NavBar/Line 1.svg" alt="Navigation separator line" class="algorithm-thq-line1-elm" />
-            <a href="../Main Page/index.html">
-              <img src="Assets/NavBar/Home (1).png" alt="Navigate to Home Page" class="algorithm-thq-home-elm" />
-            </a>
-            <a href="../About Us/index.html">
+            <div class="nav-left-wrapper">
+              <img src="Assets/NavBar/Side Menu.png" alt="Open side menu" class="algorithm-thq-side-menu-elm" />
+              <a href="../Main Page/index.html">
+                <img src="Assets/NavBar/Home (1).png" alt="Navigate to Home Page" class="algorithm-thq-home-elm" />
+              </a>
+            </div>
+            <a href="../About Us/index.html" class="nav-right-help-link">
               <img src="Assets/NavBar/Help.png" alt="Navigate to Help Page" class="algorithm-thq-help-elm" />
             </a>
           </nav>
 
+          <main class="algorithm-thq-content-container-elm" style="width:100%;height:auto;top:120px;left:0;justify-content:center;z-index:10;">
+            <div class="main-container">
+                <div class="top-controls">          
+                    <select id="algorithm">
+                        <option disabled selected>ALGORITHM</option>
+                        <option value="FIFO">FIFO</option>
+                        <option value="LRU">LRU</option>
+                        <option value="OPTIMAL">OPTIMAL</option>
+                        <option value="LFU">LFU</option>
+                    </select>          
+                </div>
+
+                <div class="vm-fields">
+                    <div class="vm-group">
+                        <label>Reference String</label>
+                        <input id="reference" type="text" placeholder="Ex: 1 2 3 4 4 5 6 7">
+                        <p class="field-note-text">Note: Please separate numbers using spaces.</p>
+                    </div>
+            
+                    <div class="vm-group small">
+                        <label>No. of Frames</label>
+                        <input id="frames" type="number" min="1" placeholder="3">
+                    </div>
+                </div>
+            
+                <button id="compute">CALCULATE</button>
+            </div>
+          </main>
+
           <div id="popup-overlay">
             <div class="modal-card">
               <div class="modal-header">
-                <span>OUTPUT</span>
+                <h2>OUTPUT</h2>
+                <span id="close-modal">&times;</span>
               </div>
               <div class="modal-body">
                 <h2 class="virtual-memory-title">VIRTUAL MEMORY</h2>
-                <div class="memory-bars-container">
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                  <div class="bar"></div>
-                </div>
               </div>
             </div>
           </div>
