@@ -37,9 +37,9 @@ function addProcessRow() {
   // Adjusted inputs to match the 4 columns shown in your layout image
   row.innerHTML = `
       <td><input type="text" value="P${rowCount}"></td>
-      <td><input type="number" value="0" min="0"></td>
-      <td><input type="number" value="3" min="1"></td>
-      <td><input type="number" value="50" min="1"></td>
+      <td><input type="number" min="0" placeholder="0"></td>
+      <td><input type="number" min="1" placeholder="3"></td>
+      <td><input type="number" min="1" placeholder="25"></td>
       <td><button class="btn-danger" onclick="deleteRow(this)">X</button></td>
   `;
 }
