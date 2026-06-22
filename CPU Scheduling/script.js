@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const quantumInput = document.getElementById("quantum");
   const processTableBody = document.querySelector("#processTable tbody");
   const addProcessBtn = document.getElementById("addProcess");
-  const computeBtn = document.getElementById("compute"); // Single reference!
+  const computeBtn = document.getElementById("compute");
   
   // Popup Elements
   const popupOverlay = document.getElementById("popup-overlay");
@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
   if (popupOverlay) {
       popupOverlay.addEventListener("click", (event) => { 
-          // Close popup when clicking the dark overlay or the container backdrop
           if (event.target === popupOverlay || event.target === backdropContainer) {
               popupOverlay.classList.remove("show");
           }
@@ -33,28 +32,82 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================================================
-  // 2. DYNAMIC UI INTERACTION AND CONTEXT TOGGLES
+  // 2. DYNAMIC UI INTERACTION AND LAYOUT-SAFE CONTROLS
   // ==========================================================================
-  algorithmSelect.addEventListener("change", () => {
+  function updateUIContext() {
       const algo = algorithmSelect.value;
-      
-      // Handle Round Robin Time Quantum Input Visibility
-      if (algo === "RR") {
+      // MLFQ hint wrapper toggle
+const wrapper = document.getElementById("quantum-wrapper");
+const hint = document.getElementById("mlfq-hint");
+
+if (algo === "RR" || algo === "MLQ" || algo === "MLFQ") {
+    wrapper.style.display = "flex";
+
+    if (algo === "MLFQ") {
+        hint.style.display = "block";
+        quantumInput.placeholder = "Base Quantum (Q0)";
+    } else {
+        hint.style.display = "none";
+        quantumInput.placeholder = "Time Quantum";
+    }
+} else {
+    wrapper.style.display = "none";
+    quantumInput.value = "";
+}   // 1. Toggle for Time Quantum Display
+      if (algo === "RR" || algo === "MLQ" || algo === "MLFQ") {
           quantumInput.style.display = "inline-block";
+          if (algo === "MLFQ") {
+              quantumInput.placeholder = "Base Quantum (Q0)";
+          } else {
+              quantumInput.placeholder = "Time Quantum";
+          }
       } else {
           quantumInput.style.display = "none";
           quantumInput.value = "";
       }
 
-      // Handle Mode Selection Box (For SJF and Priority Variants)
+      // 2. Toggle for Preemptive/Non-Preemptive Mode Selector Box
       if (algo === "SJF" || algo === "PRIORITY") {
           modeSelect.style.display = "inline-block";
       } else {
           modeSelect.style.display = "none";
       }
-  });
 
-  // Handle Adding New Blank Rows
+      // 3. Dynamic Structural Priority Column Hiding Engine
+      const requiresPriority = (algo === "PRIORITY" || algo === "MLQ");
+      const priorityCells = document.querySelectorAll(".priority-col");
+      
+      // Dynamic Header Label Switching
+      const thPriority = document.querySelector("#processTable th.priority-col");
+      if (thPriority) {
+          thPriority.textContent = algo === "MLQ" ? "Queue (1=High, 2=Low)" : "Priority";
+      }
+
+      // Apply layout-safe appearance adjustments
+      priorityCells.forEach(cell => {
+          if (requiresPriority) {
+              cell.style.display = ""; // Defaults to native table-cell
+          } else {
+              cell.style.display = "none"; // Safe structural hiding
+          }
+      });
+
+      // Recalculate column layout scales based on visibility states
+      const tableEl = document.getElementById("processTable");
+      if (tableEl) {
+          const visibleColumnsCount = requiresPriority ? 5 : 4;
+          const percentageWidth = 100 / visibleColumnsCount;
+          const allHeaders = tableEl.querySelectorAll("th");
+          const allDataCells = tableEl.querySelectorAll("td");
+          
+          allHeaders.forEach(th => { if(th.style.display !== "none") th.style.width = `${percentageWidth}%`; });
+          allDataCells.forEach(td => { if(td.style.display !== "none") td.style.width = `${percentageWidth}%`; });
+      }
+  }
+
+  algorithmSelect.addEventListener("change", updateUIContext);
+
+  // Handle Adding New Rows Safely
   addProcessBtn.addEventListener("click", () => {
       processCount++;
       const row = document.createElement("tr");
@@ -62,11 +115,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <td class="pid">P${processCount}</td>
           <td><input class="arrival" type="number" min="0"></td>
           <td><input class="burst" type="number" min="1"></td>
-          <td><input class="priority" type="number" min="1"></td>
+          <td class="priority-col"><input class="priority" type="number" min="1" value="1"></td>
           <td><button class="delete">✕</button></td>
       `;
       processTableBody.appendChild(row);
       attachDeleteEvent(row.querySelector(".delete"));
+      
+      // Instantly synchronize structural state for newly born cells
+      updateUIContext();
   });
 
   function attachDeleteEvent(button) {
@@ -81,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Initial attach for P1 row delete button element
   document.querySelectorAll(".delete").forEach(attachDeleteEvent);
 
   function reindexProcesses() {
@@ -93,11 +148,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
+  // Run on start to establish clean default parameters
+  updateUIContext();
+
   // ==========================================================================
   // 3. CORE COMPUTATION SCHEDULING DISPATCHER
   // ==========================================================================
   computeBtn.addEventListener("click", () => {
       const algo = algorithmSelect.value;
+      // MLFQ quantum hint visibility control
+
       if (!algo) {
           alert("Please select an algorithm first!");
           return;
@@ -118,8 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
               return;
           }
 
-          // Fallback safety if Priority is blank or not selected
-          if (priorityText === "") {
+          if (priorityText === "" || isNaN(priorityText)) {
               priorityText = "1"; 
           }
 
@@ -140,36 +199,46 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       let quantum = parseInt(quantumInput.value);
-      if (algo === "RR" && (isNaN(quantum) || quantum <= 0)) {
+      if ((algo === "RR" || algo === "MLQ" || algo === "MLFQ") && (isNaN(quantum) || quantum <= 0)) {
           alert("Please enter a valid Time Quantum greater than 0.");
           return;
       }
 
-      // Sort baseline safe copy to begin timelines accurately
       processes.sort((a, b) => a.arrival - b.arrival);
 
       let timeline = [];
-      const selectedMode = modeSelect.value; // "pre" or "non"
+      const selectedMode = modeSelect.value; 
 
       if (algo === "FCFS") {
           timeline = runFCFS(processes);
       } else if (algo === "SJF") {
           if (selectedMode === "pre") {
-              timeline = runSRTF(processes); // Preemptive SJF runs SRTF mathematics engine
+              timeline = runSRTF(processes); 
           } else {
-              timeline = runSJFNonPreemptive(processes); // Non-Preemptive SJF
+              timeline = runSJFNonPreemptive(processes); 
           }
       } else if (algo === "RR") {
           timeline = runRR(processes, quantum);
       } else if (algo === "PRIORITY") {
           const isPreemptive = selectedMode === "pre";
           timeline = runPriority(processes, isPreemptive);
+      } else if (algo === "HRRN") {
+          timeline = runHRRN(processes);
+      } else if (algo === "MLQ") {
+          timeline = runMLQ(processes, quantum);
+      } else if (algo === "MLFQ") {
+          timeline = runMLFQ(processes, quantum);
       }
+
+      processes.sort((a, b) => {
+          const numA = parseInt(a.id.replace("P", ""));
+          const numB = parseInt(b.id.replace("P", ""));
+          return numA - numB;
+      });
 
       calculateMetrics(processes, timeline);
       renderOutput(processes, timeline);
       
-      // OPEN THE POPUP AFTER COMPUTATION SUCCESS
       popupOverlay.classList.add("show");
   });
 
@@ -235,7 +304,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let time = 0, completed = 0, n = procs.length;
       let timeline = [];
       let pArray = JSON.parse(JSON.stringify(procs));
-
       let currentRunning = null;
       let startSegmentTime = 0;
 
@@ -403,6 +471,261 @@ document.addEventListener("DOMContentLoaded", () => {
       return compressTimeline(timeline);
   }
 
+  function runHRRN(procs) {
+      let time = 0, completed = 0, n = procs.length;
+      let timeline = [];
+      let pArray = JSON.parse(JSON.stringify(procs));
+      let isDone = Array(n).fill(false);
+
+      while (completed < n) {
+          let idx = -1;
+          let maxHrr = -1;
+
+          for (let i = 0; i < n; i++) {
+              if (pArray[i].arrival <= time && !isDone[i]) {
+                  let waitingTime = time - pArray[i].arrival;
+                  let hrr = (waitingTime + pArray[i].burst) / pArray[i].burst;
+                  if (hrr > maxHrr) {
+                      maxHrr = hrr;
+                      idx = i;
+                  }
+              }
+          }
+
+          if (idx === -1) {
+              let nextArrival = Infinity;
+              for(let i=0; i<n; i++) {
+                  if(!isDone[i] && pArray[i].arrival > time) {
+                      nextArrival = Math.min(nextArrival, pArray[i].arrival);
+                  }
+              }
+              timeline.push({ id: "Idle", start: time, end: nextArrival });
+              time = nextArrival;
+          } else {
+              timeline.push({ id: pArray[idx].id, start: time, end: time + pArray[idx].burst });
+              time += pArray[idx].burst;
+              isDone[idx] = true;
+              completed++;
+          }
+      }
+      return compressTimeline(timeline);
+  }
+
+  function runMLQ(procs, q) {
+      let time = 0, completed = 0, n = procs.length;
+      let timeline = [];
+      let pArray = JSON.parse(JSON.stringify(procs));
+      
+      let q1_ready = []; 
+      let q2_ready = []; 
+      
+      let currentRunning = null;
+      let currentQueueLevel = 0; 
+      let quantumLeft = 0;
+      let startSegmentTime = 0;
+
+      while (completed < n) {
+          pArray.forEach(p => {
+              if (p.arrival === time) {
+                  if (p.priority === 1) q1_ready.push(p);
+                  else q2_ready.push(p);
+              }
+          });
+
+          if (currentRunning && currentQueueLevel === 2 && q1_ready.length > 0) {
+              timeline.push({ id: currentRunning.id, start: startSegmentTime, end: time });
+              q2_ready.unshift(currentRunning); 
+              currentRunning = null;
+          } 
+          else if (currentRunning && currentQueueLevel === 1 && quantumLeft === 0) {
+              timeline.push({ id: currentRunning.id, start: startSegmentTime, end: time });
+              if (currentRunning.remaining > 0) q1_ready.push(currentRunning);
+              currentRunning = null;
+          }
+
+          if (!currentRunning) {
+              if (q1_ready.length > 0) {
+                  currentRunning = q1_ready.shift();
+                  currentQueueLevel = 1;
+                  quantumLeft = Math.min(currentRunning.remaining, q);
+                  startSegmentTime = time;
+              } else if (q2_ready.length > 0) {
+                  currentRunning = q2_ready.shift();
+                  currentQueueLevel = 2;
+                  startSegmentTime = time;
+              }
+          }
+
+          if (currentRunning) {
+              currentRunning.remaining--;
+              time++;
+              if (currentQueueLevel === 1) quantumLeft--;
+
+              if (currentRunning.remaining === 0) {
+                  timeline.push({ id: currentRunning.id, start: startSegmentTime, end: time });
+                  completed++;
+                  currentRunning = null;
+              }
+          } else {
+              if (timeline.length > 0 && timeline[timeline.length - 1].id === "Idle") {
+                  timeline[timeline.length - 1].end++;
+              } else {
+                  timeline.push({ id: "Idle", start: time, end: time + 1 });
+              }
+              time++;
+          }
+      }
+      return compressTimeline(timeline);
+  }
+
+function runMLFQ(procs, q) {
+    let time = 0;
+    let completed = 0;
+    let n = procs.length;
+
+    let timeline = [];
+    let pArray = JSON.parse(JSON.stringify(procs));
+
+    let q0 = []; // highest priority (RR q)
+    let q1 = []; // mid priority (RR 2q)
+    let q2 = []; // lowest priority (FCFS)
+
+    let current = null;
+    let level = -1;
+    let quantumLeft = 0;
+    let startTime = 0;
+
+    function addArrivals() {
+        for (let i = 0; i < n; i++) {
+            if (pArray[i].arrival === time) {
+                q0.push(pArray[i]); // always enter highest queue
+            }
+        }
+    }
+
+    function preempt() {
+        if (!current) return false;
+
+        // higher queue always interrupts lower
+        if (level === 1 && q0.length > 0) return true;
+        if (level === 2 && (q0.length > 0 || q1.length > 0)) return true;
+
+        return false;
+    }
+
+    while (completed < n) {
+        addArrivals();
+
+        // =========================
+        // PREEMPTION RULE
+        // =========================
+        if (preempt()) {
+            timeline.push({
+                id: current.id,
+                start: startTime,
+                end: time
+            });
+
+            if (current.remaining > 0) {
+                if (level === 1) q1.unshift(current);
+                else if (level === 2) q2.unshift(current);
+            }
+
+            current = null;
+        }
+
+        // =========================
+        // DISPATCHER (SELECT PROCESS)
+        // =========================
+        if (!current) {
+            if (q0.length > 0) {
+                current = q0.shift();
+                level = 0;
+                quantumLeft = q;
+            } 
+            else if (q1.length > 0) {
+                current = q1.shift();
+                level = 1;
+                quantumLeft = 2 * q;
+            } 
+            else if (q2.length > 0) {
+                current = q2.shift();
+                level = 2;
+                quantumLeft = Infinity; // FCFS behavior
+            }
+
+            startTime = time;
+        }
+
+        // =========================
+        // EXECUTION
+        // =========================
+        if (current) {
+            current.remaining--;
+            time++;
+
+            if (level === 0 || level === 1) {
+                quantumLeft--;
+            }
+
+            // FINISH PROCESS
+            if (current.remaining === 0) {
+                timeline.push({
+                    id: current.id,
+                    start: startTime,
+                    end: time
+                });
+
+                current = null;
+                completed++;
+                continue;
+            }
+
+            // =========================
+            // DEMOTION RULE
+            // =========================
+            if (level === 0 && quantumLeft === 0) {
+                timeline.push({
+                    id: current.id,
+                    start: startTime,
+                    end: time
+                });
+
+                q1.push(current);
+                current = null;
+            } 
+            else if (level === 1 && quantumLeft === 0) {
+                timeline.push({
+                    id: current.id,
+                    start: startTime,
+                    end: time
+                });
+
+                q2.push(current);
+                current = null;
+            }
+        } 
+        else {
+            // IDLE
+            if (
+                timeline.length > 0 &&
+                timeline[timeline.length - 1].id === "Idle"
+            ) {
+                timeline[timeline.length - 1].end++;
+            } else {
+                timeline.push({
+                    id: "Idle",
+                    start: time,
+                    end: time + 1
+                });
+            }
+            time++;
+        }
+    }
+
+    return compressTimeline(timeline);
+}
+
   function compressTimeline(timeline) {
       if (timeline.length === 0) return timeline;
       let compressed = [timeline[0]];
@@ -429,11 +752,8 @@ document.addEventListener("DOMContentLoaded", () => {
               p.ct = filtering[filtering.length - 1].end;
               p.tat = p.ct - p.arrival;
               p.wt = p.tat - p.burst;
-              
-              let firstSegment = timeline.find(t => t.id === p.id);
-              p.rt = firstSegment ? firstSegment.start - p.arrival : 0;
           } else {
-              p.ct = 0; p.tat = 0; p.wt = 0; p.rt = 0;
+              p.ct = 0; p.tat = 0; p.wt = 0;
           }
       });
   }
@@ -446,7 +766,6 @@ document.addEventListener("DOMContentLoaded", () => {
       resultTable.innerHTML = "";
       averagesDiv.innerHTML = "";
 
-      // Remove any old calculations container if it exists before drawing fresh instances
       const oldCalcDiv = document.getElementById("step-by-step-calcs");
       if (oldCalcDiv) oldCalcDiv.remove();
       const oldHr = document.getElementById("popup-divider-hr");
@@ -505,20 +824,18 @@ document.addEventListener("DOMContentLoaded", () => {
                   <th>Completion Time</th>
                   <th>Turnaround Time</th>
                   <th>Waiting Time</th>
-                  <th>Response Time</th>
               </tr>
           </thead>
           <tbody>
       `;
       
-      let avgTat = 0, avgWt = 0, avgRt = 0;
+      let avgTat = 0, avgWt = 0;
       let formulasHTML = `<div id="step-by-step-calcs" style="margin-top:20px; font-size:14px; color:#e0e0e0; line-height:1.8;">`;
       formulasHTML += `<h3 style="color: rgba(242, 232, 164, 0.8); text-transform: uppercase; font-size:18px; margin-bottom:15px;">Step-By-Step Formulas</h3>`;
       
       procs.forEach(p => {
           avgTat += p.tat;
           avgWt += p.wt;
-          avgRt += p.rt;
 
           tableHeaderHTML += `
               <tr>
@@ -528,17 +845,14 @@ document.addEventListener("DOMContentLoaded", () => {
                   <td>${p.ct}</td>
                   <td>${p.tat}</td>
                   <td>${p.wt}</td>
-                  <td>${p.rt}</td>
               </tr>
           `;
 
-          // Build structural text logging string calculations format
           formulasHTML += `
               <div style="background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; margin-bottom: 12px; border-left: 3px solid #b0cce3;">
                   <p style="font-weight: 600; color: #ffffff; margin-bottom: 4px;">📈 Process ${p.id}:</p>
                   <p style="padding-left: 15px;">• Turnaround Time (TAT) = CT - AT &rarr; ${p.ct} - ${p.arrival} = <b>${p.tat} ms</b></p>
                   <p style="padding-left: 15px;">• Waiting Time (WT) = TAT - BT &rarr; ${p.tat} - ${p.burst} = <b>${p.wt} ms</b></p>
-                  <p style="padding-left: 15px;">• Response Time (RT) = Start - AT &rarr; ${timeline.find(t => t.id === p.id).start} - ${p.arrival} = <b>${p.rt} ms</b></p>
               </div>
           `;
       });
@@ -549,37 +863,30 @@ document.addEventListener("DOMContentLoaded", () => {
       let totalProcesses = procs.length;
       let rawTatSum = avgTat;
       let rawWtSum = avgWt;
-      let rawRtSum = avgRt;
 
       avgTat = (avgTat / totalProcesses).toFixed(2);
       avgWt = (avgWt / totalProcesses).toFixed(2);
-      avgRt = (avgRt / totalProcesses).toFixed(2);
 
       averagesDiv.innerHTML = `
           <p>Average Turnaround Time: <b>${avgTat} ms</b></p>
           <p>Average Waiting Time: <b>${avgWt} ms</b></p>
-          <p>Average Response Time: <b>${avgRt} ms</b></p>
       `;
 
-      // Append System Averages Formulas Summaries
       formulasHTML += `
           <div style="background: rgba(242, 232, 164, 0.05); padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px dashed rgba(242, 232, 164, 0.3);">
               <p style="font-weight: 600; color: rgba(242, 232, 164, 1); margin-bottom: 6px;">📊 Global System Averages Calculations:</p>
               <p>• Avg TAT = (${procs.map(p => p.tat).join(" + ")}) / ${totalProcesses} = ${rawTatSum} / ${totalProcesses} = <b>${avgTat} ms</b></p>
               <p>• Avg WT = (${procs.map(p => p.wt).join(" + ")}) / ${totalProcesses} = ${rawWtSum} / ${totalProcesses} = <b>${avgWt} ms</b></p>
-              <p>• Avg RT = (${procs.map(p => p.rt).join(" + ")}) / ${totalProcesses} = ${rawRtSum} / ${totalProcesses} = <b>${avgRt} ms</b></p>
           </div>
       `;
       formulasHTML += `</div>`;
 
-      // Create the horizontal rules line separator
       const hrElement = document.createElement("hr");
       hrElement.id = "popup-divider-hr";
       hrElement.style.border = "none";
       hrElement.style.borderTop = "1px solid rgba(255, 255, 255, 0.15)";
       hrElement.style.margin = "35px 0 20px 0";
 
-      // Append components
       document.querySelector('.popup-content').appendChild(hrElement);
       document.querySelector('.popup-content').insertAdjacentHTML('beforeend', formulasHTML);
   }

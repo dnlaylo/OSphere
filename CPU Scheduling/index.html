@@ -8,11 +8,25 @@
     <meta property="twitter:card" content="summary_large_image" />
 
     <style data-tag="reset-style-sheet">
-      html { line-height: 1.15;} body { margin: 0;} * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased;} p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0;} button { background-color: transparent;} button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;} button,select { text-transform: none;} button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; color: inherit;} button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner { border-style: none; padding: 0;} button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus { outline: 1px dotted ButtonText;} a { color: inherit; text-decoration: inherit;} pre { white-space: normal;} input { padding: 2px 4px;} img { display: block;} details { display: block; margin: 0; padding: 0;} summary::-webkit-details-marker { display: none;} [data-thq="accordion"] [data-thq="accordion-content"] { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; padding: 0;} [data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] { max-height: 1000vh;} details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] { transform: rotate(180deg);} html { scroll-behavior: smooth }
+      html { line-height: 1.15;} body { margin: 0;} * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased;} p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin: 0; padding: 0;} button { background-color: transparent;} button,input,optgroup,select,textarea { font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;} button,select { text-transform: none;} button,[type="button"],[type="reset"],[type="submit"] { -webkit-appearance: button; appearance: button; color: inherit;} button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner { border-style: none; padding: 0;} button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus { outline: 1px dotted ButtonText;} a { color: inherit; text-decoration: inherit;} pre { white-space: normal;} input { padding: 2px 4px;} img { display: block;} details { display: block; margin: 0; padding: 0;} summary::-webkit-details-marker { display: none;} [data-thq="accordion"] [data-thq="accordion-content"] { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-in-out; padding: 0;} [data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] { max-height: 1000vh;} details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] { transform: rotate(180deg);} html { scroll-behavior: smooth }
     </style>
     <style data-tag="default-style-sheet">
-      html { font-family: Inter; font-size: 16px; }
-      body { font-weight: 400; font-style:normal; text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 1.15; color: var(--dl-color-theme-neutral-dark); background: var(--dl-color-theme-neutral-light); fill: var(--dl-color-theme-neutral-dark); }
+      html { font-family: Inter; font-size: 16px; background-color: #000000; min-height: 100%; }
+      body { font-weight: 400; font-style:normal; text-decoration: none; text-transform: none; letter-spacing: normal; line-height: 1.15; color: var(--dl-color-theme-neutral-dark); background: #000000 !important; fill: var(--dl-color-theme-neutral-dark); min-height: 100vh; width: 100%; overflow-x: hidden; }
+      
+      /* RESPONSIVENESS AND ANTI-WHITE SPACE PATCH */
+      .algorithm-container1 { min-height: 100vh; background-color: #000000; width: 100%; display: flex; flex-direction: column; }
+      .algorithm-thq-algorithm-elm { min-height: 100vh; width: 100%; position: relative; background-color: #000000; }
+      .algorithm-thq-bg-elm { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; pointer-events: none; }
+      .algorithm-thq-mainpageblackbg-elm { width: 100%; height: 100%; object-fit: cover; }
+      
+      #processTable { width: 100%; border-collapse: collapse; table-layout: fixed; }
+      #processTable th, #processTable td { text-align: center; vertical-align: middle; width: 20%; word-wrap: break-word; }
+      .top-controls { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+      @media (max-width: 768px) {
+        .main-container { width: 95% !important; padding: 15px !important; margin: 20px auto !important; }
+        #processTable input { width: 100% !important; max-width: 70px; }
+      }
     </style>
 
     <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
@@ -35,23 +49,34 @@
             <img src="Assets/BG/Dots.svg" alt="Dotted background pattern overlay" class="algorithm-thq-assets13-elm" />
           </div>
   
-          <main class="algorithm-thq-content-container-elm" style="width: 100%; height: auto; top: 120px; left: 0; justify-content: center; z-index: 10;">
+          <main class="algorithm-thq-content-container-elm" style="width: 100%; height: auto; padding-top: 120px; padding-bottom: 50px; left: 0; display: flex; justify-content: center; z-index: 10; position: relative;">
             <div class="main-container">
                 <div class="top-controls">
-                    <select id="algorithm">
-                        <option value="" selected disabled>ALGORITHM</option>
-                        <option value="FCFS">FCFS</option>
-                        <option value="SJF">Shortest Job First (SJF)</option>
-                        <option value="RR">Round Robin</option>
-                        <option value="PRIORITY">Priority Scheduling</option>
-                    </select>
+                  <select id="algorithm">
+                      <option value="" selected disabled>ALGORITHM</option>
+                      <option value="FCFS">FCFS</option>
+                      <option value="SJF">Shortest Job First (SJF)</option>
+                      <option value="RR">Round Robin</option>
+                      <option value="PRIORITY">Priority Scheduling</option>
+                      <option value="HRRN">Highest Response Ratio Next (HRRN)</option>
+                      <option value="MLQ">Multilevel Queue Scheduling</option>
+                      <option value="MLFQ">Multilevel Feedback Queue (MLFQ)</option>
+                  </select>
                     
-                    <select id="mode" style="display:none;">
-                        <option value="non" selected>Non-Preemptive</option>
-                        <option value="pre">Preemptive</option>
-                    </select>
+                  <select id="mode" style="display:none;">
+                      <option value="non" selected>Non-Preemptive</option>
+                      <option value="pre">Preemptive</option>
+                  </select>
                     
-                    <input type="number" id="quantum" placeholder="Time Quantum" style="display:none;" min="1">
+                  <div class="quantum-wrapper">
+<div id="quantum-wrapper">
+  <input type="number" id="quantum" placeholder="Time Quantum">
+
+  <small id="mlfq-hint" class="quantum-hint">
+    Q1 = q, Q2 = 2q, Q3 = FCFS
+  </small>
+</div>
+</div>
                 </div>
     
                 <table id="processTable">
@@ -60,7 +85,7 @@
                             <th>Process</th>
                             <th>Arrival Time</th>
                             <th>Burst Time</th>
-                            <th>Priority</th>
+                            <th class="priority-col">Priority</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -69,7 +94,7 @@
                             <td class="pid">P1</td>
                             <td><input class="arrival" type="number" min="0"></td>
                             <td><input class="burst" type="number" min="1"></td>
-                            <td><input class="priority" type="number" min="1"></td>
+                            <td class="priority-col"><input class="priority" type="number" min="1" value="1"></td>
                             <td><button class="delete">✕</button></td>
                         </tr>
                     </tbody>

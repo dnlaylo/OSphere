@@ -6,6 +6,66 @@
     box-sizing: border-box;
     font-family: 'Alexandria', sans-serif;
 }
+/* ---------- Reset (Optimized with Fallback) ---------- */
+html { 
+  line-height: 1.15; 
+  scroll-behavior: smooth; 
+  background-color: #0d0f14; /* Solid dark base fallback before images load */
+}
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #0d0f14; /* Prevents white flash on slow connections */
+  min-height: 100vh;
+}
+*, *::before, *::after { box-sizing: border-box; }
+p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin:0; padding:0; }
+button { background-color: transparent; }
+button,input,optgroup,select,textarea { font-family:inherit; font-size:100%; line-height:1.15; margin:0; }
+a { color:inherit; text-decoration:inherit; }
+img { display:block; }
+
+/* =========================================================
+   ROOT WRAPPER
+   ========================================================= */
+.mainpage-container1 {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden; /* Prevents subtle mobile horizontal wiggle */
+}
+
+/* =========================================================
+   BACKGROUND LAYER (Now truly fixed and performant)
+   ========================================================= */
+.mainpage-thq-background-elm {
+  position: fixed; /* Locks background to viewport, ignores scroll height */
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Placed cleanly behind everything without stack tension */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.mainpage-thq-gradient-elm,
+.mainpage-thq-dots-elm,
+.mainpage-thq-dots2-elm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainpage-thq-dots-elm  { opacity: 0.10; }
+.mainpage-thq-dots2-elm { opacity: 0.10; }
 
 .algorithm-container1 {
     width: 100%;
@@ -965,4 +1025,30 @@
     font-size: 18px;
     margin-left: 6px;
 }
-    
+    .gantt-bar-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+.quantum-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.quantum-hint {
+    font-size: 12px;
+    color: rgba(130, 120, 135, 0.8);
+    text-align: center;
+}
+#quantum-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quantum-hint {
+    font-size: 12px;
+    color: rgba(130,120,135,0.8);
+}
