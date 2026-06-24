@@ -474,3 +474,56 @@
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb:hover {
     background-color: rgba(242, 232, 164, 0.7);
 }
+
+.matrix-scroll-centrator {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important; /* Prevents flexbox from clipping the left side */
+    overflow-x: auto !important;
+    padding: 10px 4px 20px 4px !important;
+}
+
+.memory-bars-container {
+    display: flex !important;
+    gap: 16px !important;
+    justify-content: flex-start !important;
+    margin: 0 auto !important; 
+    width: max-content !important; 
+    min-width: 100% !important;
+}
+
+.output-thq-output-elm {
+    width: 100% !important;
+    max-height: 100% !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+/* Custom Scrollbar UI Styles */
+#popup-overlay .modal-card::-webkit-scrollbar,
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar,
+.matrix-scroll-centrator::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+#popup-overlay .modal-card::-webkit-scrollbar-track,
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar-track,
+.matrix-scroll-centrator::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 100px;
+}
+
+#popup-overlay .modal-card::-webkit-scrollbar-thumb,
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb,
+.matrix-scroll-centrator::-webkit-scrollbar-thumb {
+    background-color: rgba(242, 232, 164, 0.4);
+    border-radius: 100px;
+    border: 2px solid transparent;
+}
+
+#popup-overlay .modal-card::-webkit-scrollbar-thumb:hover,
+#popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb:hover,
+.matrix-scroll-centrator::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(242, 232, 164, 0.7);
+}
