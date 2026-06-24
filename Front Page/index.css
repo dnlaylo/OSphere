@@ -1,168 +1,198 @@
+/* --- Base Container Structural Fixes --- */
 .frontpage-container1 {
   width: 100%;
   display: flex;
-  overflow: auto;
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+  background-color: #0b0a0a; /* Fallback dark background color */
 }
  
 .frontpage-thq-frontpage-elm {
   width: 100%;
-  height: 810px;
+  min-height: 100vh;
   display: flex;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Vertically centers landing content */
   position: relative;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-color: rgba(0, 0, 0, 0.20000000298023224);
-  background-color: rgba(255, 255, 255, 0.10000000149011612);
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling on mobile */
+  padding: 80px 24px 40px 24px; /* Essential spacing for mobile padding */
+  box-sizing: border-box;
 }
  
+/* --- Responsive Background Canvas --- */
 .frontpage-thq-background-elm {
-  top: -1400px;
-  left: -788px;
-  width: 3102px;
-  height: 5235px;
-  display: flex;
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
- 
-.frontpage-thq-dots-elm1 {
-  top: 1219px;
-  left: 495.00018310546875px;
-  width: 2198.999755859375px;
-  height: 1308.0001220703125px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-}
- 
-.frontpage-thq-dots2-elm {
-  top: 70px;
-  right: 171px;
-  width: 1164px;
-  height: 1165px;
-  opacity: 0.20;
-  position: absolute;
-}
- 
-.frontpage-thq-dots-elm2 {
-  top: 113px;
-  left: -42px;
-  width: 1316px;
-  height: 1098px;
-  opacity: 0.20;
-  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
 }
  
 .frontpage-thq-gradient-elm {
-  top: 0px;
-  left: 0px;
-  width: 3102px;
-  height: 5235px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures gradient fills screen neatly regardless of ratio */
   position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.frontpage-thq-dots-elm1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
  
-.frontpage-thq-navigation-bar-elm {
-  top: 0px;
-  left: -0.0003662109375px;
-  width: 1440.1253662109375px;
-  height: 54px;
-  display: flex;
+.frontpage-thq-dots2-elm,
+.frontpage-thq-dots-elm2 {
   position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
+  max-width: 45%;
+  height: auto;
+  opacity: 0.15;
+}
+ 
+.frontpage-thq-dots2-elm {
+  top: 10%;
+  right: -5%;
+}
+ 
+.frontpage-thq-dots-elm2 {
+  bottom: 10%;
+  left: -5%;
+}
+ 
+/* --- Flexbox Navigation Bar --- */
+.frontpage-thq-navigation-bar-elm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+  z-index: 10;
 }
  
 .frontpage-thq-line1-elm {
-  top: 50px;
-  left: 1440.125px;
-  width: 1440px;
-  height: 1px;
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  object-fit: cover;
 }
  
 .frontpage-thq-side-menu-elm {
-  top: 3px;
-  left: 26.0003662109375px;
-  width: 56px;
-  height: 47px;
-  position: absolute;
+  width: 42px;
+  height: auto;
+  cursor: pointer;
+  margin-right: 12px;
+  transition: transform 0.2s ease;
+}
+
+.frontpage-thq-side-menu-elm:hover {
+  transform: scale(1.05);
 }
  
 .frontpage-thq-home-elm {
-  top: 0px;
-  left: 78.0003662109375px;
-  width: 60px;
-  height: 54px;
-  position: absolute;
-  border-color: rgba(0, 0, 0, 1);
+  width: 48px;
+  height: auto;
 }
  
+/* Pushes Help Icon smoothly to the upper right corner */
+.frontpage-thq-navigation-bar-elm > a:last-of-type {
+  margin-left: auto;
+}
+
 .frontpage-thq-help-elm {
-  top: 4px;
-  left: 1371px;
-  width: 35px;
-  height: 40px;
-  position: absolute;
+  width: 28px;
+  height: auto;
 }
  
+/* --- Main Hero Content Components --- */
 .frontpage-thq-o-sphere-logo-elm {
-  top: 123px;
-  left: 185px;
-  width: 1069px;
-  height: 282px;
-  position: absolute;
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 90%; /* Scales dynamically on small layout changes */
+  height: auto;
+  margin-bottom: 24px;
 }
  
 .frontpage-thq-text-elm1 {
-  top: 405px;
-  left: 327px;
+  position: relative;
+  z-index: 2;
   color: rgba(255, 255, 255, 1);
-  width: 787px;
+  max-width: 1000px;
+  width: 100%;
   height: auto;
-  position: absolute;
-  font-size: 24px;
-  box-shadow: 0px 4px 4px 0px rgba(13, 12, 12, 1) ;
-  font-style: Light;
+  font-size: 25px;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.7); /* Upgraded from box-shadow for cleaner text readability */
   text-align: center;
-  font-family: Alexandria;
+  font-family: Alexandria, sans-serif;
   font-weight: 300;
-  line-height: normal;
-  font-stretch: normal;
+  line-height: 1.6;
+  margin-bottom: 48px;
   text-decoration: underline;
 }
  
 .frontpage-thq-explore-button-elm {
-  top: 613px;
-  left: 577px;
-  width: 285px;
-  height: 74px;
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  height: 60px;
   display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 1;
-  background-color: rgba(255, 167, 196, 0.41999998688697815);
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 167, 196, 0.35);
+  border: 1px solid rgba(255, 167, 196, 0.5);
+  border-radius: 30px; /* Gives the CTA a modern, polished look */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 60px;
+}
+
+.frontpage-thq-explore-button-elm:hover {
+  background-color: rgba(255, 167, 196, 0.55);
+  transform: translateY(-2px);
 }
  
 .frontpage-thq-text-elm2 {
-  top: 17px;
-  left: 63px;
+  width: 100%;
   color: rgba(255, 255, 255, 1);
-  width: 160px;
-  height: auto;
-  position: absolute;
-  font-size: 32px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-  font-style: Medium;
+  font-size: 22px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
-  font-family: Alexandria;
+  font-family: Alexandria, sans-serif;
   font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+/* --- Media Queries for Mobile Screens --- */
+@media (max-width: 768px) {
+  .frontpage-thq-o-sphere-logo-elm {
+    max-width: 450px;
+  }
+  
+  .frontpage-thq-text-elm1 {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .frontpage-thq-explore-button-elm {
+    width: 200px;
+    height: 52px;
+  }
+
+  .frontpage-thq-text-elm2 {
+    font-size: 18px;
+  }
 }
