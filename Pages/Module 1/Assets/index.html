@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>OSphere</title>
+    <meta property="og:title" content="OSphere" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button; appearance: button; color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="../Side Menu/sideMenu.css" />
+  </head>
+  <body>
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="module2-container1">
+        <div class="module2-thq-module2-elm">
+          
+          <div class="mainpage-thq-background-elm">
+            <img
+              src="Assets/BG/BG.svg"
+              alt="Decorative Site Background Pattern Layer"
+              class="module2-thq-bg-elm"
+            />
+          </div>
+
+          <div class="mainpage-thq-navigation-bar-elm">
+            <img src="Assets/NavBar/Side Menu.png" alt="Open Side Menu" id="menuToggle" class="mainpage-thq-side-menu-elm" />
+            
+            <a href="../Main Page/index.html" class="home-link-wrapper">
+              <img src="Assets/NavBar/Home (1).png" alt="Go to Home" class="mainpage-thq-home-elm" />
+            </a>
+            
+            <a href="../About%20Us/index.html" class="help-link-wrapper">
+              <img src="Assets/NavBar/Help.png" alt="About Us" class="mainpage-thq-help-elm" />
+            </a>
+          </div>
+
+          <div id="sideMenuOverlay" class="side-menu-overlay"></div>
+
+          <div id="sideMenu" class="side-menu">
+          <div class="side-menu-header">
+              <svg id="closeMenuBtn" class="close-icon" viewBox="0 0 24 24" width="36" height="36" stroke="#827887" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+          </div>
+
+          <div class="side-menu-content">
+              <div class="menu-item-wrapper">
+              <div class="menu-btn" onclick="toggleDropdown('modulesDropdown', this)">
+                  Modules
+                  <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div id="modulesDropdown" class="dropdown-content modules-bg">
+                  <a href="../Module%201/index.html">Module 1</a>
+                  <a href="../Module%202/index.html">Module 2</a>
+                  <a href="../Module%203/index.html">Module 3</a>
+                  <a href="../Module%204/index.html">Module 4</a>
+                  <a href="../Module%205/index.html">Module 5</a>
+                  <a href="../Module%206/index.html">Module 6</a>
+                  <a href="../Module%207/index.html">Module 7</a>
+                  <a href="../Module%208/index.html">Module 8</a>
+              </div>
+              </div>
+
+              <div class="menu-item-wrapper">
+              <div class="menu-btn" onclick="toggleDropdown('algosDropdown', this)">
+                  Algorithms
+                  <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </div>
+              <div id="algosDropdown" class="dropdown-content algos-bg">
+                  <a href="../CPU%20Scheduling/index.html">CPU Scheduling</a>
+                  <a href="../Memory%20Management/index.html">Memory Management</a>
+                  <a href="../Virtual%20Memory/index.html">Virtual Memory</a>
+                  <a href="../Mass%20Storage%20Management/index.html">Mass Storage Management</a>
+              </div>
+              </div>
+          </div>
+          
+          <div class="side-menu-footer">
+              <div class="menu-item-wrapper">
+              <a href="../About%20Us/index.html" class="menu-btn link-btn">About Us</a>
+              </div>
+              
+              <div class="menu-item-wrapper">
+              <a href="../Bibliography/index.html" class="menu-btn link-btn">Bibliography</a>
+              </div>
+          </div>
+          </div>
+
+          <div class="module2-thq-header-elm">
+            <img
+              src="Assets/M2 BG.svg"
+              alt="Module 2 Header Background Graphic Banner"
+              class="module2-thq-m2bg-elm"
+            />
+            <span class="module2-thq-text-elm399">Module 2:</span>
+            <span class="module2-thq-text-elm398">
+              Operating System Structures
+            </span>
+          </div>
+
+          <div class="module2-thq-content-container-elm">
+                      
+            <div class="module2-thq-overview-elm">
+              <span class="module2-thq-text-elm397">Overview:</span>
+              <span class="module2-thq-text-elm395">
+                This module introduces the internal structure and organization of an Operating Systems, focusing on how computer systems are built and how core components such as the CPU, memory, and I/O devices interact within a structured architecture. It explores computer system organization, interrupt handling, I/O systems, storage hierarchy, and hardware protection mechanisms that ensure safe and efficient execution of programs. The module also examines key OS responsibilities including process, memory, file, and device management, as well as system services like system calls and command interpretation. Finally, it covers different OS structural designs such as layered systems, microkernels, modular systems, and UNIX-based architecture, highlighting how operating systems are engineered to balance performance, security, and scalability.
+              </span>
+            </div>
+
+            <div class="module2-thq-computer-system-architecture-elm module2-card">
+              <span class="module2-thq-text-elm394">Computer System Architecture</span>
+              <div class="image-row">
+                <img src="Assets/Figures/Fig 1.svg" alt="Individual processor" class="module2-thq-fig1-elm" />
+                <img src="Assets/Figures/Fig 2.svg" alt="Multi-processor system" class="module2-thq-fig2-elm" />
+              </div>
+            </div>
+
+            <div class="module2-thq-computer-system-organization-elm module2-card">
+              <span class="module2-thq-text-elm389">Computer System Organization</span>
+              <span class="module2-thq-text-elm391">Computer system organization explains how the CPU, memory, and input/output (I/O) devices work together to process data efficiently.</span>
+              <span class="module2-thq-text-elm393">
+                <span class="bL1"><span class="module2-text322">1. Concurrent Operation</span></span>
+                <span class="bL2"><span class="module2-text324">• The CPU and I/O devices work at the same time.</span></span>
+                <span class="bL2"><span class="module2-text326">This means:</span></span>
+                <span class="bL3"><span class="module2-text328">• While the CPU is processing data, I/O devices can also perform their tasks</span></span>
+                <span class="bL3"><span class="module2-text330">• This improves overall system speed and efficiency</span></span>
+                <span class="bL1 gap"><span class="module2-text333">2. Device Controllers</span></span>
+                <span class="bL2"><span class="module2-text335">• Each I/O device is managed by a device controller.</span></span>
+                <span class="bL3"><span class="module2-text337">• Each controller handles one specific type of device (e.g., keyboard, disk, printer)</span></span>
+                <span class="bL3"><span class="module2-text339">• It acts as a middle unit between the device and the computer system</span></span>
+                <span class="bL1 gap"><span class="module2-text342">3. Local Buffer Storage</span></span>
+                <span class="bL2"><span class="module2-text344">• Every device controller has a local buffer.</span></span>
+                <span class="bL2"><span class="module2-text346">• Data from the device is first stored in this buffer</span></span>
+                <span class="bL2"><span class="module2-text348">• This helps manage data transfer smoothly before sending it to memory or CPU</span></span>
+                <span class="bL1 gap"><span class="module2-text351">4. Data Transfer Process</span></span>
+                <span class="bL2"><span class="module2-text353">• The CPU does not communicate directly with the device.</span></span>
+                <span class="bL2"><span class="module2-text355">Instead:</span></span>
+                <span class="bL3"><span class="module2-text357">Data moves between the device and the controller’s buffer</span></span>
+                <span class="bL3"><span class="module2-text359">• Then the CPU transfers data between the buffer and main memory</span></span>
+                <span class="bL1 gap"><span class="module2-text362">5. Interrupt System</span></span>
+                <span class="bL2"><span>• Device controllers notify the CPU when they finish a task.</span></span>
+                <span class="bL3"><span>• This is done through an interrupt signal</span></span>
+                <span class="bL3"><span>• It tells the CPU that I/O operation is complete and ready for processing</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-interrupts-elm">
+              <span class="module2-thq-text-elm380">Interrupts</span>
+              <span class="module2-thq-text-elm381">
+                <span class="bL1"><span>• Interrupt transfers control to the interrupt service routine</span></span>
+                <span class="bL2"><span>• Interrupt Service Routine: Segments of code that determine action to be taken for each type of interrupt.</span></span>
+                <span class="bL2"><span>• Interrupt vector contains the address of service routines.</span></span>
+                <span class="bL1 gap"><span>• OS preserves the state of the CPU</span></span>
+                <span class="bL2"><span>• stores registers and the program counter (address of interrupted instruction).</span></span>
+                <span class="bL1 gap"><span>• Trap</span></span>
+                <span class="bL2"><span>• software generated interrupt caused either by an error or a user request.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-interrupt-handling-elm">
+              <span class="module2-thq-text-elm379">Interrupt Handling</span>
+              <span class="module2-thq-text-elm374">
+                <span class="bL1"><span class="module2-thq-text-elm375">• Types of interrupt</span></span>
+                <span class="bL2"><span>• Polling</span></span>
+                <span class="bL2"><span>• Vectored interrupt system</span></span><br>
+                <span class="bL1"><span>• Incoming interrupts are disabled while another interrupt is being processed to prevent a lost interrupt.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-io-structure-elm">
+              <span class="module2-thq-text-elm373">I/O Structure</span>
+              <span class="module2-thq-text-elm364">
+                <span class="bL1"><span class="module2-thq-text-elm365">• Synchronous I/O</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm366">• wait instruction idles CPU until next interrupt</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm367">• no simultaneous I/O processing, at most one outstanding I/O request at a time.</span></span>
+                <span class="bL1 gap"><span class="module2-thq-text-elm368">• Asynchronous I/O</span></span>
+                <span class="bL2"><span style="font-weight: 200;">• After I/O is initiated, control returns to the user program without waiting for I/O completion.</span></span>
+                <span class="bL3"><span style="font-weight: 200;">• System call</span></span>
+                <span class="bL3"><span style="font-weight: 200;">• Device Status table - holds type, address and state for each device</span></span>
+                <span class="bL3"><span style="font-weight: 200;">• OS indexes into the I/O device table to determine device status and modify table entry to include interrupt.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-direct-memory-access-elm">
+              <span class="module2-thq-text-elm359">Direct Memory Access (DMA)</span>
+              <div class="float-wrap">
+                <img src="Assets/Figures/Fig 3.svg" alt="DMA path" class="module2-thq-fig3-elm dma-float" />
+                  <span class="module2-thq-text-elm360">
+                <span class="bL1"><span>• Used for high speed I/O devices able to transmit information at close to memory speeds.</span></span>
+                <span class="bL1"><span>• Device controller transfers blocks of data from buffer storage directly to main memory without CPU intervention.</span></span>
+                <span class="bL1"><span>• Only one interrupt is generated per block, rather than one per byte (or word).</span></span>
+           </span>
+
+                  <span class="module2-thq-text-elm357">Storage Structure</span>
+                  <span class="module2-thq-text-elm348">
+                    <span class="bL1"><span class="module2-thq-text-elm349">• Main memory - </span>
+                    <span class="module2-thq-text-elm350">only large storage media that the CPU can access directly.</span></span>
+                    <span class="bL1"><span class="module2-thq-text-elm351">• Secondary storage - </span>
+                    <span class="module2-thq-text-elm352">extension of main memory that has large nonvolatile storage capacity.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm353">• Magnetic disks - </span>
+                    <span style="font-weight: 200;">rigid metal or glass platters covered with magnetic recording material.</span></span>
+                    <span class="bL3"><span style="font-weight: 200;">• The disk surface is logically divided into tracks, subdivided into sectors.</span></span>
+                    <span class="bL3"><span style="font-weight: 200;">• Disk controller determines logical interaction between device and computer.</span></span>
+                </span>
+              </div>
+            </div>
+
+<div class="module2-thq-storagehierarchy-elm">
+              <div class="content-row">
+                <div class="text-content">
+                  <span class="module2-thq-text-elm339">Storage Hierarchy</span>
+                  <span class="module2-thq-text-elm340">
+                    <span class="bL1"><span class="module2-thq-text-elm341">• Storage systems</span>
+                        <span class="module2-thq-text-elm342">are organized in a hierarchy based on</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm343">• Speed</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm344">• Cost</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm345">• Volatility</span></span>
+                    <span class="bL1"><span class="module2-thq-text-elm346">• Caching</span>
+                        <span style="font-weight: 200;">- process of copying information into a faster storage system; main memory can be viewed as a fast cache for secondary storage.</span></span>
+                  </span>
+                </div>
+                <img src="Assets/Figures/Fig 4.svg" alt="Storage Pyramid" class="module2-thq-fig4-elm" />
+              </div>
+            </div>
+
+            <div class="storage-list-card">
+              <div class="content-row">
+                <div class="text-content">
+                  <span class="module2-thq-text-elm309">
+                    <span class="bL1"><span class="module2-thq-text-elm310">• Registers</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm311">• Small storage locations inside the CPU.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm312">• Fastest type of storage.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm313">• Holds data and instructions currently being processed.</span></span>
+                    <span class="bL1 gap"><span class="module2-thq-text-elm314">• Cache</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm315">• High-speed memory located close to the CPU.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm316">• Stores frequently used data to reduce access time.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm317">• Faster than main memory but smaller in size.</span></span>
+                    <span class="bL1 gap"><span class="module2-thq-text-elm318">• Main Memory (RAM)</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm319">• Temporary storage used by running programs.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm320">• Allows quick access to active data and applications.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm321">• Data is lost when power is turned off.</span></span>
+                    <span class="bL1 gap"><span class="module2-thq-text-elm322">• Electronic Disk (SSD)</span></span>
+                    <span class="bL2"><span style="font-weight: 200;">• Uses flash memory with no moving parts.</span></span>
+                    <span class="bL2"><span style="font-weight: 200;">• Faster and more reliable than magnetic disks.</span></span>
+                    <span class="bL2"><span style="font-weight: 200;">• Commonly used for operating systems and applications</span></span>
+                  </span>
+                </div>
+                
+                <div class="text-content">
+                  <span class="module2-thq-text-elm326">
+                    <span class="bL1"><span class="module2-thq-text-elm327">• Magnetic Disk (HDD)</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm328">• Stores data on rotating magnetic platters.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm329">• Provides large storage capacity at a lower cost.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm330">• Slower than SSDs due to moving mechanical parts.</span></span>
+                    <span class="bL1 gap"><span class="module2-thq-text-elm331">• Optical Disk</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm332">• Stores data using laser technology.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm333">• Examples include CDs, DVDs, and Blu-ray discs.</span></span>
+                    <span class="bL2"><span class="module2-thq-text-elm334">• Often used for media distribution and backups.</span></span>
+                    <span class="bL1 gap"><span class="module2-thq-text-elm335">• Magnetic Tape</span></span>
+                    <span class="bL2"><span>• Uses magnetic strips to store data sequentially.</span></span>
+                    <span class="bL2"><span>• Very large storage capacity and low cost.</span></span>
+                    <span class="bL2"><span>• Commonly used for long-term backup and archiving.</span></span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="module2-thq-hardware-protection-elm">
+              <span class="module2-thq-text-elm308" style="display:block; font-size:32px; font-weight:300; margin-bottom:8px;">Hardware Protection</span>
+              <span class="module2-thq-text-elm297">• Hardware protection ensures that the operating system controls access to system resources and prevents programs from interfering with each other or the system itself.</span>
+              <span class="module2-thq-text-elm307">Dual-mode operation</span>
+            </div>
+
+            <div class="module2-card">
+              <span class="module2-thq-text-elm299">
+                <span class="bL1"><span>• Sharing system resources requires the operating system to ensure that an incorrect program cannot cause other programs to execute incorrectly.</span></span>
+                <span class="bL1"><span>• Provide hardware support to differentiate between at least two modes of operation:</span></span>
+                <span class="bL1 gap"><span>1. User mode -- execution done on behalf of a user.</span></span>
+                <span class="bL1"><span>2. Monitor mode (supervisor/kernel/system mode) – execution done on behalf of the operating system.</span></span>
+                <span class="bL1 gap"><span>• Mode bit added to computer hardware to indicate the current mode: monitor(0) or user(1).</span></span>
+              </span>
+              <div class="image-row">
+                <img src="Assets/Figures/Fig 5.svg" class="module2-thq-fig5-elm" />
+                <img src="Assets/Figures/Fig 6.svg" class="module2-thq-fig6-elm" />
+              </div>
+              <span class="module2-thq-text-elm299">
+                <span class="bL1"><span>• When an interrupt or fault occurs, hardware switches to monitor mode.</span></span>
+                <span class="bL1"><span>• Privileged instructions only in monitor mode.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-io-protection-elm">
+              <span class="module2-thq-text-elm296">I/O Protection</span>
+              <span class="module2-thq-text-elm293">
+                <span class="bL1"><span>• All I/O instructions are privileged instructions.</span></span>
+                <span class="bL1"><span>• Must ensure that a user program could never gain control of the computer in monitor mode, for e.g. a user program that as part of its execution, stores a new address in the interrupt vector.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-memory-protection-elm">
+              <span class="module2-thq-text-elm292">Memory Protection</span>
+              <div class="content-row">
+                <div class="text-content">
+                  <span class="module2-thq-text-elm282">
+                <span class="bL1"><span>• Must provide memory protection at least for the interrupt vector and the interrupt service routines.</span></span>
+                <span class="bL1"><span>• To provide memory protection, add two registers that determine the range of legal addresses a program may address.</span></span>
+                <span class="bL2"><span>• Base Register - holds the smallest legal physical memory address.</span></span>
+                <span class="bL2"><span>• Limit register - contains the size of the range.</span></span>
+                <span class="bL1"><span>• Memory outside the defined range is protected.</span></span>
+                <span class="bL1"><span>• When executing in monitor mode, the OS has unrestricted access to both monitor and users’ memory.</span></span>
+              </span>
+                </div>
+                <div class="image-row">
+                  <img src="Assets/Figures/Fig 7.svg" class="module2-thq-fig7-elm" />
+                  <img src="Assets/Figures/Fig 8.svg" class="module2-thq-fig8-elm" />
+                </div>
+              </div>
+            </div>
+
+            <div class="module2-thq-cpu-protection-elm">
+              <span class="module2-thq-text-elm281">CPU Protection</span>
+              <span class="module2-thq-text-elm273">
+                <span class="bL1"><span class="module2-thq-text-elm274">• Timer</span>
+                <span style="font-weight: 200;">- interrupts computer after specified period to ensure that the OS maintains control.</span></span>
+                <span class="bL2"><span style="font-weight: 200;">• The timer is decremented every clock tick.</span></span>
+                <span class="bL2"><span style="font-weight: 200;">• When the timer reaches a value of 0, an interrupt occurs.</span></span>
+                <span class="bL1 gap"><span style="font-weight: 200;">• Timer is commonly used to implement time sharing.</span></span>
+                <span class="bL1"><span style="font-weight: 200;">• Timer is also used to compute the current time.</span></span>
+                <span class="bL1"><span style="font-weight: 200;">• Load timer is a privileged instruction.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-general-systemarchitecture-elm">
+              <span class="module2-thq-text-elm272">General System Architecture</span>
+              <span class="module2-thq-text-elm268">
+                <span class="bL1"><span class="module2-thq-text-elm269">• Given the I/O instructions are privileged, how do users perform I/O?</span></span>
+                <span class="bL1"><span class="module2-thq-text-elm270">• Via system calls</span>
+                <span>- the method used by a process to request action by the operating system.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-system-calls-elm">
+              <span class="module2-thq-text-elm267">System Calls</span>
+              <span class="module2-thq-text-elm260">
+                <span class="bL1"><span>• Interface between running program and the OS.</span></span>
+                <span class="bL2"><span>• Assembly language instructions (macros and subroutines)</span></span>
+                <span class="bL2"><span>• Some higher level languages allow system calls to be made directly (e.g. C)</span></span>
+                <span class="bL1"><span>• Passing parameters between a running program and OS via registers, memory tables or stack.</span></span>
+                <span class="bL1"><span>• Unix has about 32 system calls </span></span>
+                <span class="bL2"><span>• read(), write(), open(), close(), fork(), exec(), ioctl(),.....</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-operating-system-services-elm">
+              <span class="module2-thq-text-elm259">Operating System Services</span>
+              <span class="module2-thq-text-elm248">
+                <span class="bL1"><span>• Services that provide user-interfaces to OS</span></span>
+                <span class="bL2"><span>• Program execution - load program into memory and run it</span></span>
+                <span class="bL2"><span>• I/O Operations - since users cannot execute I/O operations directly</span></span>
+                <span class="bL2"><span>• File System Manipulation - read, write, create, delete files</span></span>
+                <span class="bL2"><span>• Communications - interprocess and intersystem</span></span>
+                <span class="bL2"><span>• Error Detection - in hardware, I/O devices, user programs</span></span>
+                <span class="bL1 gap"><span>• Services for providing efficient system operation</span></span>
+                <span class="bL2"><span>• Resource Allocation - for simultaneously executing jobs</span></span>
+                <span class="bL2"><span>• Accounting - for account billing and usage statistics</span></span>
+                <span class="bL2"><span>• Protection - ensure access to system resources is controlled</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-system-programs-elm">
+              <span class="module2-thq-text-elm247">System Programs</span>
+              <span class="module2-thq-text-elm238">
+                <span class="bL1"><span>• Convenient environment for program development and execution. The user view of the OS is defined by system programs, not system calls.</span></span>
+                <span class="bL2"><span>• Command Interpreter (sh, csh, ksh) - parses/executes other system programs</span></span>
+                <span class="bL2"><span>• File manipulation - copy (cp), print (lpr), compare(cmp,diff)</span></span>
+                <span class="bL2"><span>• File modification - editing (ed, vi, emacs)</span></span>
+                <span class="bL2"><span>• Application programs - send mail (mail), read news (rn)</span></span>
+                <span class="bL2"><span>• Programming language support (cc)</span></span>
+                <span class="bL2"><span>• Status information, communication</span></span>
+                <span class="bL2"><span>• Etc.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-command-interpreter-system-elm">
+              <span class="module2-thq-text-elm237">Command Interpreter System</span>
+              <span class="module2-thq-text-elm231">
+                <span class="bL1"><span>• Commands that are given to the operating system via command statements that execute</span></span>
+                <span class="bL2"><span>• Process creation and deletion, I/O handling, Secondary Storage Management, Main Memory Management, File System Access, Protection, Networking.</span></span>
+                <span class="bL1 gap"><span>• Obtains the next command and executes it.</span></span>
+                <span class="bL1"><span>• Programs that read and interpret control statements also called -</span></span>
+                <span class="bL2"><span>• Control card interpreter, command-line interpreter, shell (in UNIX)</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-systemdesignand-implementation-elm">
+              <span class="module2-thq-text-elm229">System Design and Implementation</span>
+              <span class="module2-thq-text-elm221">
+                <span class="bL1"><span>• Establish design goals</span></span>
+                <span class="bL2"><span>• User Goals</span></span>
+                <span class="bL2"><span>• System Goals</span></span>
+                <span class="bL1"><span>• Software Engineering -</span></span>
+                <span class="bL2"><span>• Separate mechanism from policy. Policies determine what needs to be done, mechanisms determine how they are done.</span></span>
+                <span class="bL1"><span>• Choose a high-level implementation language </span></span>
+                <span class="bL2"><span>• faster implementation, more compact, easier to debug</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-systemgeneration-elm">
+              <span class="module2-thq-text-elm220">System Generation</span>
+              <span class="module2-thq-text-elm214">
+                <span class="bL1"><span>• OS written for a class of machines, must be configured for each specific site.</span></span>
+                <span class="bL2"><span>• SYSGEN program obtains info about specific hardware configuration and creates version of OS for hardware</span></span>
+                <span class="bL1"><span>• Booting</span></span>
+                <span class="bL1"><span>• Bootstrap program - loader program loads kernel, kernel loads rest of OS.</span></span>
+                <span class="bL2"><span>• Bootstrap program stored in ROM</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-operating-systems-howaretheyorganized-elm">
+              <span class="module2-thq-text-elm212">Operating Systems: How are they organized?</span>
+              <span class="module2-thq-text-elm203">
+                <span class="bL1"><span>• Simple - Only one or two levels of code</span></span>
+                <span class="bL1"><span>• Layered - Lower levels independent of upper levels</span></span>
+                <span class="bL1"><span>• Microkernel - OS built from many user-level processes</span></span>
+                <span class="bL1"><span>• Modular - Core kernel with Dynamically loadable modules</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-os-structure-simple-approach-elm">
+              <span class="module2-thq-text-elm201">OS Structure - Simple Approach</span>
+              <div class="content-row">
+                <div class="text-content">
+                  <span class="module2-thq-text-elm198">
+                <span class="bL1"><span>• MS-DOS - provides a lot of functionality in little space.</span></span>
+                <span class="bL2"><span>• Not divided into modules, Interfaces and levels of functionality are not well separated</span></span>
+              </span>
+                </div>
+                <img src="Assets/Figures/Fig 9.svg" class="module2-thq-fig9-elm" />
+              </div>
+            </div>
+
+            <div class="module2-thq-unix-system-structure-elm">
+              <span class="module2-thq-text-elm196">UNIX System Structure</span>
+              <span class="module2-thq-text-elm190">
+                <span class="bL1"><span>• UNIX - limited structuring, has 2 separable parts</span></span>
+                <span class="bL2"><span>• Systems programs</span></span>
+                <span class="bL2"><span>• Kernel - everything below the system call interface and above physical hardware.</span></span>
+                <span class="bL3"><span>• Filesystem, CPU scheduling, memory management</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-layered-os-structure-elm">
+              <span class="module2-thq-text-elm189">Layered OS Structure</span>
+              <div class="content-row">
+                <div class="text-content">
+                  <span class="module2-thq-text-elm185">
+                <span class="bL1"><span>• OS is divided into a number of layers - bottom layer is hardware, highest layer is the user interface.</span></span>
+                <span class="bL1"><span>• Each layer uses functions and services of only lower-level layers.</span></span>
+                <span class="bL1"><span>• The Operating System Kernel has successive layers of abstraction.</span></span>
+              </span>
+                </div>
+                <div class="image-row">
+                  <img src="Assets/Figures/Fig 10.svg" class="module2-thq-fig10-elm" />
+                  <img src="Assets/Figures/Fig 11.svg" class="module2-thq-fig11-elm" />
+                </div>
+              </div>
+            </div>
+
+            <div class="module2-thq-microkernel-structure-elm">
+              <span class="module2-thq-text-elm184">Microkernel Structure</span>
+              <span class="module2-thq-text-elm169">
+                <span class="bL1"><span class="module2-thq-text-elm170">• Moves as much from the kernel into “user” space</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm171">• Small core OS running at kernel level</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm172">• OS Services built from many independent user-level processes</span></span>
+                <span class="bL1"><span class="module2-thq-text-elm173">• Communication between modules with message passing</span></span>
+                <span class="bL1 gap"><span class="module2-thq-text-elm174">• Benefits</span><span class="module2-thq-text-elm175">:</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm176">• Easier to extend a microkernel</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm177">• Easier to port OS to new architectures</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm178">• More reliable (less code is running in kernel mode)</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm179">• Fault Isolation (parts of kernel protected from other parts)</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm180">• More secure</span></span>
+                <span class="bL1 gap"><span class="module2-thq-text-elm181">Detriments</span><span>:</span></span>
+                <span class="bL2"><span>• Performance overhead severe for naïve implementation</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-modulesbased-structure-elm">
+              <span class="module2-thq-text-elm168">Modules-based Structure</span>
+              <div class="content-row">
+                <div class="text-content">
+                  <span class="module2-thq-text-elm161">
+                <span class="bL1"><span>• Most modern operating systems implement modules</span></span>
+                <span class="bL2"><span>• Uses object-oriented approach</span></span>
+                <span class="bL2"><span>• Each core component is separate</span></span>
+                <span class="bL2"><span>• Each talks to the others over known interfaces</span></span>
+                <span class="bL2"><span>• Each is loadable as needed within the kernel</span></span>
+                <span class="bL1"><span>• Overall, similar to layers but with more flexible</span></span>
+              </span>
+                </div>
+                <img src="Assets/Figures/Fig 12.svg" class="module2-thq-fig12-elm" />
+              </div>
+            </div>
+
+            <div class="module2-thq-os-task-process-management-elm">
+              <span class="module2-thq-text-elm160">OS Task: Process Management</span>
+              <span class="module2-thq-text-elm149">
+                <span class="bL1"><span class="module2-thq-text-elm150">• Process</span>
+                <span class="module2-thq-text-elm151"> - fundamental concept in OS</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm152">• Process is a program in execution.</span></span>
+                <span class="bL2"><span class="module2-thq-text-elm153">• Process needs resources - CPU time, memory, files/data and I/O devices.</span></span>
+                <span class="bL1 gap"><span class="module2-thq-text-elm154">OS</span>
+                <span> is responsible for the following process management activities.</span></span>
+                <span class="bL2"><span style="font-weight: 200;">• Process creation and deletion</span></span>
+                <span class="bL2"><span style="font-weight: 200;">• Process suspension and resumption</span></span>
+                <span class="bL2"><span style="font-weight: 200;">• Process synchronization and interprocess communication</span></span>
+                <span class="bL2"><span style="font-weight: 200;">• Process interactions - deadlock detection, avoidance and correction</span></span><br> 
+              </span>
+            </div>
+
+            <div class="module2-thq-os-task-memory-management-elm">
+              <span class="module2-thq-text-elm147">OS Task: Memory Management</span>
+              <span class="module2-thq-text-elm140">
+                <span class="bL1"><span>• Main Memory is an array of addressable words or bytes that is quickly accessible.</span></span>
+                <span class="bL1"><span>• Main Memory is volatile.</span></span>
+                <span class="bL1"><span>• OS is responsible for:</span></span>
+                <span class="bL2"><span>• Allocate and deallocate memory to processes.</span></span>
+                <span class="bL2"><span>• Managing multiple processes within memory - keep track of which parts of memory are used by which processes. Manage the sharing of memory between processes.</span></span>
+                <span class="bL2"><span>• Determining which processes to load when memory becomes available.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-os-task-secondary-storage-elm">
+              <span class="module2-thq-text-elm138">OS Task: Secondary Storage and I/O Management</span>
+              <span class="module2-thq-text-elm130">
+                <span class="bL1"><span>• Since primary storage is expensive and volatile, secondary storage is required for backup.</span></span>
+                <span class="bL1"><span>• Disk is the primary form of secondary storage.</span></span>
+                <span class="bL2"><span>• OS performs storage allocation, free-space management and disk scheduling.</span></span>
+                <span class="bL1 gap"><span>• I/O system in the OS consists of</span></span>
+                <span class="bL2"><span>• Buffer caching and management</span></span>
+                <span class="bL2"><span>• Device driver interface that abstracts device details</span></span>
+                <span class="bL2"><span>• Drivers for specific hardware devices</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-file-management-system-elm">
+              <span class="module2-thq-text-elm129">OS Task: File System Management</span>
+              <span class="module2-thq-text-elm120">
+                <span class="bL1"><span>• File is a collection of related information defined by creator</span></span>
+                <span class="bL2"><span>• represents programs and data.</span></span>
+                <span class="bL1"><span>• OS is responsible for</span></span>
+                <span class="bL2"><span>• File creation and deletion</span></span>
+                <span class="bL2"><span>• Directory creation and deletion</span></span>
+                <span class="bL2"><span>• Supporting primitives for file/directory manipulation.</span></span>
+                <span class="bL2"><span>• Mapping files to disks (secondary storage).</span></span>
+                <span class="bL2"><span>• Backup files on archival media (tapes).</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-os-task-protectionand-security-elm">
+              <span class="module2-thq-text-elm118">OS Task: Protection and Security</span>
+              <span class="module2-thq-text-elm109">
+                <span class="bL1"><span>• Protection mechanisms control access of programs and processes to user and system resources.</span></span>
+                <span class="bL2"><span>• Protect the user from himself, the user from other users, the system from users.</span></span>
+                <span class="bL1"><span>• Protection mechanisms must:</span></span>
+                <span class="bL2"><span>• Distinguish between authorized and unauthorized use.</span></span>
+                <span class="bL2"><span>• Specify access controls to be imposed on use.</span></span>
+                <span class="bL2"><span>• Provide mechanisms for enforcement of access control.</span></span>
+                <span class="bL2"><span>• Security mechanisms provide trust in system and privacy</span></span>
+                <span class="bL3"><span>• authentication, certification, encryption etc.</span></span>
+              </span>
+            </div>
+
+            <div class="module2-thq-o-snetworking-elm">
+              <span class="module2-thq-text-elm108">OS Task: Networking</span>
+              <span class="module2-thq-text-elm100">
+                <span class="bL1"><span>• Connecting processors in a distributed system</span></span>
+                <span class="bL1"><span>• A Distributed System is a collection of processors that do not share memory or a clock.</span></span>
+                <span class="bL1"><span>• Processors are connected via a communication network.</span></span>
+                <span class="bL1 gap"><span>• Advantages:</span></span>
+                <span class="bL2"><span >• Allows users and system to exchange information</span></span>
+                <span class="bL2"><span >• provide computational speedup</span></span>
+                <span class="bL2"><span >• increased reliability and availability of information</span></span>
+              </span>
+            </div>
+
+          </div>
+          <div class="module2-thq-footer-elm">
+            <img
+              src="Assets/Footer/Footer Line.svg"
+              alt="Footer Horizontal Accent Separator Line"
+              class="module2-thq-footer-line-elm"
+            />
+            <img
+              src="Assets/Footer/OSphere Logo.svg"
+              alt="OSphere Application Footer Branding Logo"
+              class="module2-thq-o-sphere-logo-elm"
+            />
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../Side Menu/script.js"></script>
+  </body>
+</html>
