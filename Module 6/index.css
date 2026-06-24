@@ -138,7 +138,7 @@ img { display: block; }
   object-position: center center;
 }
 
-.module6-thq-text-elm298, .module6-thq-text-elm365 {
+.module6-thq-text-elm366 {
   position: absolute;
   top: clamp(8px, 1vw, 13px);            
   left: clamp(24px, 4vw, 56px);          
@@ -150,7 +150,7 @@ img { display: block; }
   white-space: nowrap;
 }
 
-.module6-thq-text-elm297, .module6-thq-text-elm366 {
+.module6-thq-text-elm365 {
   position: absolute;
   top: clamp(52px, 6vw, 86px);           
   left: clamp(24px, 4vw, 56px);          
