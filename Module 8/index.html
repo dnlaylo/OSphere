@@ -63,19 +63,27 @@
 
       <div class="module8-container1">
         <div class="module8-thq-module8-elm">
-          <img src="Assets/BG/BG.svg" alt="Module 8 Background" class="module8-thq-bg-elm" />
-
-          <div class="module8-thq-navigation-bar-elm">
-            <img src="Assets/NavBar/Line 1.svg" alt="Navigation Divider Line" class="module8-thq-line1-elm" />
-            <img src="Assets/NavBar/Side Menu.png" alt="Side Menu Toggle" class="module8-thq-side-menu-elm" />
-            <a href="../Main Page/index.html">
-              <img src="Assets/NavBar/Home (1).png" alt="Navigate to Home" class="module8-thq-home-elm" />
-            </a>
-            <a href="../About Us/index.html">
-              <img src="Assets/NavBar/Help.png" alt="Navigate to Help/About Us" class="module8-thq-help-elm" />
-            </a>
+          
+          <div class="mainpage-thq-background-elm">
+            <img
+              src="Assets/BG/BG.svg"
+              alt="Decorative Site Background Pattern Layer"
+              class="module8-thq-bg-elm"
+            />
           </div>
 
+          <div class="mainpage-thq-navigation-bar-elm">
+            <img src="Assets/NavBar/Side Menu.png" alt="Open Side Menu" class="mainpage-thq-side-menu-elm" />
+            
+            <a href="../Main Page/index.html" class="home-link-wrapper">
+              <img src="Assets/NavBar/Home (1).png" alt="Go to Home" class="mainpage-thq-home-elm" />
+            </a>
+            
+            <a href="../About%20Us/index.html" class="help-link-wrapper">
+              <img src="Assets/NavBar/Help.png" alt="About Us" class="mainpage-thq-help-elm" />
+            </a>
+          </div>
+          
           <div class="module8-thq-header-elm">
             <img src="Assets/M8 BG.svg" alt="Module 8 Header Background" class="module8-thq-m8bg-elm" />
             <span class="module8-thq-text-elm357">Module 8:</span>
@@ -123,7 +131,8 @@
               <span class="module8-thq-text-elm353">What is Deadlock?</span>
             </div>
 
-            <div class="module8-thq-terminologies-elm">
+            <div class="module8-thq-terminologies-elm module8-card">
+              <span class="module8-thq-text-elm351">Terminologies</span>
               <img src="Assets/Container/Container 1.svg" alt="Terminologies Container Background" class="module8-thq-container1-elm" />
               <span class="module8-thq-text-elm345">
                 <span>
@@ -162,53 +171,52 @@
                   are mathematically subset within unsafe states.
                 </span>
               </span>
-              <span class="module8-thq-text-elm351">Terminologies</span>
             </div>
 
             <div class="module8-thq-visual-assets-structure-elm">
-              <img src="Assets/Container/Container 2.svg" alt="Visual Assets Container Background" class="module8-thq-container2-elm" />
-              <span class="module8-thq-text-elm335">
-                <span>
-                  • System Resource Allocation Graph (RAG): A directed graph
-                  consisting of Vertices (V) and Edges (E). V is partitioned
-                  into Processes (P) and Resources (R).
-                </span>
-                <br />
-                <span>
-                  • Cycle Property 1: If the RAG contains no cycles, the system is
-                  mathematically guaranteed to be free of deadlocks.
-                </span>
-                <br />
-                <span>
-                  • Cycle Property 2: If the graph contains a cycle and resources
-                  have only 1 instance, a deadlock has definitely occurred.
-                </span>
-                <br />
-                <span>
-                  • Cycle Property 3: If the graph contains a cycle and resources
-                  have multiple instances, a deadlock may exist but is not
-                  guaranteed.
-                </span>
-                <br />
-                <span>
-                  • Wait-For Graph (WFG): For single-instance resource
-                  environments, the resource nodes are optimized out. Edges are
-                  reduced strictly to Pi Pj &nbsp;meaning Process i is waiting
-                  for Process j to release a resource. A cycle in a Wait-For
-                  Graph indicates an active deadlock.
-                </span>
-              </span>
-              <span class="module8-thq-text-elm341">Module 8: Figure 1</span>
-              <img src="Assets/Figures/Fig 1.svg" alt="Resource Allocation Graph Figure 1" class="module8-thq-fig1-elm" />
               <span class="module8-thq-text-elm342">
+                <span class="module8-thq-text-elm344">
+                Visual Assets Structure
+                </span>
                 <span>
                   To represent how processes interact with resources, visual
                   assets within the system are modeled using graph networks:
                 </span>
                 <br />
               </span>
-              <span class="module8-thq-text-elm344">
-                Visual Assets Structure
+            </div>
+
+            <div class="module8-thq-text-elm335 module8-card">
+              <img src="Assets/Figures/Fig 1.svg" alt="Resource Allocation Graph Figure 1" class="module8-thq-fig1-elm" />
+              <span class="module8-thq-text-elm341">Module 8: Figure 1</span><br />
+              <span>
+                • System Resource Allocation Graph (RAG): A directed graph
+                consisting of Vertices (V) and Edges (E). V is partitioned
+                into Processes (P) and Resources (R).
+              </span>
+              <br />
+              <span>
+                • Cycle Property 1: If the RAG contains no cycles, the system is
+                mathematically guaranteed to be free of deadlocks.
+              </span>
+              <br />
+              <span>
+                • Cycle Property 2: If the graph contains a cycle and resources
+                have only 1 instance, a deadlock has definitely occurred.
+              </span>
+              <br />
+              <span>
+                • Cycle Property 3: If the graph contains a cycle and resources
+                have multiple instances, a deadlock may exist but is not
+                guaranteed.
+              </span>
+              <br />
+              <span>
+                • Wait-For Graph (WFG): For single-instance resource
+                environments, the resource nodes are optimized out. Edges are
+                reduced strictly to Pi Pj &nbsp;meaning Process i is waiting
+                for Process j to release a resource. A cycle in a Wait-For
+                Graph indicates an active deadlock.
               </span>
             </div>
 
@@ -402,142 +410,7 @@
               </span>
             </div>
 
-            <div class="module8-thq-deadlockalgorithms-elm">
-              <img src="Assets/Container/Container 7.svg" alt="Deadlock Algorithms Container Background" class="module8-thq-container7-elm" />
-              <span class="module8-thq-text-elm100">Deadlock Algorithms</span>
-              <span class="module8-thq-text-elm101">
-                <span>1. Initialize Work vector = Available vector.</span>
-                <br />
-                <span>
-                  2. Initialize Finish array = false for all processes.
-                </span>
-                <br />
-                <span>3. LOOP: Find an index 'i' where:</span>
-                <br />
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Finish[i] == false
-                </span>
-                <br />
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Need[i] &lt;= Work
-                </span>
-                <br />
-                <span>
-                  4. IF no such 'i' exists, BREAK loop (go to step 6).
-                </span>
-                <br />
-                <span>5. IF found:</span>
-                <br />
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work = Work +
-                  Allocation[i]
-                </span>
-                <br />
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finish[i] = true
-                </span>
-                <br />
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record 'i' in Safe
-                  Sequence
-                </span>
-                <br />
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go back to step 3.
-                </span>
-                <br />
-                <span>6. IF Finish[i] == true for ALL processes:</span>
-                <br />
-                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System is SAFE.</span>
-                <br />
-                <span>&nbsp;&nbsp;&nbsp;ELSE:</span>
-                <br />
-                <span>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System is UNSAFE.
-                </span>
-                <br />
-              </span>
-              <span class="module8-thq-text-elm117">
-                <span>1. Algorithm Analysis</span>
-                <br />
-                <span>
-                  To handle deadlocks, operating systems generally employ one of
-                  three main strategies:
-                </span>
-                <br />
-                <span>
-                  • Deadlock Prevention: A strict protocol that ensures the system
-                  never enters a deadlock state by guaranteeing at least one of
-                  the four necessary conditions (Mutual Exclusion, Hold and
-                  Wait, No Preemption, Circular Wait) cannot hold. For example,
-                  Circular Wait can be prevented by imposing a total numerical
-                  ordering on all resource types.
-                </span>
-                <br />
-                <span>
-                  • Deadlock Avoidance (Banker's Algorithm): The OS is given
-                  advance information about the maximum resources a process will
-                  need during its lifetime. When a request is made, the OS
-                  dynamically checks if granting it will leave the system in a
-                  "Safe State". If unsafe, the process is forced to wait.
-                </span>
-                <br />
-                <span>
-                  • Deadlock Detection &amp; Recovery: The OS allows deadlocks to
-                  occur, runs a detection algorithm periodically to find
-                  processes that are stuck (where Finish[i] == false), and then
-                  attempts to recover.
-                </span>
-                <br />
-                <br />
-                <span>2. Mathematical Calculations (Banker's Algorithm)</span>
-                <br />
-                <span>
-                  The Banker's Algorithm uses matrix mathematics to track system
-                  state across $n$ processes and $m$ resource types:
-                </span>
-                <br />
-                <span>
-                  • Available: A vector indicating the number of available
-                  instances of each resource type.
-                </span>
-                <br />
-                <span>
-                  • Allocation: A matrix tracking the resources currently held by
-                  each process.
-                </span>
-                <br />
-                <span>
-                  • Max: A matrix defining the maximum potential demand of each
-                  process.
-                </span>
-                <br />
-                <span>
-                  • Need Calculation: The remaining resources a process might
-                  request is calculated as: Need = Max - Allocation.
-                </span>
-                <br />
-                <span>
-                  • Safety Check Math: The algorithm searches for a process where
-                  Need &lt;= Work (Work is initially equal to Available). If
-                  found, it simulates execution and updates the available pool:
-                  Work = Work + Allocation.
-                </span>
-                <br />
-                <br />
-                <span>3. Programmatic Logic &amp; Pseudocode</span>
-                <br />
-                <span>
-                  Below is the generalized logical flow for the Safety Algorithm
-                  component of Deadlock Avoidance:
-                </span>
-                <br />
-              </span>
-            </div>
-
-            <div class="module8-thq-programmatic-logic-algorithmic-computations-elm">
-              <img src="Assets/Container/Container 3.svg" alt="Programmatic Logic Container Background 3" class="module8-thq-container3-elm" />
-              <img src="Assets/Container/Container 4.svg" alt="Programmatic Logic Container Background 4" class="module8-thq-container4-elm" />
+            <div class="module8-thq-programmatic-logic-algorithmic-computations-elm ">
               <span class="module8-thq-text-elm268">
                 Programmatic Logic &amp; Algorithmic Computations
               </span>
@@ -551,6 +424,13 @@
                   allocation matrices use multi-dimensional vector math:
                 </span>
                 <br />
+                <img src="Assets/Figures/Fig 3.svg" alt="Banker's Algorithm Code Figure 3" class="module8-thq-fig3-elm module8-card" />
+              </span>
+              <span class="module8-thq-text-elm275">
+                Vector comparison inequality checks (X Y) require that every
+                element in vector X is less than or equal to its corresponding
+                element in vector Y. If even one element exceeds the boundary
+                condition, the statement evaluates to false.
               </span>
               <span class="module8-thq-text-elm272">
                 <span class="module8-thq-text-elm273">
@@ -561,12 +441,6 @@
                   This high-level architecture maps theory into code to evaluate
                   system safety:
                 </span>
-              </span>
-              <span class="module8-thq-text-elm275">
-                Vector comparison inequality checks (X Y) require that every
-                element in vector X is less than or equal to its corresponding
-                element in vector Y. If even one element exceeds the boundary
-                condition, the statement evaluates to false.
               </span>
               <span class="module8-thq-text-elm276">
                 <span>JavaScript</span>
@@ -769,11 +643,45 @@
                 <span>}</span>
                 <br />
               </span>
-              <img src="Assets/Figures/Fig 3.svg" alt="Banker's Algorithm Code Figure 3" class="module8-thq-fig3-elm" />
+            </div>
+
+            <div class="module8-thq-application-architecture-matrix-elm">
+              <span class="module8-thq-text-elm265">
+                Application Architecture Matrix (Web Sandbox Integration)
+              </span>
+              <span class="module8-thq-text-elm266">
+                <span>
+                  Since the target delivery blueprint calls for building an
+                  interactive Web Application leveraging HTML5, CSS, and vanilla
+                  JavaScript logic, the deadlock framework is deployed within
+                  web platforms through the following architectural design:
+                </span>
+                <br />
+              </span>
+              <img src="Assets/Figures/Fig 4.svg" alt="Application Architecture Matrix Figure 4" class="module8-thq-fig4-elm" />
+            </div>
+
+            <div class="module8-thq-architectural-adaptations-elm module8-card">
+              <span class="module8-thq-text-elm250">
+                1. Architectural Adaptations for Web Sandbox
+              </span>
+              <img src="Assets/Figures/Fig 5.svg" alt="Architectural Adaptation Table Figure 5" class="module8-thq-fig5-elm" />
+              <span class="module8-thq-text-elm251">Architectural Dimension</span>
+              <span class="module8-thq-text-elm252">Process Modeling</span>
+              <span class="module8-thq-text-elm253">Resource Constraints</span>
+              <span class="module8-thq-text-elm254">Concurrency Simulation</span>
+              <span class="module8-thq-text-elm255">Preemptive Interrupt Scheduling, Core Time-Slicing.</span>
+              <span class="module8-thq-text-elm256">Native Kernels, PCBs, Forked Tasks, Hardware Flags. PDF+ 1</span>
+              <span class="module8-thq-text-elm257">Physical CPU registers, RAM Pages, IO Devices, Drivers. PDF+ 2</span>
+              <span class="module8-thq-text-elm258">System Console Logs, Low-Level Kernel Prints.</span>
+              <span class="module8-thq-text-elm260">Primitive Numeric Tokens: Managed dynamically inside an engine state dictionary array tracking available, allocated, and max.</span>
+              <span class="module8-thq-text-elm261">Asynchronous Event Loop Routing: Utilizes async scheduling macros (setTimeout, requestAnimationFrame, or Web Workers) to mimic concurrent operations.</span>
+              <span class="module8-thq-text-elm262">Dynamic HTML5 Canvas &amp; SVG Rendering: Renders real-time interactive vector networks visually mapping nodes (Pi​, Rj​) and edges (E) dynamically. PDF</span>
+              <span class="module8-thq-text-elm263">Visualization Layer</span>
+              <span class="module8-thq-text-elm264">OS Theory (Traditional)</span>
             </div>
 
             <div class="module8-thq-sandbox-engine-implementationcode-elm">
-              <img src="Assets/Container/Container 6.svg" alt="Sandbox Engine Code Container Background" class="module8-thq-container6-elm" />
               <span class="module8-thq-text-elm138">
                 2. Sandbox Engine Implementation Code
               </span>
@@ -1241,43 +1149,6 @@
               </span>
             </div>
 
-            <div class="module8-thq-application-architecture-matrix-elm">
-              <span class="module8-thq-text-elm265">
-                Application Architecture Matrix (Web Sandbox Integration)
-              </span>
-              <span class="module8-thq-text-elm266">
-                <span>
-                  Since the target delivery blueprint calls for building an
-                  interactive Web Application leveraging HTML5, CSS, and vanilla
-                  JavaScript logic, the deadlock framework is deployed within
-                  web platforms through the following architectural design:
-                </span>
-                <br />
-              </span>
-              <img src="Assets/Figures/Fig 4.svg" alt="Application Architecture Matrix Figure 4" class="module8-thq-fig4-elm" />
-            </div>
-
-            <div class="module8-thq-architectural-adaptations-elm">
-              <img src="Assets/Container/Container 5.svg" alt="Architectural Adaptations Container Background" class="module8-thq-container5-elm" />
-              <span class="module8-thq-text-elm250">
-                1. Architectural Adaptations for Web Sandbox
-              </span>
-              <img src="Assets/Figures/Fig 5.svg" alt="Architectural Adaptation Table Figure 5" class="module8-thq-fig5-elm" />
-              <span class="module8-thq-text-elm251">Architectural Dimension</span>
-              <span class="module8-thq-text-elm252">Process Modeling</span>
-              <span class="module8-thq-text-elm253">Resource Constraints</span>
-              <span class="module8-thq-text-elm254">Concurrency Simulation</span>
-              <span class="module8-thq-text-elm255">Preemptive Interrupt Scheduling, Core Time-Slicing.</span>
-              <span class="module8-thq-text-elm256">Native Kernels, PCBs, Forked Tasks, Hardware Flags. PDF+ 1</span>
-              <span class="module8-thq-text-elm257">Physical CPU registers, RAM Pages, IO Devices, Drivers. PDF+ 2</span>
-              <span class="module8-thq-text-elm258">System Console Logs, Low-Level Kernel Prints.</span>
-              <span class="module8-thq-text-elm259">text</span>
-              <span class="module8-thq-text-elm260">Primitive Numeric Tokens: Managed dynamically inside an engine state dictionary array tracking available, allocated, and max.</span>
-              <span class="module8-thq-text-elm261">Asynchronous Event Loop Routing: Utilizes async scheduling macros (setTimeout, requestAnimationFrame, or Web Workers) to mimic concurrent operations.</span>
-              <span class="module8-thq-text-elm262">Dynamic HTML5 Canvas &amp; SVG Rendering: Renders real-time interactive vector networks visually mapping nodes (Pi​, Rj​) and edges (E) dynamically. PDF</span>
-              <span class="module8-thq-text-elm263">Visualization Layer</span>
-              <span class="module8-thq-text-elm264">OS Theory (Traditional)</span>
-            </div>
 
             <div class="module8-thq-web-application-integration-elm">
               <span class="module8-thq-text-elm132">
@@ -1313,9 +1184,140 @@
                 </span>
               </span>
             </div>
+
+            <div class="module8-thq-deadlockalgorithms-elm ">
+              <span class="module8-thq-text-elm100">Deadlock Algorithms</span>
+              <span class="module8-thq-text-elm117">
+                <span>1. Algorithm Analysis</span>
+                <br />
+                <span>
+                  To handle deadlocks, operating systems generally employ one of
+                  three main strategies:
+                </span>
+                <br />
+                <span>
+                  • Deadlock Prevention: A strict protocol that ensures the system
+                  never enters a deadlock state by guaranteeing at least one of
+                  the four necessary conditions (Mutual Exclusion, Hold and
+                  Wait, No Preemption, Circular Wait) cannot hold. For example,
+                  Circular Wait can be prevented by imposing a total numerical
+                  ordering on all resource types.
+                </span>
+                <br />
+                <span>
+                  • Deadlock Avoidance (Banker's Algorithm): The OS is given
+                  advance information about the maximum resources a process will
+                  need during its lifetime. When a request is made, the OS
+                  dynamically checks if granting it will leave the system in a
+                  "Safe State". If unsafe, the process is forced to wait.
+                </span>
+                <br />
+                <span>
+                  • Deadlock Detection &amp; Recovery: The OS allows deadlocks to
+                  occur, runs a detection algorithm periodically to find
+                  processes that are stuck (where Finish[i] == false), and then
+                  attempts to recover.
+                </span>
+                <br />
+                <br />
+                <span>2. Mathematical Calculations (Banker's Algorithm)</span>
+                <br />
+                <span>
+                  The Banker's Algorithm uses matrix mathematics to track system
+                  state across $n$ processes and $m$ resource types:
+                </span>
+                <br />
+                <span>
+                  • Available: A vector indicating the number of available
+                  instances of each resource type.
+                </span>
+                <br />
+                <span>
+                  • Allocation: A matrix tracking the resources currently held by
+                  each process.
+                </span>
+                <br />
+                <span>
+                  • Max: A matrix defining the maximum potential demand of each
+                  process.
+                </span>
+                <br />
+                <span>
+                  • Need Calculation: The remaining resources a process might
+                  request is calculated as: Need = Max - Allocation.
+                </span>
+                <br />
+                <span>
+                  • Safety Check Math: The algorithm searches for a process where
+                  Need &lt;= Work (Work is initially equal to Available). If
+                  found, it simulates execution and updates the available pool:
+                  Work = Work + Allocation.
+                </span>
+                <br />
+                <br />
+                <span>3. Programmatic Logic &amp; Pseudocode</span>
+                <br />
+                <span>
+                  Below is the generalized logical flow for the Safety Algorithm
+                  component of Deadlock Avoidance:
+                </span>
+                <br /><br />
+                <span class="module8-thq-text-elm101 module8-card">
+                  <span>1. Initialize Work vector = Available vector.</span>
+                  <br />
+                  <span>
+                    2. Initialize Finish array = false for all processes.
+                  </span>
+                  <br />
+                  <span>3. LOOP: Find an index 'i' where:</span>
+                  <br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a. Finish[i] == false
+                  </span>
+                  <br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b. Need[i] &lt;= Work
+                  </span>
+                  <br />
+                  <span>
+                    4. IF no such 'i' exists, BREAK loop (go to step 6).
+                  </span>
+                  <br />
+                  <span>5. IF found:</span>
+                  <br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Work = Work +
+                    Allocation[i]
+                  </span>
+                  <br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finish[i] = true
+                  </span>
+                  <br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Record 'i' in Safe
+                    Sequence
+                  </span>
+                  <br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Go back to step 3.
+                  </span>
+                  <br />
+                  <span>6. IF Finish[i] == true for ALL processes:</span>
+                  <br />
+                  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System is SAFE.</span>
+                  <br />
+                  <span>&nbsp;&nbsp;&nbsp;ELSE:</span>
+                  <br />
+                  <span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System is UNSAFE.
+                  </span>
+                  <br />
+                </span>
+              </span>
+            </div>
             
           </div>
-
           <div class="module8-thq-footer-elm">
             <img src="Assets/Footer/Footer Line.svg" alt="Footer Line Separator" class="module8-thq-footerline-elm" />
             <img src="Assets/Footer/OSphere Logo.svg" alt="OSphere Logo" class="module8-thq-o-sphere-logo-elm" />

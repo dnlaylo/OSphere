@@ -1,1398 +1,453 @@
+html { line-height: 1.15; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Alexandria, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #fff;
+  background: #0d0d14;
+}
+*, *::before, *::after { box-sizing: border-box; }
+p, li, ul, pre, div, h1, h2, h3, h4, h5, h6,
+figure, blockquote, figcaption { margin: 0; padding: 0; }
+button { background-color: transparent; }
+button, input, optgroup, select, textarea {
+  font-family: inherit; font-size: 100%; line-height: 1.15; margin: 0;
+}
+a { color: inherit; text-decoration: inherit; }
+img { display: block; }
+
+/* =========================================================
+   ROOT WRAPPER
+   ========================================================= */
 .module8-container1 {
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   MAIN CANVAS
+   ========================================================= */
+.module8-thq-module8-elm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow: visible;
+  border: none;
+  background-color: transparent;
+}
+
+/* =========================================================
+   BACKGROUND LAYER (fixed behind everything)
+   ========================================================= */
+.mainpage-thq-background-elm {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.module8-thq-bg-elm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================================================
+   ALL CONTENT sits above the background
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm,
+.mainpage-thq-footer-elm {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================================
+   NAVIGATION BAR
+   ========================================================= */
+.mainpage-thq-navigation-bar-elm {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(16px, 3vw, 26px);
+  flex-shrink: 0;
+}
+
+.mainpage-thq-line1-elm { display: none; }
+
+.mainpage-thq-side-menu-elm {
+  width: clamp(36px, 4vw, 56px);
+  height: auto;
+  cursor: pointer;
+}
+
+.home-link-wrapper {
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.mainpage-thq-home-elm {
+  width: clamp(36px, 4vw, 60px);
+  height: auto;
+}
+
+.help-link-wrapper {
+  margin-left: auto; 
+}
+
+.mainpage-thq-help-elm {
+  width: clamp(24px, 2.5vw, 35px);
+  height: auto;
+}
+
+/* =========================================================
+   HEADER BANNER
+   ========================================================= */
+.module8-thq-header-elm {
+  position: relative;
+  width: min(1347px, 94%);
+  height: clamp(100px, 12vw, 149px);
+  margin: clamp(16px, 2.5vw, 32px) auto clamp(24px, 3vw, 48px);
+  border-radius: clamp(16px, 2.5vw, 30px);
+  background-color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.module8-thq-m8bg-elm {
+  position: absolute;
+  top: -40%;
+  left: 0;
+  width: 100%;
+  height: 250%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.module8-thq-text-elm357 {
+  position: absolute;
+  top: clamp(8px, 1vw, 13px);            
+  left: clamp(24px, 4vw, 56px);          
+  color: rgba(37, 37, 37, 1);
+  font-size: clamp(32px, 4.5vw, 64px);   
+  font-family: Alexandria, sans-serif;
+  font-weight: 600;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.module8-thq-text-elm358 {
+  position: absolute;
+  top: clamp(52px, 6vw, 86px);           
+  left: clamp(24px, 4vw, 56px);          
+  color: rgba(37, 37, 37, 1);
+  font-size: clamp(16px, 2.2vw, 32px);   
+  font-family: Alexandria, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* =========================================================
+   CONTENT CONTAINER
+   ========================================================= */
+.module8-thq-content-container-elm {
+  position: relative;
+  width: min(1299px, 94%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vw, 56px);
+  padding-bottom: clamp(40px, 5vw, 80px);
+}
+
+/* =========================================================
+   HIDE ABSOLUTE BACKGROUND CONTAINERS (SVG Boxes)
+   ========================================================= */
+.module8-thq-container1-elm,
+.module8-thq-container2-elm,
+.module8-thq-container3-elm,
+.module8-thq-container4-elm,
+.module8-thq-container5-elm,
+.module8-thq-container6-elm,
+.module8-thq-container7-elm {
+  display: none !important;
+}
+
+/* =========================================================
+   CARD COMPONENT & SECTION BLOCKS (Relative Layout Reset)
+   ========================================================= */
+/* Apply the translucent background directly to sections that had container SVGs */
+.module8-thq-terminologies-elm,
+.module8-thq-text-elm335,
+.module8-thq-text-elm101,
+.module8-thq-fig3-elm,
+.module8-thq-text-elm276,
+.module8-thq-text-elm139,
+.module8-thq-architectural-adaptations-elm {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: clamp(12px, 2vw, 20px);
+  padding: clamp(20px, 3vw, 48px) clamp(20px, 3vw, 40px);
+}
+
+/* Reset all main section divs from absolute fixed bounds to flex columns */
+.module8-thq-overview-elm,
+.module8-thq-whatis-deadlock-elm,
+.module8-thq-terminologies-elm,
+.module8-thq-visual-assets-structure-elm,
+.module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm,
+.module8-thq-deadlock-management-strategy-elm,
+.module8-thq-deadlockalgorithms-elm,
+.module8-thq-programmatic-logic-algorithmic-computations-elm,
+.module8-thq-sandbox-engine-implementationcode-elm,
+.module8-thq-application-architecture-matrix-elm,
+.module8-thq-web-application-integration-elm {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  top: auto !important;
+  left: auto !important;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vw, 24px);
+}
+
+/* =========================================================
+   DOM ORDER FIXES USING FLEX ORDER (Keeps HTML untouched)
+   ========================================================= */
+.module8-thq-whatis-deadlock-elm .module8-thq-text-elm353 { order: 1; margin-bottom: 8px; }
+.module8-thq-whatis-deadlock-elm .module8-thq-text-elm352 { order: 2; }
+
+.module8-thq-visual-assets-structure-elm .module8-thq-text-elm344 { order: 1; } 
+.module8-thq-visual-assets-structure-elm .module8-thq-text-elm342 { order: 2; } 
+.module8-thq-visual-assets-structure-elm .module8-thq-fig1-elm { order: 3; } 
+.module8-thq-visual-assets-structure-elm .module8-thq-text-elm341 { order: 4; } 
+.module8-thq-visual-assets-structure-elm .module8-thq-text-elm335 { order: 5; margin-top: 16px; }
+
+.module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm .module8-thq-text-elm329 { order: 1; }
+.module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm .module8-thq-text-elm330 { order: 2; }
+.module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm .module8-thq-fig2-elm { order: 3; align-self: center; margin: 24px 0 8px 0; }
+.module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm .module8-thq-text-elm328 { order: 4; }
+.module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm .module8-thq-text-elm331 { order: 5; margin-top: 16px; }
+
+.module8-thq-programmatic-logic-algorithmic-computations-elm .module8-thq-text-elm268 { order: 1; }
+.module8-thq-programmatic-logic-algorithmic-computations-elm .module8-thq-text-elm269 { order: 2; }
+.module8-thq-programmatic-logic-algorithmic-computations-elm .module8-thq-fig3-elm { order: 3; align-self: center; margin: 24px 0; }
+.module8-thq-programmatic-logic-algorithmic-computations-elm .module8-thq-text-elm275 { order: 4; }
+.module8-thq-programmatic-logic-algorithmic-computations-elm .module8-thq-text-elm272 { order: 5; margin-top: 32px; }
+.module8-thq-programmatic-logic-algorithmic-computations-elm .module8-thq-text-elm276 { order: 6; }
+
+.module8-thq-sandbox-engine-implementationcode-elm .module8-thq-text-elm138 { order: 1; }
+.module8-thq-sandbox-engine-implementationcode-elm .module8-thq-text-elm249 { order: 2; }
+.module8-thq-sandbox-engine-implementationcode-elm .module8-thq-text-elm139 { order: 3; }
+
+/* =========================================================
+   SHARED HEADINGS (Fluid 32px)
+   ========================================================= */
+.module8-thq-text-elm354, .module8-thq-text-elm353, .module8-thq-text-elm351, 
+.module8-thq-text-elm344, .module8-thq-text-elm329, .module8-thq-text-elm326, 
+.module8-thq-text-elm100, .module8-thq-text-elm268, .module8-thq-text-elm138, 
+.module8-thq-text-elm265, .module8-thq-text-elm250, .module8-thq-text-elm132 {
+  position: relative !important;
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-family: Alexandria, sans-serif;
+  font-weight: 300;
+  font-size: clamp(24px, 3.5vw, 32px);
+  line-height: 1.3;
+  margin-bottom: clamp(4px, 1vw, 12px);
+  text-align: left;
+  top: auto !important; left: auto !important;
+  width: auto !important; height: auto !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   SHARED BODY TEXT (Fluid 16px to 24px)
+   ========================================================= */
+.module8-thq-text-elm355, .module8-thq-text-elm352, .module8-thq-text-elm345, 
+.module8-thq-text-elm335, .module8-thq-text-elm342, .module8-thq-text-elm330, 
+.module8-thq-text-elm331, .module8-thq-text-elm327, .module8-thq-text-elm101, 
+.module8-thq-text-elm117, .module8-thq-text-elm269, .module8-thq-text-elm272, 
+.module8-thq-text-elm275, .module8-thq-text-elm249, .module8-thq-text-elm266, 
+.module8-thq-text-elm133 {
+  position: relative !important;
+  display: block;
+  color: rgba(255, 255, 255, 1);
+  font-family: Alexandria, sans-serif;
+  font-weight: 200;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: clamp(26px, 3vw, 35px);
+  text-align: justify;
+  top: auto !important; left: auto !important;
+  width: auto !important; height: auto !important;
+}
+
+/* =========================================================
+   CAPTIONS
+   ========================================================= */
+.module8-thq-text-elm341, .module8-thq-text-elm328 {
+  position: relative !important;
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Alexandria, sans-serif;
+  font-weight: 200;
+  font-size: clamp(12px, 1.5vw, 16px);
+  text-align: center;
+  top: auto !important; left: auto !important;
+  width: auto !important; height: auto !important;
+}
+
+/* =========================================================
+   CODE BLOCKS (Terminal Styling)
+   ========================================================= */
+.module8-thq-text-elm276, .module8-thq-text-elm139 {
+  position: relative !important;
+  display: block;
+  font-family: monospace, sans-serif;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: clamp(16px, 2vw, 24px);
+  border-radius: 12px;
+  overflow-x: auto;
+  color: #00ffcc;
+  top: auto !important; left: auto !important;
+  width: 100% !important; height: auto !important;
+}
+.module8-thq-text-elm276 span, .module8-thq-text-elm139 span {
+  font-family: monospace, sans-serif;
+}
+
+/* =========================================================
+   IMAGES / FIGURES
+   ========================================================= */
+.module8-thq-fig1-elm, .module8-thq-fig2-elm, .module8-thq-fig3-elm, .module8-thq-fig4-elm {
+  position: relative !important;
+  flex: 0 0 auto;
+  width: min(100%, 750px);
+  height: auto !important;
+  border-radius: 8px;
+  object-fit: contain;
+  margin: 0 auto;
+  top: auto !important; left: auto !important;
+}
+
+/* =========================================================
+   ARCHITECTURAL ADAPTATIONS TABLE GRID
+   Converts the scattered absolute text into a responsive grid
+   without touching the HTML tags!
+   ========================================================= */
+.module8-thq-architectural-adaptations-elm {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  top: auto !important; left: auto !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.module8-thq-text-elm250 { grid-column: 1 / -1; margin-bottom: 16px; } /* Title */
+.module8-thq-fig5-elm { display: none !important; } /* Hide the rigid SVG table lines */
+
+/* Headers */
+.module8-thq-text-elm251, .module8-thq-text-elm264, .module8-thq-text-elm259 {
+  font-weight: 600;
+  font-size: clamp(18px, 2vw, 24px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  position: relative !important; top: auto !important; left: auto !important;
+  width: auto !important; height: auto !important; text-align: left;
+}
+
+/* Grid Cells Base Styling */
+.module8-thq-text-elm252, .module8-thq-text-elm253, .module8-thq-text-elm254, 
+.module8-thq-text-elm263, .module8-thq-text-elm256, .module8-thq-text-elm257, 
+.module8-thq-text-elm255, .module8-thq-text-elm258, .module8-thq-text-elm260, 
+.module8-thq-text-elm261, .module8-thq-text-elm262 {
+  position: relative !important; top: auto !important; left: auto !important;
+  width: auto !important; height: auto !important;
+  font-size: clamp(14px, 1.5vw, 18px);
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Explicit Grid Coordinates */
+.module8-thq-text-elm251 { grid-column: 1; grid-row: 2; }
+.module8-thq-text-elm264 { grid-column: 2; grid-row: 2; }
+.module8-thq-text-elm259 { grid-column: 3; grid-row: 2; }
+
+.module8-thq-text-elm252 { grid-column: 1; grid-row: 3; font-weight: 400; color: #fff;}
+.module8-thq-text-elm256 { grid-column: 2; grid-row: 3; }
+.module8-thq-text-elm260 { grid-column: 3; grid-row: 4; }
+
+.module8-thq-text-elm253 { grid-column: 1; grid-row: 4; font-weight: 400; color: #fff;}
+.module8-thq-text-elm257 { grid-column: 2; grid-row: 4; }
+.module8-thq-text-elm261 { grid-column: 3; grid-row: 5; }
+
+.module8-thq-text-elm254 { grid-column: 1; grid-row: 5; font-weight: 400; color: #fff;}
+.module8-thq-text-elm255 { grid-column: 2; grid-row: 5; }
+.module8-thq-text-elm262 { grid-column: 3; grid-row: 6; }
+
+.module8-thq-text-elm263 { grid-column: 1; grid-row: 6; font-weight: 400; color: #fff;}
+.module8-thq-text-elm258 { grid-column: 2; grid-row: 6; }
+
+
+/* =========================================================
+   FOOTER (Relative Layout Reset)
+   ========================================================= */
+.module8-thq-footer-elm {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(32px, 5vw, 80px);
+  padding-bottom: clamp(24px, 3vw, 48px);
+}
+
+.module8-thq-footerline-elm { display: none; }
+
+.module8-thq-o-sphere-logo-elm {
+  width: min(480px, 60%);
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+@media (max-width: 900px) {
+  /* Stack the architectural adaptations table into cards for mobile */
+  .module8-thq-architectural-adaptations-elm {
+    display: flex !important;
     flex-direction: column;
   }
-   
-  .module8-thq-module8-elm {
-    width: 100%;
-    height: 16804px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 1);
-    border-style: solid;
-    border-width: 1px;
-    background-color: rgba(255, 255, 255, 0.10000000149011612);
-  }
-   
-  .module8-thq-bg-elm {
-    top: -131px;
-    left: -5661px;
-    width: 10034px;
-    height: 16935px;
-    position: absolute;
-  }
-   
-  .module8-thq-footer-elm {
-    top: 16392px;
-    left: -0.0003662109375px;
-    width: 1440.1253662109375px;
-    height: 411.9993591308594px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-footerline-elm {
-    top: 0px;
-    left: 1440.1253662109375px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .module8-thq-o-sphere-logo-elm {
-    top: 1.884765625px;
-    left: 314.1287841796875px;
-    width: 812px;
-    height: 410px;
-    position: absolute;
-  }
-   
-  .module8-thq-content-container-elm {
-    top: 339px;
-    left: 67px;
-    width: 1390px;
-    height: 15944px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-deadlockalgorithms-elm {
-    top: 14361px;
-    left: 33px;
-    width: 1239px;
-    height: 1583px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-container7-elm {
-    top: 965px;
-    left: 264px;
-    width: 605px;
-    height: 618px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module8-thq-text-elm100 {
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm101 {
-    top: 994px;
-    left: 294px;
-    color: rgba(255, 255, 255, 1);
-    width: 546px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm117 {
-    top: 72px;
-    left: 3px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-web-application-integration-elm {
-    top: 13824px;
-    left: 20px;
-    width: 1239px;
-    height: 459px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-text-elm132 {
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm133 {
-    top: 88px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-sandbox-engine-implementationcode-elm {
-    top: 9288px;
-    left: 20px;
-    width: 1237px;
-    height: 4439px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-container6-elm {
-    top: 164px;
-    left: 0px;
-    width: 1236px;
-    height: 4275px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module8-thq-text-elm138 {
-    left: 57px;
-    color: rgba(255, 255, 255, 1);
-    width: 1070px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm139 {
-    top: 204px;
-    left: 21px;
-    color: rgba(255, 255, 255, 1);
-    width: 1194px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm249 {
-    top: 59px;
-    left: 57px;
-    color: rgba(255, 255, 255, 1);
-    width: 1180px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-architectural-adaptations-elm {
-    top: 8286px;
-    left: 45px;
-    width: 1191px;
-    height: 957px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-container5-elm {
-    top: 56px;
-    left: 0px;
-    width: 1191px;
-    height: 901px;
-    position: absolute;
-    border-radius: 20px;
-  }
-   
-  .module8-thq-text-elm250 {
-    left: 24px;
-    color: rgba(255, 255, 255, 1);
-    width: 1070px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-fig5-elm {
-    top: 80px;
-    left: 79px;
-    width: 1033px;
-    height: 856px;
-    position: absolute;
-  }
-   
-  .module8-thq-text-elm251 {
-    top: 120px;
-    left: 138px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm252 {
-    top: 275px;
-    left: 138px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm253 {
-    top: 427px;
-    left: 138px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm254 {
-    top: 580px;
-    left: 138px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm255 {
-    top: 562px;
-    left: 465px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm256 {
-    top: 214px;
-    left: 465px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm257 {
-    top: 371px;
-    left: 465px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm258 {
-    top: 782px;
-    left: 465px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm259 {
-    top: 205px;
-    left: 770px;
-    color: rgba(255, 255, 255, 1);
-    width: 300px;
-    height: auto;
-    position: absolute;
-    font-size: 15px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm260 {
-    top: 371px;
-    left: 770px;
-    color: rgba(255, 255, 255, 1);
-    width: 300px;
-    height: auto;
-    position: absolute;
-    font-size: 15px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm261 {
-    top: 539px;
-    left: 770px;
-    color: rgba(255, 255, 255, 1);
-    width: 300px;
-    height: auto;
-    position: absolute;
-    font-size: 15px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm262 {
-    top: 750px;
-    left: 770px;
-    color: rgba(255, 255, 255, 1);
-    width: 300px;
-    height: auto;
-    position: absolute;
-    font-size: 15px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm263 {
-    top: 808px;
-    left: 138px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm264 {
-    top: 137px;
-    left: 468px;
-    color: rgba(255, 255, 255, 1);
-    width: 256px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-application-architecture-matrix-elm {
-    top: 7597px;
-    left: 45px;
-    width: 1212px;
-    height: 581px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-text-elm265 {
-    color: rgba(255, 255, 255, 1);
-    width: 1082px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm266 {
-    top: 59px;
-    color: rgba(255, 255, 255, 1);
-    width: 1212px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-fig4-elm {
-    top: 183px;
-    left: 237px;
-    width: 711px;
-    height: 398px;
-    position: absolute;
-  }
-   
-  .module8-thq-programmatic-logic-algorithmic-computations-elm {
-    top: 4898px;
-    left: 26px;
-    width: 1364px;
-    height: 2591px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-container3-elm {
-    top: 198px;
-    left: 263px;
-    width: 652px;
-    height: 97px;
-    position: absolute;
-  }
-   
-  .module8-thq-container4-elm {
-    top: 661px;
-    left: 117px;
-    width: 990px;
-    height: 1930px;
-    position: absolute;
-  }
-   
-  .module8-thq-text-elm268 {
-    left: 2px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm269 {
-    top: 70px;
-    left: 2px;
-    color: rgba(255, 255, 255, 1);
-    width: 1224px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm270 {
-    text-decoration: UNDERLINE;
-  }
-   
-  .module8-thq-text-elm272 {
-    top: 529px;
-    color: rgba(255, 255, 255, 1);
-    width: 1224px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm273 {
-    text-decoration: UNDERLINE;
-  }
-   
-  .module8-thq-text-elm275 {
-    top: 334px;
-    left: 2px;
-    color: rgba(255, 255, 255, 1);
-    width: 1224px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm276 {
-    top: 678px;
-    left: 152px;
-    color: rgba(255, 255, 255, 1);
-    width: 1212px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-fig3-elm {
-    top: 191px;
-    left: 304px;
-    width: 569px;
-    height: 111px;
-    position: absolute;
-  }
-   
-  .module8-thq-deadlock-management-strategy-elm {
-    top: 2965px;
-    left: 20px;
-    width: 1240px;
-    height: 1907px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-text-elm326 {
-    color: rgb(255, 255, 255);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Light;
-    text-align: left;
-    font-family: "Alexandria";
-    font-weight: 300;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm327 {
-    top: 60.653907775878906px;
-    left: 8px;
-    color: rgb(255, 255, 255);
-    width: 1232px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: Bold;
-    text-align: left;
-    font-family: Alexandria;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-text310 {
-    font-weight: 700;
-  }
-   
-  .module8-text311 {
-    font-weight: 700;
-  }
-   
-  .module8-text312 {
-    font-weight: 200;
-  }
-   
-  .module8-text313 {
-    font-weight: 700;
-  }
-   
-  .module8-text314 {
-    font-weight: 200;
-  }
-   
-  .module8-text315 {
-    font-weight: 700;
-  }
-   
-  .module8-text316 {
-    font-weight: 200;
-  }
-   
-  .module8-text317 {
-    font-weight: 700;
-  }
-   
-  .module8-text318 {
-    font-weight: 200;
-  }
-   
-  .module8-text319 {
-    font-weight: 700;
-  }
-   
-  .module8-text320 {
-    font-weight: 200;
-  }
-   
-  .module8-text321 {
-    font-weight: 700;
-  }
-   
-  .module8-text322 {
-    font-weight: 700;
-  }
-   
-  .module8-text323 {
-    font-weight: 700;
-  }
-   
-  .module8-text324 {
-    font-weight: 700;
-  }
-   
-  .module8-text325 {
-    font-weight: 700;
-  }
-   
-  .module8-text326 {
-    font-weight: 700;
-  }
-   
-  .module8-text327 {
-    font-weight: 200;
-  }
-   
-  .module8-text328 {
-    font-weight: 200;
-  }
-   
-  .module8-text329 {
-    font-weight: 200;
-  }
-   
-  .module8-text330 {
-    font-weight: 200;
-  }
-   
-  .module8-text331 {
-    font-weight: 200;
-  }
-   
-  .module8-text332 {
-    font-weight: 200;
-  }
-   
-  .module8-text333 {
-    font-weight: 200;
-  }
-   
-  .module8-text334 {
-    font-weight: 200;
-  }
-   
-  .module8-text335 {
-    font-weight: 200;
-  }
-   
-  .module8-text336 {
-    font-weight: 200;
-  }
-   
-  .module8-text337 {
-    font-weight: 200;
-  }
-   
-  .module8-text338 {
-    font-weight: 200;
-  }
-   
-  .module8-text339 {
-    font-weight: 200;
-  }
-   
-  .module8-text340 {
-    font-weight: 200;
-  }
-   
-  .module8-text341 {
-    font-weight: 200;
-  }
-   
-  .module8-text342 {
-    font-weight: 200;
-  }
-   
-  .module8-text343 {
-    font-weight: 200;
-  }
-   
-  .module8-text344 {
-    font-weight: 200;
-  }
-   
-  .module8-text345 {
-    font-weight: 200;
-  }
-   
-  .module8-text346 {
-    font-weight: 200;
-  }
-   
-  .module8-text347 {
-    font-weight: 200;
-  }
-   
-  .module8-text348 {
-    font-weight: 200;
-  }
-   
-  .module8-text349 {
-    font-weight: 200;
-  }
-   
-  .module8-text350 {
-    font-weight: 200;
-  }
-   
-  .module8-text351 {
-    font-weight: 200;
-  }
-   
-  .module8-text352 {
-    font-weight: 200;
-  }
-   
-  .module8-text353 {
-    font-weight: 200;
-  }
-   
-  .module8-text354 {
-    font-weight: 200;
-  }
-   
-  .module8-text355 {
-    font-weight: 200;
-  }
-   
-  .module8-text356 {
-    font-weight: 200;
-  }
-   
-  .module8-text357 {
-    font-weight: 200;
-  }
-   
-  .module8-text358 {
-    font-weight: 200;
-  }
-   
-  .module8-text359 {
-    font-weight: 200;
-  }
-   
-  .module8-text360 {
-    font-weight: 200;
-  }
-   
-  .module8-text361 {
-    font-weight: 200;
-  }
-   
-  .module8-text362 {
-    font-weight: 200;
-  }
-   
-  .module8-text363 {
-    font-weight: 200;
-  }
-   
-  .module8-text364 {
-    font-weight: 200;
-  }
-   
-  .module8-text365 {
-    font-weight: 200;
-  }
-   
-  .module8-text366 {
-    font-weight: 700;
-  }
-   
-  .module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm {
-    top: 2353px;
-    left: 20px;
-    width: 1247px;
-    height: 426px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-text-elm328 {
-    top: 407px;
-    left: 230px;
-    color: rgba(255, 255, 255, 1);
-    width: 157px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: ExtraLight;
-    text-align: justify;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm329 {
-    color: rgba(255, 255, 255, 1);
-    width: 867px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm330 {
-    top: 48px;
-    color: rgba(255, 255, 255, 1);
-    width: 1247px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: justify;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm331 {
-    top: 152px;
-    left: 591px;
-    color: rgba(255, 255, 255, 1);
-    width: 651px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: justifie;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-fig2-elm {
-    top: 176px;
-    left: 20px;
-    width: 560px;
-    height: 210px;
-    position: absolute;
-  }
-   
-  .module8-thq-visual-assets-structure-elm {
-    top: 1390px;
-    left: 0px;
-    width: 1355px;
-    height: 903px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-container2-elm {
-    top: 127px;
-    left: 0px;
-    width: 1278px;
-    height: 776px;
-    position: absolute;
-  }
-   
-  .module8-thq-text-elm335 {
-    top: 479px;
-    left: 37px;
-    color: rgba(255, 255, 255, 1);
-    width: 1232px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm341 {
-    top: 435px;
-    left: 569px;
-    color: rgba(255, 255, 255, 1);
-    width: 139px;
-    height: auto;
-    position: absolute;
-    font-size: 16px;
-    font-style: ExtraLight;
-    text-align: justify;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-fig1-elm {
-    top: 160px;
-    left: 233px;
-    width: 839px;
-    height: 264px;
-    position: absolute;
-  }
-   
-  .module8-thq-text-elm342 {
-    top: 43px;
-    left: 64px;
-    color: rgba(255, 255, 255, 1);
-    width: 1291px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm344 {
-    left: 65px;
-    color: rgba(255, 255, 255, 1);
-    width: 564px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-terminologies-elm {
-    top: 690px;
-    left: 0px;
-    width: 1285px;
-    height: 597.5px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-container1-elm {
-    top: 0px;
-    left: 0px;
-    width: 1277px;
-    height: 598px;
-    position: absolute;
-  }
-   
-  .module8-thq-text-elm345 {
-    top: 86px;
-    left: 46px;
-    color: rgba(255, 255, 255, 1);
-    width: 1185px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm351 {
-    top: 27px;
-    left: 46px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-whatis-deadlock-elm {
-    top: 472px;
-    left: 18px;
-    width: 1239px;
-    height: 247px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-text-elm352 {
-    top: 52px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm353 {
-    color: rgba(255, 255, 255, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-overview-elm {
-    top: 0px;
-    left: 20px;
-    width: 1239px;
-    height: 449px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-text-elm354 {
-    color: rgba(255, 255, 255, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    font-style: Light;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 300;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm355 {
-    top: 52px;
-    color: rgba(255, 255, 255, 1);
-    width: 1239px;
-    height: auto;
-    position: absolute;
-    font-size: 24px;
-    font-style: ExtraLight;
-    text-align: justify;
-    font-family: Alexandria;
-    font-weight: 200;
-    line-height: 35px;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-header-elm {
-    top: 116px;
-    left: 46px;
-    width: 1329px;
-    height: 153px;
-    display: flex;
-    overflow: hidden;
-    position: absolute;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-radius: 30px;
-    background-color: transparent;
-  }
-   
-  .module8-thq-m8bg-elm {
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-   
-  .module8-thq-text-elm357 {
-    top: 13px;
-    left: 32px;
-    color: rgba(35, 38, 48, 1);
-    width: 348px;
-    height: auto;
-    position: absolute;
-    font-size: 64px;
-    font-style: SemiBold;
-    text-align: center;
-    font-family: Alexandria;
-    font-weight: 600;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-text-elm358 {
-    top: 95px;
-    left: 62px;
-    color: rgba(37, 37, 37, 1);
-    width: 502px;
-    height: auto;
-    position: absolute;
-    font-size: 32px;
-    font-style: Regular;
-    text-align: left;
-    font-family: Alexandria;
-    font-weight: 400;
-    line-height: normal;
-    font-stretch: normal;
-    text-decoration: none;
-  }
-   
-  .module8-thq-navigation-bar-elm {
-    top: 0px;
-    left: -0.0023193359375px;
-    width: 1440.1253662109375px;
-    height: 54px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-   
-  .module8-thq-line1-elm {
-    top: 50px;
-    left: 1440.125px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
-  }
-   
-  .module8-thq-side-menu-elm {
-    top: 3px;
-    left: 26.025634765625px;
-    width: 56px;
-    height: 47px;
-    position: absolute;
-  }
-   
-  .module8-thq-home-elm {
-    top: 0px;
-    left: 78.025634765625px;
-    width: 60px;
-    height: 54px;
-    position: absolute;
-    border-color: rgba(0, 0, 0, 1);
-  }
-   
-  .module8-thq-help-elm {
-    top: 4px;
-    left: 1371px;
-    width: 35px;
-    height: 40px;
-    position: absolute;
-  }  
+  .module8-thq-text-elm259 { display: none !important; }
+  .module8-thq-text-elm251, .module8-thq-text-elm264 {
+    margin-top: 24px;
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+  }
+}
+
+@media (max-width: 600px) {
+  .module8-thq-header-elm { height: clamp(80px, 18vw, 120px); }
+  .module8-card { padding: clamp(16px, 4vw, 28px) clamp(14px, 3vw, 24px); }
+  .module8-thq-o-sphere-logo-elm { width: 75%; }
+}

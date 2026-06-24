@@ -150,7 +150,7 @@ img { display:block; }
   width: min(823px, 88%);
   height: clamp(44px, 5vw, 69px);
   margin: clamp(16px, 2.5vw, 36px) auto clamp(32px, 4vw, 60px);
-  background-color: rgba(217, 217, 217, 1);
+  background-color: rgb(255, 255, 255);
   border-radius: 50px;
   overflow: visible;
   display: flex;
