@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Structural DOM Hook Selectors
     const computeBtn = document.getElementById("compute");
     const overlay = document.getElementById("popup-overlay");
-    const closeModalBtn = document.getElementById("close-modal");
     const algoDropdown = document.getElementById("algorithm");
     const referenceInput = document.getElementById("reference");
     const framesInput = document.getElementById("frames");
@@ -73,11 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (event.target === overlay) overlay.classList.remove("show");
         });
     }
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener("click", () => {
-            overlay.classList.remove("show");
-        });
-    }
+
 
     // ==========================================================================
     // DATA SIMULATION REPLACEMENT RUNNERS

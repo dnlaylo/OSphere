@@ -10,53 +10,48 @@
 .algorithm-container1 {
     width: 100%;
     display: flex;
-    overflow: auto;
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    overflow-x: hidden;
+    background-color: #0d0f14;
 }
 
 .algorithm-thq-algorithm-elm {
     width: 100%;
-    height: 810px;
+    min-height: 100vh;
     display: flex;
     overflow: hidden;
     position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 1);
-    border-style: solid;
-    border-width: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
 }
 
 .algorithm-thq-bg-elm {
-    top: -2922px;
-    left: -1128px;
-    width: 4483px;
-    height: 7566px;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
+    z-index: -1;
+    pointer-events: none;
 }
 
 .algorithm-thq-mainpageblackbg-elm {
-    top: 0px;
-    left: 0px;
-    width: 4483px;
-    height: 7566px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
 }
 
 .algorithm-thq-assets13-elm {
-    top: 2972px;
-    left: 1131px;
-    width: 1440px;
-    height: 2202px;
+    width: 100%;
+    height: 100%;
     opacity: 0.10;
     position: absolute;
+    object-fit: cover;
 }
 
 .algorithm-thq-content-container-elm {
@@ -123,14 +118,14 @@
    MAIN APPLICATION CARD CONTAINER
    ========================================================================== */
 .main-container {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 40px;
     width: 100%;
     max-width: 950px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -155,17 +150,14 @@
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    border: 1px solid rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255,255,255,1);
     border-radius: 100px;
     padding: 12px 50px;
     text-align: center;
     cursor: pointer;
-    min-width: 450px;
+    min-width: 550px;
     appearance: none;
     -webkit-appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23574c15' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
-    background-repeat: no-repeat;
-    background-position: calc(100% - 25px) center;
 }
 
 #algorithm:focus {
@@ -190,28 +182,28 @@
 }
 
 .vm-group label {
-    color: white;
-    font-size: 32px;
-    font-weight: 300;
-    width: max-content;
-    border-bottom: 2px solid white;
-    padding-bottom: 6px;
+    color: rgba(255,255,255,0.8);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin-left: 10px;
 }
 
 .vm-group input {
+    background-color: rgba(26,26,30,0.6);
+    border: 1px solid rgba(76,76,76,1);
+    color: #ffffff;
+    font-size: 16px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 0 25px;
+    transition: all 0.2s ease;
     width: 100%;
-    height: 64px;
-    border-radius: 100px;
-    padding: 0 50px;
-    background: rgba(26, 26, 30, 0.65);
-    border: 1px solid rgba(76, 76, 76, 1);
-    color: white;
-    font-size: 24px;
-    outline: none;
 }
 
 .vm-group input:focus {
     border-color: rgba(255, 255, 255, 0.4);
+    outline: none;
 }
 
 .field-note-text {
@@ -227,18 +219,18 @@
 }
 
 #compute {
-    margin-top: 60px;
-    align-self: center;
     background-color: #b0cce3;
-    color: rgba(72, 81, 107, 1);
-    border: 1px solid rgba(255, 255, 255, 1);
-    font-size: 26px;
+    color: rgba(72,81,107,1);
+    border: 1px solid rgba(255,255,255,1);
+    font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 10px 60px;
+    padding: 12px 60px;
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    margin-top: 50px;
+    align-self: center;
 }
 
 #compute:hover {
@@ -247,7 +239,7 @@
 }
 
 /* ==========================================================================
-   POPUP OVERLAY & MODAL WINDOW
+   POPUP OVERLAY & MODAL WINDOW (UNTOUCHED)
    ========================================================================== */
 #popup-overlay {
     position: fixed;
@@ -304,7 +296,7 @@
 }
 
 .modal-header h2 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -331,14 +323,14 @@
     color: rgba(242, 232, 164, 1);
     margin-top: 30px;
     margin-bottom: 35px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 /* ==========================================================================
-   DYNAMIC CENTERING DIAGRAM CAROUSEL LAYER
+   DYNAMIC CENTERING DIAGRAM CAROUSEL LAYER (UNTOUCHED)
    ========================================================================== */
 .matrix-section-wrapper {
     width: 100%;
@@ -439,7 +431,7 @@
 }
 
 /* ==========================================================================
-   RESULTS SUMMARY METRICS PANEL
+   RESULTS SUMMARY METRICS PANEL (UNTOUCHED)
    ========================================================================== */
 .modal-summary-panel {
     margin-top: auto;
@@ -464,24 +456,21 @@
 
 /* --- Custom Oblong Scrollbar Styling --- */
 
-/* Width configuration of the scrollbar gutter */
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar {
     width: 10px;
 }
 
-/* Background Track - transparent to reveal dashboard panel color underneath */
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.15);
     border-radius: 100px;
 }
 
-/* Long Oblong Moving Thumb Handle */
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb {
-    background-color: rgba(242, 232, 164, 0.4); /* Muted gold matching accent scheme */
-    border-radius: 100px; /* Forces full rounded pill layout shape */
-    border: 2px solid transparent; /* Acts as padding space */
+    background-color: rgba(242, 232, 164, 0.4);
+    border-radius: 100px;
+    border: 2px solid transparent;
 }
 
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(242, 232, 164, 0.7); /* Highlights brighter upon mouse cursor hover */
+    background-color: rgba(242, 232, 164, 0.7);
 }

@@ -7,66 +7,65 @@
     font-family: 'Alexandria', sans-serif;
 }
 
-/* Structural Core viewframes */
+/* Structural Core viewframes (Now Responsive) */
 .algorithm-container1 {
     width: 100%;
     display: flex;
-    overflow: auto;
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    overflow-x: hidden;
+    background-color: #0d0f14;
 }
-    
+
 .algorithm-thq-algorithm-elm {
     width: 100%;
-    height: 810px;
+    min-height: 100vh;
     display: flex;
     overflow: hidden;
     position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 1);
-    border-style: solid;
-    border-width: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
 }
     
 /* Dark Theme Background Placement */
 .algorithm-thq-bg-elm {
-    top: -2922px;
-    left: -1128px;
-    width: 4483px;
-    height: 7566px;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
+    z-index: -1;
+    pointer-events: none;
 }
     
 .algorithm-thq-mainpageblackbg-elm {
-    top: 0px;
-    left: 0px;
-    width: 4483px;
-    height: 7566px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
 }
     
 .algorithm-thq-assets13-elm {
-    top: 2972px;
-    left: 1131px;
-    width: 1440px;
-    height: 2202px;
+    width: 100%;
+    height: 100%;
     opacity: 0.10;
     position: absolute;
+    object-fit: cover;
 }
     
 .algorithm-thq-content-container-elm {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    position: absolute;
     align-items: center;
-    flex-shrink: 1;
     justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    position: relative;
 }
 
 /* Glassmorphism Panel Dashboard Setup */
@@ -203,49 +202,54 @@
     box-shadow: 0 0 15px rgba(176, 204, 227, 0.4);
 }
 
-/* Shared Navigation Elements styling */
+/* ==========================================================================
+   FIXED NAVIGATION BAR
+   ========================================================================== */
 .algorithm-thq-navigation-bar-elm {
     top: 0px;
-    left: -0.003px;
-    width: 1440px;
-    height: 54px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    padding: 0 40px;
     display: flex;
     position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-    
-.algorithm-thq-line1-elm {
-    top: 50px;
-    left: 1440px;
-    width: 1440px;
-    height: 1px;
-    position: absolute;
+
+.nav-left-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-    
-.algorithm-thq-side-menu-elm {
-    top: 3px;
-    left: 26px;
-    width: 56px;
-    height: 47px;
-    position: absolute;
+
+.nav-right-help-link {
+    display: flex;
+    align-items: center;
 }
-    
-.algorithm-thq-home-elm {
-    top: 0px;
-    left: 78px;
-    width: 60px;
-    height: 54px;
-    position: absolute;
-}
-    
+
+.algorithm-thq-side-menu-elm,
+.algorithm-thq-home-elm,
 .algorithm-thq-help-elm {
-    top: 4px;
-    left: 1371px;
-    width: 35px;
-    height: 40px;
-    position: absolute;
+    position: relative;
+    top: auto;
+    left: auto;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
 }
+
+.algorithm-thq-side-menu-elm:hover,
+.algorithm-thq-home-elm:hover,
+.algorithm-thq-help-elm:hover {
+    opacity: 0.8;
+}
+
+.algorithm-thq-side-menu-elm { width: 56px; height: 47px; }
+.algorithm-thq-home-elm { width: 60px; height: 54px; }
+.algorithm-thq-help-elm { width: 35px; height: 40px; }
+
 
 /* Modals & Evaluation Overlay Design */
 #popup-overlay {
@@ -257,7 +261,7 @@
     z-index: 9999;
     background: rgba(0, 0, 0, 0.65); 
     backdrop-filter: blur(8px);
-    display: none; /* Toggle programmatically using class 'show' via script.js */
+    display: none; 
     align-items: center;
     justify-content: center;
 }
@@ -287,25 +291,21 @@
 #averages { background-color: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 10px; padding: 20px; display: flex; justify-content: space-around; align-items: center; margin-bottom: 25px; color: #ffffff; }
 
 /* --- Custom Oblong Scrollbar Styling --- */
-
-/* Width configuration of the scrollbar gutter */
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar {
     width: 10px;
 }
 
-/* Background Track - transparent to reveal dashboard panel color underneath */
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.15);
     border-radius: 100px;
 }
 
-/* Long Oblong Moving Thumb Handle */
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb {
-    background-color: rgba(242, 232, 164, 0.4); /* Muted gold matching accent scheme */
-    border-radius: 100px; /* Forces full rounded pill layout shape */
-    border: 2px solid transparent; /* Acts as padding space */
+    background-color: rgba(242, 232, 164, 0.4); 
+    border-radius: 100px; 
+    border: 2px solid transparent; 
 }
 
 #popup-overlay .output-thq-output-elm::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(242, 232, 164, 0.7); /* Highlights brighter upon mouse cursor hover */
+    background-color: rgba(242, 232, 164, 0.7); 
 }
