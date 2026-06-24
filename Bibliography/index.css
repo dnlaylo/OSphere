@@ -1,9 +1,9 @@
 /* ===================================================
-   OSphere — About Us Responsive CSS
+   OSphere — Bibliography Responsive CSS
    =================================================== */
 
 /* ---------- Reset & Root Wrapper ---------- */
-.aboutus-container1 {
+.bibliography-container1 {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -13,7 +13,7 @@
   overflow-x: hidden;
 }
 
-.aboutus-thq-aboutus-elm {
+.bibliography-thq-bibliography-elm {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -52,32 +52,19 @@
 .mainpage-thq-dots2-elm { opacity: 0.10; }
 
 /* =========================================================
-   ALL CONTENT sits above the background
-   ========================================================= */
-.mainpage-thq-navigation-bar-elm,
-.mainpage-thq-text-elm41,
-.mainpage-thq-search-elm,
-.mainpage-thq-modules-grid,
-.mainpage-thq-operating-system-algortihms-elm,
-.mainpage-thq-footer-elm {
-  position: relative;
-  z-index: 1;
-}
-
-/* =========================================================
    NAVIGATION BAR
    ========================================================= */
 .mainpage-thq-navigation-bar-elm {
+  position: relative;
   width: 100%;
   height: 54px;
   display: flex;
   align-items: center;
   padding: 0 clamp(16px, 3vw, 26px);
   flex-shrink: 0;
+  z-index: 10;
+  margin-top: 10px;
 }
-
-/* Nav line below bar — hidden, was decorative SVG at design width */
-.mainpage-thq-line1-elm { display: none; }
 
 .mainpage-thq-side-menu-elm {
   width: clamp(36px, 4vw, 56px);
@@ -85,7 +72,6 @@
   cursor: pointer;
 }
 
-/* Apply the margin to the wrapper so Flexbox spaces it correctly */
 .home-link-wrapper {
   margin-top: 5px;
   margin-left: 2px;
@@ -94,10 +80,8 @@
 .mainpage-thq-home-elm {
   width: clamp(36px, 4vw, 60px);
   height: auto;
-  /* Removed margin-left from here */
 }
 
-/* Apply margin-left: auto to the wrapper to push it to the far right */
 .help-link-wrapper {
   margin-left: auto; 
 }
@@ -105,28 +89,23 @@
 .mainpage-thq-help-elm {
   width: clamp(24px, 2.5vw, 35px);
   height: auto;
-  /* Removed margin-left from here */
 }
 
 /* =========================================================
-   TEXT BLOCKS (About Us & Objectives)
+   CONTENT BLOCK (Bibliography Area)
    ========================================================= */
-.aboutus-thq-about-us-elm,
-.aboutus-thq-objective-elm {
+.bibliography-thq-content-elm {
   position: relative;
-  width: min(1124px, 90%);
+  width: min(1229px, 90%);
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: clamp(50px, 8vw, 100px) auto 0;
-  gap: clamp(16px, 3vw, 32px);
+  gap: clamp(24px, 4vw, 40px);
   z-index: 2;
 }
 
-/* Titles */
-.aboutus-thq-text-elm32, /* About Us Title */
-.aboutus-thq-text-elm33, /* Objectives Title */
-.aboutus-thq-text-elm28  /* Members Title */ {
+/* Title */
+.bibliography-thq-text-elm32 {
   position: relative;
   width: 100%;
   text-align: center;
@@ -136,133 +115,50 @@
   color: white;
 }
 
-/* Paragraphs */
-.aboutus-thq-text-elm29,
-.aboutus-thq-text-elm34 {
+/* Base text styling for the references wrapper */
+.bibliography-thq-text-elm29 {
   position: relative;
   width: 100%;
-  font-size: clamp(16px, 2vw, 28px);
+  font-size: clamp(16px, 2vw, 22px);
   font-family: Alexandria, sans-serif;
   font-weight: 400;
-  text-align: justify;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
 }
 
 /* =========================================================
-   MEMBERS SECTION (Responsive Flex Grid)
+   BIBLIOGRAPHY LIST STYLES
    ========================================================= */
-.aboutus-thq-members-elm {
-  position: relative;
-  width: min(1300px, 95%);
-  display: flex;
-  flex-wrap: wrap; /* Allows cards to wrap into rows naturally */
-  justify-content: center;
-  gap: clamp(30px, 4vw, 50px);
-  margin-top: clamp(60px, 8vw, 100px);
-  z-index: 2;
-}
-
-/* Push the 'Members' title to take up the full top row */
-.aboutus-thq-text-elm28 {
-  flex-basis: 100%;
-  margin-bottom: clamp(10px, 2vw, 30px);
-}
-
-/* --- The Fluid Member Cards --- */
-.aboutus-thq-marga-elm,
-.aboutus-thq-lian-elm,
-.aboutus-thq-annie-elm,
-.aboutus-thq-vivienne-elm,
-.aboutus-thq-chael-elm {
-  position: relative;
-  width: clamp(280px, 30vw, 400px); /* Card shrinks/grows with screen size */
+.references-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border-radius: 50px;
-  overflow: hidden; 
-  transition: transform 0.3s ease;
+  gap: 25px; /* Space between each reference */
+  padding: 0 clamp(10px, 2vw, 40px);
 }
 
-/* Small hover effect for modern feel */
-.aboutus-thq-marga-elm:hover,
-.aboutus-thq-lian-elm:hover,
-.aboutus-thq-annie-elm:hover,
-.aboutus-thq-vivienne-elm:hover,
-.aboutus-thq-chael-elm:hover {
-  transform: translateY(-10px);
+.reference-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
-/* Background Image Splits (Clear Top, Colored Bottom) */
-[class$="-clear-elm"] {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-[class$="-yellow-elm"],
-[class$="-purple-elm"],
-[class$="-blue-elm"],
-[class$="-green-elm"],
-[class$="-orange-elm"] {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-top: -2px; /* Fixes tiny white rendering line between split images */
+.reference-item a {
+  color: #58a6ff; /* Soft blue color for links */
+  text-decoration: none;
+  word-break: break-all; /* Forces long URLs to wrap on mobile phones */
+  transition: color 0.2s ease;
+  margin-left: 30px; /* Added indentation for the links */
 }
 
-/* Dynamic Positioning for Profile Pictures & Text inside the Cards */
-[class$="-profile-elm"] {
-  position: absolute;
-  top: 14%; /* Fluid percentage so it always stays perfectly aligned */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: auto;
-  z-index: 2;
+.reference-item a:hover {
+  text-decoration: underline;
+  color: #79c8f2;
 }
-
-.aboutus-thq-text-elm10, .aboutus-thq-text-elm12, .aboutus-thq-text-elm16, 
-.aboutus-thq-text-elm20, .aboutus-thq-text-elm24 {
-  position: absolute;
-  top: 64%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: clamp(18px, 2.2vw, 30px);
-  font-family: Alexandria, sans-serif;
-  font-weight: 600;
-  color: white;
-  z-index: 3;
-  padding: 0 10px;
-}
-
-.aboutus-thq-text-elm11, .aboutus-thq-text-elm13, .aboutus-thq-text-elm17, 
-.aboutus-thq-text-elm21, .aboutus-thq-text-elm25 {
-  position: absolute;
-  top: 77%;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: clamp(14px, 1.8vw, 24px);
-  font-family: Archivo, sans-serif;
-  font-weight: 600;
-  font-style: italic;
-  z-index: 4;
-  line-height: 1.2;
-}
-
-/* Maintain original role colors */
-.aboutus-thq-text-elm11 { color: rgba(134, 123, 33, 1); } 
-.aboutus-thq-text-elm13 { color: rgba(85, 65, 109, 1); }  
-.aboutus-thq-text-elm17 { color: rgba(56, 118, 155, 1); } 
-.aboutus-thq-text-elm21 { color: rgba(64, 128, 45, 1); }  
-.aboutus-thq-text-elm25 { color: rgba(131, 69, 49, 1); }  
 
 /* =========================================================
    FOOTER
    ========================================================= */
-.aboutus-thq-footer-elm {
+.bibliography-thq-footer-elm {
   position: relative;
   width: 100%;
   display: flex;
@@ -273,11 +169,8 @@
   z-index: 2;
 }
 
-.aboutus-thq-footer-line-elm {
-  display: none; /* Often export lines are buggy, recreated purely in CSS below */
-}
-
-.aboutus-thq-footer-elm::before {
+/* Creates the horizontal line cleanly above the logo */
+.bibliography-thq-footer-elm::before {
   content: '';
   display: block;
   width: 90%;
@@ -287,36 +180,25 @@
   margin-bottom: clamp(20px, 4vw, 40px);
 }
 
-.aboutus-thq-o-sphere-logo-elm {
+.bibliography-thq-o-sphere-logo-elm {
   position: relative;
   width: min(480px, 60%);
   height: auto;
 }
 
 /* =========================================================
-   GLOBAL OVERRIDES & MOBILE BREAKPOINTS
+   MOBILE BREAKPOINTS
    ========================================================= */
-/* Strip exported hardcoded shadow styles */
-span, div, img {
-  box-shadow: none !important;
-}
-
-/* Mobile Adjustments (≤ 768px) */
 @media (max-width: 768px) {
-  .aboutus-thq-text-elm29,
-  .aboutus-thq-text-elm34 {
-    text-align: left; /* Switching to left-aligned text makes it easier to read on small screens */
+  .bibliography-thq-text-elm29 {
+    text-align: left; 
   }
   
-  .aboutus-thq-o-sphere-logo-elm {
+  .bibliography-thq-o-sphere-logo-elm {
     width: 85%;
   }
 
-  .aboutus-thq-marga-elm,
-  .aboutus-thq-lian-elm,
-  .aboutus-thq-annie-elm,
-  .aboutus-thq-vivienne-elm,
-  .aboutus-thq-chael-elm {
-     width: min(350px, 90%); /* Gives cards slight breathing room on small phones */
+  .reference-item a {
+    margin-left: 15px; /* Slightly smaller indentation on mobile to save screen space */
   }
 }

@@ -1,265 +1,105 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="en">
   <head>
     <title>OSphere</title>
-    <meta property="og:title" content="exported project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-
     <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {-webkit-appearance: button; appearance: button; color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
+      html { line-height: 1.15; scroll-behavior: smooth; }
+      body { margin: 0; }
+      * { box-sizing: border-box; border-width: 0; border-style: solid; -webkit-font-smoothing: antialiased; }
+      p, li, ul, pre, div, h1, h2, h3, h4, h5, h6, figure, blockquote, figcaption { margin: 0; padding: 0; }
+      a { color: inherit; text-decoration: inherit; }
+      img { display: block; }
     </style>
     <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-theme-neutral-dark);
-        background: var(--dl-color-theme-neutral-light);
-
-        fill: var(--dl-color-theme-neutral-dark);
-      }
+      html { font-family: Inter, sans-serif; font-size: 16px; }
+      body { font-weight: 400; color: #000; background: #fff; }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" />
+    <link href="./index.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
-      <link href="./index.css" rel="stylesheet" />
+    <div class="bibliography-container1">
+      <div class="bibliography-thq-bibliography-elm">
 
-      <div class="aboutus-container1">
-        <div class="aboutus-thq-aboutus-elm">
+        <div class="mainpage-thq-background-elm">
+          <img src="Assets/BG/BG.svg" alt="" class="mainpage-thq-gradient-elm" />
+          <img src="Assets/BG/Waves.svg" alt="" class="mainpage-thq-dots2-elm" />
+          <img src="Assets/BG/Dots.svg" alt="" class="mainpage-thq-dots-elm" />
+        </div>
 
-          <div class="mainpage-thq-background-elm">
-            <img src="Assets/BG/BG.svg"  alt="" class="mainpage-thq-gradient-elm" />
-            <img src="Assets/BG/Waves.svg"    alt="" class="mainpage-thq-dots2-elm" />
-            <img src="Assets/BG/Dots.svg"      alt="" class="mainpage-thq-dots-elm" />
-          </div>
+        <div class="mainpage-thq-navigation-bar-elm">
+          <img src="Assets/NavBar/Side Menu.png" alt="Open Side Menu" class="mainpage-thq-side-menu-elm" />
+          
+          <a href="../Main Page/index.html" class="home-link-wrapper">
+            <img src="Assets/NavBar/Home (1).png" alt="Go to Home" class="mainpage-thq-home-elm" />
+          </a>
+          
+          <a href="../About%20Us/index.html" class="help-link-wrapper">
+            <img src="Assets/NavBar/Help.png" alt="About Us" class="mainpage-thq-help-elm" />
+          </a>
+        </div>
 
-          <div class="mainpage-thq-navigation-bar-elm">
-            <img src="Assets/NavBar/Side Menu.png" alt="Open Side Menu" class="mainpage-thq-side-menu-elm" />
+        <div class="bibliography-thq-content-elm">
+          <h1 class="bibliography-thq-text-elm32">Bibliography</h1>
+          
+          <div class="bibliography-thq-text-elm29 references-list">
             
-            <a href="index.html" class="home-link-wrapper">
-              <img src="Assets/NavBar/Home (1).png" alt="Go to Home" class="mainpage-thq-home-elm" />
-            </a>
-            
-            <a href="../About%20Us/index.html" class="help-link-wrapper">
-              <img src="Assets/NavBar/Help.png" alt="About Us" class="mainpage-thq-help-elm" />
-            </a>
-          </div>
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 1 - Operating System Introduction Part 1.</p>
+              <a href="https://drive.google.com/file/d/1VjpWUb5OQ-8tI6-uaLuycaQyumm-ewxG/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1VjpWUb5OQ-8tI6-uaLuycaQyumm-ewxG/view?usp=drivesdk</a>
+            </div>
 
-          <div class="aboutus-thq-about-us-elm">
-            <span class="aboutus-thq-text-elm32">About Us</span>
-            <span class="aboutus-thq-text-elm29">
-              <span>
-                We are second-year Bachelor of Science in Computer Engineering
-                (BSCpE) students whose studies include computer systems,
-                software, hardware, and the fundamental principles that power
-                modern computing technologies. Through academic coursework,
-                technical projects, and collaborative learning experiences, we
-                continuously develop the knowledge and skills needed to
-                understand how computers and digital systems function.
-              </span>
-              <br />
-              <br />
-              <span>
-                As part of our academic journey, we created OSphere to reflect
-                our growing interest in Operating Systems and their essential
-                role in computing. Operating systems serve as the foundation
-                that connects hardware and software, managing system resources
-                and providing the environment in which applications run. By
-                studying these concepts, we gain a deeper appreciation of the
-                mechanisms that make modern computing possible and the
-                technologies that shape our digital world.
-              </span>
-              <br />
-            </span>
-          </div>
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 1 - Operating System Introduction Part 2.</p>
+              <a href="https://drive.google.com/file/d/1iLEe_nVuXqhVr18E8La9tJVwNg2d_7hC/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1iLEe_nVuXqhVr18E8La9tJVwNg2d_7hC/view?usp=drivesdk</a>
+            </div>
 
-          <div class="aboutus-thq-objective-elm">
-            <span class="aboutus-thq-text-elm33">Objectives</span>
-            <span class="aboutus-thq-text-elm34">
-              <span>
-                OSphere was created to provide a centralized and accessible
-                platform for learning Operating System concepts. We aim to
-                present technical topics in a clear, organized, and
-                student-friendly manner, making them easier to understand and
-                explore. Through this platform, we hope to support students in
-                developing a stronger understanding of how operating systems
-                function and their importance in modern computing. By bringing
-                together essential concepts and learning resources, OSphere
-                seeks to encourage continuous learning and a deeper appreciation
-                of the systems that power today's digital technologies.
-              </span>
-              <br />
-            </span>
-          </div>
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 2 - Operating Systems Structures.</p>
+              <a href="https://drive.google.com/file/d/1puUjKkUp8lic3KOEyolEW_CLiVRao8kC/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1puUjKkUp8lic3KOEyolEW_CLiVRao8kC/view?usp=drivesdk</a>
+            </div>
 
-          <div class="aboutus-thq-members-elm">
-            <span class="aboutus-thq-text-elm28">Members</span>
-            <div class="aboutus-thq-chael-elm">
-              <img
-                src="Assets/Chael Clear.svg"
-                alt="ChaelClear3671"
-                class="aboutus-thq-chael-clear-elm"
-              />
-              <img
-                src="Assets/Orange.svg"
-                alt="Orange3671"
-                class="aboutus-thq-orange-elm"
-              />
-              <img
-                src="Assets/Chael Profile.svg"
-                alt="ChaelProfile2009"
-                class="aboutus-thq-chael-profile-elm"
-              />
-              <span class="aboutus-thq-text-elm24">John Michael Alarcon</span>
-              <span class="aboutus-thq-text-elm25">
-                <span>UI/UX Designer</span>
-                <br />
-                <span>Web Developer</span>
-              </span>
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 3 - Processes.</p>
+              <a href="https://drive.google.com/file/d/14uMb54Rz5mK5So7SqU5O3jAimtveS4yh/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/14uMb54Rz5mK5So7SqU5O3jAimtveS4yh/view?usp=drivesdk</a>
             </div>
-            <div class="aboutus-thq-vivienne-elm">
-              <img
-                src="Assets/Viv Clear.svg"
-                alt="VivClear3671"
-                class="aboutus-thq-viv-clear-elm"
-              />
-              <img
-                src="Assets/Green.svg"
-                alt="Green3671"
-                class="aboutus-thq-green-elm"
-              />
-              <img
-                src="Assets/Viv Profile.svg"
-                alt="VivProfile3671"
-                class="aboutus-thq-viv-profile-elm"
-              />
-              <span class="aboutus-thq-text-elm20">Vivienne Joyce Beduya</span>
-              <span class="aboutus-thq-text-elm21">
-                <span>Concept Designer</span>
-                <br />
-                <span>Web Developer</span>
-              </span>
-            </div>
-            <div class="aboutus-thq-annie-elm">
-              <img
-                src="Assets/Annie Clear.svg"
-                alt="AnnieClear3671"
-                class="aboutus-thq-annie-clear-elm"
-              />
-              <img
-                src="Assets/Blue.svg"
-                alt="Blue3671"
-                class="aboutus-thq-blue-elm"
-              />
-              <img
-                src="Assets/Annie Profile.svg"
-                alt="AnnieProfile3671"
-                class="aboutus-thq-annie-profile-elm"
-              />
-              <span class="aboutus-thq-text-elm16">
-                Annalise Ruth Dela Cruz
-              </span>
-              <span class="aboutus-thq-text-elm17">
-                <span>QA Tester</span>
-                <br />
-                <span>Web Developer</span>
-              </span>
-            </div>
-            <div class="aboutus-thq-lian-elm">
-              <img
-                src="Assets/Lian Clear.svg"
-                alt="LianClear3671"
-                class="aboutus-thq-lian-clear-elm"
-              />
-              <img
-                src="Assets/Purple.svg"
-                alt="Purple3671"
-                class="aboutus-thq-purple-elm"
-              />
-              <img
-                src="Assets/Lian Profile.svg"
-                alt="LianProfile3671"
-                class="aboutus-thq-lian-profile-elm"
-              />
-              <span class="aboutus-thq-text-elm12">Lian Karyl Garcia</span>
-              <span class="aboutus-thq-text-elm13">
-                <span>UI/UX Designer</span>
-                <br />
-                <span>Web Developer</span>
-              </span>
-            </div>
-            <div class="aboutus-thq-marga-elm">
-              <img
-                src="Assets/Marga Clear.svg"
-                alt="MargaClear3671"
-                class="aboutus-thq-marga-clear-elm"
-              />
-              <img
-                src="Assets/Yellow.svg"
-                alt="Yellow3671"
-                class="aboutus-thq-yellow-elm"
-              />
-              <img
-                src="Assets/Marga Profile.svg"
-                alt="MargaProfile3671"
-                class="aboutus-thq-marga-profile-elm"
-              />
-              <span class="aboutus-thq-text-elm10">Margaret Sydney Laylo</span>
-              <span class="aboutus-thq-text-elm11">
-                <span>Concept Designer</span>
-                <br />
-                <span>Web Developer</span>
-              </span>
-            </div>
-          </div>
 
-          <div class="aboutus-thq-footer-elm">
-            <img
-              src="Assets/Footer/Footer Line.svg"
-              alt="FooterLine3671"
-              class="aboutus-thq-footer-line-elm"
-            />
-            <img
-              src="Assets/Footer/OSphere Logo.svg"
-              alt="OSphereLogo3671"
-              class="aboutus-thq-o-sphere-logo-elm"
-            />
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 4 - CPU Scheduling.</p>
+              <a href="https://drive.google.com/file/d/17yOZrP6TIoABijR9ij2TMZxEiWvUF7IS/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/17yOZrP6TIoABijR9ij2TMZxEiWvUF7IS/view?usp=drivesdk</a>
+            </div>
+
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 5 - Memory Management.</p>
+              <a href="https://drive.google.com/file/d/1S5UIr36OFh8tDBCsAJwIEvbj2aSnLeAx/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1S5UIr36OFh8tDBCsAJwIEvbj2aSnLeAx/view?usp=drivesdk</a>
+            </div>
+
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 6 - Virtual Memory.</p>
+              <a href="https://drive.google.com/file/d/1GLJg9nQwzGrS9jf3nMxSX2xuMQ-CrE2b/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1GLJg9nQwzGrS9jf3nMxSX2xuMQ-CrE2b/view?usp=drivesdk</a>
+            </div>
+
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 7 - Mass Storage Management.</p>
+              <a href="https://drive.google.com/file/d/1L56pR2B23dJdh1Er5XoqUk5Iru5JsQLz/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1L56pR2B23dJdh1Er5XoqUk5Iru5JsQLz/view?usp=drivesdk</a>
+            </div>
+
+            <div class="reference-item">
+              <p>Tenerife, P., Jr. (n.d.). COEN 3374 - Module 8 - Deadlocks.</p>
+              <a href="https://drive.google.com/file/d/1-RTX5yLILtppFEuds9WbPWb4W4NdK2Mq/view?usp=drivesdk" target="_blank">https://drive.google.com/file/d/1-RTX5yLILtppFEuds9WbPWb4W4NdK2Mq/view?usp=drivesdk</a>
+            </div>
+
           </div>
         </div>
+
+        <div class="bibliography-thq-footer-elm">
+          <img src="Assets/Footer/OSphere Logo.svg" alt="OSphere Logo" class="bibliography-thq-o-sphere-logo-elm" />
+        </div>
+
+      </div>
     </div>
   </body>
 </html>
