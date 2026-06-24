@@ -380,7 +380,12 @@ img { display: block; }
   padding-bottom: clamp(24px, 3vw, 48px);
 }
 
-.module5-thq-footerline-elm { display: none; }
+.module5-thq-footerline-elm {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
 
 .module5-thq-o-spherelogo-elm {
   width: min(480px, 60%);

@@ -661,7 +661,12 @@ img { display: block; }
   padding-bottom: clamp(24px, 3vw, 48px);
 }
 
-.module1-thq-footer-line-elm { display: none; }
+.module1-thq-footer-line-elm {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
 
 .module1-thq-o-sphere-logo-elm {
   width: min(480px, 60%);
