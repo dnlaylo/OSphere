@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="../Side Menu/sideMenu.css" />
+<script src="../Side Menu/script.js"></script>
+id="menuToggle"
+
+        
+        <div id="sideMenuOverlay" class="side-menu-overlay"></div>
+
+        <div id="sideMenu" class="side-menu">
+        <div class="side-menu-header">
+            <svg id="closeMenuBtn" class="close-icon" viewBox="0 0 24 24" width="36" height="36" stroke="#827887" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </div>
+
+        <div class="side-menu-content">
+            <div class="menu-item-wrapper">
+            <div class="menu-btn" onclick="toggleDropdown('modulesDropdown', this)">
+                Modules
+                <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div id="modulesDropdown" class="dropdown-content modules-bg">
+                <a href="../Module%201/index.html">Module 1</a>
+                <a href="../Module%202/index.html">Module 2</a>
+                <a href="../Module%203/index.html">Module 3</a>
+                <a href="../Module%204/index.html">Module 4</a>
+                <a href="../Module%205/index.html">Module 5</a>
+                <a href="../Module%206/index.html">Module 6</a>
+                <a href="../Module%207/index.html">Module 7</a>
+                <a href="../Module%208/index.html">Module 8</a>
+            </div>
+            </div>
+
+            <div class="menu-item-wrapper">
+            <div class="menu-btn" onclick="toggleDropdown('algosDropdown', this)">
+                Algorithms
+                <svg class="chevron" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div id="algosDropdown" class="dropdown-content algos-bg">
+                <a href="../CPU%20Scheduling/index.html">CPU Scheduling</a>
+                <a href="../Memory%20Management/index.html">Memory Management</a>
+                <a href="../Virtual%20Memory/index.html">Virtual Memory</a>
+                <a href="../Mass%20Storage%20Management/index.html">Mass Management</a>
+            </div>
+            </div>
+        </div>
+        
+        <div class="side-menu-footer">
+            <div class="menu-item-wrapper">
+            <a href="../About%20Us/index.html" class="menu-btn link-btn">About Us</a>
+            </div>
+            
+            <div class="menu-item-wrapper">
+            <a href="../Bibliography/index.html" class="menu-btn link-btn">Bibliography</a>
+            </div>
+        </div>
+        </div>

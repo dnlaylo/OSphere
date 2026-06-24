@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght=300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alexandria', sans-serif;
+}
+
+/* =========================================================
+   SIDE MENU & OVERLAY
+   ========================================================= */
+
+/* Prevents scrolling when menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Blur overlay */
+.side-menu-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.side-menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Side Menu Container */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  width: clamp(280px, 80vw, 360px);
+  height: 100vh;
+  background-color: #373535;
+  z-index: 10001;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu-content {
+  flex-grow: 1;      
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.side-menu-footer {
+  margin-top: auto;
+  padding-top: 20px; 
+  flex-shrink: 0;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+/* Header / Close Button */
+.side-menu-header {
+  margin-bottom: 40px;
+}
+.close-icon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.close-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Menu Item Containers */
+.menu-item-wrapper {
+  margin-bottom: 16px;
+}
+
+/* Main Buttons (Modules, Algorithms, Links) */
+.menu-btn {
+  background-image: url('../Side\ Menu/Assets/Text Container.png'); /* Ensure path is correct */
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  color: #827887;
+  border-radius: 12px;
+  user-select: none;
+}
+
+.menu-btn.link-btn {
+  text-decoration: none;
+  display: block; /* Overrides flex for simple links */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  padding: 10px 24px 16px 24px;
+  margin-top: 4px;
+  border-radius: 12px;
+}
+
+.dropdown-content.open {
+  display: flex;
+}
+
+/* Specific Dropdown Backgrounds */
+.modules-bg {
+  background-image: url('../Side\ Menu/Assets/Modules items Container.png'); /* Ensure path is correct */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.algos-bg {
+  background-image: url('../Side\ Menu/Assets/algo items Container.png'); /* Ensure path is correct */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Dropdown Links */
+.dropdown-content a {
+  color: #827887;
+  text-decoration: none;
+  padding: 12px 0;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  color: #ffffff;
+}
+
+/* Chevron Animation */
+.chevron {
+  transition: transform 0.3s ease;
+}
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+/* Width of the scrollbar */
+.side-menu-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track background */
+.side-menu-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+}
+
+/* Handle (the moving part) */
+.side-menu-content::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: 100px; 
+    border: 2px solid transparent; 
+}
+
+/* Handle hover state */
+.side-menu-content::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+/* Optional: Support for Firefox */
+.side-menu-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) #373535;
+}
