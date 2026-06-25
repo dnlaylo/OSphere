@@ -74,6 +74,7 @@
   align-items: center;
   padding: 0 clamp(16px, 3vw, 26px);
   flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Nav line below bar — hidden, was decorative SVG at design width */
