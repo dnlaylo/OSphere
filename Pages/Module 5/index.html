@@ -188,15 +188,26 @@
             </div>
 
             <div class="module5-thq-step-by-step-elm">
-              <span class="module5-thq-text-elm290">Step-by-Step</span>
-              <div class="module5-thq-text-elm283">
-                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>1. Staging in the Input Queue:</strong> New program jobs are initialized directly on the hard drive disk storage, waiting inside a temporary holding queue known as the input queue until main memory space becomes available.</div>
-                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>2. Long-Term Scheduler Admission:</strong> The long-term scheduler evaluates the available capacity of physical RAM and decides exactly when to approve and load a waiting program from the input queue into the next open partition block.</div>
-                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>3. Waiting in the Ready Queue:</strong> Once safely written into Main Memory, the program officially becomes an active resident process (such as Process A, B, or C) and enters the ready queue, signifying it is ready for immediate processing.</div>
-                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>4. CPU Scheduler Allocation:</strong> The short-term CPU scheduler quickly pulls the prepared process out of the ready queue and maps its execution context directly onto the central processor core.</div>
-                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>5. Runtime Hardware Access:</strong> As the instructions run inside the CPU hardware, the processor actively links back to the assigned main memory block to retrieve program instructions and manipulate variable storage locations.</div>
-                <div class="indent-level-1"><strong>6. Process Termination and Memory Clean Up:</strong> When execution reaches completion, the process finishes and terminates; the memory manager instantly reclaims that exact chunk of RAM, marking the block as completely available for new jobs arriving from the storage queue.</div>
-              </div>
+              <span class="module5-thq-text-elm113">Step-by-Step Paging Hardware Action</span>
+              <span class="module5-thq-text-elm111" style="display: block; text-align: justify;">
+                <div style="margin-bottom: 8px;"><span><span>When a program runs, the CPU generates a logical address. The hardware converts it into a physical address through these precise steps:</span></span></div>
+                
+                <div style="padding-left: 16px; margin-bottom: 6px;">
+                  <span><span><strong>1. Separate the Address:</strong> The hardware splits the logical address into two parts: a page number ($p$) and a page offset ($d$).</span></span>
+                </div>
+                
+                <div style="padding-left: 16px; margin-bottom: 6px;">
+                  <span><span><strong>2. Look up the Page Table:</strong> The system uses the page number ($p$) as an index to find the matching entry in the page table.</span></span>
+                </div>
+                
+                <div style="padding-left: 16px; margin-bottom: 6px;">
+                  <span><span><strong>3. Extract the Frame:</strong> From that page table entry, the hardware extracts the specific physical frame number ($f$) where that page is living.</span></span>
+                </div>
+                
+                <div style="padding-left: 16px;">
+                  <span><span><strong>4. Combine and Locate:</strong> The hardware combines the frame number ($f$) with the original page offset ($d$) to create the final physical address. The CPU can now read or write data directly from that frame spot.</span></span>
+                </div>
+              </span>
             </div>
 
             <div class="module5-thq-motivationof-memory-management-elm">
