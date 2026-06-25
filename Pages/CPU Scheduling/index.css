@@ -11,7 +11,6 @@
 html { 
   line-height: 1.15; 
   scroll-behavior: smooth; 
-  background-color: #0d0f14; 
 }
 
 body {
@@ -19,10 +18,11 @@ body {
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
+  background-color: #141419;
   color: #fff;
-  background-color: #0d0f14; 
   min-height: 100vh;
 }
+
 
 *, *::before, *::after { box-sizing: border-box; }
 p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption { margin:0; padding:0; }
@@ -46,29 +46,29 @@ img { display:block; }
 /* =========================================================
    BACKGROUND LAYER (Now truly fixed and performant)
    ========================================================= */
-.mainpage-thq-background-elm {
-  position: fixed; 
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1; 
-  pointer-events: none;
-  overflow: hidden;
+.algorithm-thq-bg-elm {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+ 
+.algorithm-thq-mainpageblackbg-elm {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
 }
 
-.mainpage-thq-gradient-elm,
-.mainpage-thq-dots-elm,
-.mainpage-thq-dots2-elm {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.algorithm-thq-assets13-elm{
+    width: 100%;
+    height: 100%;
+    opacity: 0.10;
+    position: absolute;
+    object-fit: cover;
 }
-
-.mainpage-thq-dots-elm  { opacity: 0.10; }
-.mainpage-thq-dots2-elm { opacity: 0.10; }
 
 .algorithm-container1 {
     width: 100%;
@@ -81,6 +81,8 @@ img { display:block; }
     justify-content: flex-start;
 
     overflow-x: hidden;
+    position: relative;
+    z-index: 1;
 }
 
 .algorithm-thq-algorithm-elm {
@@ -129,6 +131,7 @@ img { display:block; }
     padding-top: 100px;
     padding-bottom: 40px;
     position: relative;
+    z-index: 1;
 }
 
 /* ==========================================================================
