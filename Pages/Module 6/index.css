@@ -6,6 +6,7 @@ body {
   font-weight: 200;
   color: #fff;
   background: #0d0d14;
+  text-align: justify;
 }
 *, *::before, *::after { box-sizing: border-box; }
 p, li, ul, pre, div, h1, h2, h3, h4, h5, h6,
@@ -388,4 +389,17 @@ img { display: block; }
   .module6-thq-header-elm { height: clamp(80px, 18vw, 120px); }
   .module6-card { padding: clamp(16px, 4vw, 28px) clamp(14px, 3vw, 24px); }
   .module6-thq-o-sphere-logo-elm { width: 75%; }
+}
+
+/* Structural Indentation Helpers */
+.indent-level-1 {
+  display: block;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.indent-level-2 {
+  display: block;
+  padding-left: 48px;
+  margin-bottom: 6px;
 }

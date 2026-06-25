@@ -155,136 +155,61 @@
                       
             <div class="module6-thq-overview-elm">
               <span class="module6-thq-text-elm362">Overview:</span>
-              <span class="module6-thq-text-elm363">
-                <span>
-                  This module explains how an Operating Systems uses virtual
-                  memory to overcome the limitations of physical RAM and allow
-                  large programs to execute efficiently even when they are only
-                  partially loaded into memory. It introduces the concept of
-                  virtual memory as an abstraction that separates logical and
-                  physical address spaces, enabling partial process loading,
-                  memory sharing, and improved system utilization. The module
-                  further explores demand paging as the primary implementation
-                  technique, where pages are loaded only when referenced, and
-                  discusses key mechanisms such as page tables, valid/invalid
-                  bits, and page faults. It also covers performance
-                  considerations using effective access time and examines page
-                  replacement strategies like FIFO, Optimal, LRU, LFU, and
-                  Second Chance, along with frame allocation policies that
-                  determine how memory is distributed among processes. Overall,
-                  the module highlights how modern operating systems efficiently
-                  manage limited memory resources to support multitasking and
-                  high performance.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm363">
+                <div class="indent-level-1">This module explains how an Operating Systems uses virtual memory to overcome the limitations of physical RAM and allow large programs to execute efficiently even when they are only partially loaded into memory. It introduces the concept of virtual memory as an abstraction that separates logical and physical address spaces, enabling partial process loading, memory sharing, and improved system utilization. The module further explores demand paging as the primary implementation technique, where pages are loaded only when referenced, and discusses key mechanisms such as page tables, valid/invalid bits, and page faults. It also covers performance considerations using effective access time and examines page replacement strategies like FIFO, Optimal, LRU, LFU, and Second Chance, along with frame allocation policies that determine how memory is distributed among processes. Overall, the module highlights how modern operating systems efficiently manage limited memory resources to support multitasking and high performance.</div>
+              </div>
             </div>
 
             <div class="module6-thq-memory-managementandthe-needfor-virtual-memory-elm">
               <span class="module6-thq-text-elm361">Memory Management and the Need for Virtual Memory</span>
-              <span class="module6-thq-text-elm357">
-                <span>
-                  Memory management is a fundamental function of the operating
-                  system that controls how memory resources are allocated, used,
-                  and protected among multiple processes. Modern operating
-                  systems support multiprogramming, where several processes
-                  execute concurrently and compete for limited physical memory
-                  resources.
-                </span>
-                <br /><br />
-                <span>
-                  As programs become larger and more complex, it becomes
-                  impractical to require every process to be loaded entirely
-                  into main memory before execution. Many portions of a program
-                  may not be needed immediately or may never be used during a
-                  particular execution. Examples include error-handling
-                  routines, rarely used program features, dynamically allocated
-                  data structures, and optional modules.
-                </span>
-                <br /><br />
-                <span>
-                  To overcome the limitations imposed by physical memory size,
-                  operating systems implement virtual memory, which allows
-                  processes to execute even when only part of their address
-                  space is resident in main memory.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm357">
+                <div class="indent-level-1" style="margin-bottom: 16px;">Memory management is a fundamental function of the operating system that controls how memory resources are allocated, used, and protected among multiple processes. Modern operating systems support multiprogramming, where several processes execute concurrently and compete for limited physical memory resources.</div>
+                <div class="indent-level-1" style="margin-bottom: 16px;">As programs become larger and more complex, it becomes impractical to require every process to be loaded entirely into main memory before execution. Many portions of a program may not be needed immediately or may never be used during a particular execution. Examples include error-handling routines, rarely used program features, dynamically allocated data structures, and optional modules.</div>
+                <div class="indent-level-1">To overcome the limitations imposed by physical memory size, operating systems implement virtual memory, which allows processes to execute even when only part of their address space is resident in main memory.</div>
+              </div>
             </div>
 
             <div class="module6-thq-virtual-memory-elm">
               <span class="module6-thq-text-elm356">Virtual Memory</span>
-              <span class="module6-thq-text-elm352">
-                <span>
-                  Virtual memory is a memory management technique that creates
-                  the illusion of a large, contiguous address space for each
-                  process, independent of the actual size of physical memory.
-                </span>
-                <br />
-                <span>
-                  It separates a process's logical address space from the
-                  system's physical address space. Memory references generated
-                  by the CPU use logical addresses, which are translated into
-                  physical addresses through hardware and operating-system
-                  mechanisms.
-                </span>
-                <br />
-                <span>
-                  Only the portions of a process that are actively needed are
-                  maintained in physical memory, while the remaining portions
-                  reside on secondary storage until they are required.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm352">
+                <div class="indent-level-1" style="margin-bottom: 12px;">Virtual memory is a memory management technique that creates the illusion of a large, contiguous address space for each process, independent of the actual size of physical memory.</div>
+                <div class="indent-level-1" style="margin-bottom: 12px;">It separates a process's logical address space from the system's physical address space. Memory references generated by the CPU use logical addresses, which are translated into physical addresses through hardware and operating-system mechanisms.</div>
+                <div class="indent-level-1">Only the portions of a process that are actively needed are maintained in physical memory, while the remaining portions reside on secondary storage until they are required.</div>
+              </div>
             </div>
 
             <div class="module6-thq-characteristicsof-virtual-memory-elm">
               <span class="module6-thq-text-elm351">Characteristics of Virtual Memory</span>
-              <span class="module6-thq-text-elm332">
-                <span class="module6-thq-text-elm333">Virtual memory possesses several important characteristics:</span><br /><br />
-                <span class="module6-thq-text-elm335">Partial Process Loading</span><br />
-                <span class="module6-thq-text-elm337">
-                  Only the required portions of a program need to be loaded
-                  into memory for execution. Unused pages remain on secondary
-                  storage until referenced.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm338">Large Logical Address Space</span><br />
-                <span class="module6-thq-text-elm340">
-                  The logical address space available to a process can be
-                  significantly larger than the available physical memory.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm341">Memory Sharing</span><br />
-                <span class="module6-thq-text-elm343">
-                  Multiple processes may share portions of their address
-                  spaces, such as shared libraries, without duplicating memory
-                  contents.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm345">Process Isolation and Protection</span><br />
-                <span class="module6-thq-text-elm347">
-                  Address translation mechanisms provide protection by
-                  preventing processes from directly accessing each other's
-                  memory spaces.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm348">Efficient Memory Utilization</span><br />
-                <span>
-                  Physical memory is allocated only to actively used portions
-                  of processes, reducing waste and improving system
-                  efficiency.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm332">
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 16px;">Virtual memory possesses several important characteristics:</div>
+                
+                <div class="indent-level-1"><strong>Partial Process Loading</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">Only the required portions of a program need to be loaded into memory for execution. Unused pages remain on secondary storage until referenced.</div>
+                
+                <div class="indent-level-1"><strong>Large Logical Address Space</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">The logical address space available to a process can be significantly larger than the available physical memory.</div>
+                
+                <div class="indent-level-1"><strong>Memory Sharing</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">Multiple processes may share portions of their address spaces, such as shared libraries, without duplicating memory contents.</div>
+                
+                <div class="indent-level-1"><strong>Process Isolation and Protection</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">Address translation mechanisms provide protection by preventing processes from directly accessing each other's memory spaces.</div>
+                
+                <div class="indent-level-1"><strong>Efficient Memory Utilization</strong></div>
+                <div class="indent-level-2">Physical memory is allocated only to actively used portions of processes, reducing waste and improving system efficiency.</div>
+              </div>
             </div>
 
             <div class="module6-thq-benefits-elm">
               <span class="module6-thq-text-elm331">Benefits</span>
-              <span class="module6-thq-text-elm324">
-                <span>• Enables execution of programs larger than physical memory.</span><br />
-                <span>• Increases the degree of multiprogramming.</span><br />
-                <span>• Improves overall CPU utilization.</span><br />
-                <span>• Reduces memory waste by loading only required pages.</span><br />
-                <span>• Supports memory sharing among processes.</span><br />
-                <span>• Simplifies process creation through mechanisms such as copy-on-write and shared pages.</span>
-              </span>
+              <div class="module6-thq-text-elm324">
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Enables execution of programs larger than physical memory.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Increases the degree of multiprogramming.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Improves overall CPU utilization.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Reduces memory waste by loading only required pages.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Supports memory sharing among processes.</div>
+                <div class="indent-level-1">• Simplifies process creation through mechanisms such as copy-on-write and shared pages.</div>
+              </div>
             </div>
 
             <div class="module6-thq-virtual-memorythatislargerthana-physical-memory-elm">
@@ -296,296 +221,177 @@
 
             <div class="module6-thq-virtual-memory-implementation-elm">
               <span class="module6-thq-text-elm314">Virtual Memory Implementation:</span>
-              <span class="module6-thq-text-elm315">
-                <span class="module6-thq-text-elm316">• Demand Paging</span><br />
-                <span class="module6-thq-text-elm317">
-                  • Memory is divided into pages, and pages are loaded into memory
-                  only when they are referenced.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm318">• Demand Segmentation</span><br />
-                <span class="module6-thq-text-elm319">
-                  • Segments are brought into memory only when required by a process.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm320">• Paged Segmentation</span><br />
-                <span style="font-weight: 200;">
-                  • Combines the advantages of segmentation and paging by dividing
-                  segments into pages. The primary implementation discussed in
-                  this module is Demand Paging.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm315">
+                <div class="indent-level-1"><strong>• Demand Paging</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">Memory is divided into pages, and pages are loaded into memory only when they are referenced.</div>
+                
+                <div class="indent-level-1"><strong>• Demand Segmentation</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">Segments are brought into memory only when required by a process.</div>
+                
+                <div class="indent-level-1"><strong>• Paged Segmentation</strong></div>
+                <div class="indent-level-2">Combines the advantages of segmentation and paging by dividing segments into pages. The primary implementation discussed in this module is Demand Paging.</div>
+              </div>
             </div>
 
-            <div class="module6-thq-demand-paging-elm">
-              <span class="module6-thq-text-elm313">Demand Paging</span>
-              <span class="module6-thq-text-elm310">
-                <span>
-                  Demand paging is a virtual memory strategy in which pages are
-                  loaded into physical memory only when they are first accessed
-                  by a process.
-                </span>
-                <br /><br />
-                <span>
-                  Rather than loading all pages during program startup, the
-                  operating system postpones loading until a page reference
-                  actually occurs.
-                </span>
-              </span>
-            </div>
-
-            <div class="module6-thq-lazy-paper-elm">
+              <div class="module6-thq-lazy-paper-elm">
               <span class="module6-thq-text-elm309">Lazy Pager</span>
-              <span class="module6-thq-text-elm306">
-                <span>Demand paging employs a lazy pager, sometimes called a lazy swapper.</span>
-                <br /><br />
-                <span>
-                  The lazy pager delays transferring pages from secondary
-                  storage to main memory until the page is explicitly
-                  referenced. As a result, pages that are never accessed are
-                  never loaded.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm306">
+                <div class="indent-level-1" style="margin-bottom: 12px;">Demand paging employs a lazy pager, sometimes called a lazy swapper.</div>
+                <div class="indent-level-1">The lazy pager delays transferring pages from secondary storage to main memory until the page is explicitly referenced. As a result, pages that are never accessed are never loaded.</div>
+              </div>
             </div>
 
             <div class="module6-thq-page-table-support-elm">
               <span class="module6-thq-text-elm304">Page Table Support</span>
-              <span class="module6-thq-text-elm301">
-                <span>
-                  Demand paging relies on page tables that maintain information
-                  about each page.
-                </span>
-                <br /><br />
-                <span>
-                  Each page-table entry contains status information indicating
-                  whether a page currently resides in physical memory.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm301">
+                <div class="indent-level-1" style="margin-bottom: 12px;">Demand paging relies on page tables that maintain information about each page.</div>
+                <div class="indent-level-1">Each page-table entry contains status information indicating whether a page currently resides in physical memory.</div>
+              </div>
             </div>
 
             <div class="module6-thq-stepsin-demand-paging-elm">
               <span class="module6-thq-text-elm300">Steps in Demand Paging</span>
-              <span class="module6-thq-text-elm280">
-                <span class="module6-thq-text-elm281">1. Page Selection: </span>
-                <span class="module6-thq-text-elm282">
-                    When a process is to be swapped into memory, the pager
-                  predicts which pages are likely to be used before the process
-                  is swapped out again.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm284">2. Loading Required Pages: </span>
-                <span class="module6-thq-text-elm285">
-                    The pager loads only the necessary pages into physical
-                  memory, reducing swap time and minimizing the amount of
-                  physical memory required for process execution.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm286">
-                  By loading only the pages that are likely to be used, demand
-                  paging improves memory utilization and reduces the overhead
-                  associated with loading an entire process into memory.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm288">Valid Bit: </span>
-                <span class="module6-thq-text-elm290">A valid bit indicates that:</span><br />
-                <span class="module6-thq-text-elm291">1. The page belongs to the process's logical address space.</span><br />
-                <span class="module6-thq-text-elm292">2. The page is currently resident in physical memory.</span>
-                <br /><br />
-                <span class="module6-thq-text-elm294">Invalid Bit: </span>
-                <span style="font-weight: 200;">An invalid bit indicates either:</span><br />
-                <span style="font-weight: 200;">1. The page is not currently resident in memory, or</span><br />
-                <span style="font-weight: 200;">2. The referenced address is not part of the process's legal address space.</span><br />
-                <span style="font-weight: 200;">3. An access to an invalid page entry triggers a page-fault exception.</span>
-              </span>
+              <div class="module6-thq-text-elm280">
+                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>1. Page Selection:</strong> When a process is to be swapped into memory, the pager predicts which pages are likely to be used before the process is swapped out again.</div>
+                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>2. Loading Required Pages:</strong> The pager loads only the necessary pages into physical memory, reducing swap time and minimizing the amount of physical memory required for process execution.</div>
+                <div class="indent-level-1" style="margin-bottom: 24px;">By loading only the pages that are likely to be used, demand paging improves memory utilization and reduces the overhead associated with loading an entire process into memory.</div>
+                
+                <div class="indent-level-1"><strong>Valid Bit:</strong> A valid bit indicates that:</div>
+                <div class="indent-level-2">1. The page belongs to the process's logical address space.</div>
+                <div class="indent-level-2" style="margin-bottom: 24px;">2. The page is currently resident in physical memory.</div>
+                
+                <div class="indent-level-1"><strong>Invalid Bit:</strong> An invalid bit indicates either:</div>
+                <div class="indent-level-2">1. The page is not currently resident in memory, or</div>
+                <div class="indent-level-2">2. The referenced address is not part of the process's legal address space.</div>
+                <div class="indent-level-2">3. An access to an invalid page entry triggers a page-fault exception.</div>
+              </div>
             </div>
 
             <div class="module6-thq-page-faults-elm">
               <span class="module6-thq-text-elm279">Page Faults</span>
-              <span class="module6-thq-text-elm276">
-                <span>
-                  A page fault is an exception generated when a process
-                  references a page that is not currently resident in physical
-                  memory.
-                </span>
-                <br /><br />
-                <span>
-                  Page faults are expected events in demand-paging systems and
-                  are handled by the operating system.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm276">
+                <div class="indent-level-1" style="margin-bottom: 12px;">A page fault is an exception generated when a process references a page that is not currently resident in physical memory.</div>
+                <div class="indent-level-1">Page faults are expected events in demand-paging systems and are handled by the operating system.</div>
+              </div>
             </div>
 
             <div class="module6-thq-whathappenswhenareferencedpageisnotinmemory-elm">
               <span class="module6-thq-text-elm275">What Happens When a Referenced Page is Not in Memory?</span>
-              <span class="module6-thq-text-elm273">
-                <span>
-                  When a process attempts to access a page that is not currently
-                  resident in physical memory, a page fault occurs. The hardware
-                  detects that the page-table entry is marked invalid for the
-                  current memory access and generates a page-fault exception.
-                  Control is then transferred to the operating system, which
-                  determines whether the reference is valid and retrieves the
-                  required page if necessary. Control is then transferred to the
-                  operating system, which determines whether the memory
-                  reference is valid and takes the necessary actions to retrieve
-                  the required page from secondary storage.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm273">
+                <div class="indent-level-1">When a process attempts to access a page that is not currently resident in physical memory, a page fault occurs. The hardware detects that the page-table entry is marked invalid for the current memory access and generates a page-fault exception. Control is then transferred to the operating system, which determines whether the reference is valid and retrieves the required page if necessary. Control is then transferred to the operating system, which determines whether the memory reference is valid and takes the necessary actions to retrieve the required page from secondary storage.</div>
+              </div>
             </div>
 
             <div class="module6-thq-page-fault-handling-procedure-elm">
               <span class="module6-thq-text-elm272">Page Fault Handling Procedure</span>
-              <span class="module6-thq-text-elm262">
-                <span>When a page fault occurs:</span><br /><br />
-                <span>• Hardware detects the invalid page-table entry.</span><br />
-                <span>• Control transfers to the operating system.</span><br />
-                <span>• The operating system verifies that the memory reference is valid.</span><br />
-                <span>• The required page is located on backing storage.</span><br />
-                <span>• A free frame is obtained, or a victim page is selected if no free frame exists.</span><br />
-                <span>• The required page is loaded into memory.</span><br />
-                <span>• The page table is updated.</span><br />
-                <span>• The interrupted instruction is restarted.</span>
-              </span>
+              <div class="module6-thq-text-elm262">
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 12px;">When a page fault occurs:</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Hardware detects the invalid page-table entry.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Control transfers to the operating system.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• The operating system verifies that the memory reference is valid.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• The required page is located on backing storage.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• A free frame is obtained, or a victim page is selected if no free frame exists.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• The required page is loaded into memory.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• The page table is updated.</div>
+                <div class="indent-level-1">• The interrupted instruction is restarted.</div>
+              </div>
             </div>
 
             <div class="module6-thq-pure-demand-paging-elm">
               <span class="module6-thq-text-elm261">Pure Demand Paging</span>
-              <span class="module6-thq-text-elm258">
-                <span>
-                  Pure demand paging refers to a system in which no pages are
-                  loaded into memory before execution begins.
-                </span>
-                <br /><br />
-                <span>
-                  Every page enters memory only after its first reference,
-                  causing an initial page fault for each page that must be
-                  accessed.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm258">
+                <div class="indent-level-1" style="margin-bottom: 12px;">Pure demand paging refers to a system in which no pages are loaded into memory before execution begins.</div>
+                <div class="indent-level-1">Every page enters memory only after its first reference, causing an initial page fault for each page that must be accessed.</div>
+              </div>
             </div>
 
             <div class="module6-thq-performanceof-demand-paging-elm">
               <span class="module6-thq-text-elm256">Performance of Demand Paging</span>
-              <span class="module6-thq-text-elm252">
-                <span>
-                  The efficiency of a demand-paging system depends largely on
-                  the page-fault rate. Memory accesses typically require nanoseconds 
-                  or microseconds, whereas servicing a page fault may require milliseconds
-                  because secondary storage operations are involved.
-                </span>
-                <br /><br />
-                <span>
-                  Consequently, even a relatively small page-fault rate can
-                  significantly impact system performance.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm252">
+                <div class="indent-level-1" style="margin-bottom: 12px;">The efficiency of a demand-paging system depends largely on the page-fault rate. Memory accesses typically require nanoseconds or microseconds, whereas servicing a page fault may require milliseconds because secondary storage operations are involved.</div>
+                <div class="indent-level-1">Consequently, even a relatively small page-fault rate can significantly impact system performance.</div>
+              </div>
             </div>
 
-            <div class="module6-thq-effective-access-time-eat-elm">
+          <div class="module6-thq-effective-access-time-eat-elm">
               <span class="module6-thq-text-elm251">Effective Access Time (EAT)</span>
-                  <span class="module6-thq-text-elm234">
-                    <span>
-                      EAT is the average time required to access memory, considering
-                      both normal memory accesses and page faults.
-                    </span>
-                    <br /><br />
-                    <span>The page-fault rate (p) is defined as:</span><br />
-                    <span>• 0 ≤ p ≤ 1</span><br />
-                    <span>• p = 0: No page faults occur.</span><br />
-                    <span>• p = 1: Every memory reference causes a page fault.</span>
-                    <br /><br />
-                    <span>The EAT is calculated as:</span><br/><br />
-                    <img src="Assets/Figures/Fig 2.svg" alt="Figure 2: Effective Access Time calculation logic map" class="module6-thq-fig2-elm" /><br/>
-                    <span>where:</span><br/>
-                    <span>• p = page-fault rate</span><br />
-                    <span>• ma = memory access time </span><br /><br />
-                    <span>The page fault service time includes:</span><br />
-                    <span>• Page fault handling overhead</span><br />
-                    <span>• Page replacement (swap out, if required)</span><br />
-                    <span>• Page loading (swap in)</span><br />
-                    <span>• Process restart overhead</span>
-                    <br /><br />
-                    <span>
-                      As the page-fault rate increases, EAT increases significantly
-                      because page fault servicing is much slower than normal memory
-                      access.
-                    </span>
-                  </span>
+              <div class="module6-thq-text-elm234">
+                <div class="indent-level-1" style="margin-bottom: 12px;">EAT is the average time required to access memory, considering both normal memory accesses and page faults.</div>
+                <div class="indent-level-1">The page-fault rate (p) is defined as:</div>
+                <div class="indent-level-2">• 0 ≤ p ≤ 1</div>
+                <div class="indent-level-2">• p = 0: No page faults occur.</div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">• p = 1: Every memory reference causes a page fault.</div>
+                
+                <div class="indent-level-1">The EAT is calculated as:</div>
+                <div class="indent-level-1" style="margin: 16px 0;"><img src="Assets/Figures/Fig 2.svg" alt="Figure 2: Effective Access Time calculation logic map" class="module6-thq-fig2-elm" /></div>
+                
+                <div class="indent-level-1">where:</div>
+                <div class="indent-level-2">• p = page-fault rate</div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">• ma = memory access time</div>
+                
+                <div class="indent-level-1">The page fault service time includes:</div>
+                <div class="indent-level-2">• Page fault handling overhead</div>
+                <div class="indent-level-2">• Page replacement (swap out, if required)</div>
+                <div class="indent-level-2">• Page loading (swap in)</div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">• Process restart overhead</div>
+                
+                <div class="indent-level-1">As the page-fault rate increases, EAT increases significantly because page fault servicing is much slower than normal memory access.</div>
+              </div>
             </div>
 
             <div class="module6-thq-page-replacement-elm">
               <span class="module6-thq-text-elm233">Page Replacement</span>
-              <span class="module6-thq-text-elm215">
-                <span class="module6-thq-text-elm216">Need for Page Replacement</span><br />
-                <span class="module6-thq-text-elm218">
-                  Page replacement is required when a page fault occurs and no
-                  free memory frames are available. The operating system must
-                  remove an existing page from memory to create space for the
-                  required page.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm219">Options When No Free Frames Are Available</span><br />
-                <span class="module6-thq-text-elm221">
-                  When a page fault occurs and no free memory frames remain
-                  available, the operating system must choose one of the
-                  following actions:
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm222">1. Terminate the Process</span><br />
-                <span class="module6-thq-text-elm223">• Stop the process that caused the page fault.</span><br />
-                <span class="module6-thq-text-elm224">
-                  • This option is rarely used because it defeats the purpose of
-                  demand paging, which aims to improve CPU utilization and
-                  throughput.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm226">2. Swap Out a Process</span><br />
-                <span class="module6-thq-text-elm227">• Temporarily move an entire process to secondary storage.</span><br />
-                <span class="module6-thq-text-elm228">
-                  • This frees all frames used by the process but reduces the
-                  degree of multiprogramming.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm229">3. Perform Page Replacement</span><br />
-                <span style="font-weight: 200;">• Select a victim page currently residing in memory.</span><br />
-                <span style="font-weight: 200;">• Remove the victim page and load the required page into the freed frame.</span><br />
-                <span style="font-weight: 200;">• This is the most common approach in modern operating systems.</span>
-              </span>
+              <div class="module6-thq-text-elm215">
+                <div class="indent-level-1"><strong>Need for Page Replacement</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 16px;">Page replacement is required when a page fault occurs and no free memory frames are available. The operating system must remove an existing page from memory to create space for the required page.</div>
+                
+                <div class="indent-level-1"><strong>Options When No Free Frames Are Available</strong></div>
+                <div class="indent-level-2" style="margin-bottom: 12px;">When a page fault occurs and no free memory frames remain available, the operating system must choose one of the following actions:</div>
+                
+                <div class="indent-level-1"><strong>1. Terminate the Process</strong></div>
+                <div class="indent-level-2">• Stop the process that caused the page fault.</div>
+                <div class="indent-level-2" style="margin-bottom: 12px;">• This option is rarely used because it defeats the purpose of demand paging, which aims to improve CPU utilization and throughput.</div>
+                
+                <div class="indent-level-1"><strong>2. Swap Out a Process</strong></div>
+                <div class="indent-level-2">• Temporarily move an entire process to secondary storage.</div>
+                <div class="indent-level-2" style="margin-bottom: 12px;">• This frees all frames used by the process but reduces the degree of multiprogramming.</div>
+                
+                <div class="indent-level-1"><strong>3. Perform Page Replacement</strong></div>
+                <div class="indent-level-2">• Select a victim page currently residing in memory.</div>
+                <div class="indent-level-2">• Remove the victim page and load the required page into the freed frame.</div>
+                <div class="indent-level-2">• This is the most common approach in modern operating systems.</div>
+              </div>
             </div>
 
             <div class="module6-thq-how-page-replacementworks-elm">
               <span class="module6-thq-text-elm214">How Page Replacement Works</span>
-              <span class="module6-thq-text-elm206">
-                <span>1. Locate the required page in secondary storage (backing store).</span><br />
-                <span>2. Check for a free frame.</span><br />
-                <span>&nbsp;&nbsp;&nbsp;• If a free frame exists, load the page into it.</span><br />
-                <span>&nbsp;&nbsp;&nbsp;• If no free frame exists, use a page replacement algorithm to select a victim page.</span><br />
-                <span>3. If the victim page has been modified, write it back to disk and update the page table.</span><br />
-                <span>4. Load the required page into the freed frame and update the page table.</span><br />
-                <span>5. Restart the interrupted process.</span>
-              </span>
+              <div class="module6-thq-text-elm206">
+                <div class="indent-level-1" style="margin-bottom: 6px;">1. Locate the required page in secondary storage (backing store).</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">2. Check for a free frame.</div>
+                <div class="indent-level-2" style="margin-bottom: 6px;">• If a free frame exists, load the page into it.</div>
+                <div class="indent-level-2" style="margin-bottom: 6px;">• If no free frame exists, use a page replacement algorithm to select a victim page.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">3. If the victim page has been modified, write it back to disk and update the page table.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">4. Load the required page into the freed frame and update the page table.</div>
+                <div class="indent-level-1">5. Restart the interrupted process.</div>
+              </div>
             </div>
 
             <div class="module6-thq-victim-page-elm">
               <span class="module6-thq-text-elm205">Victim Page</span>
-              <span class="module6-thq-text-elm203">
-                <span>
-                  The page selected for removal is called the victim page. If it
-                  has been modified since being loaded into memory, it must be
-                  written back to secondary storage before replacement.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm203">
+                <div class="indent-level-1">The page selected for removal is called the victim page. If it has been modified since being loaded into memory, it must be written back to secondary storage before replacement.</div>
+              </div>
             </div>
 
             <div class="module6-thq-objectivesof-page-replacement-elm">
               <span class="module6-thq-text-elm202">Objectives of Page Replacement</span>
-              <span class="module6-thq-text-elm196">
-                <span>A page replacement algorithm aims to:</span><br />
-                <span>• Minimize page faults</span><br />
-                <span>• Maximize memory utilization</span><br />
-                <span>• Reduce disk I/O operations</span><br />
-                <span>• Improve overall system performance</span>
-              </span>
+              <div class="module6-thq-text-elm196">
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 8px;">A page replacement algorithm aims to:</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Minimize page faults</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Maximize memory utilization</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• Reduce disk I/O operations</div>
+                <div class="indent-level-1">• Improve overall system performance</div>
+              </div>
             </div>
 
             <div class="module6-thq-implementation-requirements-elm">
@@ -597,71 +403,53 @@
               </span>
             </div>
 
-            <div class="module6-thq-page-replacement-algorithms-elm">
+            <div class="module6-thq-implementation-requirements-elm">
+              <span class="module6-thq-text-elm195">Implementation Requirements</span>
+              <div class="module6-thq-text-elm191">
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 12px;">Demand paging requires:</div>
+                <div class="indent-level-1" style="margin-bottom: 8px;">• A page replacement algorithm to determine which page should be replaced.</div>
+                <div class="indent-level-1;">• A frame allocation algorithm to determine how many memory frames are assigned to each process.</div>
+              </div>
+            </div>
+
+             <div class="module6-thq-page-replacement-algorithms-elm">
               <span class="module6-thq-text-elm190">Page Replacement Algorithms (PRA)</span>
-              <span class="module6-thq-text-elm187">
-                <span>
-                  Page Replacement Algorithms (PRAs) are techniques used by the
-                  operating system to determine which memory page should be
-                  selected as the victim page when a page fault occurs and no
-                  free memory frames are available.
-                </span>
-                <br /><br />
-                <span>
-                  The primary objective of a page replacement algorithm is to
-                  minimize the page-fault rate while maintaining efficient
-                  memory utilization and reducing disk input/output operations.
-                  Because page-fault handling involves accessing secondary
-                  storage, a lower page-fault rate generally results in better
-                  system performance.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm187">
+                <div class="indent-level-1" style="margin-bottom: 12px;">Page Replacement Algorithms (PRAs) are techniques used by the operating system to determine which memory page should be selected as the victim page when a page fault occurs and no free memory frames are available.</div>
+                <div class="indent-level-1">The primary objective of a page replacement algorithm is to minimize the page-fault rate while maintaining efficient memory utilization and reducing disk input/output operations. Because page-fault handling involves accessing secondary storage, a lower page-fault rate generally results in better system performance.</div>
+              </div>
             </div>
 
             <div class="module6-thq-frame2-typesof-mft-elm">
               <span class="module6-thq-text-elm185">Reference String Evaluation</span>
-              <span class="module6-thq-text-elm177">
-                <span>
-                  The effectiveness of a page replacement algorithm is evaluated
-                  by analyzing its performance on a reference string, which is a
-                  sequence of page references generated during program
-                  execution.
-                </span>
-                <br /><br />
-                <span>Evaluation typically involves the following steps:</span><br />
-                <span>1. Select a reference string.</span><br />
-                <span>2. Assume a fixed number of available memory frames.</span><br />
-                <span>3. Apply the page replacement algorithm to the reference string.</span><br />
-                <span>4. Count the total number of page faults generated.</span><br /><br />
-                <span>
-                  The algorithm that produces the lowest number of page faults
-                  for a given workload is generally considered more efficient.
-                </span>
-              </span>
+              <div class="module6-thq-text-elm177">
+                <div class="indent-level-1" style="margin-bottom: 12px;">The effectiveness of a page replacement algorithm is evaluated by analyzing its performance on a reference string, which is a sequence of page references generated during program execution.</div>
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 8px;">Evaluation typically involves the following steps:</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">1. Select a reference string.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">2. Assume a fixed number of available memory frames.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">3. Apply the page replacement algorithm to the reference string.</div>
+                <div class="indent-level-1" style="margin-bottom: 16px;">4. Count the total number of page faults generated.</div>
+                <div class="indent-level-1">The algorithm that produces the lowest number of page faults for a given workload is generally considered more efficient.</div>
+              </div>
             </div>
 
             <div class="module6-thq-first-in-first-out-elm">
               <span class="module6-thq-text-elm175">First In First Out (FIFO)</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module6-thq-text-elm173">
-                    This is the simplest page replacement algorithm. In this
-                    algorithm, the operating system keeps track of all pages in
-                    the memory in a queue, the oldest page is in the front of the
-                    queue. When a page needs to be replaced, the page in the front
-                    of the queue is selected for removal.
-                  </span>
+                  <div class="module6-thq-text-elm173" style="margin-bottom: 16px;">
+                    This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced, the page in the front of the queue is selected for removal.
+                  </div>
                   <img src="Assets/Figures/Fig 3.svg" alt="Figure 3: First-In, First-Out page replacement algorithm timeline" class="module6-thq-fig3-elm" />
-                  <span class="module6-thq-text-elm165 module6-card">
-                    <br />
-                    <span><b>Example:</b> Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3-page frames. Find the number of page faults using FIFO Page Replacement Algorithm.</span><br /><br />
-                    <span>• Initially, all frames are empty. When pages 1, 3, and 0 are referenced, they are loaded into the available frames, resulting in 3 page faults.</span><br />
-                    <span>• When page 3 is referenced next, it is already present in memory, resulting in a hit and no page fault.</span><br />
-                    <span>• When page 5 is referenced, it is not present in memory. Following the FIFO algorithm, the oldest page (1) is removed from the top frame, and the remaining pages shift up, allowing page 5 to be loaded into memory, resulting in 1 page fault.</span><br />
-                    <span>• When page 6 is referenced, it is also not present in memory. The next oldest page (3) is removed from the top frame as the pages shift up, and page 6 is loaded into memory, resulting in 1 page fault.</span><br />
-                    <span>• Finally, when page 3 is referenced again, it is no longer present in memory. Following FIFO, the oldest page currently in memory (0) is removed from the top frame, and page 3 is loaded at the bottom, resulting in 1 page fault.</span><br /><br />
-                    <span><b>Total Page Faults = 6</b></span>
-                  </span>
+                  <div class="module6-thq-text-elm165 module6-card">
+                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Example:</strong> Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3-page frames. Find the number of page faults using FIFO Page Replacement Algorithm.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all frames are empty. When pages 1, 3, and 0 are referenced, they are loaded into the available frames, resulting in 3 page faults.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced next, it is already present in memory, resulting in a hit and no page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 5 is referenced, it is not present in memory. Following the FIFO algorithm, the oldest page (1) is removed from the top frame, and the remaining pages shift up, allowing page 5 to be loaded into memory, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 6 is referenced, it is also not present in memory. The next oldest page (3) is removed from the top frame as the pages shift up, and page 6 is loaded into memory, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• Finally, when page 3 is referenced again, it is no longer present in memory. Following FIFO, the oldest page currently in memory (0) is removed from the top frame, and page 3 is loaded at the bottom, resulting in 1 page fault.</div>
+                    <div class="indent-level-1"><strong>Total Page Faults = 6</strong></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -670,65 +458,42 @@
               <span class="module6-thq-text-elm152">Optimal Page Replacement</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module6-thq-text-elm153">
-                    <span class="module6-thq-text-elm154">
-                      In this algorithm, pages are replaced which would not be used
-                      for the longest duration of time in the future.
-                    </span>
-                    <br /><br />
-                    <span class="module6-thq-text-elm155">Example: </span>
-                    <span>
-                      Consider the page references 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0,
-                      3, 2, 3 with 4-page frame. Find number of page faults using
-                      Optimal Page Replacement Algorithm.
-                    </span>
-                  </span>
+                  <div class="module6-thq-text-elm153" style="margin-bottom: 16px;">
+                    <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, pages are replaced which would not be used for the longest duration of time in the future.</div>
+                    <div class="indent-level-1"><strong>Example:</strong> Consider the page references 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frame. Find number of page faults using Optimal Page Replacement Algorithm.</div>
+                  </div>
                   <img src="Assets/Figures/Fig 4.svg" alt="Figure 4: Optimal Page Replacement sequence diagram" class="module6-thq-fig4-elm" />
-                  <span class="module6-thq-text-elm157 module6-card">
-                    <span>• Initially, all slots are empty, so when 7 0 1 2 are allocated to the empty slots ---> 4 Page faults</span><br />
-                    <span>• The next reference, 0, is already present in memory and results in a hit. When page 3 is referenced, page 7 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault. </span><br />
-                    <span>• The next reference, 0, is already present in memory and results in a hit. When page 4 is referenced, page 1 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault. </span><br /><br />
-                    <span><b>Total Page Faults = 6</b></span><br /><br />
-                    <span>All remaining page references are already present in memory and therefore result in hits. </span><br />
-                    <span style="text-decoration: underline;">Optimal page replacement</span>
-                    <span>
-                      is perfect, but not possible in practice as the operating
-                      system cannot know future requests. The use of Optimal Page
-                      replacement is to set up a benchmark so that other replacement
-                      algorithms can be analyzed against it.
-                    </span>
-                  </span>
+                  <div class="module6-thq-text-elm157 module6-card">
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all slots are empty, so when 7 0 1 2 are allocated to the empty slots ---> 4 Page faults</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit. When page 3 is referenced, page 7 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• The next reference, 0, is already present in memory and results in a hit. When page 4 is referenced, page 1 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">All remaining page references are already present in memory and therefore result in hits.</div>
+                    <div class="indent-level-1"><span style="text-decoration: underline;">Optimal page replacement</span> is perfect, but not possible in practice as the operating system cannot know future requests. The use of Optimal Page replacement is to set up a benchmark so that other replacement algorithms can be analyzed against it.</div>
+                  </div>
                 </div>
               </div>
+            </div>
             </div>
 
             <div class="module6-thq-least-recently-used-elm">
               <span class="module6-thq-text-elm139">Least Recently Used (LRU)</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module6-thq-text-elm140">
-                    <span class="module6-thq-text-elm141">
-                      In this algorithm, a page will be replaced which is least recently used.
-                    </span>
-                    <br /><br />
-                    <span class="module6-thq-text-elm142">Example: </span>
-                    <span>
-                      Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2,
-                      3, 0, 3, 2, 3 with 4-page frames. Find number of page faults
-                      using LRU Page Replacement Algorithm.
-                    </span>
-                  </span>
+                  <div class="module6-thq-text-elm140" style="margin-bottom: 16px;">
+                    <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, a page will be replaced which is least recently used.</div>
+                    <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames. Find number of page faults using LRU Page Replacement Algorithm.</div>
+                  </div>
                   <img src="Assets/Figures/Fig 5.svg" alt="Figure 5: Least Recently Used page replacement reference example" class="module6-thq-fig5-elm" />
-                  <span class="module6-thq-text-elm144 module6-card">
-                    <br />
-                    <span>• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into the available frames, resulting in 4 page faults.</span><br />
-                    <span>• The next reference, 0, is already present in memory, resulting in a hit.</span><br />
-                    <span>• When page 3 is referenced, page 7 is the least recently used page and is therefore replaced, resulting in 1 page fault.</span><br />
-                    <span>• The next reference, 0, is already present in memory and results in a hit.</span><br />
-                    <span>• When page 4 is referenced, page 1 is the least recently used page and is replaced, resulting in 1 page fault.</span><br />
-                    <span>• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</span><br /><br />
-                    <span><b>Total Page Faults = 6</b></span>
-                  </span>
+                  <div class="module6-thq-text-elm144 module6-card">
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into the available frames, resulting in 4 page faults.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory, resulting in a hit.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, page 7 is the least recently used page and is therefore replaced, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, page 1 is the least recently used page and is replaced, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</div>
+                    <div class="indent-level-1"><strong>Total Page Faults = 6</strong></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -737,34 +502,21 @@
               <span class="module6-thq-text-elm138">LRU Approximation (Second Chance / Clock)</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module6-thq-text-elm134">
-                    <span class="module6-thq-text-elm135">
-                      In this algorithm, the operating system approximates the
-                      behavior of the Least Recently Used (LRU) algorithm by using a
-                      reference bit associated with each page. A page with a
-                      reference bit of 0 is selected for replacement. If a page has
-                      a reference bit of 1, it is given a second chance and its
-                      reference bit is cleared before the search continues.
-                    </span>
-                    <br /><br />
-                    <span class="module6-thq-text-elm136">Example: </span>
-                    <span>
-                      Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4,
-                      2, 3, 0, 3, 2, 3 with 4-page frames.
-                    </span>
-                  </span>
+                  <div class="module6-thq-text-elm134" style="margin-bottom: 16px;">
+                    <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, the operating system approximates the behavior of the Least Recently Used (LRU) algorithm by using a reference bit associated with each page. A page with a reference bit of 0 is selected for replacement. If a page has a reference bit of 1, it is given a second chance and its reference bit is cleared before the search continues.</div>
+                    <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames.</div>
+                  </div>
                   <img src="Assets/Figures/Fig 6.svg" alt="Figure 6: Second Chance Clock Page Replacement mechanics" class="module6-thq-fig6-elm" />
-                  <span class="module6-thq-text-elm125 module6-card">
-                    <br />
-                    <span>• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</span><br />
-                    <span>• The next reference, 0, is already present in memory, resulting in a hit.</span><br />
-                    <span>• When page 3 is referenced, no free frame is available. The clock pointer begins scanning the pages. Pages whose reference bit is 1 are given a second chance and their reference bits are cleared to 0. The first page encountered with a reference bit of 0 is page 7, which is selected for replacement. This results in 1 page fault.</span><br />
-                    <span>• The next reference, 0, is already present in memory and results in a hit.</span><br />
-                    <span>• When page 4 is referenced, the clock pointer again scans the pages starting from its current position. Page 0 (reference bit = 1) is given a second chance and its bit is cleared to 0. The pointer moves forward, and the first page encountered with a reference bit of 0 is page 1, which is selected as the victim page. Therefore, page 1 is replaced by page 4, resulting in 1 page fault.</span><br />
-                    <span>• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</span><br /><br />
-                    <span><b>Total Page Faults = 6</b></span><br /><br />
-                    <span>Note: LRU Approximation uses less overhead than true LRU while providing similar performance in many workloads.</span>
-                  </span>
+                  <div class="module6-thq-text-elm125 module6-card">
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory, resulting in a hit.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, no free frame is available. The clock pointer begins scanning the pages. Pages whose reference bit is 1 are given a second chance and their reference bits are cleared to 0. The first page encountered with a reference bit of 0 is page 7, which is selected for replacement. This results in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, the clock pointer again scans the pages starting from its current position. Page 0 (reference bit = 1) is given a second chance and its bit is cleared to 0. The pointer moves forward, and the first page encountered with a reference bit of 0 is page 1, which is selected as the victim page. Therefore, page 1 is replaced by page 4, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
+                    <div class="indent-level-1"><em>Note: LRU Approximation uses less overhead than true LRU while providing similar performance in many workloads.</em></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -773,63 +525,41 @@
               <span class="module6-thq-text-elm110">Counting-Based Page Replacement (LFU)</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module6-thq-text-elm111">
-                    <span class="module6-thq-text-elm112">
-                      Counting-Based Page Replacement maintains a reference counter
-                      for each page. The page with the smallest reference count is
-                      selected for replacement. This approach is known as Least
-                      Frequently Used (LFU) page replacement.
-                    </span>
-                    <br /><br />
-                    <span class="module6-thq-text-elm113">Example: </span>
-                    <span>
-                      Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2,
-                      3, 0, 3, 2, 3 with 4-page frames.
-                    </span>
-                  </span>
+                  <div class="module6-thq-text-elm111" style="margin-bottom: 16px;">
+                    <div class="indent-level-1" style="margin-bottom: 8px;">Counting-Based Page Replacement maintains a reference counter for each page. The page with the smallest reference count is selected for replacement. This approach is known as Least Frequently Used (LFU) page replacement.</div>
+                    <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames.</div>
+                  </div>
                   <img src="Assets/Figures/Fig 7.svg" alt="Figure 7: LFU algorithm with FIFO tie breaking illustration table" class="module6-thq-fig7-elm" />
-                  <span class="module6-thq-text-elm115 module6-card">
-                    <br />
-                    <span>• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</span><br />
-                    <span>• The next reference, 0, is already present in memory. Its reference count is increased, resulting in a hit.</span><br />
-                    <span>• When page 3 is referenced, all frames are occupied. Under the LFU policy, the page with the smallest reference count is selected for replacement. Since page 7 has the lowest reference count, it is replaced by page 3, resulting in 1 page fault.</span><br />
-                    <span>• The next reference, 0, is already present in memory and therefore results in a hit.</span><br />
-                    <span>• When page 4 is referenced, pages 1, 2, and 3 have the same lowest reference count. Because of this tie, FIFO (First-In, First-Out) is used as the tie-breaking rule. Among these pages, page 1 is the oldest and is therefore selected for replacement. Page 1 is replaced by page 4, resulting in 1 page fault.</span><br />
-                    <span>• The remaining references (2, 3, 0, 3, 2, and 3) are already present in memory. Their reference counters are updated accordingly, and all of these references result in hits.</span><br /><br />
-                    <span><b>Total Page Faults = 6</b></span><br /><br />
-                    <span>Note: In this example, Optimal, LRU, and LRU Approximation (Second Chance) produce the same number of page faults. This does not mean that all page replacement algorithms always perform equally. The number of page faults depends on the reference string, the number of available frames, and the replacement strategy used. Different workloads may produce significantly different results for each algorithm.</span>
-                  </span>
+                  <div class="module6-thq-text-elm115 module6-card">
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory. Its reference count is increased, resulting in a hit.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, all frames are occupied. Under the LFU policy, the page with the smallest reference count is selected for replacement. Since page 7 has the lowest reference count, it is replaced by page 3, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and therefore results in a hit.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, pages 1, 2, and 3 have the same lowest reference count. Because of this tie, FIFO (First-In, First-Out) is used as the tie-breaking rule. Among these pages, page 1 is the oldest and is therefore selected for replacement. Page 1 is replaced by page 4, resulting in 1 page fault.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, and 3) are already present in memory. Their reference counters are updated accordingly, and all of these references result in hits.</div>
+                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
+                    <div class="indent-level-1"><em>Note: In this example, Optimal, LRU, and LRU Approximation (Second Chance) produce the same number of page faults. This does not mean that all page replacement algorithms always perform equally. The number of page faults depends on the reference string, the number of available frames, and the replacement strategy used. Different workloads may produce significantly different results for each algorithm.</em></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <img src="Assets/Figures/Fig 8.svg" alt="Figure 8: Counting-Based Page Replacement structural properties" class="module6-thq-fig8-elm" />
-            <div class="module6-thq-frame-allocation-elm">
-              <span class="module6-thq-text-elm109">Frame Allocation</span>
-              <span class="module6-thq-text-elm100">
-                <span class="module6-thq-text-elm101">
-                  Frame allocation is the process by which the operating system
-                  distributes available physical memory frames among active
-                  processes. Proper frame allocation is essential for efficient
-                  memory management and system performance in a virtual memory
-                  environment.
-                </span>
-                <br /><br />
-                <span class="module6-thq-text-elm102">Characteristics of Frame Allocation</span><br />
-                <span>• The operating system cannot allocate more frames than the total number of frames available in physical memory.</span><br />
-                <span>• The number of frames assigned to a process directly affects its performance. Allocating fewer frames generally increases the page-fault rate.</span><br />
-                <span>• The minimum number of frames required by a process is determined by the system architecture and instruction requirements.</span><br />
-                <span>• The maximum number of frames that can be allocated depends on available physical memory and the needs of other processes.</span><br /><br />
-                <span>
-                  Effective frame allocation helps balance memory usage among
-                  processes, minimizes page faults, and improves overall system
-                  performance. To support demand paging, the operating system
-                  must employ a frame allocation strategy that determines how
-                  available frames are distributed among competing processes.
-                </span>
-              </span>
+
+            <div class="algo-summary-container">
+              <img src="Assets/Figures/Fig 8.svg" alt="Summary comparison of FIFO, Optimal, LRU, Second Chance, and LFU page replacement algorithms" class="module6-thq-fig8-elm" /> <br/>
             </div>
 
-          </div>     
+            <div class="module6-thq-frame-allocation-elm">
+              <span class="module6-thq-text-elm109">Frame Allocation</span>
+              <div class="module6-thq-text-elm100">
+                <div class="indent-level-1" style="margin-bottom: 16px;">Frame allocation is the process by which the operating system distributes available physical memory frames among active processes. Proper frame allocation is essential for efficient memory management and system performance in a virtual memory environment.</div>
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 12px;">Characteristics of Frame Allocation</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• The operating system cannot allocate more frames than the total number of frames available in physical memory.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• The number of frames assigned to a process directly affects its performance. Allocating fewer frames generally increases the page-fault rate.</div>
+                <div class="indent-level-1" style="margin-bottom: 6px;">• The minimum number of frames required by a process is determined by the system architecture and instruction requirements.</div>
+                <div class="indent-level-1" style="margin-bottom: 16px;">• The maximum number of frames that can be allocated depends on available physical memory and the needs of other processes.</div>
+                <div class="indent-level-1">Effective frame allocation helps balance memory usage among processes, minimizes page faults, and improves overall system performance. To support demand paging, the operating system must employ a frame allocation strategy that determines how available frames are distributed among competing processes.</div>
+              </div>
+            </div>
                
           <div class="module6-thq-footer-elm">
             <img

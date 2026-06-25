@@ -6,6 +6,7 @@ body {
   font-weight: 200;
   color: #fff;
   background: #0d0d14;
+  text-align: justify;
 }
 *, *::before, *::after { box-sizing: border-box; }
 p, li, ul, pre, div, h1, h2, h3, h4, h5, h6,
