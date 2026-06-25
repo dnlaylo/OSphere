@@ -246,6 +246,7 @@ img { display: block; }
 .module1-thq-text-elm219,
 .module1-thq-text-elm211,
 .module1-thq-text-elm204,
+.module1-thq-text-elm190,
 .module1-thq-text-elm200,
 .module1-thq-text-elm194,
 .module1-thq-text-elm188,
@@ -273,6 +274,7 @@ img { display: block; }
    SHARED: BODY TEXT (24px in original)
    ========================================================= */
 .module1-thq-text-elm310,
+.module1-thq-text-elm309,
 .module1-thq-text-elm305,
 .module1-thq-text-elm294,
 .module1-thq-text-elm286,
@@ -758,4 +760,25 @@ img { display: block; }
   display: block;
   padding-left: 48px;
   margin-bottom: 6px;
+}
+
+.module1-thq-text-elm292,
+.module1-thq-text-elm284 {
+  font-size: clamp(24px, 3.5vw, 30px) !important;   
+}
+
+.module1-thq-list-elm{
+  font-size: clamp(24px, 3.5vw, 20px) !important;   
+}
+
+.module1-thq-bullets-elm7{
+  font-size: clamp(24px, 3.5vw, 20px) !important;   
+}
+
+.module1-thq-text-elm245{
+  font-size: clamp(24px, 3.5vw, 20px) !important;   
+}
+
+.module1-thq-text-elm161{
+  font-size: clamp(24px, 3.5vw, 20px) !important;  
 }
