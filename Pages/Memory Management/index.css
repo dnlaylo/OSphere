@@ -20,15 +20,17 @@ body {
    PAGE STRUCTURE & BACKGROUND
 ========================= */
 
-.algorithm-container1{
+.algorithm-container1 {
     width: 100%;
-    display: flex;
     min-height: 100vh;
-    align-items: center;
+
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+
+    align-items: center;
+    justify-content: flex-start;
+
     overflow-x: hidden;
-    background-color: #0d0f14;
 }
 
 .algorithm-thq-algorithm-elm{
