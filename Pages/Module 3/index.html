@@ -185,34 +185,28 @@
                 on a disk), whereas a process is an active entity.
               </span>
               <span class="module3-thq-text-elm228">
-                <span>• Although two or more processes may be associated with the exact same program, they are strictly considered separate execution sequences by the Operating System.</span><br />
-                <span>• Examples of this distinction: Several distinct users running different copies of an email program simultaneously, or a single user invoking a text editor several times. Each instance is a unique process.</span>
-              </span>
+               <div class="indent-level-1">• Although two or more processes may be associated with the exact same program, they are strictly considered separate execution sequences by the Operating System.</div>
+                <div class="indent-level-1">• Examples of this distinction: Several distinct users running different copies of an email program simultaneously, or a single user invoking a text editor several times. Each instance is a unique process.</div>
+           </span>
             </div>
 
             <div class="module3-thq-standard-examplesof-processes-elm">
-              <span class="module3-thq-text-elm227">Standard Examples of Processes:</span>
-              <span class="module3-thq-text-elm222">
-                <span>• Compiler</span><br />
-                <span>• Word-processor</span><br />
-                <span>• Email program</span><br />
-                <span>• Sending output to a printer</span>
-              </span>
+              <span class="module3-thq-text-elm227" style="display: block; margin-bottom: 8px;">Standard Examples of Processes:</span>
+              <div class="module3-thq-text-elm222" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;">• Compiler</div>
+              <div class="module3-thq-text-elm222" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;">• Word-processor</div>
+              <div class="module3-thq-text-elm222" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;">• Email program</div>
+              <div class="module3-thq-text-elm222" style="display: block; padding-left: 24px; text-align: justify;">• Sending output to a printer</div>
             </div>
 
             <div class="module3-thq-whata-process-includes-elm module3-card">
-              <span class="module3-thq-text-elm220">What a Process Includes?</span>
-              <span class="module3-thq-text-elm210">
-                <span class="module3-thq-text-elm211">A process is structurally composed of the following four components:</span><br />
-                <span class="module3-thq-text-elm212">• Text Section:</span>
-                <span class="module3-thq-text-elm213">Contains the executable program code.</span><br />
-                <span class="module3-thq-text-elm214">• Data Section:</span>
-                <span class="module3-thq-text-elm215">Contains global and static variables.</span><br />
-                <span class="module3-thq-text-elm216">• Stack:</span>
-                <span class="module3-thq-text-elm217">Contains temporary data generated during execution (e.g., function/method parameters, return addresses, and local variables).</span><br />
-                <span class="module3-thq-text-elm218">• Program Counter:</span>
-                <span>A specialized marker that specifies the exact next instruction to be executed by the process.</span>
-              </span>
+              <span class="module3-thq-text-elm220" style="display: block; margin-bottom: 12px;">What a Process Includes?</span>
+              <div class="module3-thq-text-elm210" style="display: block; text-align: justify;">
+                <div class="module3-thq-text-elm211" style="display: block; margin-bottom: 12px; text-align: justify;">A process is structurally composed of the following four components:</div>
+                <div class="module3-thq-text-elm210" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 8px;"><strong>• Text Section:</strong> Contains the executable program code.</div>
+                <div class="module3-thq-text-elm210" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 8px;"><strong>• Data Section:</strong> Contains global and static variables.</div>
+                <div class="module3-thq-text-elm210" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 8px;"><strong>• Stack:</strong> Contains temporary data generated during execution (e.g., function/method parameters, return addresses, and local variables).</div>
+                <div class="module3-thq-text-elm210" style="display: block; padding-left: 24px; text-align: justify;"><strong>• Program Counter:</strong> A specialized marker that specifies the exact next instruction to be executed by the process.</div>
+              </div>
             </div>
 
             <div class="module3-thq-pcb-elm">
@@ -235,21 +229,14 @@
               <div class="content-row">
                 <div class="text-content">
                   <span class="module3-thq-text-elm187">
-                    <span class="module3-thq-text-elm188">Every process is managed via its PCB, which specifically tracks:</span><br />
-                    <span class="module3-thq-text-elm189">1. Process State:</span>
-                    <span class="module3-thq-text-elm191">The current operational status of the process.</span><br />
-                    <span class="module3-thq-text-elm192">2. Program Counter:</span>
-                    <span class="module3-thq-text-elm193">The memory address of the next instruction to be executed for this process. (This information must be saved when an interrupt occurs to allow the process to be successfully continued afterward).</span><br />
-                    <span class="module3-thq-text-elm194">3. CPU Registers:</span>
-                    <span class="module3-thq-text-elm195">Hardware components including accumulators, index registers, stack pointers, and general-purpose registers. (This register data must also be saved during an interrupt to allow seamless resumption later).</span><br />
-                    <span class="module3-thq-text-elm196">4. CPU Scheduling Information:</span>
-                    <span class="module3-thq-text-elm198">Includes process priority metrics, pointers to various scheduling queues, and other relevant scheduling parameters.</span><br />
-                    <span class="module3-thq-text-elm199">5. Memory-Management Information:</span>
-                    <span class="module3-thq-text-elm201">Includes the direct values of the base and limit registers, page tables, or segment tables.</span><br />
-                    <span class="module3-thq-text-elm202">6. Accounting Information:</span>
-                    <span class="module3-thq-text-elm203">Tracks the amount of CPU time and real time used, time limits, account numbers, and job or process numbers.</span><br />
-                    <span class="module3-thq-text-elm204">7. I/O Status Information:</span>
-                    <span>Includes a running list of I/O devices allocated to this specific process, a list of its open files, and related configurations.</span>
+                 <div style="margin-bottom: 12px;">Every process is managed via its PCB, which specifically tracks:</div>
+                  <div class="indent-level-1"><strong>1. Process State:</strong> The current operational status of the process.</div>
+                 <div class="indent-level-1"><strong>2. Program Counter:</strong> The memory address of the next instruction to be executed for this process. (This information must be saved when an interrupt occurs to allow the process to be successfully continued afterward).</div>
+                  <div class="indent-level-1"><strong>3. CPU Registers:</strong> Hardware components including accumulators, index registers, stack pointers, and general-purpose registers. (This register data must also be saved during an interrupt to allow seamless resumption later).</div>
+                  <div class="indent-level-1"><strong>4. CPU Scheduling Information:</strong> Includes process priority metrics, pointers to various scheduling queues, and other relevant scheduling parameters.</div>
+                  <div class="indent-level-1"><strong>5. Memory-Management Information:</strong> Includes the direct values of the base and limit registers, page tables, or segment tables.</div>
+                  <div class="indent-level-1"><strong>6. Accounting Information:</strong> Tracks the amount of CPU time and real time used, time limits, account numbers, and job or process numbers.</div>
+                  <div class="indent-level-1"><strong>7. I/O Status Information:</strong> Includes a running list of I/O devices allocated to this specific process, a list of its open files, and related configurations.</div>
                   </span>
                 </div>
                 <img src="Assets/Figures/Fig 1.svg" alt="Process Control Block Diagram" class="module3-thq-fig1-elm" />
@@ -259,17 +246,12 @@
             <div class="module3-thq-core-process-states-elm">
               <span class="module3-thq-text-elm186">Core Process States</span>
               <span class="module3-thq-text-elm174">
-                <span class="module3-thq-text-elm175">As a process executes, it continuously changes its operational state:</span><br />
-                <span class="module3-thq-text-elm176">• New:</span>
-                <span class="module3-thq-text-elm177">The process is currently being created.</span><br />
-                <span class="module3-thq-text-elm178">• Ready:</span>
-                <span class="module3-thq-text-elm179">The process is waiting to be assigned to a processor.</span><br />
-                <span class="module3-thq-text-elm180">• Running:</span>
-                <span class="module3-thq-text-elm181">Instructions belonging to the process are actively being executed.</span><br />
-                <span class="module3-thq-text-elm182">• Waiting (Blocked):</span>
-                <span class="module3-thq-text-elm183">The process is waiting for some specific event to occur (such as an I/O completion or receiving a signal).</span><br />
-                <span class="module3-thq-text-elm184">• Terminated:</span>
-                <span>The process has completely finished its execution.</span>
+                 <div style="margin-bottom: 12px;">As a process executes, it continuously changes its operational state:</div>
+                <div class="indent-level-1"><strong>• New:</strong> The process is currently being created.</div>
+                <div class="indent-level-1"><strong>• Ready:</strong> The process is waiting to be assigned to a processor.</div>
+                <div class="indent-level-1"><strong>• Running:</strong> Instructions belonging to the process are actively being executed.</div>
+                <div class="indent-level-1"><strong>• Waiting (Blocked):</strong> The process is waiting for some specific event to occur (such as an I/O completion or receiving a signal).</div>
+                <div class="indent-level-1"><strong>• Terminated:</strong> The process has completely finished its execution.</div>
               </span>
             </div>
 
@@ -278,81 +260,92 @@
                 <img src="Assets/Figures/Fig 2.svg" alt="Standard 5-State Process Diagram" class="module3-thq-fig2-elm" />
               </div>
             </div>
-
+            
             <div class="module3-thq-process-events-elm">
-              <div class="module3-thq-process-creation-events-elm">
-                <span class="module3-thq-text-elm173">Process Creation Events</span>
-                <span class="module3-thq-text-elm166">
-                  <span>There are 4 principal events that trigger the creation of a process:</span><br />
-                  <span>a. System initialization.</span><br />
-                  <span>Execution of a process creation system call by an actively running process.</span><br />
-                  <span>b. A direct user request to create a new process.</span><br />
-                  <span>c. Initiation of a background batch job.</span><br />
-                  <span>• State Entry: On creation, the process immediately enters the New state, and its initial control block (e.g., PCB1) is allocated.</span>
-                </span>
-              </div>
-              <div class="module3-thq-process-termination-events-elm" style="margin-top: 32px;">
-                <span class="module3-thq-text-elm165">Process Termination Events</span>
-                <span class="module3-thq-text-elm159">
-                  <span>A process transitions to the Terminated state due to one of 4 specific causes:</span><br />
-                  <span>a. Normal exit (Voluntary).</span><br />
-                  <span>b. Error exit (Voluntary).</span><br />
-                  <span>c. Fatal error (Involuntary).</span><br />
-                  <span>d. Killed by another process (Involuntary).</span>
-                </span>
+            <div class="module3-thq-process-creation-events-elm">
+              <span class="module3-thq-text-elm173" style="display: block; margin-bottom: 12px;">Process Creation Events</span>
+              
+              <div class="module3-thq-text-elm166" style="display: block; text-align: justify; width: 100%;">
+                <div style="margin-bottom: 12px;">There are 4 principal events that trigger the creation of a process:</div>
+                <div class="module3-thq-text-elm166" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 6px;"><strong>a.</strong> System initialization.</div>
+                <div class="module3-thq-text-elm166" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 6px;"><strong>b.</strong> Execution of a process creation system call by an actively running process.</div>
+                <div class="module3-thq-text-elm166" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 6px;"><strong>c.</strong> A direct user request to create a new process.</div>
+                <div class="module3-thq-text-elm166" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 12px;"><strong>d.</strong> Initiation of a background batch job.</div>
+                <div class="module3-thq-text-elm166" style="display: block; padding-left: 24px; text-align: justify; margin-top: 12px;">• <strong>State Entry:</strong> On creation, the process immediately enters the New state, and its initial control block (e.g., PCB1) is allocated.</div>
               </div>
             </div>
 
-            <div class="module3-thq-scheduling-queues-elm module3-card">
-              <span class="module3-thq-text-elm158">Process Scheduling Queues and Schedulers</span>
-              <span class="module3-thq-text-elm157">
-                <span class="module3-text171">1. </span><span class="module3-text172">The Three Scheduling Queues</span><br />
-                <span class="module3-text174">• As processes move through their lifecycle, they are organized into targeted queues:</span><br />
-                <span class="module3-text176">• Job Queue:</span>
-                <span class="module3-text177">The set consisting of all processes currently residing in the entire system.</span><br />
-                <span class="module3-text179">• Ready Queue:</span>
-                <span class="module3-text180">The set of all processes residing in main memory that are completely ready and waiting to execute.</span><br />
-                <span class="module3-text182">• Device Queues:</span>
-                <span>The sets of processes strictly waiting for a specific, individual I/O device to become available.</span>
-              </span>
-              <img src="Assets/Figures/Fig 3.svg" alt="Process migration diagram" class="module3-thq-fig3-elm" />
-              <span class="module3-thq-text-elm141" style="position: relative; top: auto; left: auto; width: 100%;">
-                <span class="module3-thq-text-elm142">2. Types of System Schedulers</span><br />
-                <span class="module3-thq-text-elm143">• Long-Term Scheduler (or Job Scheduler):</span>
-                <span class="module3-thq-text-elm144">Selects which processes should be moved from the disk's input queue and brought into main memory's ready queue.</span><br />
-                <span class="module3-thq-text-elm145">• Directly controls the degree of multiprogramming (the total number of processes residing in memory).</span><br />
-                <span class="module3-thq-text-elm146">• Invoked very infrequently (intervals of seconds or minutes), meaning it can afford to be relatively slow.</span><br />
-                <span class="module3-thq-text-elm147">• Must maintain a balanced Process Mix: It balances I/O-bound processes (which spend more time doing I/O than computations and have many short CPU bursts) and CPU-bound processes (which spend more time doing computations and have a few, very long CPU bursts).</span><br />
-                <span class="module3-thq-text-elm148">• Short-Term Scheduler (or CPU Scheduler):</span>
-                <span class="module3-thq-text-elm149">Selects which process residing in the main memory's ready queue should be executed next and allocates the CPU to it.</span><br />
-                <span class="module3-thq-text-elm150">• Invoked very frequently (intervals of milliseconds), meaning it must be extremely fast to maintain system performance.</span><br />
-                <span class="module3-thq-text-elm151">• Medium-Term Scheduler:</span>
-                <span class="module3-thq-text-elm152">An intermediate-level scheduling system utilized in time-sharing or virtual memory environments.</span><br />
-                <span class="module3-thq-text-elm153">• Removes processes entirely from main memory and saves them temporarily to disk (Swapping), reducing the degree of multiprogramming when memory is constrained. The processes are reintroduced later to resume exactly where they left off.</span><br /><br />
-                <span class="module3-thq-text-elm154">3. The Dispatcher</span><br />
-                <span class="module3-thq-text-elm155">• Dispatcher:</span>
-                <span>A specific module that gives physical control of the CPU to the exact process selected by the short-term scheduler.</span>
-              </span>
+            <div class="module3-thq-process-termination-events-elm" style="margin-top: 32px;">
+              <span class="module3-thq-text-elm165" style="display: block; margin-bottom: 12px;">Process Termination Events</span>
+              
+              <div class="module3-thq-text-elm159" style="display: block; text-align: justify; width: 100%;">
+                <div style="margin-bottom: 12px;">A process transitions to the Terminated state due to one of 4 specific causes:</div>
+                <div class="module3-thq-text-elm159" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 6px;"><strong>a.</strong> Normal exit (Voluntary).</div>
+                <div class="module3-thq-text-elm159" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 6px;"><strong>b.</strong> Error exit (Voluntary).</div>
+                <div class="module3-thq-text-elm159" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 6px;"><strong>c.</strong> Fatal error (Involuntary).</div>
+                <div class="module3-thq-text-elm159" style="display: block; padding-left: 24px; text-align: justify;"><strong>d.</strong> Killed by another process (Involuntary).</div>
+              </div>
+            </div>
+
+          </div>
+
+             <div class="module3-thq-scheduling-queues-elm module3-card">
+                <span class="module3-thq-text-elm158">Process Scheduling Queues and Schedulers</span>
+                
+                <div class="module3-thq-text-elm157" style="display: block; margin-top: 12px;">
+                  <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">1. The Three Scheduling Queues</div>
+                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 12px;">• As processes move through their lifecycle, they are organized into targeted queues:</div>
+                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• <strong>Job Queue:</strong> The set consisting of all processes currently residing in the entire system.</div>
+                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• <strong>Ready Queue:</strong> The set of all processes residing in main memory that are completely ready and waiting to execute.</div>
+                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 16px;">• <strong>Device Queues:</strong> The sets of processes strictly waiting for a specific, individual I/O device to become available.</div>
+                </span>
+                </div>
+
+
+                <img src="Assets/Figures/Fig 3.svg" alt="Process migration diagram" class="module3-thq-fig3-elm" />
+
+              <div class="module3-thq-text-elm141" style="display: block; position: relative; top: auto; left: auto; width: 100%; margin-top: 24px;">
+                <div class="module3-thq-text-elm142" style="margin-bottom: 12px;">2. Types of System Schedulers</div>
+                
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;"><strong>• Long-Term Scheduler (or Job Scheduler):</strong> Selects which processes should be moved from the disk's input queue and brought into main memory's ready queue.</div>
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• Directly controls the degree of multiprogramming (the total number of processes residing in memory).</div>
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• Invoked very infrequently (intervals of seconds or minutes), meaning it can afford to be relatively slow.</div>
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 12px;">• Must maintain a balanced Process Mix: It balances I/O-bound processes and CPU-bound processes.</div>
+
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;"><strong>• Short-Term Scheduler (or CPU Scheduler):</strong> Selects which process residing in the main memory's ready queue should be executed next and allocates the CPU to it.</div>
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 12px;">• Invoked very frequently (intervals of milliseconds), meaning it must be extremely fast to maintain system performance.</div>
+
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;"><strong>• Medium-Term Scheduler:</strong> An intermediate-level scheduling system utilized in time-sharing or virtual memory environments.</div>
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 20px;">• Removes processes entirely from main memory and saves them temporarily to disk (Swapping), reducing the degree of multiprogramming when memory is constrained. The processes are reintroduced later to resume exactly where they left off.</div>
+
+                <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">3. The Dispatcher</div>
+                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify;"><strong>• Dispatcher:</strong> A specific module that gives physical control of the CPU to the exact process selected by the short-term scheduler.</div>
+              </div>
+              
             </div>
 
             <div class="module3-thq-execution-journey-elm module3-card">
-              <span class="module3-thq-text-elm140">Step-by-Step Execution Journey of a Process</span>
-              <span class="module3-thq-text-elm125">
-                <span class="module3-thq-text-elm126">1. Creation:</span>
-                <span class="module3-thq-text-elm127">An arriving job enters the system and is placed on the Job Queue in the New state.</span><br />
-                <span class="module3-thq-text-elm128">2. Memory Admission:</span>
-                <span class="module3-thq-text-elm129">If there isn't enough room in main memory, the jobs wait on the disk in an Input Queue (a collection of processes on disk waiting to be brought into memory). The Long-Term Scheduler selects a job, loads it into main memory, puts it in the Ready Queue, and its state becomes Ready.</span><br />
-                <span class="module3-thq-text-elm130">3. CPU Dispatching:</span>
-                <span class="module3-thq-text-elm131">The Short-Term Scheduler selects a process from the Ready Queue. The Dispatcher hands over the CPU, and the process enters the Running state, actively accessing instructions and data from memory.</span><br />
-                <span class="module3-thq-text-elm132">4. Runtime Transitions:</span>
-                <span class="module3-thq-text-elm133">While running, one of four events will happen to the process:</span><br />
-                <span class="module3-thq-text-elm134">• Event 1 (I/O Request): The process issues an I/O request. It is placed in a specific I/O Device Queue and its state shifts to Waiting. Once the I/O or event completion occurs, it switches back to the Ready Queue.</span><br />
-                <span class="module3-thq-text-elm135">• Event 2 (Time Expiration): The maximum time slice allotted to the process in the CPU expires. It is intercepted, removed from the CPU, and placed back into the Ready Queue.</span><br />
-                <span class="module3-thq-text-elm136">• Event 3 (Child Creation): The process creates a new subprocess (forks a child) and is forced to wait until that child finishes, remaining in the Waiting state.</span><br />
-                <span class="module3-thq-text-elm137">• Event 4 (Interrupt): The process is forcibly removed from the CPU as a result of an external interrupt and is placed directly back into the Ready Queue.</span><br />
-                <span class="module3-thq-text-elm138">5. Termination:</span>
-                <span>Upon completing its final statement or encountering an error, the process finishes execution, its memory space is declared available, and its control block enters the Terminated state.</span>
-              </span>
+              <span class="module3-thq-text-elm140" style="display: block; margin-bottom: 16px;">Step-by-Step Execution Journey of a Process</span>
+              
+              <div class="module3-thq-text-elm125" style="display: block; text-align: justify; width: 100%;">
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 8px;"><strong>1. Creation:</strong> An arriving job enters the system and is placed on the Job Queue in the New state.</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 8px;"><strong>2. Memory Admission:</strong> If there isn't enough room in main memory, the jobs wait on the disk in an Input Queue. The Long-Term Scheduler selects a job, loads it into main memory, puts it in the Ready Queue, and its state becomes Ready.</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 8px;"><strong>3. CPU Dispatching:</strong> The Short-Term Scheduler selects a process from the Ready Queue. The Dispatcher hands over the CPU, and the process enters the Running state.</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 6px;"><strong>4. Runtime Transitions:</strong> While running, one of four events will happen to the process:</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• <strong>Event 1 (I/O Request):</strong> The process issues an I/O request. It is placed in a specific I/O Device Queue and its state shifts to Waiting. Once completion occurs, it switches back to the Ready Queue.</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• <strong>Event 2 (Time Expiration):</strong> The maximum time slice expires. It is removed from the CPU, and placed back into the Ready Queue.</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• <strong>Event 3 (Child Creation):</strong> The process creates a new subprocess (forks a child) and is forced to wait until that child finishes.</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 12px;">• <strong>Event 4 (Interrupt):</strong> The process is forcibly removed from the CPU as a result of an external interrupt and is placed back into the Ready Queue.</div>
+                
+                <div class="module3-thq-text-elm125" style="display: block; padding-left: 24px; text-align: justify;"><strong>5. Termination:</strong> Upon completing its final statement or encountering an error, the process finishes execution, its memory space is declared available, and its control block enters the Terminated state.</div>
+              </div>
             </div>
 
             <div class="module3-thq-memory-swappingand-suspended-states-elm">
@@ -360,10 +353,9 @@
               <div class="content-row">
                 <div class="text-content">
                   <span class="module3-thq-text-elm120">
-                    <span>If the processor is much faster than the I/O devices, all available processes could eventually find themselves waiting for I/O simultaneously. To optimize memory, the OS swaps these blocked processes onto the disk to free up main memory for new jobs. This introduces two secondary-memory states:</span><br />
-                    <span>• Blocked/Suspend: The process is currently located in secondary memory (disk) and is awaiting an external I/O event.</span><br />
-                    <span>• Ready/Suspend: The process is located in secondary memory (disk) but is fully available for execution the moment it is swapped back into main memory.</span>
-                  </span>
+                    <div style="margin-bottom: 12px;">If the processor is much faster than the I/O devices, all available processes could eventually find themselves waiting for I/O simultaneously. To optimize memory, the OS swaps these blocked processes onto the disk to free up main memory for new jobs. This introduces two secondary-memory states:</div>
+                    <div class="indent-level-1">• <strong>Blocked/Suspend:</strong> The process is currently located in secondary memory (disk) and is awaiting an external I/O event.</div>
+                    <div class="indent-level-1">• <strong>Ready/Suspend:</strong> The process is located in secondary memory (disk) but is fully available for execution the moment it is swapped back into main memory.</div>                  </span>
                 </div>
                 <img src="Assets/Figures/Fig 5.svg" alt="Memory Swapping Flowchart" class="module3-thq-fig4-elm" />
               </div>
@@ -374,13 +366,14 @@
               <div class="content-row">
                 <div class="text-content">
                   <span class="module3-thq-text-elm118">
-                    <span class="module3-text120">1. Core Mechanics</span><br />
-                    <span class="module3-text122">• When the CPU switches focus from one process to another, the system must securely save the state of the old process and load the saved state for the new process.</span><br />
-                    <span class="module3-text124">• The saved state consists of the exact CPU registers, the current process state, and all memory-management information.</span><br /><br />
-                    <span class="module3-text144">2. System Overhead</span><br />
-                    <span>• Context-switch time is pure system overhead. The operating system and hardware do no useful work for the user while a switch is taking place.</span><br />
-                    <span>• Context-switch performance and speed are highly dependent on direct hardware support.</span>
-                  </span>
+                    <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">1. Core Mechanics</div>
+                      <div class="indent-level-1">• When the CPU switches focus from one process to another, the system must securely save the state of the old process and load the saved state for the new process.</div>
+                      <div class="indent-level-1" style="margin-bottom: 16px;">• The saved state consists of the exact CPU registers, the current process state, and all memory-management information.</div>
+
+                      <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">2. System Overhead</div>
+                      <div class="indent-level-1">• Context-switch time is pure system overhead. The operating system and hardware do no useful work for the user while a switch is taking place.</div>
+                      <div class="indent-level-1">• Context-switch performance and speed are highly dependent on direct hardware support.</div>                
+                   </span>
                 </div>
                 <img src="Assets/Figures/Fig 5.svg" alt="Context Switching Sequence" class="module3-thq-fig5-elm" />
               </div>
@@ -391,19 +384,19 @@
               <div class="content-row">
                 <div class="text-content">
                   <span class="module3-thq-text-elm104">
-                    <span class="module3-thq-text-elm105">1. Process Creation and Trees</span><br />
-                    <span class="module3-thq-text-elm106">• Processes are organized hierarchically. A parent process can create children processes, which, in turn, can create other sub-processes, forming a structural tree of processes.</span><br />
-                    <span class="module3-thq-text-elm107">• Resource Sharing Options:</span>
-                    <span class="module3-thq-text-elm108">• The parent and children share all system resources.</span><br />
-                    <span class="module3-thq-text-elm109">• The children share a strict subset of the parent’s resources.</span><br />
-                    <span class="module3-thq-text-elm110">• The parent and child share no resources at all.</span><br />
-                    <span class="module3-thq-text-elm111">• Execution Behavior:</span><br />
-                    <span class="module3-thq-text-elm112">• The parent and children execute concurrently.</span><br />
-                    <span class="module3-thq-text-elm113">• The parent blocks and waits until some or all of its children have completely terminated.</span><br />
-                    <span class="module3-thq-text-elm114">• Address Space Behavior:</span><br />
-                    <span>• The child process is an exact structural duplicate of the parent process.</span><br />
-                    <span>• The child process has an entirely new program loaded into its address space.</span>
-                  </span>
+                    <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">1. Process Creation and Trees</div>
+                    <div class="indent-level-1" style="margin-bottom: 8px;">• Processes are organized hierarchically. A parent process can create children processes, forming a structural tree.</div>
+                    <div class="indent-level-1"><strong>• Resource Sharing Options:</strong></div>
+                    <div class="indent-level-2">• The parent and children share all system resources.</div>
+                    <div class="indent-level-2">• The children share a strict subset of the parent’s resources.</div>
+                    <div class="indent-level-2" style="margin-bottom: 8px;">• The parent and child share no resources at all.</div>
+                    <div class="indent-level-1"><strong>• Execution Behavior:</strong></div>
+                    <div class="indent-level-2">• The parent and children execute concurrently.</div>
+                    <div class="indent-level-2" style="margin-bottom: 8px;">• The parent blocks and waits until some or all of its children have completely terminated.</div>
+                    <div class="indent-level-1"><strong>• Address Space Behavior:</strong></div>
+                    <div class="indent-level-2">• The child process is an exact structural duplicate of the parent process.</div>
+                    <div class="indent-level-2">• The child process has an entirely new program loaded into its address space.</div>
+                </span>
                 </div>
                 <img src="Assets/Figures/Fig 6.svg" alt="Process Tree Map" class="module3-thq-fig6-elm" />
               </div>
@@ -411,19 +404,20 @@
 
             <div class="module3-thq-concrete-unix-implementations-elm module3-card">
               <span class="module3-thq-text-elm103">
-                <span class="module3-text101">2. Concrete UNIX Implementations</span><br />
-                <span style="font-weight: 200;">• fork(): A system call that creates a brand-new process. The newly created child process is an initial duplicate of the parent process.</span><br />
-                <span style="font-weight: 200;">• exec(): A system call typically used immediately after a fork() to replace the process’s memory space with an entirely new program layout.</span><br />
-                <span style="font-weight: 200;">• wait(): A system call through which a parent process receives output data from its child and suspends itself until the child finishes.</span><br />
-                <span style="font-weight: 200;">• exit(): A system call used by a process to execute its last statement and ask the operating system to delete it.</span>
-              </span>
-            </div>
+                <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 12px;">2. Concrete UNIX Implementations</div>
+                <div class="indent-level-1"><strong>• fork():</strong> A system call that creates a brand-new process. The newly created child process is an initial duplicate of the parent process.</div>
+                <div class="indent-level-1"><strong>• exec():</strong> A system call typically used immediately after a fork() to replace the process’s memory space with an entirely new program layout.</div>
+                <div class="indent-level-1"><strong>• wait():</strong> A system call through which a parent process receives output data from its child and suspends itself until the child finishes.</div>
+                <div class="indent-level-1"><strong>• exit():</strong> A system call used by a process to execute its last statement and ask the operating system to delete it.</div>
+              </div>
 
             <div class="module3-thq-cascading-termination-elm">
               <span class="module3-thq-text-elm100">
-                <span class="module3-thq-text-elm101">3. Cascading Termination</span><br />
-                <span style="font-weight: 200;">• A strict operating system policy that does not allow a child process to continue running if its parent process terminates. If a parent terminates (either normally or via an abort), the operating system automatically and recursively terminates all of its children.</span>
-              </span>
+                <div class="module3-thq-cascading-termination-elm" style="margin-top: 16px;">
+                <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">3. Cascading Termination</div>
+                <div class="indent-level-1">• A strict operating system policy that does not allow a child process to continue running if its parent process terminates. If a parent terminates (either normally or via an abort), the operating system automatically and recursively terminates all of its children.</div>
+              </div>
+             </span>
             </div>
 
           </div>
