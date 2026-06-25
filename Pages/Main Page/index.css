@@ -94,6 +94,16 @@ img { display:block; }
   padding: 0 clamp(16px, 3vw, 26px);
   flex-shrink: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  
+  /* --- NEW STICKY PROPERTIES --- */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* High z-index keeps it above scrolling content */
+  
+  /* Optional: Adds a glassmorphism background so scrolling text doesn't clash */
+  background-color: rgba(16, 18, 20, 0.74); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
 }
 
 /* Nav line below bar — hidden, was decorative SVG at design width */
