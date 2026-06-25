@@ -408,10 +408,9 @@
               <div class="module6-thq-text-elm191">
                 <div class="indent-level-1" style="font-weight: bold; margin-bottom: 12px;">Demand paging requires:</div>
                 <div class="indent-level-1" style="margin-bottom: 8px;">• A page replacement algorithm to determine which page should be replaced.</div>
-                <div class="indent-level-1;">• A frame allocation algorithm to determine how many memory frames are assigned to each process.</div>
+                <div class="indent-level-1">• A frame allocation algorithm to determine how many memory frames are assigned to each process.</div>
               </div>
             </div>
-
              <div class="module6-thq-page-replacement-algorithms-elm">
               <span class="module6-thq-text-elm190">Page Replacement Algorithms (PRA)</span>
               <div class="module6-thq-text-elm187">
@@ -435,42 +434,46 @@
 
             <div class="module6-thq-first-in-first-out-elm">
               <span class="module6-thq-text-elm175">First In First Out (FIFO)</span>
-              <div class="content-row">
-                <div class="text-content">
-                  <div class="module6-thq-text-elm173" style="margin-bottom: 16px;">
-                    This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced, the page in the front of the queue is selected for removal.
-                  </div>
-                  <img src="Assets/Figures/Fig 3.svg" alt="Figure 3: First-In, First-Out page replacement algorithm timeline" class="module6-thq-fig3-elm" />
-                  <div class="module6-thq-text-elm165 module6-card">
-                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Example:</strong> Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3-page frames. Find the number of page faults using FIFO Page Replacement Algorithm.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all frames are empty. When pages 1, 3, and 0 are referenced, they are loaded into the available frames, resulting in 3 page faults.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced next, it is already present in memory, resulting in a hit and no page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 5 is referenced, it is not present in memory. Following the FIFO algorithm, the oldest page (1) is removed from the top frame, and the remaining pages shift up, allowing page 5 to be loaded into memory, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 6 is referenced, it is also not present in memory. The next oldest page (3) is removed from the top frame as the pages shift up, and page 6 is loaded into memory, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• Finally, when page 3 is referenced again, it is no longer present in memory. Following FIFO, the oldest page currently in memory (0) is removed from the top frame, and page 3 is loaded at the bottom, resulting in 1 page fault.</div>
-                    <div class="indent-level-1"><strong>Total Page Faults = 6</strong></div>
-                  </div>
+              <div style="width: 100%;">
+                <div class="module6-thq-text-elm173" style="margin-bottom: 16px;">
+                  This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced, the page in the front of the queue is selected for removal.
+                </div>
+                
+                <div class="figure-container" style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
+                  <img src="Assets/Figures/Fig 3.svg" alt="Figure 3: First-In, First-Out page replacement algorithm timeline" class="module6-thq-fig3-elm" style="max-width: min(100%, 650px); height: auto;" />
+                </div>
+
+                <div class="module6-thq-text-elm165 module6-card" style="width: 100%;">
+                  <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Example:</strong> Consider page reference string 1, 3, 0, 3, 5, 6, 3 with 3-page frames. Find the number of page faults using FIFO Page Replacement Algorithm.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all frames are empty. When pages 1, 3, and 0 are referenced, they are loaded into the available frames, resulting in 3 page faults.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced next, it is already present in memory, resulting in a hit and no page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• When page 5 is referenced, it is not present in memory. Following the FIFO algorithm, the oldest page (1) is removed from the top frame, and the remaining pages shift up, allowing page 5 to be loaded into memory, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• When page 6 is referenced, it is also not present in memory. The next oldest page (3) is removed from the top frame as the pages shift up, and page 6 is loaded into memory, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• Finally, when page 3 is referenced again, it is no longer present in memory. Following FIFO, the oldest page currently in memory (0) is removed from the top frame, and page 3 is loaded at the bottom, resulting in 1 page fault.</div>
+                  <div class="indent-level-1"><strong>Total Page Faults = 6</strong></div>
                 </div>
               </div>
             </div>
 
             <div class="module6-thq-optimal-page-replacement-elm">
               <span class="module6-thq-text-elm152">Optimal Page Replacement</span>
-              <div class="content-row">
-                <div class="text-content">
-                  <div class="module6-thq-text-elm153" style="margin-bottom: 16px;">
-                    <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, pages are replaced which would not be used for the longest duration of time in the future.</div>
-                    <div class="indent-level-1"><strong>Example:</strong> Consider the page references 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frame. Find number of page faults using Optimal Page Replacement Algorithm.</div>
-                  </div>
-                  <img src="Assets/Figures/Fig 4.svg" alt="Figure 4: Optimal Page Replacement sequence diagram" class="module6-thq-fig4-elm" />
-                  <div class="module6-thq-text-elm157 module6-card">
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all slots are empty, so when 7 0 1 2 are allocated to the empty slots ---> 4 Page faults</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit. When page 3 is referenced, page 7 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• The next reference, 0, is already present in memory and results in a hit. When page 4 is referenced, page 1 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">All remaining page references are already present in memory and therefore result in hits.</div>
-                    <div class="indent-level-1"><span style="text-decoration: underline;">Optimal page replacement</span> is perfect, but not possible in practice as the operating system cannot know future requests. The use of Optimal Page replacement is to set up a benchmark so that other replacement algorithms can be analyzed against it.</div>
-                  </div>
+              <div style="width: 100%;">
+                <div class="module6-thq-text-elm153" style="margin-bottom: 16px;">
+                  <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, pages are replaced which would not be used for the longest duration of time in the future.</div>
+                  <div class="indent-level-1"><strong>Example:</strong> Consider the page references 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frame. Find number of page faults using Optimal Page Replacement Algorithm.</div>
+                </div>
+                
+                <div class="figure-container" style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
+                  <img src="Assets/Figures/Fig 4.svg" alt="Figure 4: Optimal Page Replacement sequence diagram" class="module6-thq-fig4-elm" style="max-width: min(100%, 650px); height: auto;" />
+                </div>
+
+                <div class="module6-thq-text-elm157 module6-card" style="width: 100%;">
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all slots are empty, so when 7 0 1 2 are allocated to the empty slots ---> 4 Page faults</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit. When page 3 is referenced, page 7 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• The next reference, 0, is already present in memory and results in a hit. When page 4 is referenced, page 1 is selected for replacement because it will not be used again in the remaining reference string, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">All remaining page references are already present in memory and therefore result in hits.</div>
+                  <div class="indent-level-1"><span style="text-decoration: underline;">Optimal page replacement</span> is perfect, but not possible in practice as the operating system cannot know future requests. The use of Optimal Page replacement is to set up a benchmark so that other replacement algorithms can be analyzed against it.</div>
                 </div>
               </div>
             </div>
@@ -478,68 +481,74 @@
 
             <div class="module6-thq-least-recently-used-elm">
               <span class="module6-thq-text-elm139">Least Recently Used (LRU)</span>
-              <div class="content-row">
-                <div class="text-content">
-                  <div class="module6-thq-text-elm140" style="margin-bottom: 16px;">
-                    <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, a page will be replaced which is least recently used.</div>
-                    <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames. Find number of page faults using LRU Page Replacement Algorithm.</div>
-                  </div>
-                  <img src="Assets/Figures/Fig 5.svg" alt="Figure 5: Least Recently Used page replacement reference example" class="module6-thq-fig5-elm" />
-                  <div class="module6-thq-text-elm144 module6-card">
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into the available frames, resulting in 4 page faults.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory, resulting in a hit.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, page 7 is the least recently used page and is therefore replaced, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, page 1 is the least recently used page and is replaced, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</div>
-                    <div class="indent-level-1"><strong>Total Page Faults = 6</strong></div>
-                  </div>
+              <div style="width: 100%;">
+                <div class="module6-thq-text-elm140" style="margin-bottom: 16px;">
+                  <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, a page will be replaced which is least recently used.</div>
+                  <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames. Find number of page faults using LRU Page Replacement Algorithm.</div>
+                </div>
+                
+                <div class="figure-container" style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
+                  <img src="Assets/Figures/Fig 5.svg" alt="Figure 5: Least Recently Used page replacement reference example" class="module6-thq-fig5-elm" style="max-width: min(100%, 650px); height: auto;" />
+                </div>
+
+                <div class="module6-thq-text-elm144 module6-card" style="width: 100%;">
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into the available frames, resulting in 4 page faults.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory, resulting in a hit.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, page 7 is the least recently used page and is therefore replaced, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, page 1 is the least recently used page and is replaced, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</div>
+                  <div class="indent-level-1"><strong>Total Page Faults = 6</strong></div>
                 </div>
               </div>
             </div>
 
             <div class="module6-thq-lru-approximation-elm">
               <span class="module6-thq-text-elm138">LRU Approximation (Second Chance / Clock)</span>
-              <div class="content-row">
-                <div class="text-content">
-                  <div class="module6-thq-text-elm134" style="margin-bottom: 16px;">
-                    <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, the operating system approximates the behavior of the Least Recently Used (LRU) algorithm by using a reference bit associated with each page. A page with a reference bit of 0 is selected for replacement. If a page has a reference bit of 1, it is given a second chance and its reference bit is cleared before the search continues.</div>
-                    <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames.</div>
-                  </div>
-                  <img src="Assets/Figures/Fig 6.svg" alt="Figure 6: Second Chance Clock Page Replacement mechanics" class="module6-thq-fig6-elm" />
-                  <div class="module6-thq-text-elm125 module6-card">
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory, resulting in a hit.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, no free frame is available. The clock pointer begins scanning the pages. Pages whose reference bit is 1 are given a second chance and their reference bits are cleared to 0. The first page encountered with a reference bit of 0 is page 7, which is selected for replacement. This results in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, the clock pointer again scans the pages starting from its current position. Page 0 (reference bit = 1) is given a second chance and its bit is cleared to 0. The pointer moves forward, and the first page encountered with a reference bit of 0 is page 1, which is selected as the victim page. Therefore, page 1 is replaced by page 4, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
-                    <div class="indent-level-1"><em>Note: LRU Approximation uses less overhead than true LRU while providing similar performance in many workloads.</em></div>
-                  </div>
+              <div style="width: 100%;">
+                <div class="module6-thq-text-elm134" style="margin-bottom: 16px;">
+                  <div class="indent-level-1" style="margin-bottom: 8px;">In this algorithm, the operating system approximates the behavior of the Least Recently Used (LRU) algorithm by using a reference bit associated with each page. A page with a reference bit of 0 is selected for replacement. If a page has a reference bit of 1, it is given a second chance and its reference bit is cleared before the search continues.</div>
+                  <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames.</div>
+                </div>
+                
+                <div class="figure-container" style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
+                  <img src="Assets/Figures/Fig 6.svg" alt="Figure 6: Second Chance Clock Page Replacement mechanics" class="module6-thq-fig6-elm" style="max-width: min(100%, 650px); height: auto;" />
+                </div>
+
+                <div class="module6-thq-text-elm125 module6-card" style="width: 100%;">
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory, resulting in a hit.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, no free frame is available. The clock pointer begins scanning the pages. Pages whose reference bit is 1 are given a second chance and their reference bits are cleared to 0. The first page encountered with a reference bit of 0 is page 7, which is selected for replacement. This results in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and results in a hit.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, the clock pointer again scans the pages starting from its current position. Page 0 (reference bit = 1) is given a second chance and its bit is cleared to 0. The pointer moves forward, and the first page encountered with a reference bit of 0 is page 1, which is selected as the victim page. Therefore, page 1 is replaced by page 4, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, 3) are already present in memory and therefore result in hits.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
+                  <div class="indent-level-1"><em>Note: LRU Approximation uses less overhead than true LRU while providing similar performance in many workloads.</em></div>
                 </div>
               </div>
             </div>
 
             <div class="module6-thq-counting-based-page-replacement-elm">
               <span class="module6-thq-text-elm110">Counting-Based Page Replacement (LFU)</span>
-              <div class="content-row">
-                <div class="text-content">
-                  <div class="module6-thq-text-elm111" style="margin-bottom: 16px;">
-                    <div class="indent-level-1" style="margin-bottom: 8px;">Counting-Based Page Replacement maintains a reference counter for each page. The page with the smallest reference count is selected for replacement. This approach is known as Least Frequently Used (LFU) page replacement.</div>
-                    <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames.</div>
-                  </div>
-                  <img src="Assets/Figures/Fig 7.svg" alt="Figure 7: LFU algorithm with FIFO tie breaking illustration table" class="module6-thq-fig7-elm" />
-                  <div class="module6-thq-text-elm115 module6-card">
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory. Its reference count is increased, resulting in a hit.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, all frames are occupied. Under the LFU policy, the page with the smallest reference count is selected for replacement. Since page 7 has the lowest reference count, it is replaced by page 3, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and therefore results in a hit.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, pages 1, 2, and 3 have the same lowest reference count. Because of this tie, FIFO (First-In, First-Out) is used as the tie-breaking rule. Among these pages, page 1 is the oldest and is therefore selected for replacement. Page 1 is replaced by page 4, resulting in 1 page fault.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, and 3) are already present in memory. Their reference counters are updated accordingly, and all of these references result in hits.</div>
-                    <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
-                    <div class="indent-level-1"><em>Note: In this example, Optimal, LRU, and LRU Approximation (Second Chance) produce the same number of page faults. This does not mean that all page replacement algorithms always perform equally. The number of page faults depends on the reference string, the number of available frames, and the replacement strategy used. Different workloads may produce significantly different results for each algorithm.</em></div>
-                  </div>
+              <div style="width: 100%;">
+                <div class="module6-thq-text-elm111" style="margin-bottom: 16px;">
+                  <div class="indent-level-1" style="margin-bottom: 8px;">Counting-Based Page Replacement maintains a reference counter for each page. The page with the smallest reference count is selected for replacement. This approach is known as Least Frequently Used (LFU) page replacement.</div>
+                  <div class="indent-level-1"><strong>Example:</strong> Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 3 with 4-page frames.</div>
+                </div>
+                
+                <div class="figure-container" style="width: 100%; display: flex; justify-content: center; margin: 20px 0;">
+                  <img src="Assets/Figures/Fig 7.svg" alt="Figure 7: LFU algorithm with FIFO tie breaking illustration table" class="module6-thq-fig7-elm" style="max-width: min(100%, 650px); height: auto;" />
+                </div>
+
+                <div class="module6-thq-text-elm115 module6-card" style="width: 100%;">
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• Initially, all four frames are empty. The first four page references (7, 0, 1, and 2) are loaded into memory, resulting in 4 page faults.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory. Its reference count is increased, resulting in a hit.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• When page 3 is referenced, all frames are occupied. Under the LFU policy, the page with the smallest reference count is selected for replacement. Since page 7 has the lowest reference count, it is replaced by page 3, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 6px;">• The next reference, 0, is already present in memory and therefore results in a hit.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• When page 4 is referenced, pages 1, 2, and 3 have the same lowest reference count. Because of this tie, FIFO (First-In, First-Out) is used as the tie-breaking rule. Among these pages, page 1 is the oldest and is therefore selected for replacement. Page 1 is replaced by page 4, resulting in 1 page fault.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• The remaining references (2, 3, 0, 3, 2, and 3) are already present in memory. Their reference counters are updated accordingly, and all of these references result in hits.</div>
+                  <div class="indent-level-1" style="margin-bottom: 12px;"><strong>Total Page Faults = 6</strong></div>
+                  <div class="indent-level-1"><em>Note: In this example, Optimal, LRU, and LRU Approximation (Second Chance) produce the same number of page faults. This does not mean that all page replacement algorithms always perform equally. The number of page faults depends on the reference string, the number of available frames, and the replacement strategy used. Different workloads may produce significantly different results for each algorithm.</em></div>
                 </div>
               </div>
             </div>
@@ -560,7 +569,7 @@
                 <div class="indent-level-1">Effective frame allocation helps balance memory usage among processes, minimizes page faults, and improves overall system performance. To support demand paging, the operating system must employ a frame allocation strategy that determines how available frames are distributed among competing processes.</div>
               </div>
             </div>
-               
+          
           <div class="module6-thq-footer-elm">
             <img
               src="Assets/Footer/OSphere Logo.svg"

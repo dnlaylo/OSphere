@@ -21,20 +21,19 @@ img { display: block; }
 /* =========================================================
    ROOT WRAPPER
    ========================================================= */
-.module3-container1 {
+.module5-container1 {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  padding-top: 54px;
 }
 
 /* =========================================================
    MAIN CANVAS
    ========================================================= */
-.module3-thq-module3-elm {
+.module5-thq-module5-elm {
   position: relative;
   width: 100%;
   display: flex;
@@ -59,7 +58,7 @@ img { display: block; }
   overflow: hidden;
 }
 
-.module3-thq-bg-elm {
+.module5-thq-bg-elm {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,18 +86,6 @@ img { display: block; }
   align-items: center;
   padding: 0 clamp(16px, 3vw, 26px);
   flex-shrink: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  
-  /* --- CHANGED TO FIXED POSITIONING --- */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000; /* Keeps navbar floating on top of all content */
-  
-  /* Glassmorphism background effect */
-  background-color: rgba(0, 0, 0, 0.7); /* Matched to your #0d1117 background */
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px); 
 }
 
 /* Nav line below bar — hidden, was decorative SVG at design width */
@@ -134,7 +121,7 @@ img { display: block; }
 /* =========================================================
    HEADER BANNER
    ========================================================= */
-.module3-thq-header-elm {
+.module5-thq-header-elm {
   position: relative;
   width: min(1347px, 94%);
   height: clamp(100px, 12vw, 149px);
@@ -145,7 +132,7 @@ img { display: block; }
   flex-shrink: 0;
 }
 
-.module3-thq-m3bg-elm {
+.module5-thq-m5bg-elm {
   position: absolute;
   top: -40%;
   left: 0;
@@ -155,11 +142,11 @@ img { display: block; }
   object-position: center center;
 }
 
-.module3-thq-text-elm238 {
+.module5-thq-text-elm298 {
   position: absolute;
   top: clamp(8px, 1vw, 13px);            
   left: clamp(24px, 4vw, 56px);          
-  color: rgb(35, 38, 49);
+  color: rgba(63, 36, 55, 1);
   font-size: clamp(32px, 4.5vw, 64px);   
   font-family: Alexandria, sans-serif;
   font-weight: 600;
@@ -167,11 +154,11 @@ img { display: block; }
   white-space: nowrap;
 }
 
-.module3-thq-text-elm239 {
+.module5-thq-text-elm297 {
   position: absolute;
   top: clamp(52px, 6vw, 86px);           
   left: clamp(24px, 4vw, 56px);          
-  color: rgb(35, 38, 49);
+  color: rgba(63, 36, 55, 1);
   font-size: clamp(16px, 2.2vw, 32px);   
   font-family: Alexandria, sans-serif;
   font-weight: 400;
@@ -181,7 +168,7 @@ img { display: block; }
 /* =========================================================
    CONTENT CONTAINER — all sections stack inside
    ========================================================= */
-.module3-thq-content-container-elm {
+.module5-thq-content-container-elm {
   position: relative;
   width: min(1299px, 94%);
   margin: 0 auto;
@@ -223,50 +210,63 @@ img { display: block; }
 /* =========================================================
    CARDS WITH TRANSLUCENT BACKGROUNDS
    ========================================================= */
-.module3-card {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: clamp(16px, 2vw, 24px);
-  border-radius: clamp(12px, 2vw, 20px);
+/* Applies card styling to sections that previously used SVG backgrounds */
+.module5-thq-step-by-step-elm,
+.module5-thq-address-binding-elm,
+.module5-thq-memory-allocation-elm,
+.module5-thq-multiprogrammingwitha-variable-number-elm,
+.module5-thq-address-conversion-elm {
   background-color: rgba(255, 255, 255, 0.04);
+  border-radius: clamp(12px, 2vw, 20px);
   padding: clamp(20px, 3vw, 48px) clamp(20px, 3vw, 40px);
 }
 
 /* Hide old absolute SVG containers */
-.module3-thq-container8-elm,
-.module3-thq-container7-elm,
-.module3-thq-container6-elm,
-.module3-thq-container5-elm,
-.module3-thq-container4-elm {
+.module5-thq-container1-elm,
+.module5-thq-container2-elm,
+.module5-thq-container3-elm,
+.module5-thq-container4-elm,
+.module5-thq-container5-elm {
   display: none;
 }
 
 /* =========================================================
    SECTION BLOCKS (Relative flow reset)
    ========================================================= */
-.module3-thq-overview-elm,
-.module3-thq-whatisa-process-elm,
-.module3-thq-programvs-process-elm,
-.module3-thq-standard-examplesof-processes-elm,
-.module3-thq-whata-process-includes-elm,
-.module3-thq-pcb-elm,
-.module3-thq-information-fieldsinsidea-pcb-elm,
-.module3-thq-core-process-states-elm,
-.module3-thq-figure2-elm,
-.module3-thq-process-events-elm,
-.module3-thq-process-termination-events-elm,
-.module3-thq-process-creation-events-elm,
-.module3-thq-scheduling-queues-elm,
-.module3-thq-execution-journey-elm,
-.module3-thq-memory-swappingand-suspended-states-elm,
-.module3-thq-context-switching-elm,
-.module3-thq-operationson-processes-elm,
-.module3-thq-concrete-unix-implementations-elm,
-.module3-thq-cascading-termination-elm {
+.module5-thq-overview-elm, 
+.module5-thq-motivationof-memory-management-elm,
+.module5-thq-whatis-memory-elm, 
+.module5-thq-step-by-step-elm,
+.module5-thq-memory-management-elm, 
+.module5-thq-addresses-elm,
+.module5-thq-address-binding-elm, 
+.module5-thq-logicalvs-virtual-space-elm,
+.module5-thq-memory-management-unit-elm, 
+.module5-thq-dynamic-loading-elm,
+.module5-thq-staticand-dynamic-linking-elm, 
+.module5-thq-overlays-elm,
+.module5-thq-swapping-elm, 
+.module5-thq-swapping-constraintsand-pending-io-elm,
+.module5-thq-frame3-waysto-optimize-swapping-elm, 
+.module5-thq-bare-machines-elm,
+.module5-thq-memory-allocation-elm, 
+.module5-thq-multiple-partition-allocation-elm,
+.module5-thq-multiprogrammingwitha-fixed-tasks-elm, 
+.module5-thq-frame2-typesof-mft-elm,
+.module5-thq-skipping-elm, 
+.module5-thq-multiprogrammingwitha-variable-number-elm,
+.module5-thq-memory-allocation-policies-elm1, 
+.module5-thq-memory-allocation-policies-elm2,
+.module5-thq-memory-fragmentation-elm, 
+.module5-thq-paging-elm2,
+.module5-thq-fragmentation-elm, 
+.module5-thq-paging-elm1,
+.module5-thq-address-conversion-elm {
   position: relative;
   width: 100%;
+  height: auto;
+  top: auto;
+  left: auto;
   display: flex;
   flex-direction: column;
   gap: clamp(8px, 1.5vw, 16px);
@@ -275,11 +275,20 @@ img { display: block; }
 /* =========================================================
    SHARED: SECTION HEADINGS (Fluid 32px)
    ========================================================= */
-.module3-thq-text-elm236, .module3-thq-text-elm235, .module3-thq-text-elm232, 
-.module3-thq-text-elm227, .module3-thq-text-elm220, .module3-thq-text-elm209, 
-.module3-thq-text-elm206, .module3-thq-text-elm186, .module3-thq-text-elm173, 
-.module3-thq-text-elm165, .module3-thq-text-elm158, .module3-thq-text-elm140, 
-.module3-thq-text-elm124, .module3-thq-text-elm119, .module3-thq-text-elm117 {
+.module5-thq-text-elm294, .module5-thq-text-elm278, .module5-thq-text-elm276,
+.module5-thq-text-elm290, .module5-thq-text-elm291, .module5-thq-text-elm270,
+.module5-thq-text-elm259, .module5-thq-text-elm254, .module5-thq-text-elm250,
+.module5-thq-text-elm244, .module5-thq-text-elm235, .module5-thq-text-elm231,
+.module5-thq-text-elm223, .module5-thq-text-elm212, .module5-thq-text-elm218,
+.module5-thq-text-elm206, .module5-thq-text-elm205, .module5-thq-text-elm186,
+.module5-thq-text-elm174, .module5-thq-text-elm163, .module5-thq-text-elm178,
+.module5-thq-text-elm153, .module5-thq-text-elm141, .module5-thq-text-elm159,
+.module5-thq-text-elm182, .module5-thq-text-elm131, .module5-thq-text-elm102,
+.module5-thq-text-elm119, .module5-thq-text-elm120 {
+  position: relative; 
+  top: auto; 
+  left: auto; 
+  width: 100%;
   display: block;
   color: rgba(255, 255, 255, 1);
   font-family: Alexandria, sans-serif;
@@ -287,18 +296,27 @@ img { display: block; }
   font-size: clamp(24px, 3.5vw, 32px);
   line-height: 1.3;
   margin-bottom: clamp(4px, 1vw, 12px);
+  box-shadow: none; /* Removes design tool shadows */
 }
 
 /* =========================================================
    SHARED: BODY TEXT (Fluid 24px/16px)
    ========================================================= */
-.module3-thq-text-elm237, .module3-thq-text-elm234, .module3-thq-text-elm231,
-.module3-thq-text-elm228, .module3-thq-text-elm222, .module3-thq-text-elm210,
-.module3-thq-text-elm208, .module3-thq-text-elm187, .module3-thq-text-elm174,
-.module3-thq-text-elm166, .module3-thq-text-elm159, .module3-thq-text-elm157,
-.module3-thq-text-elm141, .module3-thq-text-elm125, .module3-thq-text-elm120,
-.module3-thq-text-elm118, .module3-thq-text-elm104, .module3-thq-text-elm103,
-.module3-thq-text-elm100 {
+.module5-thq-text-elm295, .module5-thq-text-elm279, .module5-thq-text-elm277,
+.module5-thq-text-elm283, .module5-thq-text-elm292, .module5-thq-text-elm271,
+.module5-thq-text-elm260, .module5-thq-text-elm255, .module5-thq-text-elm251,
+.module5-thq-text-elm248, .module5-thq-text-elm245, .module5-thq-text-elm236,
+.module5-thq-text-elm232, .module5-thq-text-elm224, .module5-thq-text-elm213,
+.module5-thq-text-elm219, .module5-thq-text-elm207, .module5-thq-text-elm203,
+.module5-thq-text-elm187, .module5-thq-text-elm184, .module5-thq-text-elm164,
+.module5-thq-text-elm160, .module5-thq-text-elm176, .module5-thq-text-elm142,
+.module5-thq-text-elm137, .module5-thq-text-elm155, .module5-thq-text-elm179,
+.module5-thq-text-elm132, .module5-thq-text-elm100, .module5-thq-text-elm103,
+.module5-thq-text-elm121 {
+  position: relative; 
+  top: auto; 
+  left: auto; 
+  width: 100%;
   display: block;
   color: rgba(255, 255, 255, 1);
   font-family: Alexandria, sans-serif;
@@ -307,46 +325,53 @@ img { display: block; }
   line-height: clamp(26px, 3vw, 35px);
 }
 
-/* Shared bold/weight utilities */
-.module3-text101, .module3-thq-text-elm105, .module3-thq-text-elm107, 
-.module3-thq-text-elm111, .module3-thq-text-elm114, .module3-text120, 
-.module3-text144, .module3-thq-text-elm126, .module3-thq-text-elm128, 
-.module3-thq-text-elm130, .module3-thq-text-elm132, .module3-thq-text-elm138, 
-.module3-thq-text-elm142, .module3-thq-text-elm143, .module3-thq-text-elm148, 
-.module3-thq-text-elm151, .module3-thq-text-elm154, .module3-thq-text-elm155, 
-.module3-text172, .module3-text176, .module3-text179, .module3-text182, 
-.module3-thq-text-elm176, .module3-thq-text-elm178, .module3-thq-text-elm180, 
-.module3-thq-text-elm182, .module3-thq-text-elm184, .module3-thq-text-elm189, 
-.module3-thq-text-elm192, .module3-thq-text-elm194, .module3-thq-text-elm196, 
-.module3-thq-text-elm199, .module3-thq-text-elm202, .module3-thq-text-elm204, 
-.module3-thq-text-elm212, .module3-thq-text-elm214, .module3-thq-text-elm216, 
-.module3-thq-text-elm218 { 
+.module5-thq-text-elm248 {
+    text-align: center;
+}
+
+/* Shared bold/weight utilities for inline spans */
+.module5-thq-text-elm105, .module5-thq-text-elm108, .module5-thq-text-elm111,
+.module5-thq-text-elm112, .module5-thq-text-elm116, .module5-thq-text-elm122,
+.module5-thq-text-elm127, .module5-thq-text-elm129, .module5-thq-text-elm143,
+.module5-thq-text-elm146, .module5-thq-text-elm149, .module5-thq-text-elm165,
+.module5-thq-text-elm168, .module5-thq-text-elm171, .module5-thq-text-elm188,
+.module5-thq-text-elm194, .module5-thq-text-elm200, .module5-thq-text-elm208,
+.module5-thq-text-elm210, .module5-thq-text-elm237, .module5-thq-text-elm240,
+.module5-thq-text-elm241 { 
   font-weight: 300; 
 }
 
 /* =========================================================
    FIGURE IMAGES
    ========================================================= */
-.module3-thq-fig1-elm, .module3-thq-fig2-elm,
-.module3-thq-fig3-elm, .module3-thq-fig4-elm,
-.module3-thq-fig5-elm, .module3-thq-fig6-elm {
-  position: relative;
+.module5-thq-fig1-elm, .module5-thq-figc2-elm, .module5-thq-fig3-elm,
+.module5-thq-fig4-elm {
+  position: relative; 
+  top: auto; 
+  left: auto;
   flex: 0 0 auto;
-  width: min(45%, 480px);
+  width: min(100%, 750px); /* Keeps them constrained */
   height: auto;
   border-radius: 5px;
   object-fit: contain;
+  margin: clamp(16px, 2vw, 32px) auto;
 }
 
-/* Larger diagram adjustments */
-.module3-thq-fig3-elm,
-.module3-thq-fig6-elm { width: min(80%, 750px); margin: 0 auto; }
-.module3-thq-fig1-elm { width: min(35%, 350px); }
+/* Restrict diagram sizes within the Address Conversion card */
+.module5-thq-fig5-elm,
+.module5-thq-fig6-elm,
+.module5-thq-fig7-elm {
+  display: block;
+  max-width: 100%;    /* Never wider than the container */
+  width: min(90%, 300px); /* Comfortable default size, scales down on small screens */
+  height: auto;       /* Keeps aspect ratio intact */
+  margin: 16px auto;  /* Adds breathing room */
+}
 
 /* =========================================================
-   FOOTER (Restored relative layout)
+   FOOTER (Relative Layout Reset)
    ========================================================= */
-.module3-thq-footer-elm {
+.module5-thq-footer-elm {
   position: relative;
   width: 100%;
   display: flex;
@@ -356,14 +381,9 @@ img { display: block; }
   padding-bottom: clamp(24px, 3vw, 48px);
 }
 
-.module3-thq-footer-line-elm {
-  width: 90%;
-  height: auto;
-  display: block;
-  margin-bottom: clamp(16px, 2vw, 24px);
-}
+.module5-thq-footerline-elm { display: none; }
 
-.module3-thq-o-sphere-logo-elm {
+.module5-thq-o-spherelogo-elm {
   width: min(480px, 60%);
   height: auto;
   display: block;
@@ -374,30 +394,46 @@ img { display: block; }
    ========================================================= */
 @media (max-width: 900px) {
   .content-row { flex-direction: column; }
-  
-  .module3-thq-fig1-elm, .module3-thq-fig2-elm,
-  .module3-thq-fig3-elm, .module3-thq-fig4-elm,
-  .module3-thq-fig5-elm, .module3-thq-fig6-elm {
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 600px) {
-  .module3-thq-header-elm { height: clamp(80px, 18vw, 120px); }
-  .module3-card { padding: clamp(16px, 4vw, 28px) clamp(14px, 3vw, 24px); }
-  .module3-thq-o-sphere-logo-elm { width: 75%; }
 }
 
-/* Structural Indentation Classes */
+@media (max-width: 600px) {
+  .module5-thq-header-elm { height: clamp(80px, 18vw, 120px); }
+  
+  .module5-thq-step-by-step-elm,
+  .module5-thq-address-binding-elm,
+  .module5-thq-memory-allocation-elm,
+  .module5-thq-multiprogrammingwitha-variable-number-elm,
+  .module5-thq-address-conversion-elm {
+    padding: clamp(16px, 4vw, 28px) clamp(14px, 3vw, 24px);
+  }
+  
+  .module5-thq-o-spherelogo-elm { width: 75%; }
+}
+
+/* =========================================================
+   UNIVERSAL LAYOUT HELPER CLASSES
+   ========================================================= */
 .indent-level-1 {
   display: block;
   padding-left: 24px;
+  margin-top: 8px;
   margin-bottom: 8px;
+  font-weight: 200;
+  line-height: 1.6;
 }
 
 .indent-level-2 {
   display: block;
   padding-left: 48px;
+  margin-top: 6px;
   margin-bottom: 6px;
+  font-weight: 200;
+  line-height: 1.6;
+}
+
+/* Ensure strong nested text retains weight clean structure */
+.indent-level-1 strong,
+.indent-level-2 strong {
+  font-weight: 500;
+  color: #fff;
 }
