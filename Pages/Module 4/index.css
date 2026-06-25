@@ -100,6 +100,7 @@ img { display: block; }
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px); 
 }
+
 /* Nav line below bar — hidden, was decorative SVG at design width */
 .mainpage-thq-line1-elm { display: none; }
 
