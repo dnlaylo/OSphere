@@ -158,118 +158,118 @@
             <div class="module4-thq-the-core-archiecture-elm">
               <span class="module4-thq-text-elm269">The Core Architecture</span>
               <span class="module4-thq-text-elm270">
-                <span class="module4-thq-text-elm271">• The Ready Queue</span>: As a process is loaded into the main memory, it is kept in the ready queue. The ready queue contains the set of all processes residing in main memory that are ready and waiting to execute. Note: The ready queue is not necessarily a First-In, First-Out (FIFO) queue.<br /><br />
-                <span class="module4-thq-text-elm273">• Short-term Scheduler (CPU Scheduler)</span>: A system module that selects from among the processes in main memory that are ready to execute, and allocates the CPU to one of them.<br /><br />
-                <span class="module4-thq-text-elm275">• Dispatcher</span>: A specific module that gives control of the CPU to the process selected by the short-term scheduler.<br /><br />
-                <span class="module4-thq-text-elm277">• Dispatch Latency</span>: The total time it takes for the dispatcher to stop one process from running and start another one executing.<br /><br />
-                <span class="module4-thq-text-elm279">• Objective of Multiprogramming</span>: To achieve maximum CPU utilization by always having some process running.<br /><br />
-                <span class="module4-thq-text-elm281">• CPU Scheduling</span>: The fundamental basis of multiprogrammed operating systems. It deals with the problem of deciding which of the processes in the ready queue is to be allocated the CPU.
-              </span>
+                <div class="indent-level-1"><strong>• The Ready Queue:</strong> As a process is loaded into the main memory, it is kept in the ready queue. The ready queue contains the set of all processes residing in main memory that are ready and waiting to execute. Note: The ready queue is not necessarily a First-In, First-Out (FIFO) queue.</div>
+                <div class="indent-level-1"><strong>• Short-term Scheduler (CPU Scheduler):</strong> A system module that selects from among the processes in main memory that are ready to execute, and allocates the CPU to one of them.</div>
+                <div class="indent-level-1"><strong>• Dispatcher:</strong> A specific module that gives control of the CPU to the process selected by the short-term scheduler.</div>
+                <div class="indent-level-1"><strong>• Dispatch Latency:</strong> The total time it takes for the dispatcher to stop one process from running and start another one executing.</div>
+                <div class="indent-level-1"><strong>• Objective of Multiprogramming:</strong> To achieve maximum CPU utilization by always having some process running.</div>
+                <div class="indent-level-1"><strong>• CPU Scheduling:</strong> The fundamental basis of multiprogrammed operating systems. It deals with the problem of deciding which of the processes in the ready queue is to be allocated the CPU.</div>
+             </span>
             </div>
 
             <div class="module4-thq-the-process-context-switch-breakdown-elm">
               <span class="module4-thq-text-elm268">The Process Context Switch Breakdown</span>
               <span class="module4-thq-text-elm260">
-                <span class="module4-thq-text-elm261">• When the Dispatcher gives control of the CPU to a selected process, it executes the following sequential steps:</span><br /><br />
-                <span class="module4-thq-text-elm262">a. Switch Context</span>: Saves the state (context) of the currently running process and loads the saved state of the new process.<br />
-                <span class="module4-thq-text-elm264">b. Switch to User Mode</span>: Flips the CPU execution mode from kernel/privileged mode to user mode.<br />
-                <span class="module4-thq-text-elm266">c. Jump to Location</span>: Jumps to the proper location in the target user program to restart or begin execution of that program.
+                <div style="margin-bottom: 12px;">• When the Dispatcher gives control of the CPU to a selected process, it executes the following sequential steps:</div>
+                <div class="indent-level-1"><strong>a. Switch Context:</strong> Saves the state (context) of the currently running process and loads the saved state of the new process.</div>
+                <div class="indent-level-1"><strong>b. Switch to User Mode:</strong> Flips the CPU execution mode from kernel/privileged mode to user mode.</div>
+                <div class="indent-level-1"><strong>c. Jump to Location:</strong> Jumps to the proper location in the target user program to restart or begin execution of that program.</div>
               </span>
             </div>
 
             <div class="module4-thq-the-cpuio-burst-cycle-elm">
               <span class="module4-thq-text-elm245">The CPU-I/O Burst Cycle</span>
               <span class="module4-thq-text-elm246">
-                <span class="module4-thq-text-elm247">• Concept Definition</span>: Process execution consists of an alternating cycle of CPU execution (computations) and I/O wait (input/output operations).<br /><br />
-                <span class="module4-thq-text-elm249">• CPU Burst</span>: The time period where the process is actively utilizing the CPU (e.g., executing instructions like load, store, add, increment index).<br /><br />
-                <span class="module4-thq-text-elm251">• I/O Burst</span>: The time period where the process is blocked, waiting for an input/output operation to complete (e.g., reading from a file, writing to a disk).<br /><br />
-                <span class="module4-thq-text-elm253">• Histogram of CPU Burst Times</span>: CPU burst durations are characteristically hyperexponential. There is a very high frequency of short CPU bursts and a very low frequency of long CPU bursts.<br /><br />
-                <span class="module4-thq-text-elm255">• Classification of Processes</span>:<br />
-                <span class="module4-thq-text-elm256">• I/O-Bound Process</span>: Spends more of its time doing I/O operations than computations; characterized by many short CPU bursts.<br />
-                <span class="module4-thq-text-elm258">• CPU-Bound Process</span>: Spends more of its time doing computations; characterized by a few, very long CPU bursts.
-              </span>
+              <div class="indent-level-1"><strong>• Concept Definition:</strong> Process execution consists of an alternating cycle of CPU execution (computations) and I/O wait (input/output operations).</div>
+                <div class="indent-level-1"><strong>• CPU Burst:</strong> The time period where the process is actively utilizing the CPU (e.g., executing instructions like load, store, add, increment index).</div>
+                <div class="indent-level-1"><strong>• I/O Burst:</strong> The time period where the process is blocked, waiting for an input/output operation to complete (e.g., reading from a file, writing to a disk).</div>
+                <div class="indent-level-1"><strong>• Histogram of CPU Burst Times:</strong> CPU burst durations are characteristically hyperexponential. There is a very high frequency of short CPU bursts and a very low frequency of long CPU bursts.</div>
+                <div class="indent-level-1"><strong>• Classification of Processes:</strong></div>
+                <div class="indent-level-2">• <strong>I/O-Bound Process:</strong> Spends more of its time doing I/O operations than computations; characterized by many short CPU bursts.</div>
+                <div class="indent-level-2">• <strong>CPU-Bound Process:</strong> Spends more of its time doing computations; characterized by a few, very long CPU bursts.</div>
+               </span>
             </div>
 
             <div class="module4-thq-scheduling-decisions-schemes-elm">
               <span class="module4-thq-text-elm233">Scheduling Decisions &amp; Schemes</span>
               <span class="module4-thq-text-elm234">
-                <span class="module4-thq-text-elm235">CPU scheduling decisions take place under four specific process state changes:</span><br />
-                <span>1. When a process switches from the running state to the waiting state (e.g., an I/O request).</span><br />
-                <span>2. When a process switches from the running state to the ready state (e.g., a timer interrupt).</span><br />
-                <span>3. When a process switches from the waiting state to the ready state (e.g., I/O completion).</span><br />
-                <span>4. When a process terminates.</span><br /><br />
-                <span class="module4-thq-text-elm241">• Non-preemptive Scheduling (Cooperative)</span>: Scheduling that occurs only under conditions 1 and 4. There is no alternative choice; once a process is allocated the CPU, it continues running until it voluntarily terminates or blocks itself to wait for I/O.<br /><br />
-                <span class="module4-thq-text-elm243">• Preemptive Scheduling</span>: Scheduling that occurs under conditions 2 and 3. The operating system has a choice and can interrupt a currently running process to move it back to the ready state, preventing any single process from monopolizing the processor for too long.
+               <div style="margin-bottom: 8px;">CPU scheduling decisions take place under four specific process state changes:</div>
+                <div class="indent-level-1"><strong>1.</strong> When a process switches from the running state to the waiting state (e.g., an I/O request).</div>
+                <div class="indent-level-1"><strong>2.</strong> When a process switches from the running state to the ready state (e.g., a timer interrupt).</div>
+                <div class="indent-level-1"><strong>3.</strong> When a process switches from the waiting state to the ready state (e.g., I/O completion).</div>
+                <div class="indent-level-1" style="margin-bottom: 12px;"><strong>4.</strong> When a process terminates.</div>
+                <div class="indent-level-1"><strong>• Non-preemptive Scheduling (Cooperative):</strong> Scheduling that occurs only under conditions 1 and 4. There is no alternative choice; once a process is allocated the CPU, it continues running until it voluntarily terminates or blocks itself to wait for I/O.</div>
+                <div class="indent-level-1"><strong>• Preemptive Scheduling:</strong> Scheduling that occurs under conditions 2 and 3. The operating system has a choice and can interrupt a currently running process to move it back to the ready state, preventing any single process from monopolizing the processor for too long.</div>
               </span>
             </div>
 
             <div class="module4-thq-scheduling-performance-criteria-elm">
               <span class="module4-thq-text-elm212">Scheduling Performance Criteria</span>
               <span class="module4-thq-text-elm213">
-                <span class="module4-thq-text-elm214">1. CPU Utilization</span>: The percentage or fraction of time that the CPU is actively doing useful work. (Target: Maximize CPU utilization).<br /><br />
-                <span class="module4-thq-text-elm218">2. Throughput</span>: The absolute number of processes that are fully completed per unit of time. (Target: Maximize throughput).<br /><br />
-                <span class="module4-thq-text-elm221">3. Turnaround Time</span>: The entire time interval spanning from the exact moment a process is submitted to the moment of its complete completion.<br />
-                <span>• Mathematical Formula: Turnaround Time = Finish Time - Arrival Time (Target: Minimize turnaround time).</span><br /><br />
-                <span class="module4-thq-text-elm226">4. Waiting Time</span>: The cumulative amount of time a process spends sitting and waiting inside the ready queue.<br />
-                <span>• Mathematical Formula: Waiting Time = Turnaround Time - Burst Time (Target: Minimize waiting time).</span><br /><br />
-                <span class="module4-thq-text-elm230">5. Response Time</span>: The specific amount of time it takes from process submission until the very first response or output begins to be produced (not the time it takes to output the entire response). (Target: Minimize response time).
+                <div class="indent-level-1"><strong>1. CPU Utilization:</strong> The percentage or fraction of time that the CPU is actively doing useful work. (Target: Maximize CPU utilization).</div>
+                  <div class="indent-level-1"><strong>2. Throughput:</strong> The absolute number of processes that are fully completed per unit of time. (Target: Maximize throughput).</div>
+                  <div class="indent-level-1"><strong>3. Turnaround Time:</strong> The entire time interval spanning from the exact moment a process is submitted to the moment of its complete completion.</div>
+                  <div class="indent-level-2">• <strong>Mathematical Formula:</strong> Turnaround Time = Finish Time - Arrival Time (Target: Minimize turnaround time).</div>
+                  <div class="indent-level-1"><strong>4. Waiting Time:</strong> The cumulative amount of time a process spends sitting and waiting inside the ready queue.</div>
+                  <div class="indent-level-2">• <strong>Mathematical Formula:</strong> Waiting Time = Turnaround Time - Burst Time (Target: Minimize waiting time).</div>
+                  <div class="indent-level-1"><strong>5. Response Time:</strong> The specific amount of time it takes from process submission until the very first response or output begins to be produced (not the time it takes to output the entire response). (Target: Minimize response time).</div>
               </span>
             </div>
 
             <div class="module4-thq-cpu-scheduling-algorithms-elm">
               <span class="module4-thq-text-elm201">First-Come, First-Served (FCFS) Scheduling</span>
               <span class="module4-thq-text-elm203">
-                <span class="module4-thq-text-elm181">• Definition:</span> The core algorithm where the process that requests the CPU first is allocated the CPU first, based entirely on its arrival time or when it was loaded into memory.<br /><br />
-                <span class="module4-thq-text-elm187">• Data Structure: </span>Managed using a standard First-In, First-Out (FIFO) queue.<br /><br />
-                <span class="module4-thq-text-elm188">• Scheme Type: </span>Strictly Non-preemptive. Once a process gets CPU allocation, it retains it until it terminates or requests an I/O operation.<br /><br />
-                <span class="module4-thq-text-elm183">• Key Characteristics &amp; Limitations:</span><br />
-                • Average waiting time is generally not minimal.<br />
-                • A short process may be forced to wait a very long time if a massive process arrives ahead of it.<br />
-                • It inherently favors CPU-bound processes over I/O-bound processes.<br />
-                • The Convoy Effect: A major performance phenomenon where multiple short processes end up stuck waiting in a long line behind one massive, slow process while it holds the CPU.
+               <div class="indent-level-1"><strong>• Definition:</strong> The core algorithm where the process that requests the CPU first is allocated the CPU first, based entirely on its arrival time or when it was loaded into memory.</div>
+                <div class="indent-level-1"><strong>• Data Structure:</strong> Managed using a standard First-In, First-Out (FIFO) queue.</div>
+                <div class="indent-level-1"><strong>• Scheme Type:</strong> Strictly Non-preemptive. Once a process gets CPU allocation, it retains it until it terminates or requests an I/O operation.</div>
+                <div class="indent-level-1"><strong>• Key Characteristics &amp; Limitations:</strong></div>
+                <div class="indent-level-2">• Average waiting time is generally not minimal.</div>
+                <div class="indent-level-2">• A short process may be forced to wait a very long time if a massive process arrives ahead of it.</div>
+                <div class="indent-level-2">• It inherently favors CPU-bound processes over I/O-bound processes.</div>
+                <div class="indent-level-2">• <strong>The Convoy Effect:</strong> A major performance phenomenon where multiple short processes end up stuck waiting in a long line behind one massive, slow process while it holds the CPU.</div>
               </span>
             </div>
 
             <div class="module4-thq-shortest-job-first-elm">
               <span class="module4-thq-text-elm184">Shortest-Job-First (SJF) / Shortest-Job-Next (SJN)</span>
               <span class="module4-thq-text-elm185">
-                <span class="module4-thq-text-elm186">• Definition</span>: An algorithm that allocates the CPU based on the length of the process's next CPU burst (more accurately called "Shortest Next CPU Burst"). Short processes are allowed to jump directly ahead of longer processes.<br /><br />
-                <span class="module4-thq-text-elm189">• Tie-Breaker Rule</span>: If two processes share the exact same next CPU burst length, FCFS is employed to break the tie.<br /><br />
-                <span class="module4-thq-text-elm191">• Key Performance Characteristics</span>:<br />
-                <span class="module4-thq-text-elm192">• Advantage</span>: It is mathematically optimal—it guarantees the minimum possible average waiting time for any given set of processes.<br />
-                <span class="module4-thq-text-elm194">• Disadvantage</span>: Can lead to Starvation, where longer processes may wait indefinitely if a continuous stream of shorter processes keeps arriving in the ready queue.<br /><br />
-                <span class="module4-thq-text-elm196">• Operational Schemes (Two Variants)</span>:<br />
-                <span class="module4-thq-text-elm197">• Non-preemptive SJF</span>: Once the CPU is allocated to a process, it cannot be interrupted or overridden until it completely finishes its current CPU burst, even if a new process with a shorter burst arrives.<br />
-                <span class="module4-thq-text-elm199">• Preemptive SJF / Shortest-Remaining-Time-First (SRTF)</span>: If a new process arrives in the ready queue with a next CPU burst time that is shorter than the remaining burst time of the currently executing process, the running process is immediately preempted and swapped out.
+                <div class="indent-level-1"><strong>• Definition:</strong> An algorithm that allocates the CPU based on the length of the process's next CPU burst (more accurately called "Shortest Next CPU Burst"). Short processes are allowed to jump directly ahead of longer processes.</div>
+                <div class="indent-level-1"><strong>• Tie-Breaker Rule:</strong> If two processes share the exact same next CPU burst length, FCFS is employed to break the tie.</div>
+                <div class="indent-level-1"><strong>• Key Performance Characteristics:</strong></div>
+                <div class="indent-level-2">• <strong>Advantage:</strong> It is mathematically optimal—it guarantees the minimum possible average waiting time for any given set of processes.</div>
+                <div class="indent-level-2">• <strong>Disadvantage:</strong> Can lead to Starvation, where longer processes may wait indefinitely if a continuous stream of shorter processes keeps arriving in the ready queue.</div>
+                <div class="indent-level-1"><strong>• Operational Schemes (Two Variants):</strong></div>
+                <div class="indent-level-2">• <strong>Non-preemptive SJF:</strong> Once the CPU is allocated to a process, it cannot be interrupted or overridden until it completely finishes its current CPU burst, even if a new process with a shorter burst arrives.</div>
+                <div class="indent-level-2">• <strong>Preemptive SJF / Shortest-Remaining-Time-First (SRTF):</strong> If a new process arrives in the ready queue with a next CPU burst time that is shorter than the remaining burst time of the currently executing process, the running process is immediately preempted and swapped out.</div>
               </span>
             </div>
 
             <div class="module4-thq-priority-scheduling-elm">
               <span class="module4-thq-text-elm167">Priority Scheduling</span>
               <span class="module4-thq-text-elm168">
-                <span class="module4-thq-text-elm169">• Definition</span>: An algorithm where a priority value (typically an integer) is explicitly associated with every process, and the CPU is allocated to the process possessing the highest priority.<br /><br />
-                <span class="module4-thq-text-elm171">• Standard Rule</span>: The smallest integer value represents the highest priority level.<br /><br />
-                <span class="module4-thq-text-elm173">• Relationship to SJF</span>: SJF is simply a specific form of priority scheduling where the priority value is equal to the predicted length of the next CPU burst.<br /><br />
-                <span class="module4-thq-text-elm175">• Key Issues &amp; Solutions</span>:<br />
-                <span>• Problem - Starvation (Indefinite Blocking): Low-priority processes may sit in the queue forever and never execute if higher-priority processes are constantly submitted.</span><br />
-                <span>• Solution - Aging: A technical process where the operating system gradually increases the priority level of long-waiting processes as time progresses.</span><br /><br />
-                <span class="module4-thq-text-elm178">• Operational Schemes (Two Variants)</span>:<br />
-                <span class="module4-thq-text-elm179">• Nonpreemptive Priority (NPP)</span>: The CPU is given to the job with the highest priority. If priorities are equal, FCFS is used. The process cannot be interrupted while running.<br />
-                <span class="module4-thq-text-elm182">• Preemptive Priority (PP)</span>: If a newly arrived process features a higher priority level than the process currently executing, the running job is instantly preempted.
+              <div class="indent-level-1"><strong>• Definition:</strong> An algorithm where a priority value (typically an integer) is explicitly associated with every process, and the CPU is allocated to the process possessing the highest priority.</div>
+                <div class="indent-level-1"><strong>• Standard Rule:</strong> The smallest integer value represents the highest priority level.</div>
+                <div class="indent-level-1"><strong>• Relationship to SJF:</strong> SJF is simply a specific form of priority scheduling where the priority value is equal to the predicted length of the next CPU burst.</div>
+                <div class="indent-level-1"><strong>• Key Issues &amp; Solutions:</strong></div>
+                <div class="indent-level-2">• <strong>Problem - Starvation (Indefinite Blocking):</strong> Low-priority processes may sit in the queue forever and never execute if higher-priority processes are constantly submitted.</div>
+                <div class="indent-level-2">• <strong>Solution - Aging:</strong> A technical process where the operating system gradually increases the priority level of long-waiting processes as time progresses.</div>
+                <div class="indent-level-1"><strong>• Operational Schemes (Two Variants):</strong></div>
+                <div class="indent-level-2">• <strong>Nonpreemptive Priority (NPP):</strong> The CPU is given to the job with the highest priority. If priorities are equal, FCFS is used. The process cannot be interrupted while running.</div>
+                <div class="indent-level-2">• <strong>Preemptive Priority (PP):</strong> If a newly arrived process features a higher priority level than the process currently executing, the running job is instantly preempted.</div>
               </span>
             </div>
 
             <div class="module4-thq-memory-protection-elm">
               <span class="module4-thq-text-elm166">Round Robin Scheduling</span>
               <span class="module4-thq-text-elm153">
-                <span class="module4-thq-text-elm154">• Definition</span>: An algorithm designed specifically for time-sharing environments. It operates similarly to FCFS, but overlays preemption mechanisms to dynamically cycle through executing processes.<br /><br />
-                <span class="module4-thq-text-elm156">• Time Quantum (q)</span>: A small, fixed unit of CPU time (typically ranging between 10 to 100 milliseconds) allocated to a process at a time. No single job can continuously hold the CPU for longer than one time quantum per turn.<br /><br />
-                <span class="module4-thq-text-elm158">• Preemption Mechanism</span>: Driven by clock interrupts generated at periodic intervals matching the quantum size. When an interrupt occurs, the running process is preempted and placed at the back of the ready queue.<br /><br />
-                <span class="module4-thq-text-elm160">• Wait-Time Guarantee</span>: If there are n processes in the ready queue and the time quantum is q, each process receives 1/n of the CPU time in chunks of at most q. No process will ever wait more than (n-1) x q time units for its next turn.<br /><br />
-                <span class="module4-thq-text-elm162">• Performance Dependency on Quantum Size</span>:<br />
-                <span>• If q is extremely large, RR performance degenerates and becomes identical to FIFO/FCFS.</span><br />
-                <span>• If q is extremely small, q must still remain significantly larger than the system's context switch time. Otherwise, the performance overhead from constant switching becomes sustainably high.</span><br />
-                <span>• Turnaround Optimization Rule: Average turnaround time improves if the majority of processes can fully complete their next CPU burst within the span of a single time quantum.</span>
+                <div class="indent-level-1"><strong>• Definition:</strong> An algorithm designed specifically for time-sharing environments. It operates similarly to FCFS, but overlays preemption mechanisms to dynamically cycle through executing processes.</div>
+                  <div class="indent-level-1"><strong>• Time Quantum (q):</strong> A small, fixed unit of CPU time (typically ranging between 10 to 100 milliseconds) allocated to a process at a time. No single job can continuously hold the CPU for longer than one time quantum per turn.</div>
+                  <div class="indent-level-1"><strong>• Preemption Mechanism:</strong> Driven by clock interrupts generated at periodic intervals matching the quantum size. When an interrupt occurs, the running process is preempted and placed at the back of the ready queue.</div>
+                  <div class="indent-level-1"><strong>• Wait-Time Guarantee:</strong> If there are n processes in the ready queue and the time quantum is q, each process receives 1/n of the CPU time in chunks of at most q. No process will ever wait more than (n-1) x q time units for its next turn.</div>
+                  <div class="indent-level-1"><strong>• Performance Dependency on Quantum Size:</strong></div>
+                  <div class="indent-level-2">• If q is extremely large, RR performance degenerates and becomes identical to FIFO/FCFS.</div>
+                  <div class="indent-level-2">• If q is extremely small, q must still remain significantly larger than the system's context switch time. Otherwise, the performance overhead from constant switching becomes sustainably high.</div>
+                  <div class="indent-level-2">• <strong>Turnaround Optimization Rule:</strong> Average turnaround time improves if the majority of processes can fully complete their next CPU burst within the span of a single time quantum.</div>
               </span>
             </div>
 
@@ -277,41 +277,45 @@
               <span class="module4-thq-text-elm152">Highest-Response-Ratio-Next (HRRN) Scheduling</span>
               <span class="module4-thq-text-elm140">
                 <span class="module4-thq-text-elm141">• Definition</span>: A non-preemptive scheduling algorithm where the process with the highest mathematically computed response ratio is chosen for execution next.<br /><br />
-                <span class="module4-thq-text-elm143">• Response Ratio Formula</span>:<br />
-                <span>• Response Ratio = (Time Spent Waiting + Expected Service Time) / Expected Service Time</span><br />
-                <span>• (Where "Expected Service Time" is equal to the next CPU burst time)</span><br /><br />
-                <span class="module4-thq-text-elm146">• Tie-Breaker Rule</span>: If two processes compute down to an identical response ratio, FCFS is utilized.<br /><br />
-                <span class="module4-thq-text-elm148">• Key Characteristics</span>:<br />
-                <span>• The absolute minimum possible value of a response ratio is 1 (occurring the exact moment a process enters the ready queue).</span><br />
-                <span>• Shorter processes are naturally favored (since a smaller denominator yields a higher ratio).</span><br />
-                <span>• Longer processes are protected against starvation via aging—as their waiting time (numerator) continuously grows over time, their overall response ratio increases until they win CPU allocation.</span>
+                <div class="indent-level-1"><strong>• Definition:</strong> A non-preemptive scheduling algorithm where the process with the highest mathematically computed response ratio is chosen for execution next.</div>
+                  <div class="indent-level-1"><strong>• Response Ratio Formula:</strong></div>
+                  <div class="indent-level-2">• Response Ratio = (Time Spent Waiting + Expected Service Time) / Expected Service Time</div>
+                  <div class="indent-level-2" style="margin-bottom: 8px;">• (Where "Expected Service Time" is equal to the next CPU burst time)</div>
+                  <div class="indent-level-1"><strong>• Tie-Breaker Rule:</strong> If two processes compute down to an identical response ratio, FCFS is utilized.</div>
+                  <div class="indent-level-1"><strong>• Key Characteristics:</strong></div>
+                  <div class="indent-level-2">• The absolute minimum possible value of a response ratio is 1 (occurring the exact moment a process enters the ready queue).</div>
+                  <div class="indent-level-2">• Shorter processes are naturally favored (since a smaller denominator yields a higher ratio).</div>
+                  <div class="indent-level-2">• Longer processes are protected against starvation via aging—as their waiting time (numerator) continuously grows over time, their overall response ratio increases until they win CPU allocation.</div>
               </span>
             </div>
 
             <div class="module4-thq-multilevel-queue-elm">
               <span class="module4-thq-text-elm139">Multilevel Queue Scheduling</span>
               <span class="module4-thq-text-elm125">
-                <span class="module4-thq-text-elm126">• Definition</span>: A scheduling methodology where the ready queue is partitioned into several entirely separate sub-queues based on process characteristics (e.g., separating foreground interactive processes from background batch processes).<br /><br />
-                <span class="module4-thq-text-elm128">• Independent Algorithms</span>: Every sub-queue maintains its own separate scheduling algorithm (for example, the foreground queue might run Round Robin while the background queue runs FCFS).<br /><br />
-                <span class="module4-thq-text-elm130">• Queue Priority Hierarchy (From Highest to Lowest Priority)</span>:<br />
-                <span>a. System processes | b. Interactive processes | c. Interactive editing processes | d. Student processes | e. Batch processes</span><br /><br />
-                <span class="module4-thq-text-elm136">• Inter-Queue Scheduling Methods (Managing Queue Priority)</span>:<br />
-                <span>a. Fixed Priority Preemptive Scheduling: Each individual queue holds absolute priority over lower-priority queues. No process in a lower-priority queue can run unless all higher-priority queues are completely empty.</span><br />
-                <span>b. Time Slicing: Every queue receives a statically allocated, dedicated percentage of the total CPU time to divide among its own processes.</span>
+              <div class="indent-level-1"><strong>• Definition:</strong> A scheduling methodology where the ready queue is partitioned into several entirely separate sub-queues based on process characteristics (e.g., separating foreground interactive processes from background batch processes).</div>
+                <div class="indent-level-1"><strong>• Independent Algorithms:</strong> Every sub-queue maintains its own separate scheduling algorithm (for example, the foreground queue might run Round Robin while the background queue runs FCFS).</div>
+                <div class="indent-level-1"><strong>• Queue Priority Hierarchy (From Highest to Lowest Priority):</strong></div>
+                <div class="indent-level-2"><strong>a.</strong> System processes</div>
+                  <div class="indent-level-2"><strong>b.</strong> Interactive processes</div>
+                  <div class="indent-level-2"><strong>c.</strong> Interactive editing processes</div>
+                  <div class="indent-level-2"><strong>d.</strong> Student processes</div>
+                  <div class="indent-level-2"><strong>e.</strong> Batch processes</div>                <div class="indent-level-1" style="margin-top: 8px;"><strong>• Inter-Queue Scheduling Methods (Managing Queue Priority):</strong></div>
+                <div class="indent-level-2"><strong>a. Fixed Priority Preemptive Scheduling:</strong> Fixed Priority Preemptive Scheduling: Each individual queue holds absolute priority over lower-priority queues. No process in a lower-priority queue (e.g., a batch queue) can run unless all higher-priority queues are completely empty. If a lower-priority process is currently running and a process enters a higher-priority queue, the lower-priority process is immediately preempted.</div>
+                <div class="indent-level-2"><strong>b. Time Slicing:</strong> Every queue receives a statically allocated, dedicated percentage of the total CPU time to divide among its own processes (e.g., Queue 1 takes 50% of CPU time, Queue 2 takes 30%, and Queue 3 gets 20%).</div>
               </span>
             </div>
 
             <div class="module4-thq-multilevel-feedback-queue-elm">
               <span class="module4-thq-text-elm100">Multilevel Feedback Queue (MLFQ) Scheduling</span>
               <span class="module4-thq-text-elm101">
-                <span class="module4-thq-text-elm102">• Definition</span>: An advanced extension of Multilevel Queues where processes are not permanently assigned to a single queue. Instead, processes are permitted to dynamically move between different queues based on their execution history. This structure inherently implements aging and penalizes processes that monopolize the CPU for long periods.<br /><br />
-                <span class="module4-thq-text-elm104">• System Parameters (Defining an MLFQ System)</span>: An MLFQ scheduler is strictly defined by five distinct parameters:<br />
-                <span>• The total number of sub-queues | • The specific scheduling algorithm used within each individual queue | • The explicit method used to determine when to upgrade a process to a higher-priority queue (Aging) | • The explicit method used to determine when to demote a process to a lower-priority queue | • The explicit method used to determine which queue a process will initially enter when it requires service.</span><br /><br />
-                <span class="module4-thq-text-elm111">• The Demotion/Interruption Process (Step-by-Step Multi-Level Life Cycle)</span>:<br />
-                <span>• A brand new process enters the highest-priority queue (Q0) under an FCFS structure and is allocated a small time quantum. If the process finishes its job within that time quantum, it terminates cleanly. If the quantum expires, it is preempted, demoted, and moved to the back of the next lower-priority queue (Q1). Lower-priority queues are processed only when all higher-priority queues are completely empty.</span><br /><br />
-                <span class="module4-thq-text-elm119">• Key Issues &amp; Solutions</span>:<br />
-                <span class="module4-thq-text-elm121">• Problem</span>: Starvation of long processes if I/O-bound and interactive processes keep arriving continuously.<br />
-                <span class="module4-thq-text-elm123">• Solution</span>: Aging (processes waiting too long in a low-priority queue can be dynamically moved to a higher-priority queue).
+              <div class="indent-level-1"><strong>• Definition:</strong> An advanced extension of Multilevel Queues where processes are not permanently assigned to a single queue. Instead, processes are permitted to dynamically move between different queues based on their execution history. This structure inherently implements aging and penalizes processes that monopolize the CPU for long periods.</div>
+                <div class="indent-level-1"><strong>• System Parameters (Defining an MLFQ System):</strong> An MLFQ scheduler is strictly defined by five distinct parameters:</div>
+                <div class="indent-level-2">• The total number of sub-queues | • The specific scheduling algorithm used within each individual queue | • The explicit method used to determine when to upgrade a process to a higher-priority queue (Aging) | • The explicit method used to determine when to demote a process to a lower-priority queue | • The explicit method used to determine which queue a process will initially enter when it requires service.</div>
+                <div class="indent-level-1" style="margin-top: 8px;"><strong>• The Demotion/Interruption Process (Step-by-Step Multi-Level Life Cycle):</strong></div>
+                <div class="indent-level-2">• A brand new process enters the highest-priority queue (Q0) under an FCFS structure and is allocated a small time quantum. If the process finishes its job within that time quantum, it terminates cleanly. If the quantum expires, it is preempted, demoted, and moved to the back of the next lower-priority queue (Q1). Lower-priority queues are processed only when all higher-priority queues are completely empty.</div>
+                <div class="indent-level-1" style="margin-top: 8px;"><strong>• Key Issues &amp; Solutions:</strong></div>
+                <div class="indent-level-2"><strong>• Problem:</strong> Starvation of long processes if I/O-bound and interactive processes keep arriving continuously.</div>
+                <div class="indent-level-2"><strong>• Solution:</strong> Aging (processes waiting too long in a low-priority queue can be dynamically moved to a higher-priority queue).</div>
               </span>
             </div>
 

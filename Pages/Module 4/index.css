@@ -294,3 +294,16 @@ img { display: block; }
   .module4-thq-header-elm { height: clamp(80px, 18vw, 120px); }
   .module4-thq-o-sphere-logo-elm { width: 75%; }
 }
+
+/* Structural Indentation Helpers */
+.indent-level-1 {
+  display: block;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.indent-level-2 {
+  display: block;
+  padding-left: 48px;
+  margin-bottom: 6px;
+}
