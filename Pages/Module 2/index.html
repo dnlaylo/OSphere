@@ -167,44 +167,52 @@
 
             <div class="module2-thq-computer-system-organization-elm module2-card">
               <span class="module2-thq-text-elm389">Computer System Organization</span>
-              <span class="module2-thq-text-elm391">Computer system organization explains how the CPU, memory, and input/output (I/O) devices work together to process data efficiently.</span>
-              <span class="module2-thq-text-elm393">
-                <span class="module2-text322">1. Concurrent Operation</span><br />
-                <span class="module2-text324">• The CPU and I/O devices work at the same time.</span><br />
-                <span class="module2-text326">This means:</span><br />
-                <span class="module2-text328">• While the CPU is processing data, I/O devices can also perform their tasks</span><br />
-                <span class="module2-text330">• This improves overall system speed and efficiency</span><br /><br />
-                <span class="module2-text333">2. Device Controllers</span><br />
-                <span class="module2-text335">• Each I/O device is managed by a device controller.</span><br />
-                <span class="module2-text337">• Each controller handles one specific type of device (e.g., keyboard, disk, printer)</span><br />
-                <span class="module2-text339">• It acts as a middle unit between the device and the computer system</span><br /><br />
-                <span class="module2-text342">3. Local Buffer Storage</span><br />
-                <span class="module2-text344">• Every device controller has a local buffer.</span><br />
-                <span class="module2-text346">• Data from the device is first stored in this buffer</span><br />
-                <span class="module2-text348">• This helps manage data transfer smoothly before sending it to memory or CPU</span><br /><br />
-                <span class="module2-text351">4. Data Transfer Process</span><br />
-                <span class="module2-text353">• The CPU does not communicate directly with the device.</span><br />
-                <span class="module2-text355">Instead:</span><br />
-                <span class="module2-text357">Data moves between the device and the controller’s buffer</span><br />
-                <span class="module2-text359">• Then the CPU transfers data between the buffer and main memory</span><br /><br />
-                <span class="module2-text362">5. Interrupt System</span><br />
-                <span>• Device controllers notify the CPU when they finish a task.</span><br />
-                <span>• This is done through an interrupt signal</span><br />
-                <span>• It tells the CPU that I/O operation is complete and ready for processing</span>
-              </span>
+              <div class="module2-thq-text-elm391">
+                Computer system organization explains how the CPU, memory, and input/output (I/O) devices work together to process data efficiently.
+              </div>
+              <div class="module2-thq-text-elm393">
+                <div style="font-weight: bold; margin-top: 12px; margin-bottom: 4px;">1. Concurrent Operation</div>
+                <div class="indent-level-1">• The CPU and I/O devices work at the same time.</div>
+                <div class="indent-level-1" style="font-style: italic;">This means:</div>
+                <div class="indent-level-2">• While the CPU is processing data, I/O devices can also perform their tasks.</div>
+                <div class="indent-level-2">• This improves overall system speed and efficiency.</div>
+
+                <div style="font-weight: bold; margin-top: 12px; margin-bottom: 4px;">2. Device Controllers</div>
+                <div class="indent-level-1">• Each I/O device is managed by a device controller.</div>
+                <div class="indent-level-2">• Each controller handles one specific type of device (e.g., keyboard, disk, printer).</div>
+                <div class="indent-level-2">• It acts as a middle unit between the device and the computer system.</div>
+
+                <div style="font-weight: bold; margin-top: 12px; margin-bottom: 4px;">3. Local Buffer Storage</div>
+                <div class="indent-level-1">• Every device controller has a local buffer.</div>
+                <div class="indent-level-2">• Data from the device is first stored in this buffer.</div>
+                <div class="indent-level-2">• This helps manage data transfer smoothly before sending it to memory or CPU.</div>
+
+                <div style="font-weight: bold; margin-top: 12px; margin-bottom: 4px;">4. Data Transfer Process</div>
+                <div class="indent-level-1">• The CPU does not communicate directly with the device.</div>
+                <div class="indent-level-1" style="font-style: italic;">Instead:</div>
+                <div class="indent-level-2">• Data moves between the device and the controller’s buffer.</div>
+                <div class="indent-level-2">• Then the CPU transfers data between the buffer and main memory.</div>
+
+                <div style="font-weight: bold; margin-top: 12px; margin-bottom: 4px;">5. Interrupt System</div>
+                <div class="indent-level-1">• Device controllers notify the CPU when they finish a task.</div>
+                <div class="indent-level-2">• This is done through an interrupt signal.</div>
+                <div class="indent-level-2">• It tells the CPU that the I/O operation is complete and ready for processing.</div>
+              </div>
             </div>
 
-            <div class="module2-thq-interrupts-elm">
+              <div class="module2-thq-interrupts-elm">
               <span class="module2-thq-text-elm380">Interrupts</span>
-              <span class="module2-thq-text-elm381">
-                <span>• Interrupt transfers control to the interrupt service routine</span><br />
-                <span>• Interrupt Service Routine: Segments of code that determine action to be taken for each type of interrupt.</span><br />
-                <span>• Interrupt vector contains the address of service routines.</span><br /><br />
-                <span>• OS preserves the state of the CPU</span><br />
-                <span>• stores registers and the program counter (address of interrupted instruction).</span><br /><br />
-                <span>• Trap</span><br />
-                <span>• software generated interrupt caused either by an error or a user request.</span>
-              </span>
+              <div class="module2-thq-text-elm381">
+                <div class="indent-level-1">• Interrupt transfers control to the interrupt service routine.</div>
+                <div class="indent-level-2">• <strong>Interrupt Service Routine:</strong> Segments of code that determine action to be taken for each type of interrupt.</div>
+                <div class="indent-level-2">• Interrupt vector contains the address of service routines.</div>
+                
+                <div class="indent-level-1" style="margin-top: 12px;">• OS preserves the state of the CPU.</div>
+                <div class="indent-level-2">• Stores registers and the program counter (address of interrupted instruction).</div>
+                
+                <div class="indent-level-1" style="margin-top: 12px;">• Trap</div>
+                <div class="indent-level-2">• Software generated interrupt caused either by an error or a user request.</div>
+              </div>
             </div>
 
             <div class="module2-thq-interrupt-handling-elm">
@@ -315,15 +323,17 @@
               <span class="module2-thq-text-elm308">Hardware Protection</span>
               <span class="module2-thq-text-elm297">Hardware protection ensures that the operating system controls access to system resources and prevents programs from interfering with each other or the system itself.</span>
               <span class="module2-thq-text-elm307">Dual-mode operation</span>
-              <span class="module2-thq-text-elm299">
-                <span>• Sharing system resources requires the operating system to ensure that an incorrect program cannot cause other programs to execute incorrectly.</span><br />
-                <span>• Provide hardware support to differentiate between at least two modes of operation:</span><br /><br />
-                <span>1. User mode -- execution done on behalf of a user.</span><br />
-                <span>2. Monitor mode (supervisor/kernel/system mode) – execution done on behalf of the operating system.</span><br /><br />
-                <span>• Mode bit added to computer hardware to indicate the current mode: monitor(0) or user(1).</span><br />
-                <span>• When an interrupt or fault occurs, hardware switches to monitor mode.</span><br />
-                <span>• Privileged instructions only in monitor mode.</span>
-              </span>
+              <div class="module2-thq-text-elm299">
+                <span class="indent-level-1">• Sharing system resources requires the operating system to ensure that an incorrect program cannot cause other programs to execute incorrectly.</span>
+                <span class="indent-level-1">• Provide hardware support to differentiate between at least two modes of operation:</span>
+                
+                <span class="indent-level-2">1. User mode -- execution done on behalf of a user.</span>
+                <span class="indent-level-2">2. Monitor mode (supervisor/kernel/system mode) – execution done on behalf of the operating system.</span>
+                
+                <span class="indent-level-1">• Mode bit added to computer hardware to indicate the current mode: monitor(0) or user(1).</span>
+                <span class="indent-level-1">• When an interrupt or fault occurs, hardware switches to monitor mode.</span>
+                <span class="indent-level-1">• Privileged instructions only in monitor mode.</span>
+              </div>
               <div class="image-row">
                 <img src="Assets/Figures/Fig 5.svg" class="module2-thq-fig5-elm" />
                 <img src="Assets/Figures/Fig 6.svg" class="module2-thq-fig6-elm" />
@@ -332,24 +342,24 @@
 
             <div class="module2-thq-io-protection-elm">
               <span class="module2-thq-text-elm296">I/O Protection</span>
-              <span class="module2-thq-text-elm293">
-                <span>• All I/O instructions are privileged instructions.</span><br />
-                <span>• Must ensure that a user program could never gain control of the computer in monitor mode, for e.g. a user program that as part of its execution, stores a new address in the interrupt vector.</span>
-              </span>
+              <div class="module2-thq-text-elm293">
+                <span class="indent-level-1">• All I/O instructions are privileged instructions.</span>
+                <span class="indent-level-1">• Must ensure that a user program could never gain control of the computer in monitor mode, for e.g. a user program that as part of its execution, stores a new address in the interrupt vector.</span>
+              </div>
             </div>
 
-            <div class="module2-thq-memory-protection-elm">
+          <div class="module2-thq-memory-protection-elm">
               <span class="module2-thq-text-elm292">Memory Protection</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module2-thq-text-elm282">
-                    <span>• Must provide memory protection at least for the interrupt vector and the interrupt service routines.</span><br />
-                    <span>• To provide memory protection, add two registers that determine the range of legal addresses a program may address.</span><br />
-                    <span>• Base Register - holds the smallest legal physical memory address.</span><br />
-                    <span>• Limit register - contains the size of the range.</span><br />
-                    <span>• Memory outside the defined range is protected.</span><br />
-                    <span>• When executing in monitor mode, the OS has unrestricted access to both monitor and users’ memory.</span>
-                  </span>
+                  <div class="module2-thq-text-elm282">
+                    <span class="indent-level-1">• Must provide memory protection at least for the interrupt vector and the interrupt service routines.</span>
+                    <span class="indent-level-1">• To provide memory protection, add two registers that determine the range of legal addresses a program may address.</span>
+                    <span class="indent-level-2">• Base Register - holds the smallest legal physical memory address.</span>
+                    <span class="indent-level-2">• Limit register - contains the size of the range.</span>
+                    <span class="indent-level-1">• Memory outside the defined range is protected.</span>
+                    <span class="indent-level-1">• When executing in monitor mode, the OS has unrestricted access to both monitor and users’ memory.</span>
+                  </div>
                 </div>
                 <div class="image-row">
                   <img src="Assets/Figures/Fig 7.svg" class="module2-thq-fig7-elm" />
@@ -360,121 +370,121 @@
 
             <div class="module2-thq-cpu-protection-elm">
               <span class="module2-thq-text-elm281">CPU Protection</span>
-              <span class="module2-thq-text-elm273">
+              <div class="module2-thq-text-elm273">
                 <span class="module2-thq-text-elm274">Timer</span>
-                <span style="font-weight: 200;">- interrupts computer after specified period to ensure that the OS maintains control.</span><br />
-                <span style="font-weight: 200;">• The timer is decremented every clock tick.</span><br />
-                <span style="font-weight: 200;">• When the timer reaches a value of 0, an interrupt occurs.</span><br /><br />
-                <span style="font-weight: 200;">• Timer is commonly used to implement time sharing.</span><br />
-                <span style="font-weight: 200;">• Timer is also used to compute the current time.</span><br />
-                <span style="font-weight: 200;">• Load timer is a privileged instruction.</span>
-              </span>
+                <span class="indent-level-1">- interrupts computer after specified period to ensure that the OS maintains control.</span>
+                <span class="indent-level-2">• The timer is decremented every clock tick.</span>
+                <span class="indent-level-2">• When the timer reaches a value of 0, an interrupt occurs.</span>
+                <span class="indent-level-1">• Timer is commonly used to implement time sharing.</span>
+                <span class="indent-level-1">• Timer is also used to compute the current time.</span>
+                <span class="indent-level-1">• Load timer is a privileged instruction.</span>
+              </div>
             </div>
 
             <div class="module2-thq-general-systemarchitecture-elm">
               <span class="module2-thq-text-elm272">General System Architecture</span>
-              <span class="module2-thq-text-elm268">
-                <span class="module2-thq-text-elm269">Given the I/O instructions are privileged, how do users perform I/O?</span><br />
-                <span class="module2-thq-text-elm270">Via system calls</span>
-                <span>- the method used by a process to request action by the operating system.</span>
-              </span>
+              <div class="module2-thq-text-elm268">
+                <span class="module2-thq-text-elm269">Given the I/O instructions are privileged, how do users perform I/O?</span>
+                <span class="indent-level-1"><span class="module2-thq-text-elm270">Via system calls</span> - the method used by a process to request action by the operating system.</span>
+              </div>
             </div>
 
             <div class="module2-thq-system-calls-elm">
               <span class="module2-thq-text-elm267">System Calls</span>
-              <span class="module2-thq-text-elm260">
-                <span>• Interface between running program and the OS.</span><br />
-                <span>• Assembly language instructions (macros and subroutines)</span><br />
-                <span>• Some higher level languages allow system calls to be made directly (e.g. C)</span><br />
-                <span>• Passing parameters between a running program and OS via registers, memory tables or stack.</span><br />
-                <span>• Unix has about 32 system calls </span><br />
-                <span>• read(), write(), open(), close(), fork(), exec(), ioctl(),.....</span>
-              </span>
+              <div class="module2-thq-text-elm260">
+                <span class="indent-level-1">• Interface between running program and the OS.</span>
+                <span class="indent-level-1">• Assembly language instructions (macros and subroutines)</span>
+                <span class="indent-level-1">• Some higher level languages allow system calls to be made directly (e.g. C)</span>
+                <span class="indent-level-1">• Passing parameters between a running program and OS via registers, memory tables or stack.</span>
+                <span class="indent-level-1">• Unix has about 32 system calls </span>
+                <span class="indent-level-2">• read(), write(), open(), close(), fork(), exec(), ioctl(),.....</span>
+              </div>
             </div>
 
             <div class="module2-thq-operating-system-services-elm">
               <span class="module2-thq-text-elm259">Operating System Services</span>
-              <span class="module2-thq-text-elm248">
-                <span>• Services that provide user-interfaces to OS</span><br />
-                <span>• Program execution - load program into memory and run it</span><br />
-                <span>• I/O Operations - since users cannot execute I/O operations directly</span><br />
-                <span>• File System Manipulation - read, write, create, delete files</span><br />
-                <span>• Communications - interprocess and intersystem</span><br />
-                <span>• Error Detection - in hardware, I/O devices, user programs</span><br /><br />
-                <span>• Services for providing efficient system operation</span><br />
-                <span>• Resource Allocation - for simultaneously executing jobs</span><br />
-                <span>• Accounting - for account billing and usage statistics</span><br />
-                <span>• Protection - ensure access to system resources is controlled</span>
-              </span>
+              <div class="module2-thq-text-elm248">
+                <span class="indent-level-1">• Services that provide user-interfaces to OS</span>
+                <span class="indent-level-2">• Program execution - load program into memory and run it</span>
+                <span class="indent-level-2">• I/O Operations - since users cannot execute I/O operations directly</span>
+                <span class="indent-level-2">• File System Manipulation - read, write, create, delete files</span>
+                <span class="indent-level-2">• Communications - interprocess and intersystem</span>
+                <span class="indent-level-2">• Error Detection - in hardware, I/O devices, user programs</span>
+                
+                <span class="indent-level-1" style="margin-top: 12px;">• Services for providing efficient system operation</span>
+                <span class="indent-level-2">• Resource Allocation - for simultaneously executing jobs</span>
+                <span class="indent-level-2">• Accounting - for account billing and usage statistics</span>
+                <span class="indent-level-2">• Protection - ensure access to system resources is controlled</span>
+              </div>
             </div>
 
             <div class="module2-thq-system-programs-elm">
               <span class="module2-thq-text-elm247">System Programs</span>
-              <span class="module2-thq-text-elm238">
-                <span>Convenient environment for program development and execution. The user view of the OS is defined by system programs, not system calls.</span><br />
-                <span>• Command Interpreter (sh, csh, ksh) - parses/executes other system programs</span><br />
-                <span>• File manipulation - copy (cp), print (lpr), compare(cmp,diff)</span><br />
-                <span>• File modification - editing (ed, vi, emacs)</span><br />
-                <span>• Application programs - send mail (mail), read news (rn)</span><br />
-                <span>• Programming language support (cc)</span><br />
-                <span>• Status information, communication</span><br />
-                <span>• Etc.</span>
-              </span>
+              <div class="module2-thq-text-elm238">
+                <span class="indent-level-1">Convenient environment for program development and execution. The user view of the OS is defined by system programs, not system calls.</span>
+                <span class="indent-level-2">• Command Interpreter (sh, csh, ksh) - parses/executes other system programs</span>
+                <span class="indent-level-2">• File manipulation - copy (cp), print (lpr), compare(cmp,diff)</span>
+                <span class="indent-level-2">• File modification - editing (ed, vi, emacs)</span>
+                <span class="indent-level-2">• Application programs - send mail (mail), read news (rn)</span>
+                <span class="indent-level-2">• Programming language support (cc)</span>
+                <span class="indent-level-2">• Status information, communication</span>
+                <span class="indent-level-2">• Etc.</span>
+              </div>
             </div>
 
             <div class="module2-thq-command-interpreter-system-elm">
               <span class="module2-thq-text-elm237">Command Interpreter System</span>
-              <span class="module2-thq-text-elm231">
-                <span>• Commands that are given to the operating system via command statements that execute</span><br />
-                <span>• Process creation and deletion, I/O handling, Secondary Storage Management, Main Memory Management, File System Access, Protection, Networking.</span><br /><br />
-                <span>• Obtains the next command and executes it.</span><br />
-                <span>• Programs that read and interpret control statements also called -</span><br />
-                <span>• Control card interpreter, command-line interpreter, shell (in UNIX)</span>
-              </span>
+              <div class="module2-thq-text-elm231">
+                <span class="indent-level-1">• Commands that are given to the operating system via command statements that execute</span>
+                <span class="indent-level-2">• Process creation and deletion, I/O handling, Secondary Storage Management, Main Memory Management, File System Access, Protection, Networking.</span>
+                <span class="indent-level-1" style="margin-top: 12px;">• Obtains the next command and executes it.</span>
+                <span class="indent-level-1">• Programs that read and interpret control statements also called -</span>
+                <span class="indent-level-2">• Control card interpreter, command-line interpreter, shell (in UNIX)</span>
+              </div>
             </div>
 
             <div class="module2-thq-systemdesignand-implementation-elm">
               <span class="module2-thq-text-elm229">System Design and Implementation</span>
-              <span class="module2-thq-text-elm221">
-                <span>• Establish design goals</span><br />
-                <span>• User Goals</span><br />
-                <span>• System Goals</span><br />
-                <span>• Software Engineering -</span><br />
-                <span>• Separate mechanism from policy. Policies determine what needs to be done, mechanisms determine how they are done.</span><br />
-                <span>• Choose a high-level implementation language </span><br />
-                <span>• faster implementation, more compact, easier to debug</span>
-              </span>
+              <div class="module2-thq-text-elm221">
+                <span class="indent-level-1">• Establish design goals</span>
+                <span class="indent-level-2">• User Goals</span>
+                <span class="indent-level-2">• System Goals</span>
+                <span class="indent-level-1">• Software Engineering -</span>
+                <span class="indent-level-2">• Separate mechanism from policy. Policies determine what needs to be done, mechanisms determine how they are done.</span>
+                <span class="indent-level-1">• Choose a high-level implementation language </span>
+                <span class="indent-level-2">• faster implementation, more compact, easier to debug</span>
+              </div>
             </div>
 
             <div class="module2-thq-systemgeneration-elm">
               <span class="module2-thq-text-elm220">System Generation</span>
-              <span class="module2-thq-text-elm214">
-                <span>• OS written for a class of machines, must be configured for each specific site.</span><br />
-                <span>• SYSGEN program obtains info about specific hardware configuration and creates version of OS for hardware</span><br />
-                <span>• Booting</span><br />
-                <span>• Bootstrap program - loader program loads kernel, kernel loads rest of OS.</span><br />
-                <span>• Bootstrap program stored in ROM</span>
-              </span>
+              <div class="module2-thq-text-elm214">
+                <span class="indent-level-1">• OS written for a class of machines, must be configured for each specific site.</span>
+                <span class="indent-level-1">• SYSGEN program obtains info about specific hardware configuration and creates version of OS for hardware</span>
+                <span class="indent-level-1">• Booting</span>
+                <span class="indent-level-2">• Bootstrap program - loader program loads kernel, kernel loads rest of OS.</span>
+                <span class="indent-level-2">• Bootstrap program stored in ROM</span>
+              </div>
             </div>
 
             <div class="module2-thq-operating-systems-howaretheyorganized-elm">
               <span class="module2-thq-text-elm212">Operating Systems: How are they organized?</span>
-              <span class="module2-thq-text-elm203">
-                <span>• Simple - Only one or two levels of code</span><br />
-                <span>• Layered - Lower levels independent of upper levels</span><br />
-                <span>• Microkernel - OS built from many user-level processes</span><br />
-                <span>• Modular - Core kernel with Dynamically loadable modules</span>
-              </span>
+              <div class="module2-thq-text-elm203">
+                <span class="indent-level-1">• Simple - Only one or two levels of code</span>
+                <span class="indent-level-1">• Layered - Lower levels independent of upper levels</span>
+                <span class="indent-level-1">• Microkernel - OS built from many user-level processes</span>
+                <span class="indent-level-1">• Modular - Core kernel with Dynamically loadable modules</span>
+              </div>
             </div>
 
             <div class="module2-thq-os-structure-simple-approach-elm">
               <span class="module2-thq-text-elm201">OS Structure - Simple Approach</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module2-thq-text-elm198">
-                    <span>• MS-DOS - provides a lot of functionality in little space.</span><br />
-                    <span>• Not divided into modules, Interfaces and levels of functionality are not well separated</span>
-                  </span>
+                  <div class="module2-thq-text-elm198">
+                    <span class="indent-level-1">• MS-DOS - provides a lot of functionality in little space.</span>
+                    <span class="indent-level-1">• Not divided into modules, Interfaces and levels of functionality are not well separated</span>
+                  </div>
                 </div>
                 <img src="Assets/Figures/Fig 9.svg" class="module2-thq-fig9-elm" />
               </div>
@@ -482,23 +492,23 @@
 
             <div class="module2-thq-unix-system-structure-elm">
               <span class="module2-thq-text-elm196">UNIX System Structure</span>
-              <span class="module2-thq-text-elm190">
-                <span>• UNIX - limited structuring, has 2 separable parts</span><br />
-                <span>• Systems programs</span><br />
-                <span>• Kernel - everything below the system call interface and above physical hardware.</span><br />
-                <span>• Filesystem, CPU scheduling, memory management</span>
-              </span>
+              <div class="module2-thq-text-elm190">
+                <span class="indent-level-1">• UNIX - limited structuring, has 2 separable parts</span>
+                <span class="indent-level-2">• Systems programs</span>
+                <span class="indent-level-2">• Kernel - everything below the system call interface and above physical hardware.</span>
+                <span class="indent-level-3" style="display: block; padding-left: 72px; margin-bottom: 6px;">• Filesystem, CPU scheduling, memory management</span>
+              </div>
             </div>
 
             <div class="module2-thq-layered-os-structure-elm">
               <span class="module2-thq-text-elm189">Layered OS Structure</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module2-thq-text-elm185">
-                    <span>• OS is divided into a number of layers - bottom layer is hardware, highest layer is the user interface.</span><br />
-                    <span>• Each layer uses functions and services of only lower-level layers.</span><br />
-                    <span>• The Operating System Kernel has successive layers of abstraction.</span>
-                  </span>
+                  <div class="module2-thq-text-elm185">
+                    <span class="indent-level-1">• OS is divided into a number of layers - bottom layer is hardware, highest layer is the user interface.</span>
+                    <span class="indent-level-1">• Each layer uses functions and services of only lower-level layers.</span>
+                    <span class="indent-level-1">• The Operating System Kernel has successive layers of abstraction.</span>
+                  </div>
                 </div>
                 <div class="image-row">
                   <img src="Assets/Figures/Fig 10.svg" class="module2-thq-fig10-elm" />
@@ -509,34 +519,36 @@
 
             <div class="module2-thq-microkernel-structure-elm">
               <span class="module2-thq-text-elm184">Microkernel Structure</span>
-              <span class="module2-thq-text-elm169">
-                <span class="module2-thq-text-elm170">• Moves as much from the kernel into “user” space</span><br />
-                <span class="module2-thq-text-elm171">• Small core OS running at kernel level</span><br />
-                <span class="module2-thq-text-elm172">• OS Services built from many independent user-level processes</span><br />
-                <span class="module2-thq-text-elm173">• Communication between modules with message passing</span><br /><br />
-                <span class="module2-thq-text-elm174">Benefits</span><span class="module2-thq-text-elm175">:</span><br />
-                <span class="module2-thq-text-elm176">• Easier to extend a microkernel</span><br />
-                <span class="module2-thq-text-elm177">• Easier to port OS to new architectures</span><br />
-                <span class="module2-thq-text-elm178">• More reliable (less code is running in kernel mode)</span><br />
-                <span class="module2-thq-text-elm179">• Fault Isolation (parts of kernel protected from other parts)</span><br />
-                <span class="module2-thq-text-elm180">• More secure</span><br /><br />
-                <span class="module2-thq-text-elm181">Detriments</span><span>:</span><br />
-                <span>• Performance overhead severe for naïve implementation</span>
-              </span>
+              <div class="module2-thq-text-elm169">
+                <span class="module2-thq-text-elm170 indent-level-1">• Moves as much from the kernel into “user” space</span>
+                <span class="module2-thq-text-elm171 indent-level-1">• Small core OS running at kernel level</span>
+                <span class="module2-thq-text-elm172 indent-level-1">• OS Services built from many independent user-level processes</span>
+                <span class="module2-thq-text-elm173 indent-level-1">• Communication between modules with message passing</span>
+                
+                <span class="module2-thq-text-elm174 indent-level-1" style="margin-top: 12px; font-weight: bold;">Benefits:</span>
+                <span class="module2-thq-text-elm176 indent-level-2">• Easier to extend a microkernel</span>
+                <span class="module2-thq-text-elm177 indent-level-2">• Easier to port OS to new architectures</span>
+                <span class="module2-thq-text-elm178 indent-level-2">• More reliable (less code is running in kernel mode)</span>
+                <span class="module2-thq-text-elm179 indent-level-2">• Fault Isolation (parts of kernel protected from other parts)</span>
+                <span class="module2-thq-text-elm180 indent-level-2">• More secure</span>
+                
+                <span class="module2-thq-text-elm181 indent-level-1" style="margin-top: 12px; font-weight: bold;">Detriments:</span>
+                <span class="indent-level-2">• Performance overhead severe for naïve implementation</span>
+              </div>
             </div>
 
             <div class="module2-thq-modulesbased-structure-elm">
               <span class="module2-thq-text-elm168">Modules-based Structure</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module2-thq-text-elm161">
-                    <span>• Most modern operating systems implement modules</span><br />
-                    <span>• Uses object-oriented approach</span><br />
-                    <span>• Each core component is separate</span><br />
-                    <span>• Each talks to the others over known interfaces</span><br />
-                    <span>• Each is loadable as needed within the kernel</span><br />
-                    <span>• Overall, similar to layers but with more flexible</span>
-                  </span>
+                  <div class="module2-thq-text-elm161">
+                    <span class="indent-level-1">• Most modern operating systems implement modules</span>
+                    <span class="indent-level-1">• Uses object-oriented approach</span>
+                    <span class="indent-level-1">• Each core component is separate</span>
+                    <span class="indent-level-1">• Each talks to the others over known interfaces</span>
+                    <span class="indent-level-1">• Each is loadable as needed within the kernel</span>
+                    <span class="indent-level-1">• Overall, similar to layers but with more flexible</span>
+                  </div>
                 </div>
                 <img src="Assets/Figures/Fig 12.svg" class="module2-thq-fig12-elm" />
               </div>
@@ -544,43 +556,44 @@
 
             <div class="module2-thq-os-task-process-management-elm">
               <span class="module2-thq-text-elm160">OS Task: Process Management</span>
-              <span class="module2-thq-text-elm149">
-                <span class="module2-thq-text-elm150">Process</span>
-                <span class="module2-thq-text-elm151"> - fundamental concept in OS</span><br />
-                <span class="module2-thq-text-elm152">• Process is a program in execution.</span><br />
-                <span class="module2-thq-text-elm153">• Process needs resources - CPU time, memory, files/data and I/O devices.</span><br /><br />
-                <span class="module2-thq-text-elm154">OS</span>
-                <span> is responsible for the following process management activities.</span><br />
-                <span style="font-weight: 200;">• Process creation and deletion</span><br />
-                <span style="font-weight: 200;">• Process suspension and resumption</span><br />
-                <span style="font-weight: 200;">• Process synchronization and interprocess communication</span><br />
-                <span style="font-weight: 200;">• Process interactions - deadlock detection, avoidance and correction</span>
-              </span>
+              <div class="module2-thq-text-elm149">
+                <span class="indent-level-1"><span class="module2-thq-text-elm150">Process</span><span class="module2-thq-text-elm151"> - fundamental concept in OS</span></span>
+                <span class="indent-level-2">• Process is a program in execution.</span>
+                <span class="indent-level-2">• Process needs resources - CPU time, memory, files/data and I/O devices.</span>
+                
+                <span class="indent-level-1" style="margin-top: 12px;"><span class="module2-thq-text-elm154">OS</span> is responsible for the following process management activities.</span>
+                <span class="indent-level-2">• Process creation and deletion</span>
+                <span class="indent-level-2">• Process suspension and resumption</span>
+                <span class="indent-level-2">• Process synchronization and interprocess communication</span>
+                <span class="indent-level-2">• Process interactions - deadlock detection, avoidance and correction</span>
+              </div>
             </div>
 
             <div class="module2-thq-os-task-memory-management-elm">
+<div class="module2-thq-os-task-memory-management-elm">
               <span class="module2-thq-text-elm147">OS Task: Memory Management</span>
-              <span class="module2-thq-text-elm140">
-                <span>• Main Memory is an array of addressable words or bytes that is quickly accessible.</span><br />
-                <span>• Main Memory is volatile.</span><br />
-                <span>• OS is responsible for:</span><br />
-                <span>• Allocate and deallocate memory to processes.</span><br />
-                <span>• Managing multiple processes within memory - keep track of which parts of memory are used by which processes. Manage the sharing of memory between processes.</span><br />
-                <span>• Determining which processes to load when memory becomes available.</span>
-              </span>
+              <div class="module2-thq-text-elm140">
+                <span class="indent-level-1">• Main Memory is an array of addressable words or bytes that is quickly accessible.</span>
+                <span class="indent-level-1">• Main Memory is volatile.</span>
+                <span class="indent-level-1">• OS is responsible for:</span>
+                <span class="indent-level-2">• Allocate and deallocate memory to processes.</span>
+                <span class="indent-level-2">• Managing multiple processes within memory - keep track of which parts of memory are used by which processes. Manage the sharing of memory between processes.</span>
+                <span class="indent-level-2">• Determining which processes to load when memory becomes available.</span>
+              </div>
             </div>
 
             <div class="module2-thq-os-task-secondary-storage-elm">
               <span class="module2-thq-text-elm138">OS Task: Secondary Storage and I/O Management</span>
-              <span class="module2-thq-text-elm130">
-                <span>• Since primary storage is expensive and volatile, secondary storage is required for backup.</span><br />
-                <span>• Disk is the primary form of secondary storage.</span><br />
-                <span>• OS performs storage allocation, free-space management and disk scheduling.</span><br /><br />
-                <span>• I/O system in the OS consists of</span><br />
-                <span>• Buffer caching and management</span><br />
-                <span>• Device driver interface that abstracts device details</span><br />
-                <span>• Drivers for specific hardware devices</span>
-              </span>
+              <div class="module2-thq-text-elm130">
+                <span class="indent-level-1">• Since primary storage is expensive and volatile, secondary storage is required for backup.</span>
+                <span class="indent-level-1">• Disk is the primary form of secondary storage.</span>
+                <span class="indent-level-1">• OS performs storage allocation, free-space management and disk scheduling.</span>
+                
+                <span class="indent-level-1" style="margin-top: 12px;">• I/O system in the OS consists of</span>
+                <span class="indent-level-2">• Buffer caching and management</span>
+                <span class="indent-level-2">• Device driver interface that abstracts device details</span>
+                <span class="indent-level-2">• Drivers for specific hardware devices</span>
+              </div>
             </div>
 
             <div class="module2-thq-file-management-system-elm">
@@ -613,15 +626,16 @@
 
             <div class="module2-thq-o-snetworking-elm">
               <span class="module2-thq-text-elm108">OS Task: Networking</span>
-              <span class="module2-thq-text-elm100">
-                <span>• Connecting processors in a distributed system</span><br />
-                <span>• A Distributed System is a collection of processors that do not share memory or a clock.</span><br />
-                <span>• Processors are connected via a communication network.</span><br /><br />
-                <span>• Advantages:</span><br />
-                <span style="padding-left: 30px;">• Allows users and system to exchange information</span><br />
-                <span style="padding-left: 30px;">• provide computational speedup</span><br />
-                <span style="padding-left: 30px;">• increased reliability and availability of information</span><br />
-              </span>
+              <div class="module2-thq-text-elm100">
+                <div class="indent-level-1">• Connecting processors in a distributed system.</div>
+                <div class="indent-level-2">• A Distributed System is a collection of processors that do not share memory or a clock.</div>
+                <div class="indent-level-2">• Processors are connected via a communication network.</div>
+                
+                <div style="font-weight: bold; margin-top: 12px; margin-bottom: 4px;">Advantages:</div>
+                <div class="indent-level-1">• Allows users and system to exchange information.</div>
+                <div class="indent-level-1">• Provide computational speedup.</div>
+                <div class="indent-level-1">• Increased reliability and availability of information.</div>
+              </div>
             </div>
 
           </div>
