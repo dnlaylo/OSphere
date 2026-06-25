@@ -28,6 +28,7 @@ img { display: block; }
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  padding-top: 54px;
 }
 
 /* =========================================================
@@ -86,6 +87,18 @@ img { display: block; }
   align-items: center;
   padding: 0 clamp(16px, 3vw, 26px);
   flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  
+  /* --- CHANGED TO FIXED POSITIONING --- */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Keeps navbar floating on top of all content */
+  
+  /* Glassmorphism background effect */
+  background-color: rgba(0, 0, 0, 0.7); /* Matched to your #0d1117 background */
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px); 
 }
 
 /* Nav line below bar — hidden, was decorative SVG at design width */
