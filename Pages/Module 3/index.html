@@ -93,6 +93,7 @@
               </svg>
           </div>
 
+
           <div class="side-menu-content">
               <div class="menu-item-wrapper">
               <div class="menu-btn" onclick="toggleDropdown('modulesDropdown', this)">
@@ -289,40 +290,45 @@
 
           </div>
 
-             <div class="module3-thq-scheduling-queues-elm module3-card">
+            <div class="module3-thq-scheduling-queues-elm module3-card">
                 <span class="module3-thq-text-elm158">Process Scheduling Queues and Schedulers</span>
                 
-                <div class="module3-thq-text-elm157" style="display: block; margin-top: 12px;">
+                <div class="module3-thq-text-elm157" style="display: block; margin-top: 12px; width: 100%;">
                   <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">1. The Three Scheduling Queues</div>
-                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 12px;">• As processes move through their lifecycle, they are organized into targeted queues:</div>
-                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• <strong>Job Queue:</strong> The set consisting of all processes currently residing in the entire system.</div>
-                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• <strong>Ready Queue:</strong> The set of all processes residing in main memory that are completely ready and waiting to execute.</div>
-                  <div class="module3-thq-text-elm157" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 16px;">• <strong>Device Queues:</strong> The sets of processes strictly waiting for a specific, individual I/O device to become available.</div>
-                </span>
+                  <div class="indent-level-1" style="margin-bottom: 12px;">• As processes move through their lifecycle, they are organized into targeted queues:</div>
+                  <div class="indent-level-2" style="margin-bottom: 4px;">• <strong>Job Queue:</strong> The set consisting of all processes currently residing in the entire system.</div>
+                  <div class="indent-level-2" style="margin-bottom: 4px;">• <strong>Ready Queue:</strong> The set of all processes residing in main memory that are completely ready and waiting to execute.</div>
+                  <div class="indent-level-2" style="margin-bottom: 16px;">• <strong>Device Queues:</strong> The sets of processes strictly waiting for a specific, individual I/O device to become available.</div>
                 </div>
 
+                <div class="figure-container" style="width: 100%; display: flex; justify-content: center; margin: 24px 0;">
+                  <img 
+                    src="Assets/Figures/Fig 3.svg" 
+                    alt="Process migration diagram" 
+                    class="module3-thq-fig3-elm" 
+                    style="max-width: min(100%, 750px); height: auto; display: block; margin: 0 auto;" 
+                  />
+                </div>
 
-                <img src="Assets/Figures/Fig 3.svg" alt="Process migration diagram" class="module3-thq-fig3-elm" />
+                <div class="module3-thq-text-elm141" style="display: block; width: 100%; margin-top: 16px;">
+                  <div class="module3-thq-text-elm142" style="font-weight: 300; font-size: 1.1em; margin-bottom: 12px;">2. Types of System Schedulers</div>
+                  
+                  <div class="indent-level-1" style="margin-bottom: 4px;"><strong>• Long-Term Scheduler (or Job Scheduler):</strong> Selects which processes should be moved from the disk's input queue and brought into main memory's ready queue.</div>
+                  <div class="indent-level-2" style="margin-bottom: 4px;">• Directly controls the degree of multiprogramming (the total number of processes residing in memory).</div>
+                  <div class="indent-level-2" style="margin-bottom: 4px;">• Invoked very infrequently (intervals of seconds or minutes), meaning it can afford to be relatively slow.</div>
+                  <div class="indent-level-2" style="margin-bottom: 12px;">• Must maintain a balanced Process Mix: It balances I/O-bound processes and CPU-bound processes.</div>
 
-              <div class="module3-thq-text-elm141" style="display: block; position: relative; top: auto; left: auto; width: 100%; margin-top: 24px;">
-                <div class="module3-thq-text-elm142" style="margin-bottom: 12px;">2. Types of System Schedulers</div>
-                
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;"><strong>• Long-Term Scheduler (or Job Scheduler):</strong> Selects which processes should be moved from the disk's input queue and brought into main memory's ready queue.</div>
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• Directly controls the degree of multiprogramming (the total number of processes residing in memory).</div>
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 4px;">• Invoked very infrequently (intervals of seconds or minutes), meaning it can afford to be relatively slow.</div>
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 12px;">• Must maintain a balanced Process Mix: It balances I/O-bound processes and CPU-bound processes.</div>
+                  <div class="indent-level-1" style="margin-bottom: 4px;"><strong>• Short-Term Scheduler (or CPU Scheduler):</strong> Selects which process residing in the main memory's ready queue should be executed next and allocates the CPU to it.</div>
+                  <div class="indent-level-2" style="margin-bottom: 12px;">• Invoked very frequently (intervals of milliseconds), meaning it must be extremely fast to maintain system performance.</div>
 
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;"><strong>• Short-Term Scheduler (or CPU Scheduler):</strong> Selects which process residing in the main memory's ready queue should be executed next and allocates the CPU to it.</div>
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 12px;">• Invoked very frequently (intervals of milliseconds), meaning it must be extremely fast to maintain system performance.</div>
+                  <div class="indent-level-1" style="margin-bottom: 4px;"><strong>• Medium-Term Scheduler:</strong> An intermediate-level scheduling system utilized in time-sharing or virtual memory environments.</div>
+                  <div class="indent-level-2" style="margin-bottom: 20px;">• Removes processes entirely from main memory and saves them temporarily to disk (Swapping), reducing the degree of multiprogramming when memory is constrained. The processes are reintroduced later to resume exactly where they left off.</div>
 
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify; margin-bottom: 4px;"><strong>• Medium-Term Scheduler:</strong> An intermediate-level scheduling system utilized in time-sharing or virtual memory environments.</div>
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 48px; text-align: justify; margin-bottom: 20px;">• Removes processes entirely from main memory and saves them temporarily to disk (Swapping), reducing the degree of multiprogramming when memory is constrained. The processes are reintroduced later to resume exactly where they left off.</div>
-
-                <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">3. The Dispatcher</div>
-                <div class="module3-thq-text-elm141" style="display: block; padding-left: 24px; text-align: justify;"><strong>• Dispatcher:</strong> A specific module that gives physical control of the CPU to the exact process selected by the short-term scheduler.</div>
-              </div>
+                  <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">3. The Dispatcher</div>
+                  <div class="indent-level-1"><strong>• Dispatcher:</strong> A specific module that gives physical control of the CPU to the exact process selected by the short-term scheduler.</div>
+                </div>
               
-            </div>
+             </div>
 
             <div class="module3-thq-execution-journey-elm module3-card">
               <span class="module3-thq-text-elm140" style="display: block; margin-bottom: 16px;">Step-by-Step Execution Journey of a Process</span>
@@ -378,28 +384,39 @@
                 <img src="Assets/Figures/Fig 5.svg" alt="Context Switching Sequence" class="module3-thq-fig5-elm" />
               </div>
             </div>
-
+            
             <div class="module3-thq-operationson-processes-elm">
               <span class="module3-thq-text-elm117">Operations on Processes</span>
-              <div class="content-row">
-                <div class="text-content">
-                  <span class="module3-thq-text-elm104">
-                    <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">1. Process Creation and Trees</div>
-                    <div class="indent-level-1" style="margin-bottom: 8px;">• Processes are organized hierarchically. A parent process can create children processes, forming a structural tree.</div>
-                    <div class="indent-level-1"><strong>• Resource Sharing Options:</strong></div>
-                    <div class="indent-level-2">• The parent and children share all system resources.</div>
-                    <div class="indent-level-2">• The children share a strict subset of the parent’s resources.</div>
-                    <div class="indent-level-2" style="margin-bottom: 8px;">• The parent and child share no resources at all.</div>
-                    <div class="indent-level-1"><strong>• Execution Behavior:</strong></div>
-                    <div class="indent-level-2">• The parent and children execute concurrently.</div>
-                    <div class="indent-level-2" style="margin-bottom: 8px;">• The parent blocks and waits until some or all of its children have completely terminated.</div>
-                    <div class="indent-level-1"><strong>• Address Space Behavior:</strong></div>
-                    <div class="indent-level-2">• The child process is an exact structural duplicate of the parent process.</div>
-                    <div class="indent-level-2">• The child process has an entirely new program loaded into its address space.</div>
-                </span>
+              
+              <div class="text-content" style="width: 100%;">
+                <div class="module3-thq-text-elm104">
+                  <div style="font-weight: 300; font-size: 1.1em; margin-bottom: 8px;">1. Process Creation and Trees</div>
+                  <div class="indent-level-1" style="margin-bottom: 8px;">• Processes are organized hierarchically. A parent process can create children processes, forming a structural tree.</div>
+                  
+                  <div class="indent-level-1"><strong>• Resource Sharing Options:</strong></div>
+                  <div class="indent-level-2">• The parent and children share all system resources.</div>
+                  <div class="indent-level-2">• The children share a strict subset of the parent’s resources.</div>
+                  <div class="indent-level-2" style="margin-bottom: 8px;">• The parent and child share no resources at all.</div>
+                  
+                  <div class="indent-level-1"><strong>• Execution Behavior:</strong></div>
+                  <div class="indent-level-2">• The parent and children execute concurrently.</div>
+                  <div class="indent-level-2" style="margin-bottom: 8px;">• The parent blocks and waits until some or all of its children have completely terminated.</div>
+                  
+                  <div class="indent-level-1"><strong>• Address Space Behavior:</strong></div>
+                  <div class="indent-level-2">• The child process is an exact structural duplicate of the parent process.</div>
+                  <div class="indent-level-2">• The child process has an entirely new program loaded into its address space.</div>
                 </div>
-                <img src="Assets/Figures/Fig 6.svg" alt="Process Tree Map" class="module3-thq-fig6-elm" />
               </div>
+
+              <div class="figure-container" style="width: 100%; display: flex; justify-content: center; margin: 24px 0;">
+                <img 
+                  src="Assets/Figures/Fig 6.svg" 
+                  alt="Process Tree Map" 
+                  class="module3-thq-fig6-elm" 
+                  style="max-width: min(100%, 600px); height: auto; display: block;" 
+                />
+              </div>
+
             </div>
 
             <div class="module3-thq-concrete-unix-implementations-elm module3-card">
