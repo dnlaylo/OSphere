@@ -155,42 +155,17 @@
             
             <div class="module7-thq-overview-elm">
               <span class="module7-thq-text-elm85">Overview:</span>
-              <span class="module7-thq-text-elm84">
-                This module provides a broad introduction to the fundamental
-                concepts of Operating Systems, covering how operating systems
-                act as an intermediary between users and computer hardware, and
-                how they manage system resources to ensure efficient and
-                convenient computing. It explores the evolution of computing
-                environments from early mainframe and batch systems to modern
-                multiprogramming and time-sharing systems, as well as system
-                architectures such as multiprocessor, distributed, clustered,
-                real-time, desktop, and handheld systems. The module also
-                discusses key OS goals and functions, including resource
-                allocation, process management, memory and CPU scheduling, and
-                system control, alongside different computing environments such
-                as traditional, web-based, and embedded systems that shape how
-                operating systems are used today.
+              <span class="module7-thq-text-elm84" style="display: block; text-align: justify; padding-left: 20px;">
+                This module explores secondary storage structure and mass-storage management in operating systems, detailing how disk scheduling, formatting, and structural organization influence performance. It begins by introducing magnetic disks and non-volatile memory (NVM) devices, evaluating physical architectures alongside performance factors like swap-space management and storage attachment configurations. The module then addresses disk attachment methods—including host-attached, network-attached storage (NAS), and storage area networks (SAN)—before explaining logical block addressing (LBA) and fundamental disk management tasks like physical formatting, partitioning, and boot block initialization. The primary focus centers on disk scheduling algorithms—specifically FCFS, SSTF, SCAN, C-SCAN, LOOK, and C-LOOK—analyzing how each algorithm organizes the request queue to minimize mechanical head movement and reduce seek time latencies. Ultimately, the module demonstrates how these management policies optimize data access speeds, reliability, and storage efficiency.
               </span>
             </div>
 
             <div class="module7-thq-whatis-mass-storage-elm">
               <span class="module7-thq-text-elm83">What is Mass Storage?</span>
               <div class="content-row">
-                <span class="module7-thq-text-elm82 text-content">
-                  Mass storage, often called secondary storage, refers to the
-                  computer devices and media engineered to hold vast quantities of
-                  data permanently and non-volatily. While main memory (RAM) is
-                  fast but temporary, clearing completely whenever the system
-                  loses power, mass storage acts as the computer's long-term
-                  digital warehouse. It retains everything from the operating
-                  system and core software applications to personal user files,
-                  ensuring data survives across system reboots. Because it is
-                  physically positioned further from the CPU and frequently relies
-                  on complex flash memory controllers or mechanical components,
-                  mass storage operates at significantly slower data transfer
-                  speeds than RAM, but compensates by offering massive capacities
-                  at a fraction of the cost.
-                </span>
+                <div class="module7-thq-text-elm82 text-content">
+                  <div class="indent-level-1" style="text-align: justify;">Mass storage, often called secondary storage, refers to the computer devices and media engineered to hold vast quantities of data permanently and non-volatilely. While main memory (RAM) is fast but temporary, clearing completely whenever the system loses power, mass storage acts as the computer's long-term digital warehouse. It retains everything from the operating system and core software applications to personal user files, ensuring data survives across system reboots. Because it is physically positioned further from the CPU and frequently relies on complex flash memory controllers or mechanical components, mass storage operates at significantly slower data transfer speeds than RAM, but compensates by offering massive capacities at a fraction of the cost.</div>
+                </div>
                 <div class="text-content">
                   <img alt="Figure 1: Mass Storage Device Overview" src="Assets/Figures/Fig 1.svg" class="module7-thq-fig1-elm" />
                   <span class="module7-thq-text-elm81">Module 7: Figure 1</span>
@@ -200,54 +175,25 @@
 
             <div class="module7-thq-disk-structure-elm">
               <span class="module7-thq-text-elm78">Disk Structure</span>
-              <span class="module7-thq-text-elm79">
-                A magnetic disk system relies on a stack of flat, circular
-                platters fixed to a central rotating shaft (or spindle). Both
-                surfaces of each platter are coated with a magnetizable
-                material where data is permanently recorded. Logically, the
-                surface of each platter is mapped into concentric circles
-                called tracks, which are further subdivided into smaller arcs
-                known as sectors. The sector serves as the fundamental,
-                smallest addressable unit of data storage on the drive. When
-                multiple platters are stacked, the collection of tracks at the
-                exact same radius across all surfaces forms a vertical
-                cylinder. Operating systems often group several sectors
-                together into a single logical unit called a cluster to manage
-                file allocation more efficiently.
-              </span>
+              <div class="module7-thq-text-elm79">
+                <div class="indent-level-1" style="text-align: justify;">A magnetic disk system relies on a stack of flat, circular platters fixed to a central rotating shaft (or spindle). Both surfaces of each platter are coated with a magnetizable material where data is permanently recorded. Logically, the surface of each platter is mapped into concentric circles called tracks, which are further subdivided into smaller arcs known as sectors. The sector serves as the fundamental, smallest addressable unit of data storage on the drive. When multiple platters are stacked, the collection of tracks at the exact same radius across all surfaces forms a vertical cylinder. Operating systems often group several sectors together into a single logical unit called a cluster to manage file allocation more efficiently.</div>
+              </div>
             </div>
 
             <div class="module7-thq-componentsand-parts-elm module7-card">
               <span class="module7-thq-text-elm77">Components and Parts</span>
               <div class="content-row">
                 <div class="text-content">
-                  <span class="module7-thq-text-elm70">
-                    <span class="module7-thq-text-elm71">• Rotating Shaft (Spindle):</span><br/>
-                    <span class="module7-thq-text-elm72">
-                      Driven by a high-speed motor, this central axis spins the
-                      stacked platters at a constant speed (typically measured in
-                      revolutions per second or RPM). This continuous rotation
-                      ensures that the recorded data sectors pass beneath the
-                      drive's sensors for constant accessibility.
-                    </span>
-                    <br /><br />
-                    <span class="module7-thq-text-elm73">• Read-Write Head:</span><br/>
-                    <span class="module7-thq-text-elm74">
-                      A tiny electromagnetic component positioned just micro-inches
-                      above the platter surface. Its primary function is to detect
-                      (read) or alter (write) the magnetic orientation of the
-                      sectors directly beneath it, converting physical magnetic
-                      patterns into binary data and vice versa.
-                    </span>
-                    <br /><br />
-                    <span class="module7-thq-text-elm75">• Arm Assembly (Actuator):</span><br/>
-                    <span>
-                      A mechanical bracket framework that holds the read-write heads
-                      in place. It moves radially back and forth across the surfaces
-                      of the spinning platters, shifting the heads precisely between
-                      different tracks to locate specific data.
-                    </span>
-                  </span>
+                  <div class="module7-thq-text-elm70">
+                    <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Rotating Shaft (Spindle):</div>
+                    <div class="indent-level-2" style="text-align: justify; margin-bottom: 16px;">Driven by a high-speed motor, this central axis spins the stacked platters at a constant speed (typically measured in revolutions per second or RPM). This continuous rotation ensures that the recorded data sectors pass beneath the drive's sensors for constant accessibility.</div>
+                    
+                    <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Read-Write Head:</div>
+                    <div class="indent-level-2" style="text-align: justify; margin-bottom: 16px;">A tiny electromagnetic component positioned just micro-inches above the platter surface. Its primary function is to detect (read) or alter (write) the magnetic orientation of the sectors directly beneath it, converting physical magnetic patterns into binary data and vice versa.</div>
+                    
+                    <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Arm Assembly (Actuator):</div>
+                    <div class="indent-level-2" style="text-align: justify;">A mechanical bracket framework that holds the read-write heads in place. It moves radially back and forth across the surfaces of the spinning platters, shifting the heads precisely between different tracks to locate specific data.</div>
+                  </div>
                 </div>
                 <div class="text-content" style="align-items: center;">
                   <img alt="Figure 2: Hard Disk Components and Parts" src="Assets/Figures/Fig 2.svg" class="module7-thq-fig2-elm" />
@@ -258,33 +204,16 @@
 
             <div class="module7-thq-performance-elm module7-card">
               <span class="module7-thq-text-elm68">Performance:</span>
-              <span class="module7-thq-text-elm61">
-                <span class="module7-thq-text-elm62">• Seek Time:</span>
-                <span class="module7-thq-text-elm63">
-                  The duration required for the mechanical arm assembly to
-                  physically move the read-write head from its current position
-                  to the specific track containing the requested data. This
-                  represents the primary mechanical delay because it involves
-                  physical movement across the disk radius.
-                </span>
-                <br /><br />
-                <span class="module7-thq-text-elm64">• Latency Time (Rotational Latency):</span>
-                <span class="module7-thq-text-elm65">
-                  The delay that occurs after the head reaches the correct
-                  track, during which the drive waits for the spinning platter
-                  to bring the target sector directly underneath the read-write
-                  head. This time is directly dependent on the rotational speed
-                  of the spindle motor.
-                </span>
-                <br /><br />
-                <span class="module7-thq-text-elm66">• Transfer Time:</span>
-                <span class="module7-thq-text-elm67">
-                  The electronic phase of the operation, representing the actual
-                  speed at which data bits are read from or written to the
-                  magnetic surface and transmitted between the disk drive and
-                  the system's main memory.
-                </span>
-              </span>
+              <div class="module7-thq-text-elm61">
+                <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Seek Time:</div>
+                <div class="indent-level-2" style="text-align: justify; margin-bottom: 16px;">The duration required for the mechanical arm assembly to physically move the read-write head from its current position to the specific track containing the requested data. This represents the primary mechanical delay because it involves physical movement across the disk radius.</div>
+                
+                <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Latency Time (Rotational Latency):</div>
+                <div class="indent-level-2" style="text-align: justify; margin-bottom: 16px;">The delay that occurs after the head reaches the correct track, during which the drive waits for the spinning platter to bring the target sector directly underneath the read-write head. This time is directly dependent on the rotational speed of the spindle motor.</div>
+                
+                <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Transfer Time:</div>
+                <div class="indent-level-2" style="text-align: justify;">The electronic phase of the operation, representing the actual speed at which data bits are read from or written to the magnetic surface and transmitted between the disk drive and the system's main memory.</div>
+              </div>
             </div>
 
             <div class="module7-thq-rn-wonthe-disks-elm">
@@ -293,25 +222,29 @@
               <div class="module7-thq-clv-elm content-row">
                 <div class="text-content">
                   <span class="module7-thq-text-elm55">Constant Linear Velocity (CLV)</span>
-                  <span class="module7-thq-text-elm54">
-                    • In disks using CLV, the density of bits per unit length is
-                    uniform across every track on the media. Because the outer
-                    tracks have a larger circumference, they contain more data
-                    bits and more sectors than the shorter inner tracks. To keep
-                    the rate of data moving past the read-write head completely
-                    constant, the drive motor must dynamically change its speed.
-                    The drive increases its rotation speed as the head moves from
-                    the outer tracks toward the inner tracks to compensate for the
-                    decreasing track length. This variable-speed method is
-                    exclusively used in optical storage media such as CD-ROM and
-                    DVD-ROM drives.
-                  </span><br />
+                  <div class="module7-thq-text-elm54">
+                    <div class="indent-level-1" style="text-align: justify;">• In disks using CLV, the density of bits per unit length is uniform across every track on the media. Because the outer tracks have a larger circumference, they contain more data bits and more sectors than the shorter inner tracks. To keep the rate of data moving past the read-write head completely constant, the drive motor must dynamically change its speed. The drive increases its rotation speed as the head moves from the outer tracks toward the inner tracks to compensate for the decreasing track length. This variable-speed method is exclusively used in optical storage media such as CD-ROM and DVD-ROM drives.</div>
+                  </div>
                 </div>
                 <div class="text-content">
                   <img alt="Figure 3: Constant Linear Velocity (CLV) Diagram" src="Assets/Figures/Fig 3.svg" class="module7-thq-fig3-elm" />
                   <span class="module7-thq-text-elm56">Module 7: Figure 3</span>
                 </div>
               </div>
+
+              <div class="module7-thq-cav-elm content-row">
+                <div class="text-content">
+                  <span class="module7-thq-text-elm58">Constant Angular Velocity (CAV)</span>
+                  <div class="module7-thq-text-elm57">
+                    <div class="indent-level-1" style="text-align: justify;">• In disks using CAV, the number of bits per track is uniform across the entire disk, meaning every track contains a constant number of sectors. Because the larger outer tracks hold the exact same amount of data as the shorter inner tracks, the physical density of the bits automatically increases from the outer tracks to the inner tracks. Because the sectors are aligned at fixed geometric angles, the disk rotation speed stays completely constant regardless of where the read-write head is positioned. This fixed-speed method is the standard technique used in magnetic storage devices like hard disks and floppy disks.</div>
+                  </div>
+                </div>
+                <div class="text-content">
+                  <img alt="Figure 4: Constant Angular Velocity (CAV) Diagram" src="Assets/Figures/Fig 4.svg" class="module7-thq-fig4-elm" />
+                  <span class="module7-thq-text-elm59">Module 7: Figure 4</span>
+                </div>
+              </div>
+            </div>
 
               <div class="module7-thq-cav-elm content-row">
                 <div class="text-content">
@@ -339,43 +272,28 @@
 
             <div class="module7-thq-disk-scheduling-elm">
               <span class="module7-thq-text-elm53">Disk Scheduling</span>
-              <span class="module7-thq-text-elm44">
-                Disk scheduling is the process of managing and prioritizing
-                input/output (I/O) requests that arrive for the hard disk.
-                Since mechanical hard drives rely on a physical arm assembly
-                to move to a specific track (seek time) and a spindle to
-                rotate a sector under the head (rotational latency), random
-                requests can cause the drive head to move back and forth
-                inefficiently, severely slowing down performance.
-              </span>
-              <br />
-              <span class="module7-thq-text-elm46">
-                1. FCFS Scheduling <br />
-                2. SSTF Scheduling <br />
-                3. SCAN Scheduling <br />
-                4. C-SCAN Scheduling <br />
-                5. LOOK Scheduling <br />
-                6. CLOOK Scheduling
-              </span>
+              <div class="module7-thq-text-elm44">
+                <div class="indent-level-1" style="text-align: justify; margin-bottom: 12px;">Disk scheduling is the process of managing and prioritizing input/output (I/O) requests that arrive for the hard disk. Since mechanical hard drives rely on a physical arm assembly to move to a specific track (seek time) and a spindle to rotate a sector under the head (rotational latency), random requests can cause the drive head to move back and forth inefficiently, severely slowing down performance.</div>
+              </div>
+              <div class="module7-thq-text-elm46">
+                <div class="indent-level-1" style="line-height: 1.8;">
+                  1. FCFS Scheduling <br />
+                  2. SSTF Scheduling <br />
+                  3. SCAN Scheduling <br />
+                  4. C-SCAN Scheduling <br />
+                  5. LOOK Scheduling <br />
+                  6. CLOOK Scheduling <br /> <br />
+                </div>
+              </div>
             </div>
 
             <div class="module7-thq-first-come-first-serve-elm">
               <span class="module7-thq-text-elm43">First Come, First Serve (FCFS) Scheduling</span>
-              <span class="module7-thq-text-elm39">
-                <span class="module7-thq-text-elm40">
-                  • This is the simplest form of disk scheduling. It services I/O
-                  requests strictly in the order they arrive in the queue,
-                  without regard for the current position of the disk head.
-                </span>
-                <br /><br />
-                <span class="module7-thq-text-elm41">• Pros &amp; Cons:</span>
-                <span>
-                  It is completely fair and prevents starvation (every request
-                  is guaranteed to be serviced). However, it results in massive,
-                  wild head movements across the disk, creating high total head
-                  travel and slow average response times.
-                </span>
-              </span>
+              <div class="module7-thq-text-elm39">
+                <div class="indent-level-1" style="text-align: justify; margin-bottom: 12px;">• This is the simplest form of disk scheduling. It services I/O requests strictly in the order they arrive in the queue, without regard for the current position of the disk head.</div>
+                <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Pros &amp; Cons:</div>
+                <div class="indent-level-2" style="text-align: justify;">It is completely fair and prevents starvation (every request is guaranteed to be serviced). However, it results in massive, wild head movements across the disk, creating high total head travel and slow average response times.</div> <br />
+              </div>
             </div>
 
             <div class="module7-thq-fcf-sexample-elm module7-card">
@@ -387,139 +305,79 @@
             </div>
 
             <div class="module7-thq-shortest-seek-time-first-scheduling-elm">
-              <span class="module7-thq-text-elm37">Shortest Seek Time First Scheduling</span>
-              <span class="module7-thq-text-elm32">
-                <span class="module7-thq-text-elm33">
-                  • This algorithm selects the request that is closest to the
-                  current position of the read-write head, minimizing the
-                  immediate seek time.
-                </span>
-                <br /><br />
-                <span class="module7-thq-text-elm34">• Pros &amp; Cons:</span>
-                <span>
-                  It significantly reduces the total head movement compared to
-                  FCFS, boosting overall throughput. The major disadvantage is
-                  starvation; if a steady stream of requests keeps arriving near
-                  the current head position, requests on the far edges of the
-                  disk may wait indefinitely.
-                </span>
-              </span>
-              <br/>
-              <span class="module7-thq-text-elm36 module7-card">Example:
-              <div class="image-row">
-                <img alt="SSTF Example Graph 1" src="Assets/Figures/Fig 7.svg" class="module7-thq-fig7-elm" />
-                <img alt="SSTF Example Graph 2" src="Assets/Figures/Fig 8.svg" class="module7-thq-fig8-elm" />
+              <br /> <span class="module7-thq-text-elm37">Shortest Seek Time First Scheduling</span>
+              <div class="module7-thq-text-elm32">
+                <div class="indent-level-1" style="text-align: justify; margin-bottom: 12px;">• This algorithm selects the request that is closest to the current position of the read-write head, minimizing the immediate seek time.</div>
+                <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Pros &amp; Cons:</div>
+                <div class="indent-level-2" style="text-align: justify;">It significantly reduces the total head movement compared to FCFS, boosting overall throughput. The major disadvantage is starvation; if a steady stream of requests keeps arriving near the current head position, requests on the far edges of the disk may wait indefinitely.</div>
               </div>
-              </span>
+              <br/>
+              <div class="module7-thq-text-elm36 module7-card">
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 12px;">Example:</div>
+                <div class="image-row">
+                  <img alt="SSTF Example Graph 1" src="Assets/Figures/Fig 7.svg" class="module7-thq-fig7-elm" />
+                  <img alt="SSTF Example Graph 2" src="Assets/Figures/Fig 8.svg" class="module7-thq-fig8-elm" />
+                </div>
+              </div>
             </div>
 
             <div class="module7-thq-scan-scheduling-elm">
-              <span class="module7-thq-text-elm31">SCAN Scheduling</span>
-              <span class="module7-thq-text-elm26">
-                <span class="module7-thq-text-elm27">
-                  • The disk head starts at one end of the disk and moves toward
-                  the other end, servicing requests as it reaches each track.
-                  When it hits the very edge of the disk, it reverses direction
-                  and moves back toward the opposite end, continuing to service
-                  remaining requests.
-                </span>
-                <br /><br />
-                <span class="module7-thq-text-elm28">• Pros &amp; Cons:</span>
-                <span>
-                  It eliminates starvation and provides a much lower variance in
-                  response time compared to SSTF. However, it can be inefficient
-                  because the head travels all the way to the end of the disk
-                  even if there are no pending requests waiting at the extreme
-                  boundary.
-                </span>
-              </span>
-              <br/>
-              <span class="module7-thq-text-elm30 module7-card">Example:
-              <div class="image-row">
-                <img alt="SCAN Example Graph 1" src="Assets/Figures/Fig 9.svg" class="module7-thq-fig9-elm" />
-                <img alt="SCAN Example Graph 2" src="Assets/Figures/Fig 10.svg" class="module7-thq-fig10-elm" />
+              <br /> <span class="module7-thq-text-elm31">SCAN Scheduling</span>
+              <div class="module7-thq-text-elm26">
+                <div class="indent-level-1" style="text-align: justify; margin-bottom: 12px;">• The disk head starts at one end of the disk and moves toward the other end, servicing requests as it reaches each track. When it hits the very edge of the disk, it reverses direction and moves back toward the opposite end, continuing to service remaining requests.</div>
+                <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Pros &amp; Cons:</div>
+                <div class="indent-level-2" style="text-align: justify;">It eliminates starvation and provides a much lower variance in response time compared to SSTF. However, it can be inefficient because the head travels all the way to the end of the disk even if there are no pending requests waiting at the extreme boundary.</div>
               </div>
-              </span>
+              <br/>
+              <div class="module7-thq-text-elm30 module7-card">
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 12px;">Example:</div>
+                <div class="image-row">
+                  <img alt="SCAN Example Graph 1" src="Assets/Figures/Fig 9.svg" class="module7-thq-fig9-elm" />
+                  <img alt="SCAN Example Graph 2" src="Assets/Figures/Fig 10.svg" class="module7-thq-fig10-elm" />
+                </div>
+              </div>
             </div>
 
             <div class="module7-thq-cscan-scheduling-elm">
-              <span class="module7-thq-text-elm25">C-SCAN Scheduling</span>
-              <span class="module7-thq-text-elm20">
-                <span class="module7-thq-text-elm21">
-                  • Designed to provide a more uniform waiting time, C-SCAN moves
-                  the head from one end of the disk to the other, servicing
-                  requests along the way. However, when it reaches the end
-                  boundary, it immediately wraps around to the beginning
-                  boundary without servicing any requests on the return trip,
-                  and then restarts its scanning motion.
-                </span>
-                <br /><br />
-                <span class="module7-thq-text-elm22">• Pros &amp; Cons:</span>
-                <span>
-                  It provides a highly predictable and uniform delay for all
-                  requests across the entire disk surface. The downside is that
-                  the complete reset across the disk adds an unserviced travel
-                  delay.
-                </span>
-              </span>
-              <br/>
-              <span class="module7-thq-text-elm24 module7-card">Example:
-              <div class="image-row">
-                <img alt="C-SCAN Example Graph 1" src="Assets/Figures/Fig 11.svg" class="module7-thq-fig11-elm" />
-                <img alt="C-SCAN Example Graph 2" src="Assets/Figures/Fig 12.svg" class="module7-thq-fig12-elm" />
+             <br /> <span class="module7-thq-text-elm25">C-SCAN Scheduling</span>
+              <div class="module7-thq-text-elm20">
+                <div class="indent-level-1" style="text-align: justify; margin-bottom: 12px;">• Designed to provide a more uniform waiting time, C-SCAN moves the head from one end of the disk to the other, servicing requests along the way. However, when it reaches the end boundary, it immediately wraps around to the beginning boundary without servicing any requests on the return trip, and then restarts its scanning motion.</div>
+                <div class="indent-level-1" style="text-align: justify; font-weight: bold; margin-bottom: 4px;">• Pros &amp; Cons:</div>
+                <div class="indent-level-2" style="text-align: justify;">It provides a highly predictable and uniform delay for all requests across the entire disk surface. The downside is that the complete reset across the disk adds an unserviced travel delay.</div>
               </div>
-              </span>
+              <br/>
+              <div class="module7-thq-text-elm24 module7-card">
+                <div class="indent-level-1" style="font-weight: bold; margin-bottom: 12px;">Example:</div>
+                <div class="image-row">
+                  <img alt="C-SCAN Example Graph 1" src="Assets/Figures/Fig 11.svg" class="module7-thq-fig11-elm" />
+                  <img alt="C-SCAN Example Graph 2" src="Assets/Figures/Fig 12.svg" class="module7-thq-fig12-elm" />
+                </div>
+              </div>
             </div>
 
             <div class="module7-thq-look-scheduling-elm">
-              <span class="module7-thq-text-elm19">LOOK Scheduling</span>
-              <span class="module7-thq-text-elm16">
-                • The read-write head moves in one direction servicing requests
-                until there are no more pending requests ahead of its current
-                position. Instead of traveling all the way to the absolute
-                physical edge of the disk, it immediately stops and reverses
-                direction on the spot to service requests waiting behind
-                it.<br /><br />
-                • It prevents the starvation of requests on the extreme inner
-                and outer tracks while remaining more efficient than SCAN by
-                eliminating wasted mechanical travel to empty disk boundaries;
-                however, it still results in unequal waiting times because
-                tracks near the middle of the disk are naturally visited more
-                frequently than those on the extreme edges.
-              </span>
+              <br /> <span class="module7-thq-text-elm19">LOOK Scheduling</span>
+              <div class="module7-thq-text-elm16">
+                <div class="indent-level-1" style="text-align: justify; margin-bottom: 12px;">• The read-write head moves in one direction servicing requests until there are no more pending requests ahead of its current position. Instead of traveling all the way to the absolute physical edge of the disk, it immediately stops and reverses direction on the spot to service requests waiting behind it.</div>
+                <div class="indent-level-1" style="text-align: justify;">• It prevents the starvation of requests on the extreme inner and outer tracks while remaining more efficient than SCAN by eliminating wasted mechanical travel to empty disk boundaries; however, it still results in unequal waiting times because tracks near the middle of the disk are naturally visited more frequently than those on the extreme edges.</div> <br />
+              </div>
             </div>
 
             <div class="module7-thq-clook-scheduling-elm module7-card">
-              <span class="module7-thq-text-elm15">C-LOOK Scheduling</span>
-              <span class="module7-thq-text-elm12">
-                • The head services requests in only one direction (e.g., from
-                lowest track number to highest). Once it services the highest
-                requested track, it performs a single rapid return trip
-                straight back to the lowest requested track in the
-                queue—without servicing any tracks on the way back and without
-                traveling to the physical edges of the disk.<br /><br />
-                • Pros &amp; Cons: It provides a highly uniform and predictable
-                waiting time for all requests across the disk surface while
-                maximizing efficiency by restricting all mechanical sweeps
-                strictly to the span of active requests; however, the
-                completely unserviced return trip across the disk creates an
-                extra idle delay before it can resume processing requests at
-                the starting end.
-              </span>
+             <br /> <span class="module7-thq-text-elm15">C-LOOK Scheduling</span>
+              <div class="module7-thq-text-elm12">
+                <div class="indent-level-1" style="text-align: justify; margin-bottom: 12px;">• The head services requests in only one direction (e.g., from lowest track number to highest). Once it services the highest requested track, it performs a single rapid return trip straight back to the lowest requested track in the queue—without servicing any tracks on the way back and without traveling to the physical edges of the disk.</div>
+                <div class="indent-level-1" style="text-align: justify;">• Pros &amp; Cons: It provides a highly uniform and predictable waiting time for all requests across the disk surface while maximizing efficiency by restricting all mechanical sweeps strictly to the span of active requests; however, the completely unserviced return trip across the disk creates an extra idle delay before it can resume processing requests at the starting end.</div>
+              </div>
             </div>
 
             <div class="module7-thq-total-head-movement-elm">
-              <span class="module7-thq-text-elm11">Total Head Movement</span>
-              <span class="module7-thq-text-elm10">
-                By subtracting the smaller track number from the larger track
-                number at each step, you calculate the absolute distance
-                traveled for that leg of the journey. Summing all those
-                individual movements together gives you the Total Head Movement,
-                which directly reflects the mechanical seek time delay.
-              </span>
+             <br />  <span class="module7-thq-text-elm11">Total Head Movement</span>
+              <div class="module7-thq-text-elm10">
+                <div class="indent-level-1" style="text-align: justify;">By subtracting the smaller track number from the larger track number at each step, you calculate the absolute distance traveled for that leg of the journey. Summing all those individual movements together gives you the Total Head Movement, which directly reflects the mechanical seek time delay.</div>
+              </div>
             </div>
-
-          </div>
+         </div>
           <div class="module7-thq-footer-elm">
             <img
               alt="Footer Separator Line"
