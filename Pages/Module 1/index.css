@@ -742,7 +742,20 @@ img { display: block; }
     width: 75%; 
   }
   
-  .indented {
-    padding-left: clamp(10px, 3vw, 20px) !important;
+.indented {
+  padding-left: clamp(24px, 4vw, 48px) !important;
+}
   }
+
+/* Structural Indentation Classes */
+.indent-level-1 {
+  display: block;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.indent-level-2 {
+  display: block;
+  padding-left: 48px;
+  margin-bottom: 6px;
 }

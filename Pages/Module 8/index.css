@@ -6,6 +6,7 @@ body {
   font-weight: 200;
   color: #fff;
   background: #0d0d14;
+  text-align: justify;
 }
 *, *::before, *::after { box-sizing: border-box; }
 p, li, ul, pre, div, h1, h2, h3, h4, h5, h6,
@@ -456,3 +457,44 @@ img { display: block; }
   .module8-card { padding: clamp(16px, 4vw, 28px) clamp(14px, 3vw, 24px); }
   .module8-thq-o-sphere-logo-elm { width: 75%; }
 }
+
+/* Structural Indentation Helpers */
+.indent-level-1 {
+  display: block;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.indent-level-2 {
+  display: block;
+  padding-left: 48px;
+  margin-bottom: 6px;
+}
+
+/* ===== Bordered, centered table for Architectural Adaptations (matches Fig 5) ===== */
+.module8-thq-architectural-adaptations-elm { gap: 0 !important; }
+
+/* every header + body cell: box + centered content */
+.module8-thq-text-elm251, .module8-thq-text-elm264, .module8-thq-text-elm259,
+.module8-thq-text-elm259a,
+.module8-thq-text-elm252, .module8-thq-text-elm253, .module8-thq-text-elm254,
+.module8-thq-text-elm263, .module8-thq-text-elm256, .module8-thq-text-elm257,
+.module8-thq-text-elm255, .module8-thq-text-elm258, .module8-thq-text-elm260,
+.module8-thq-text-elm261, .module8-thq-text-elm262 {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 14px 16px !important;
+  margin: 0 !important;
+}
+
+/* headers stay bold */
+.module8-thq-text-elm251, .module8-thq-text-elm264, .module8-thq-text-elm259 {
+  font-weight: 600;
+}
+
+/* place the two recovered cells */
+.module8-thq-text-elm259  { grid-column: 3; grid-row: 2; } /* col-3 header */
+.module8-thq-text-elm259a { grid-column: 3; grid-row: 3; } /* Process Modeling → web impl */
