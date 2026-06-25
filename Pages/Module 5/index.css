@@ -382,7 +382,7 @@ img { display: block; }
 
 .module5-thq-footerline-elm {
   width: 90%;
-  height: auto;
+  height: 2px;
   display: block;
   margin-bottom: clamp(16px, 2vw, 24px);
 }
@@ -412,4 +412,17 @@ img { display: block; }
   }
   
   .module5-thq-o-spherelogo-elm { width: 75%; }
+}
+
+/* Structural Indentation Helpers */
+.indent-level-1 {
+  display: block;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.indent-level-2 {
+  display: block;
+  padding-left: 48px;
+  margin-bottom: 6px;
 }
