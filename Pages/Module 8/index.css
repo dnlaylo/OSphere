@@ -498,3 +498,40 @@ img { display: block; }
 /* place the two recovered cells */
 .module8-thq-text-elm259  { grid-column: 3; grid-row: 2; } /* col-3 header */
 .module8-thq-text-elm259a { grid-column: 3; grid-row: 3; } /* Process Modeling → web impl */
+
+
+/* Structural Indentation Classes */
+.indent-level-1 {
+  display: block;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.indent-level-2 {
+  display: block;
+  padding-left: 48px;
+  margin-bottom: 6px;
+}
+
+/* Structural Indentation Helpers */
+.indent-level-1 {
+  display: block;
+  padding-left: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.indent-level-2 {
+  display: block;
+  padding-left: 48px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Ensure the card has proper padding */
+.module8-card {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}

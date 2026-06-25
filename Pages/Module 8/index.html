@@ -189,55 +189,29 @@
             <div class="module8-thq-terminologies-elm module8-card">
               <span class="module8-thq-text-elm351">Terminologies</span>
               <img src="Assets/Container/Container 1.svg" alt="Terminologies Container Background" class="module8-thq-container1-elm" />
-              <span class="module8-thq-text-elm345">
-                <span>
-                  1. Resource: Physical or logical components required by a process
-                  to execute its task (e.g., CPU cycles, memory blocks, tape
-                  drives, or printers). System resources are inherently limited
-                  and can be either sharable (accessible by multiple processes
-                  simultaneously) or non-sharable (exclusive to one process at a
-                  time).
+              <div class="module8-thq-text-elm345" style="text-align: justify; padding: 0 10px; margin-top: 12px;">
+                <span style="display: block; margin-bottom: 12px;">
+                  <b>1. Resource:</b> Physical or logical components required by a process to execute its task (e.g., CPU cycles, memory blocks, tape drives, or printers). System resources are inherently limited and can be either sharable (accessible by multiple processes simultaneously) or non-sharable (exclusive to one process at a time).
                 </span>
-                <br />
-                <span>
-                  2. Request Edge: A directed vertex notation (Pi to Rj) in a graph
-                  structure indicating that process Pi has initiated a block to
-                  wait for an available instance of resource type Rj.
+                <span style="display: block; margin-bottom: 12px;">
+                  <b>2. Request Edge:</b> A directed vertex notation (P<sub>i</sub> → R<sub>j</sub>) in a graph structure indicating that process P<sub>i</sub> has initiated a block to wait for an available instance of resource type R<sub>j</sub>.
                 </span>
-                <br />
-                <span>
-                  3. Assignment Edge: A directed vertex notation (Rj to Pi)
-                  indicating that an instance of resource type Rj has been
-                  successfully claimed and allocated to process Pi.
+                <span style="display: block; margin-bottom: 12px;">
+                  <b>3. Assignment Edge:</b> A directed vertex notation (R<sub>j</sub> → P<sub>i</sub>) indicating that an instance of resource type R<sub>j</sub> has been successfully claimed and allocated to process P<sub>i</sub>.
                 </span>
-                <br />
-                <span>
-                  4. Safe State: A system operating condition where there exists at
-                  least one specific execution sequence (a Safe Sequence) that
-                  ensures all active processes can eventually claim their
-                  maximum declared resources and complete execution without
-                  triggering a deadlock.
+                <span style="display: block; margin-bottom: 12px;">
+                  <b>4. Safe State:</b> A system operating condition where there exists at least one specific execution sequence (a Safe Sequence) that ensures all active processes can eventually claim their maximum declared resources and complete execution without triggering a deadlock.
                 </span>
-                <br />
-                <span>
-                  5. Unsafe State: A condition where the system cannot guarantee
-                  that all processes can finish without deadlocking. An unsafe
-                  state is not explicitly a deadlock, but all deadlock states
-                  are mathematically subset within unsafe states.
+                <span style="display: block;">
+                  <b>5. Unsafe State:</b> A condition where the system cannot guarantee that all processes can finish without deadlocking. An unsafe state is not explicitly a deadlock, but all deadlock states are mathematically subset within unsafe states.
                 </span>
-              </span>
+              </div>
             </div>
 
             <div class="module8-thq-visual-assets-structure-elm">
-              <span class="module8-thq-text-elm342">
-                <span class="module8-thq-text-elm344">
-                Visual Assets Structure
-                </span>
-                <span>
-                  To represent how processes interact with resources, visual
-                  assets within the system are modeled using graph networks:
-                </span>
-                <br />
+              <span class="module8-thq-text-elm342" style="display: block; text-align: justify;">
+                <span class="module8-thq-text-elm344" style="display: block; margin-bottom: 8px;">Visual Assets Structure</span>
+                <span>To represent how processes interact with resources, visual assets within the system are modeled using graph networks:</span>
               </span>
             </div>
 
@@ -277,36 +251,24 @@
 
             <div class="module8-thq-stepby-step-breakdownofthe-resource-lifecycle-elm">
               <span class="module8-thq-text-elm328">Module 8: Figure 2</span>
-              <span class="module8-thq-text-elm329">
-                Step-by-Step Breakdown of the Resource Lifecycle
+              <span class="module8-thq-text-elm329">Step-by-Step Breakdown of the Resource Lifecycle</span>
+              <span class="module8-thq-text-elm330" style="display: block; margin-bottom: 16px;">
+                A process must strictly traverse the following standard sequence to interact with non-sharable system assets:
               </span>
-              <span class="module8-thq-text-elm330">
-                A process must strictly traverse the following standard sequence
-                to interact with non-sharable system assets:
-              </span>
-              <span class="module8-thq-text-elm331">
-                <span>
-                  1. Request: The process submits a formal claim to the Operating
-                  System for an instance of a resource type. If the resource is
-                  currently occupied or unavailable, the process is pushed into
-                  a waiting queue (e.g., tape queue, printer queue) and must
-                  wait.
+              <div class="module8-thq-text-elm331" style="text-align: justify; padding-left: 20px; margin-bottom: 20px;">
+                <span style="display: block; margin-bottom: 12px;">
+                  <b>1. Request:</b> The process submits a formal claim to the Operating System for an instance of a resource type. If the resource is currently occupied or unavailable, the process is pushed into a waiting queue (e.g., tape queue, printer queue) and must wait.
                 </span>
-                <br />
-                <span>
-                  2. Use: Once the resource request is granted, the process takes
-                  exclusive lock control over the asset and executes its program
-                  instructions.
+                <span style="display: block; margin-bottom: 12px;">
+                  <b>2. Use:</b> Once the resource request is granted, the process takes exclusive lock control over the asset and executes its program instructions.
                 </span>
-                <br />
-                <span>
-                  3. Release: Upon completing its specific task, the process
-                  voluntarily relinquishes control of the asset, returning it to
-                  the system's available pool for allocation to other waiting
-                  processes.
+                <span style="display: block;">
+                  <b>3. Release:</b> Upon completing its specific task, the process voluntarily relinquishes control of the asset, returning it to the system's available pool for allocation to other waiting processes.
                 </span>
-              </span>
-              <img src="Assets/Figures/Fig 2.svg" alt="Resource Lifecycle Sequence Figure 2" class="module8-thq-fig2-elm" />
+              </div>
+              <div style="text-align: center;">
+                <img src="Assets/Figures/Fig 2.svg" alt="Resource Lifecycle Sequence Figure 2" class="module8-thq-fig2-elm" style="margin: 0 auto;" />
+              </div>
             </div>
 
             <div class="module8-thq-deadlock-management-strategy-elm">
